@@ -94,8 +94,8 @@ Composer objects:
 |-------------------|-------------------|-------------------------------------------------------|---------------------------|-------------------------------------|
 |Node               |Scene              |ramses::Node                       | rlogic::RamsesNodeBinding | Child nodes are assigned as children in Ramses. RamsesNodeBinding points to Ramses node. |
 |MeshNode           |Scene              |ramses::MeshNode ramses::Appearance ramses::GeometryBinding| rlogic::RamsesNodeBinding rlogic::RamsesAppearanceBinding| Same as Node, but with Appearance and GeometryBinding which refers to array resources (see Mesh) |
-|PerspectiveCamera  |Scene              |ramses::PerspectiveCamera                              |                           | Most recently modified object of this type is assigned to the default Ramses RenderPass |
-|OrthographicCamera |Scene              |ramses::OrthographicCamera                             |                           | Most recently modified object of this type is assigned to the default Ramses RenderPass |
+|PerspectiveCamera  |Scene              |ramses::PerspectiveCamera                              | rlogic::RamsesCameraBinding | Most recently modified object of this type is assigned to the default Ramses RenderPass |
+|OrthographicCamera |Scene              |ramses::OrthographicCamera                             | rlogic::RamsesCameraBinding | Most recently modified object of this type is assigned to the default Ramses RenderPass |
 |Material           |Resources          |ramses::Effect                                         |                           | Holds the Effect, not the appearance and uniform values (see MeshNode) |
 |Mesh               |Resources          |ramses::ArrayResource                                  |                           | Holds geometry data referenced by ramses::MeshNode's ramses::GeometryBinding |
 |Texture            |Resources          |ramses::Texture2D  ramses::TextureSampler              |                           | Currently static |
