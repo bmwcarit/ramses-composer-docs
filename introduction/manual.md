@@ -39,6 +39,14 @@ __Property Browser__: Here you can see and change all the properties of the obje
 
 __Ramses Preview__: Here you see what your scene will look like. Note that you can select different methods for zooming the preview on the top. _Original fit_ will give you the exact resolution of the camera. If your scene has multiple cameras, the preview will show the camera you modified last. Take note that you can currently create only one preview via the _View_ menu.
 
+### Layouts
+
+Ramses Composer saves your current view layout when closing. This current layout will get restored upon relaunching Ramses Composer or loading a project.
+
+You can save, load and delete custom layouts, or restore the default layout.  All these options are available in the _View_ → _Layouts_ menu.
+
+Saved layouts are program-global - loading a project will not load a custom layout.
+
 ## Asset types and tools
 
 __Meshes__ are created in a 3D modelling tool. Ramses Composer is designed and tested to work well with Blender. It supports the [Khronos group glTF](https://www.khronos.org/gltf/) as a modern format for meshes.
