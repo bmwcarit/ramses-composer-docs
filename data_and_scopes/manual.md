@@ -123,9 +123,7 @@ Furthermore, Prefab(Instance) scene content is instantiated (copied) on all plac
 
 ## Default Resources
 
-Every RaCo scene contains default Ramses resources for Materials and Meshes. Currently, these will also get exported.
-
-<!-- TODO update docs once we fix that -->
+Ramses Composer contains default resources, serving as placeholder resources. A default resource used in a scene will also get exported.
 
 ### CubeMap
 
