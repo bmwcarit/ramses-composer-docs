@@ -137,9 +137,9 @@ The default Mesh in RaCo is a simple cube.
 
 There are two default Materials.
 
-Using a Mesh that does not contain Normals will result in the first default Material: a single matte color with the RGBA values [1.0, 0.0, 0.2, 1.0] that spans the entire Mesh.
+Using a Mesh that does not contain normals will result in the first default Material: a single matte color with the RGBA values [1.0, 0.0, 0.2, 1.0] that spans the entire Mesh.
 
-Using a Mesh that contains Normals but no Material will result in the second default Material: an orange color with the RGBA values [1.0, 0.5, 0.0, 1.0] and surface reflection.
+Using a Mesh that contains normals but no Material will result in the second default Material: an orange color with the RGBA values [1.0, 0.5, 0.0, 1.0] and surface reflection.
 
 ### Texture
 
