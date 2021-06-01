@@ -37,7 +37,7 @@ __Undo Stack__: Here you can see all the changes you made to the scene. It is po
 
 __Property Browser__: Here you can see and change all the properties of the object last selected in the Scene Graph, Resources or Prefabs view. It is possible to lock a property browser to permanently  stick with the same object using the lock button on top. You can also add additional property browsers from the _View_ menu to observe and configure multiple objects.
 
-__Ramses Preview__: Here you see what your scene will look like. Note that you can select different methods for zooming the preview on the top. _Original fit_ will give you the exact resolution of the camera. If your scene has multiple cameras, the preview will show the camera you modified last.
+__Ramses Preview__: Here you see what your scene will look like. Note that you can select different methods for zooming the preview on the top. _Original fit_ will give you the exact resolution of the camera. If your scene has multiple cameras, the preview will show the camera you modified last. Take note that you can currently create only one preview via the _View_ menu.
 
 ## Asset types and tools
 
