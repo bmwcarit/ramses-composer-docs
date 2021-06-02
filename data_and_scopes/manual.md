@@ -123,7 +123,7 @@ Furthermore, Prefab(Instance) scene content is instantiated (copied) on all plac
 
 ## Default Resources
 
-Ramses Composer contains default resources, serving as placeholder resources. A default resource used in a scene will also get exported.
+Ramses Composer contains default resources, serving as placeholder resources. A default resource used in a scene will also get exported. Multiple objects share the same default resource, independent of whether this object is in the current project or imported from a different project as an external reference or otherwise. This is done to prevent unnecessary default resource duplicates upon exporting the scene.
 
 ### CubeMap
 
