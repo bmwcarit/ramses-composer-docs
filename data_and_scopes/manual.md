@@ -92,10 +92,10 @@ Composer objects:
 
 | Composer type     |From View          |Exported Ramses object(s)                              |Exported Logic object(s)   |Notes |
 |-------------------|-------------------|-------------------------------------------------------|---------------------------|-------------------------------------|
-|Node               |Scene              |ramses::Node ramses::RenderGroup                       | rlogic::RamsesNodeBinding | Child nodes are assigned as children in Ramses. RamsesNodeBinding points to Ramses node. RenderGroup contains the node itself, not its children. Children's render groups are added to this node's render group in the same order as the child nodes. |
-|MeshNode           |Scene              |ramses::MeshNode ramses::RenderGroup ramses::Appearance ramses::GeometryBinding| rlogic::RamsesNodeBinding rlogic::RamsesAppearanceBinding| Same as Node, but with Appearance and GeometryBinding which refers to array resources (see Mesh) |
-|PerspectiveCamera  |Scene              |ramses::PerspectiveCamera                              |                           | Most recently modified object of this type is assigned to the default Ramses RenderPass |
-|OrthographicCamera |Scene              |ramses::OrthographicCamera                             |                           | Most recently modified object of this type is assigned to the default Ramses RenderPass |
+|Node               |Scene              |ramses::Node                       | rlogic::RamsesNodeBinding | Child nodes are assigned as children in Ramses. RamsesNodeBinding points to Ramses node. |
+|MeshNode           |Scene              |ramses::MeshNode ramses::Appearance ramses::GeometryBinding| rlogic::RamsesNodeBinding rlogic::RamsesAppearanceBinding| Same as Node, but with Appearance and GeometryBinding which refers to array resources (see Mesh) |
+|PerspectiveCamera  |Scene              |ramses::PerspectiveCamera                              | rlogic::RamsesCameraBinding | Most recently modified object of this type is assigned to the default Ramses RenderPass |
+|OrthographicCamera |Scene              |ramses::OrthographicCamera                             | rlogic::RamsesCameraBinding | Most recently modified object of this type is assigned to the default Ramses RenderPass |
 |Material           |Resources          |ramses::Effect                                         |                           | Holds the Effect, not the appearance and uniform values (see MeshNode) |
 |Mesh               |Resources          |ramses::ArrayResource                                  |                           | Holds geometry data referenced by ramses::MeshNode's ramses::GeometryBinding |
 |Texture            |Resources          |ramses::Texture2D  ramses::TextureSampler              |                           | Currently static |
@@ -103,7 +103,7 @@ Composer objects:
 |LuaScript          |Scene or Resources |                                                       | rlogic::LuaScript         | LuaScripts can be global (Resources tab) or local (Scene Graph tab) |
 |PrefabInstance     |Scene              | Various                                               | Various                   | Exported content depends on referenced Prefab. Each PrefabInstance creates its own copy based on Prefab contents.  |
 |Prefab             |Prefab             |                                                       |                           | Content created only if referenced by a PrefabInstance. Underlying nodes and scripts are exported as if they had their own Scene Graph. Ramses nodes are parented to the parent node of the corresponding PrefabInstance |
-|                   |                   | ramses::RenderPass                                    |                           | There is a single, global RenderPass which contains a single global RenderGroup to which all root node RenderGroups are being assigned|
+|                   |                   | ramses::RenderPass                                    |                           | There is a single global RenderPass which contains a single global RenderGroup. All mesh nodes are assigned to this RenderGroup in the render order of the Scene Graph|
 
 LuaScripts generally belong to a scene. You will find them showing up in the Resource view for scripts which are positioned in the top-level of the scene hierarchy. We plan to remove this in an upcoming version of the composer.
 
@@ -123,9 +123,7 @@ Furthermore, Prefab(Instance) scene content is instantiated (copied) on all plac
 
 ## Default Resources
 
-Every RaCo scene contains default Ramses resources for Materials and Meshes. Currently, these will also get exported.
-
-<!-- TODO update docs once we fix that -->
+Ramses Composer contains default resources, serving as placeholder resources. A default resource used in a scene will also get exported. Multiple objects share the same default resource, independent of whether this object is in the current project or imported from a different project as an external reference or otherwise. This is done to prevent unnecessary default resource duplicates upon exporting the scene.
 
 ### CubeMap
 
@@ -139,9 +137,9 @@ The default Mesh in RaCo is a simple cube.
 
 There are two default Materials.
 
-Using a Mesh that does not contain Normals will result in the first default Material: a single matte color with the RGBA values [1.0, 0.0, 0.2, 1.0] that spans the entire Mesh.
+Using a Mesh that does not contain normals will result in the first default Material: a single matte color with the RGBA values [1.0, 0.0, 0.2, 1.0] that spans the entire Mesh.
 
-Using a Mesh that contains Normals but no Material will result in the second default Material: an orange color with the RGBA values [1.0, 0.5, 0.0, 1.0] and surface reflection.
+Using a Mesh that contains normals but no Material will result in the second default Material: an orange color with the RGBA values [1.0, 0.5, 0.0, 1.0] and surface reflection.
 
 ### Texture
 

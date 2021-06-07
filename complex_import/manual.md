@@ -184,6 +184,10 @@ a material assigned to them and you have to export materials in the glTF export 
 Also worth noting - after import, the material settings (shader uniforms) are taken over from the material instance in the Composer. If you want to take over
 existing settings, you have to manually transfer them (or copy-paste the newly imported MeshNode over the existing one).
 
+## A note on negative scale values
+
+Currently, Ramses Composer uses [assimp](https://github.com/assimp/assimp) to import glTF files and convert the glTF data to Ramses Composer data. During testing, we found out that when encountering negative scale values during a node import, Assimp flips all other positive scale values of that node and compensates with respective 180 degree rotations. This approach does not harmonize with how Ramses handles node scaling and rotation. As a preventive measure, importing nodes with negative scale values is temporarily prohibited in Ramses Composer. We are currently looking into replacing assimp with a more one-to-one-import-friendly glTF importer.
+
 ## General note on Blender modifiers
 
 The Blender modifier is a _non-destructive_ operation. It will not modify the original object, and you can reverse the modifier at any time.
