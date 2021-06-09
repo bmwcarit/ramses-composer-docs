@@ -52,3 +52,5 @@ The authoring tool for the RAMSES graphics toolchain.
 [Using the Log Output Console](using_log_console/manual.md)
 
 [Common Issues](common_issues/manual.md)
+
+[Crash dumps](crash_dumps/manual.md)
