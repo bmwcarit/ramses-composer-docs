@@ -10,10 +10,10 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 
 # Ramses Composer versions and dependencies
 
-|Ramses Composer   |Ramses     |Ramses Logic|Date    |Notes                                        |
-|------------------|-----------|------------|--------|---------------------------------------------|
-|0.8.0             |27.0.102   |0.6.0       |Upcoming| Next planned major release                  |
-|0.7.3             |27.0.101   |0.5.3       |04.2021 | Latest supported release                    |
+|Ramses Composer   |Ramses     |Ramses Logic|Date    |Notes                                                 |
+|------------------|-----------|------------|--------|------------------------------------------------------|
+|0.8.1             |27.0.103   |0.6.1       |06.2021 | Latest supported release, first open source release  |
+|0.7.3             |27.0.101   |0.5.3       |04.2021 |                                                      |
 
 
 # Switching to a newer version of the Composer (Project files)
