@@ -15,9 +15,8 @@ This repository contains the documentation for Ramses Composer, the authoring to
 
 ## Related resources
 
-You will find the source code of Ramses Composer and instructions on how to build it in the main [Ramses Composer repository](https://github.com/GENIVI/ramses-composer).
-
-Ramses Composer builds on the the RAMSES logic engine ([user manual](https://ramses-logic.readthedocs.io/en/latest/) / [source repository](https://github.com/GENIVI/ramses-logic)) and the RAMSES renderer ([wiki pages](https://github.com/GENIVI/ramses/wiki) / [API documentation](https://genivi.github.io/ramses/) / [source repository](https://github.com/GENIVI/ramses)).
+You will find the source code of Ramses Composer and instructions on how to build it in the main [Ramses Composer repository](https://github.com/GENIVI/ramses-composer). For a general overview of the Ramses ecosystem and its other components, visit
+also [these pages](https://ramses-sdk.readthedocs.io/).
 
 ## License
 
