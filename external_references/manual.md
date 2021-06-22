@@ -33,6 +33,10 @@ To summarize, External References work with
 * Meshes
 * Scripts
 
+Only scene files which have been _created independently_ from the consumer scene may be used as a source scene for external reference objects. 
+
+Independently created scenes are only those that are created by File/New followed by File/Save. Scenes files created using either File/SaveAs from within RamsesComposer or by using OS file copy operations do _not_ count as independently created and can not be used as source of external reference objects.
+
 This allows you to split up your project into multiple modules with their own scene files and put them into a version control system as separate entities. This works very much like you would handle software modules or libraries in software development. This way you can
 
 * use version control to select which version of a module scene you want to use and when you want to switch to a different version
@@ -160,6 +164,17 @@ To remove an External Prefab, simply delete it from the Prefab View. As long as 
 Note that only objects required by other External References are protected this way. Prefabs and resources that are actively used in the scene graph can be deleted any time, this will just invalidate the corresponding references in the scene graph.
 
 Likewise, you can delete resources manually. But Ramses Composer can do this for you and detect and delete all resources currently not used by any other objects can be automatically. Select *Delete Unused Resources* from the context menu in the *Resources* view. This will apply to both External References and normal resource objects. It is a good idea to save your scene beforehand, just in case more things disappear than expected.
+
+
+## Splitting existing Projects into Modules
+
+To split an existing scene into multiple modules and integrate them into the original master scene using external references the following approximate workflow can be used
+
+1. Prefab conversion: create Prefabs for the parts of the scenegraph that should be placed into a module scene.
+2. Creating module scene: Deep cut the Prefabs and paste them into a newly created scene for the module. This may be more convenient when using multiple RamsesComposer instances. The pasting into the module scene needs to use normal paste and not paste as external reference.
+3. Use module in master scene: add the newly created module scene to the Projects Browser, copy the Prefabs from there and paste them into the master scene _as external references_. Set the template of prefab instances to the pasted prefabs. 
+
+The deep cut operation of the Prefab will include all resources that are used by the Prefab and is needed to ensure that the module scene will contain the prefab with all its dependencies. 
 
 
 ## Moving Project Files
