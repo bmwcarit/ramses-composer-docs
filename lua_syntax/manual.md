@@ -22,7 +22,7 @@ This section explains the basics about _Lua_ scripts and how to use them interac
 ## Why should you use Lua scripts
 
 Using _Lua_ scripts is generally optional, you don't need them to create a basic, static 3D scene.
-However, they allow you to include dynamic behaviour and some business logic in your scene. They enable you  to create interfaces and "translate" given information to an specific behaviour and pass on this information via _links_.
+However, they allow you to include dynamic behaviour and some business logic in your scene. They enable you to create interfaces and "translate" given information to an specific behaviour and pass on this information via _links_.
 
 For example:
 * you get information about the traveled distance as `float`
