@@ -171,7 +171,7 @@ Likewise, you can delete resources manually. But Ramses Composer can do this for
 To split an existing scene into multiple modules and integrate them into the original master scene using external references the following approximate workflow can be used:
 
 1. Prefab conversion: create Prefabs for the parts of the scenegraph that should be placed into a module scene.
-2. Creating module scene: Deep cut the Prefabs and paste them into a newly created scene for the module. This may be more convenient when using multiple RamsesComposer instances. The pasting into the module scene needs to use normal paste and not paste as external reference.
+2. Creating module scene: Deep cut the Prefabs and paste them into a newly created scene for the module. An easy way to do this is to use multiple RamsesComposer instances. When pasting into the module scene, use normal paste and not `paste as external reference`.
 3. Use module in master scene: add the newly created module scene to the Projects Browser, copy the Prefabs from there and paste them into the master scene _as external references_. Set the template of prefab instances to the pasted prefabs. 
 
 The deep cut operation of the Prefab will include all resources that are used by the Prefab and is needed to ensure that the module scene will contain the prefab with all its dependencies. 
