@@ -41,6 +41,8 @@ eliminate duplication and maintain clear structure? The following tutorials prov
 
 [External references](external_references/manual.md) - Explains how to import and use building blocks from different projects.
 
+[Render pipeline](./render_pipeline/manual.md) - Support for render order, render passes, render targets and render buffers.
+
 [Best practices](./best_practices/manual.md) - Suggests best practices for project structure.
 
 ## Advanced guides
