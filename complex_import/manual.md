@@ -77,7 +77,7 @@ over the `Import GLTF Assets` function, which is available
 via right click on any node in the `Scene Graph` view. See the
 [details section on glTF import](#gltf-import-details) for more details.
 
-In this example, we will import all content from the `structure.gltf` file which was
+In this example we will import all content from the `structure.gltf` file which was
 exported from Blender:
 
 ![](./docs/import_dialogue.png)
@@ -95,8 +95,8 @@ Adapt the root node too:
 ![](./docs/node_params.png)
 
 Since this example uses transparent objects which are order-dependent, you need a deterministic
-ordering mechanics to ensure consistent rendering. Select the MainRenderLayer object in the Resources
-menu and choose the option 'Scene graph order' in the `Render Order` field:
+order to ensure consistent rendering. Select the MainRenderLayer object in the Resources
+menu and choose the option `Scene graph order` in the `Render Order` field:
 
 ![](./docs/render_order.png)
 
@@ -185,7 +185,7 @@ As soon as the glTF file changed, you can immediately observe the new geometry i
 
 You can arbitrarily modify all meshes' geometry and re-export - and the mesh's changes will be automatically imported by the Composer.
 Note that nodes and their transformations will not be re-imported. If you move an object or rotate it differently - this change
-will not be re-imported by the Composer. You can import the entire file again, copy-paste only the nodes that you want re-imported, then delete
+will not be re-imported by the Composer. You can import the entire file again, copy-paste only the nodes that you want re-imported and then finally delete
 the second copy of the import.
 
 ## A note on materials
@@ -205,7 +205,7 @@ existing settings, you have to manually transfer them (or copy-paste the newly i
 
 The glTF import option prompts the
 selection of a glTF file to import, then proceeds to perform
-a one-time import of all nodes and meshes from the specified file. This option requires
+a one-time import of all nodes and meshes from that specified file. This option requires
 selecting (right-click) a node in the Scene Graph view and attaches a root node
 with the name of the glTF file under the selected node. All imported nodes are attached under
 that root node. The import
