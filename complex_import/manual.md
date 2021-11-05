@@ -58,9 +58,9 @@ To make it easier to match objects after the import, the naming convention for a
 
 * Cylinder/TX+2   (a cylinder object which is translated along the X axis by 2 units in the positive direction)
 * Cone/TY+5/RX-90  (a cone which is translated along Y by +5 units, and rotated around X by -90 degrees)
+* Meshes have a 'Mesh' suffix in the name, Materials have a 'Mat_' prefix
 
-<!-- TODO Violin There is a problem here - negative scaling doesn't work, and ramses's scale + rotate does not work like
-in blender. We should fix this, and re-add these transforms to the example project -->
+<!-- TODO Violin There is a problem here rotations still don't work as expected, investigate more -->
 
 There are also a few `Pivot` objects which don't have mesh data of their own, but only serve as local
 coordinate systems for their children:
@@ -68,21 +68,39 @@ coordinate systems for their children:
 ![](./docs/pivots.png)
 
 We want to import the Blender contents into the Ramses Composer and keep the original node structure. In
-the [Hello World](../hello_world/manual.md) or the [Monkey](../monkey/manual.md) examples we learned
+the [Hello World](../hello_world/manual.md) and the [Monkey](../monkey/manual.md) examples we learned
 how to import single meshes. The monkeys example creates three instances of a mesh, but the
 referenced glTF file still contains only one mesh. For more complex scenes, especially such that contain
 multiple nodes arranged hierarchically, it's not
 convenient to import these one by one. The Ramses Composer supports the import of an entire scene graph
 over the `Import GLTF Assets` function, which is available
-in the `File` menu or via right click on the `Scene Graph` or `Resources` views. The option prompts the
-selection of a glTF file to import, then proceeds to perform
-a one-time import of all nodes and meshes in the specified file. After the import is finished, the result looks something like this:
+via right click on any node in the `Scene Graph` view. See the
+[details section on glTF import](#gltf-import-details) for more details.
+
+In this example we will import all content from the `structure.gltf` file which was
+exported from Blender:
+
+![](./docs/import_dialogue.png)
+
+After the import is finished, the result looks something like this:
 
 ![](./docs/after_import_viewport.png)
 
 You must adapt the default camera parameters to have a better view of the scene:
 
 ![](./docs/camera_params.png)
+
+Adapt the root node too:
+
+![](./docs/node_params.png)
+
+Since this example uses transparent objects which are order-dependent, you need a deterministic
+order to ensure consistent rendering. Select the MainRenderLayer object in the Resources
+menu and choose the option `Scene graph order` in the `Render Order` field:
+
+![](./docs/render_order.png)
+
+<!-- TODO Violin add link to render order docs here -->
 
 The import function puts all imported nodes inside a new root node with name equal to the name of the glTF file:
 
@@ -103,6 +121,9 @@ just assign a 4-component color, set alpha values lower than 1.0, and disable th
 After you do this for all MeshNodes and use different color values, the scene starts to look like this:
 
 ![](./docs/translucent.png)
+
+Make sure to create separate Material instances for each MeshNode, and assign them separately. This way we can
+update the geometry in the glTF file without losing the link to the Materials.
 
 With this scene setup, we can now change the source graphics and/or the import settings of the
 Composer and observe the changes through the semi-transparent objects.
@@ -130,7 +151,7 @@ Let's do some experiments!
 Select one of the Mesh resources and change its index property, e.g. set the index of `TorusMesh/TZ+1`
 from 9 to 6. The torus will immediately transform to a cone! But why? If you inspect the mesh index
 of `ConeMesh/SY3Z4` you will see it is also 6. That's the mesh of one of the cone objects! You just told the
-`Torus` mesh to steal the mesh geometry from the `Cone` object.
+`Torus` mesh to use the mesh geometry from the `Cone` object.
 
 In a real-world project, you wouldn't want to change the mesh indices manually for an imported mesh. This experiment was
 meant to show how the link between imported objects towards external
@@ -163,13 +184,8 @@ As soon as the glTF file changed, you can immediately observe the new geometry i
 ![](./docs/voxel_modifier_5.png)
 
 You can arbitrarily modify all meshes' geometry and re-export - and the mesh's changes will be automatically imported by the Composer.
-There is a limitation though: the nodes and their transformations will not be re-imported. If you move an object or rotate it differently - this change
-will not be re-imported by the Composer. As a workaround, you can import the entire file again, copy-paste only the nodes that you want re-imported, then delete
-the second copy of the import.
-
-<!-- TODO Violin we need to fix this limitation - it is a major blocker for a fluent workflow, and doesn't scale well with larger projects.
-It is not an option to force an artist to put a single mesh per blender file, and neither is an option to always re-import and
-reconfigure all objects -->
+Note that nodes and their transformations will not be re-imported. If you move an object or rotate it differently - this change
+will not be re-imported by the Composer. You can re-import the file, select only the nodes that you want updated and then finally cut-and paste them in place of the old ones.
 
 ## A note on materials
 
@@ -184,9 +200,37 @@ a material assigned to them and you have to export materials in the glTF export 
 Also worth noting - after import, the material settings (shader uniforms) are taken over from the material instance in the Composer. If you want to take over
 existing settings, you have to manually transfer them (or copy-paste the newly imported MeshNode over the existing one).
 
-## A note on negative scale values
+## glTF import details
 
-Currently, Ramses Composer uses [assimp](https://github.com/assimp/assimp) to import glTF files and convert the glTF data to Ramses Composer data. During testing, we found out that when encountering negative scale values during a node import, Assimp flips all other positive scale values of that node and compensates with respective 180 degree rotations. This approach does not harmonize with how Ramses handles node scaling and rotation. As a preventive measure, importing nodes with negative scale values is temporarily prohibited in Ramses Composer. We are currently looking into replacing assimp with a more one-to-one-import-friendly glTF importer.
+The glTF import option prompts the
+selection of a glTF file to import, then proceeds to perform
+a one-time import of all nodes and meshes from that specified file. This option requires
+selecting (right-click) a node in the Scene Graph view and attaches a root node
+with the name of the glTF file under the selected node. All imported nodes are attached under
+that root node. The import
+menu also offers a selection menu to import only specific objects from the glTF file.
+
+<!-- TODO Violin what happens with more than one scene? Also, add exact list of supported glTF objects -->
+
+Here is a list of the glTF objects currently supported:
+
+* scenes
+* nodes
+* meshes
+* mesh data (accessors, bufferViews, buffers, etc.)
+
+The following objects are not supported (yet):
+
+* cameras
+* animations
+* images/samples/textures
+* materials
+
+Even though materials are not supported, there is a special behavior to use material/shaders created in the
+Ramses Composer project. If a MeshNode N references a material M in the glTF file, and a material with name M
+exists in the Ramses Composer project, then the imported node N will automatically reference material M.
+This enables managing a material library in the Ramses Composer project and re-using it for the same
+scene after it was changed and re-imported.
 
 ## General note on Blender modifiers
 

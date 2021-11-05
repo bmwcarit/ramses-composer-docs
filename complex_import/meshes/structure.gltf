@@ -1,6 +1,6 @@
 {
     "asset" : {
-        "generator" : "Khronos glTF Blender I/O v1.4.40",
+        "generator" : "Khronos glTF Blender I/O v1.6.16",
         "version" : "2.0"
     },
     "extensionsUsed" : [
@@ -33,7 +33,12 @@
         },
         {
             "mesh" : 1,
-            "name" : "Cone/TZ+4",
+            "name" : "Cone/TZ+4/SZ-1",
+            "scale" : [
+                1,
+                1,
+                -1
+            ],
             "translation" : [
                 0,
                 0,
@@ -165,7 +170,178 @@
                     "transmissionFactor" : 0.8260869383811951
                 }
             },
-            "name" : "Translucent",
+            "name" : "Mat_ConeMesh/TY+5/RX-90",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.8000000715255737,
+                    0.7760764956474304,
+                    0.7760764956474304,
+                    0.5893719792366028
+                ],
+                "metallicFactor" : 0.5265700817108154,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "doubleSided" : true,
+            "extensions" : {
+                "KHR_materials_transmission" : {
+                    "transmissionFactor" : 0.8260869383811951
+                }
+            },
+            "name" : "Mat_ConeMesh/TZ+4/SZ-1",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.8000000715255737,
+                    0.7760764956474304,
+                    0.7760764956474304,
+                    0.5893719792366028
+                ],
+                "metallicFactor" : 0.5265700817108154,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "doubleSided" : true,
+            "extensions" : {
+                "KHR_materials_transmission" : {
+                    "transmissionFactor" : 0.8260869383811951
+                }
+            },
+            "name" : "Mat_CylinderMesh/Centered",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.8000000715255737,
+                    0.7760764956474304,
+                    0.7760764956474304,
+                    0.5893719792366028
+                ],
+                "metallicFactor" : 0.5265700817108154,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "doubleSided" : true,
+            "extensions" : {
+                "KHR_materials_transmission" : {
+                    "transmissionFactor" : 0.8260869383811951
+                }
+            },
+            "name" : "Mat_CylinderMesh/TX+2",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.8000000715255737,
+                    0.7760764956474304,
+                    0.7760764956474304,
+                    0.5893719792366028
+                ],
+                "metallicFactor" : 0.5265700817108154,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "doubleSided" : true,
+            "extensions" : {
+                "KHR_materials_transmission" : {
+                    "transmissionFactor" : 0.8260869383811951
+                }
+            },
+            "name" : "Mat_CylinderMesh/TY+2",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.8000000715255737,
+                    0.7760764956474304,
+                    0.7760764956474304,
+                    0.5893719792366028
+                ],
+                "metallicFactor" : 0.5265700817108154,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "doubleSided" : true,
+            "extensions" : {
+                "KHR_materials_transmission" : {
+                    "transmissionFactor" : 0.8260869383811951
+                }
+            },
+            "name" : "Mat_ConeMesh/SZ+2",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.8000000715255737,
+                    0.7760764956474304,
+                    0.7760764956474304,
+                    0.5893719792366028
+                ],
+                "metallicFactor" : 0.5265700817108154,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "doubleSided" : true,
+            "extensions" : {
+                "KHR_materials_transmission" : {
+                    "transmissionFactor" : 0.8260869383811951
+                }
+            },
+            "name" : "Mat_ConeMesh/SY3Z4",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.8000000715255737,
+                    0.7760764956474304,
+                    0.7760764956474304,
+                    0.5893719792366028
+                ],
+                "metallicFactor" : 0.5265700817108154,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "doubleSided" : true,
+            "extensions" : {
+                "KHR_materials_transmission" : {
+                    "transmissionFactor" : 0.8260869383811951
+                }
+            },
+            "name" : "Mat_TorusMesh/TX+2",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.8000000715255737,
+                    0.7760764956474304,
+                    0.7760764956474304,
+                    0.5893719792366028
+                ],
+                "metallicFactor" : 0.5265700817108154,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "doubleSided" : true,
+            "extensions" : {
+                "KHR_materials_transmission" : {
+                    "transmissionFactor" : 0.8260869383811951
+                }
+            },
+            "name" : "Mat_TorusMesh/TY+2/TZ-1",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.8000000715255737,
+                    0.7760764956474304,
+                    0.7760764956474304,
+                    0.5893719792366028
+                ],
+                "metallicFactor" : 0.5265700817108154,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "doubleSided" : true,
+            "extensions" : {
+                "KHR_materials_transmission" : {
+                    "transmissionFactor" : 0.8260869383811951
+                }
+            },
+            "name" : "Mat_TorusMesh/TZ+1",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [
                     0.8000000715255737,
@@ -199,7 +375,7 @@
                         "POSITION" : 2
                     },
                     "indices" : 1,
-                    "material" : 0
+                    "material" : 1
                 }
             ]
         },
@@ -211,7 +387,7 @@
                         "POSITION" : 3
                     },
                     "indices" : 4,
-                    "material" : 0
+                    "material" : 2
                 }
             ]
         },
@@ -223,7 +399,7 @@
                         "POSITION" : 5
                     },
                     "indices" : 4,
-                    "material" : 0
+                    "material" : 3
                 }
             ]
         },
@@ -235,7 +411,7 @@
                         "POSITION" : 6
                     },
                     "indices" : 4,
-                    "material" : 0
+                    "material" : 4
                 }
             ]
         },
@@ -247,7 +423,7 @@
                         "POSITION" : 7
                     },
                     "indices" : 1,
-                    "material" : 0
+                    "material" : 5
                 }
             ]
         },
@@ -259,7 +435,7 @@
                         "POSITION" : 8
                     },
                     "indices" : 1,
-                    "material" : 0
+                    "material" : 6
                 }
             ]
         },
@@ -271,7 +447,7 @@
                         "POSITION" : 9
                     },
                     "indices" : 10,
-                    "material" : 0
+                    "material" : 7
                 }
             ]
         },
@@ -283,7 +459,7 @@
                         "POSITION" : 11
                     },
                     "indices" : 10,
-                    "material" : 0
+                    "material" : 8
                 }
             ]
         },
@@ -295,7 +471,7 @@
                         "POSITION" : 12
                     },
                     "indices" : 10,
-                    "material" : 0
+                    "material" : 9
                 }
             ]
         }
