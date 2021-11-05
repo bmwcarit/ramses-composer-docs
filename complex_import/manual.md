@@ -185,8 +185,7 @@ As soon as the glTF file changed, you can immediately observe the new geometry i
 
 You can arbitrarily modify all meshes' geometry and re-export - and the mesh's changes will be automatically imported by the Composer.
 Note that nodes and their transformations will not be re-imported. If you move an object or rotate it differently - this change
-will not be re-imported by the Composer. You can import the entire file again, copy-paste only the nodes that you want re-imported and then finally delete
-the second copy of the import.
+will not be re-imported by the Composer. You can re-import the file, select only the nodes that you want updated and then finally cut-and paste them in place of the old ones.
 
 ## A note on materials
 
