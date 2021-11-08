@@ -16,19 +16,19 @@ This example shows different ways to define rendering order for objects in a sce
 
 # Overview
 
-Usually, the rendering order of objects is not something to take care of, as that is something
-that the depth buffer takes care of: objects which are in front will overwrite the pixels of
-objects in the back. However, sometimes it's important to have a specific order of objects.
+The rendering order of objects is usually not something to manage manually. Typically
+the depth buffer takes care of that: objects which are in front will overwrite the pixels of
+objects in the back. But sometimes it's important to have a specific order of objects.
 For example transparent objects need to be rendered back-to-front, as they don't fully occlude
-each other. Also, some techniques like shadow mapping, reflections, or depth-prepass require
+each other. Also, some techniques like shadow mapping, reflections, or depth-prepasses require
 a given order or special rules which objects should be rendered at which time.
 
 In this chapter we demonstrate different ordering techniques and how to use and combine them.
 
 # Contents of a Ramses Composer project
 
-In order to understand how ordering of content works, it's essential to understand first
-what the content is inside a Ramses Composer project.
+In order to understand how ordering of content works, it's essential to understand
+the contents of a Ramses Composer project first.
 
 A newly created project contains following default objects (which can be deleted later):
 
@@ -103,7 +103,7 @@ Note that if tags have the same number, their relative order is not defined. The
 
 ## Order based on RenderPass slots
 
-Example project: [3_by_render_pass](./3_by_render_pass.rca).
+Example project: [3_by_render_pass_slots](./3_by_render_pass_slots.rca).
 
 Finally, a `RenderPass` is the place where `RenderLayer` objects are collected and rendered with a
 `Camera` object. This is where `RenderLayer` can be ordered between each other too, by the slots they are
@@ -119,6 +119,35 @@ The layers are ordered in different slots in the main `RenderPass`:
 
 If you change the order in these slots, the quads will be rendered in the corresponding order.
 
+## Order with multiple RenderPasses
+
+Example project: [4_by_render_pass](./4_by_render_pass.rca).
+
+In the previous sections, we had a single `RenderPass` which was used to render all content.
+It is possible to have more than one `RenderPass` instances which are rendered relative to each other.
+This is also the technique to use if you want to use different cameras!
+
+In this example, we have a dedicated `RenderPass` for each quad - red, blue and green:
+
+![](./docs/multiple_passes.png)
+
+Notice that we still need separate `RenderLayers` too. RenderPasses don't group or filter
+objects in any way - that's done by the `RenderLayers` and their tags.
+
+In this setup, each `RenderPass` has a single `RenderLayer` attached to it, instead of all three.
+The render order of the `RenderPasses` is defined by their `Order` property:
+
+![](./docs/renderpass_order.png)
+
+Countrary to `RenderLayer` tags, `RenderPasses` must be ordered with unique order. If you have two
+`RenderPass` instances with the same order, you will get an error:
+
+![](./docs/renderpass_order_error.png)
+
+This example has the exact same result as the previous one. However now each `RenderPass` can
+have a different camera! Go ahead and try it - create a second camera, assign it to one
+of the passes, change it's settings and observe the result.
+
 # Combining the techniques
 
 The ordering mechanisms described in this example are compatible to each other and can be combined.
@@ -127,3 +156,5 @@ It is also possible to refer to tags used in nested projects (see [external refe
 
 To understand which Ramses objects are generated based on the RenderPass, RenderLayer and SceneGraph
 structures, see [the data and scopes section](../data_and_scopes/manual.md).
+
+<!-- TODO add section for material filters and link it here -->
