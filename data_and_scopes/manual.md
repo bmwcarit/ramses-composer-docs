@@ -100,17 +100,14 @@ Composer objects:
 |Mesh               |Resources          |ramses::ArrayResource                                  |                           | Holds geometry data referenced by ramses::MeshNode's ramses::GeometryBinding |
 |Texture            |Resources          |ramses::Texture2D  ramses::TextureSampler              |                           | Currently static |
 |CubeMap            |Resources          |ramses::TextureCube  ramses::TextureSampler            |                           | Currently static |
-|LuaScript          |Scene              |                                                       | rlogic::LuaScript         | LuaScripts can be global (Resources tab) or local (Scene Graph tab) |
+|LuaScript          |Scene              |                                                       | rlogic::LuaScript         |                                                                     |
 |PrefabInstance     |Scene              | Various                                               | Various                   | Exported content depends on referenced Prefab. Each PrefabInstance creates its own copy based on Prefab contents.  |
 |Prefab             |Prefab             |                                                       |                           | Content created only if referenced by a PrefabInstance. Underlying nodes and scripts are exported as if they had their own Scene Graph. Ramses nodes are parented to the parent node of the corresponding PrefabInstance |
 |RenderBuffer       |Resources          | ramses::RenderBuffer                                  |                           | A direct mapping to the Ramses render buffer. |
-|RenderLayer        |Resources          | ramses::RenderGroup                                   |                           | Each render layer creates a render group. The renderables in a render group are determined by tags. The order of the renderables is either given by manually specifying the order index for each tag, or given by the scene graph order. |
+|RenderLayer        |Resources          | ramses::RenderGroup                                   |                           | Each render layer creates a ramses::RenderGroup. The renderables in a render group are determined by tags. The order of the renderables is either given by manually specifying the order index for each tag, or given by the scene graph order. |
 |RenderPass         |Resources          | ramses::RenderPass                                    |                           | A direct mapping to the Ramses render pass. |
 |RenderTarget       |Resources          | ramses::RenderTarget                                  |                           | A direct mapping to the Ramses render target. |
 
-LuaScripts generally belong to a scene. You will find them showing up in the Resource view for scripts which are positioned in the top-level of the scene hierarchy. We plan to remove this in an upcoming version of the composer.
-
-<!-- TODO Update docs once we remove scripts from resources window view -->
 
 LuaScripts which belong to a PrefabInstance are created as if they were directly attached to a scene. Currently, all such scripts are exported as copies - one copy per PrefabInstance.
 
