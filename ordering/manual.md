@@ -118,6 +118,7 @@ The layers are ordered in different slots in the main `RenderPass`:
 ![](./docs/renderpass_slots.png)
 
 If you change the order in these slots, the quads will be rendered in the corresponding order.
+Go ahead and try it out!
 
 ## Order with multiple RenderPasses
 
@@ -132,7 +133,8 @@ In this example, we have a dedicated `RenderPass` for each quad - red, blue and 
 ![](./docs/multiple_passes.png)
 
 Notice that we still need separate `RenderLayers` too. RenderPasses don't group or filter
-objects in any way - that's done by the `RenderLayers` and their tags.
+objects in any way - that's done by the `RenderLayers` and their tags. `RenderPasses` can
+only reference `RenderLayers` which have already collected and possibly sorted their content.
 
 In this setup, each `RenderPass` has a single `RenderLayer` attached to it, instead of all three.
 The render order of the `RenderPasses` is defined by their `Order` property:
