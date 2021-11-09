@@ -14,7 +14,7 @@ function interface()
 
     -- Output: direction of light in that static position
     OUT.light_direction = VEC3F
-    -- Output: direction of light in that static position
+    -- Output: color of light
     OUT.light_color = VEC3F
 end
 
