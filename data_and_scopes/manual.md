@@ -94,20 +94,20 @@ Composer objects:
 |-------------------|-------------------|-------------------------------------------------------|---------------------------|-------------------------------------|
 |Node               |Scene              |ramses::Node                       | rlogic::RamsesNodeBinding | Child nodes are assigned as children in Ramses. RamsesNodeBinding points to Ramses node. |
 |MeshNode           |Scene              |ramses::MeshNode ramses::Appearance ramses::GeometryBinding| rlogic::RamsesNodeBinding rlogic::RamsesAppearanceBinding| Same as Node, but with Appearance and GeometryBinding which refers to array resources (see Mesh) |
-|PerspectiveCamera  |Scene              |ramses::PerspectiveCamera                              | rlogic::RamsesCameraBinding | Most recently modified object of this type is assigned to the default Ramses RenderPass |
-|OrthographicCamera |Scene              |ramses::OrthographicCamera                             | rlogic::RamsesCameraBinding | Most recently modified object of this type is assigned to the default Ramses RenderPass |
+|PerspectiveCamera  |Scene              |ramses::PerspectiveCamera                              | rlogic::RamsesCameraBinding | Are assigned by the user to render passes |
+|OrthographicCamera |Scene              |ramses::OrthographicCamera                             | rlogic::RamsesCameraBinding | Are assigned by the user to render passes |
 |Material           |Resources          |ramses::Effect                                         |                           | Holds the Effect, not the appearance and uniform values (see MeshNode) |
 |Mesh               |Resources          |ramses::ArrayResource                                  |                           | Holds geometry data referenced by ramses::MeshNode's ramses::GeometryBinding |
 |Texture            |Resources          |ramses::Texture2D  ramses::TextureSampler              |                           | Currently static |
 |CubeMap            |Resources          |ramses::TextureCube  ramses::TextureSampler            |                           | Currently static |
-|LuaScript          |Scene or Resources |                                                       | rlogic::LuaScript         | LuaScripts can be global (Resources tab) or local (Scene Graph tab) |
+|LuaScript          |Scene              |                                                       | rlogic::LuaScript         |                                                                     |
 |PrefabInstance     |Scene              | Various                                               | Various                   | Exported content depends on referenced Prefab. Each PrefabInstance creates its own copy based on Prefab contents.  |
 |Prefab             |Prefab             |                                                       |                           | Content created only if referenced by a PrefabInstance. Underlying nodes and scripts are exported as if they had their own Scene Graph. Ramses nodes are parented to the parent node of the corresponding PrefabInstance |
-|                   |                   | ramses::RenderPass                                    |                           | There is a single global RenderPass which contains a single global RenderGroup. All mesh nodes are assigned to this RenderGroup in the render order of the Scene Graph|
+|RenderBuffer       |Resources          | ramses::RenderBuffer                                  |                           | A direct mapping to the Ramses render buffer. |
+|RenderLayer        |Resources          | ramses::RenderGroup                                   |                           | Each render layer creates a ramses::RenderGroup. The renderables in a render group are determined by tags. The order of the renderables is either given by manually specifying the order index for each tag, or given by the scene graph order. |
+|RenderPass         |Resources          | ramses::RenderPass                                    |                           | A direct mapping to the Ramses render pass. |
+|RenderTarget       |Resources          | ramses::RenderTarget                                  |                           | A direct mapping to the Ramses render target. |
 
-LuaScripts generally belong to a scene. You will find them showing up in the Resource view for scripts which are positioned in the top-level of the scene hierarchy. We plan to remove this in an upcoming version of the composer.
-
-<!-- TODO Update docs once we remove scripts from resources window view -->
 
 LuaScripts which belong to a PrefabInstance are created as if they were directly attached to a scene. Currently, all such scripts are exported as copies - one copy per PrefabInstance.
 
