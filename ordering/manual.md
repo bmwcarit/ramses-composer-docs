@@ -12,7 +12,7 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 
 ![](./docs/viewport_preview.png)
 
-This example shows different ways to define rendering order for objects in a scene.
+This example shows different ways to define rendering order of objects in a scene.
 
 # Overview
 
@@ -32,7 +32,7 @@ the contents of a Ramses Composer project first.
 
 A newly created project contains following default objects (which can be deleted later):
 
-* A scene graph with one `Node`, one (child) `MeshNode`, and a camera
+* A scene graph with one `Node`, one (child) `MeshNode`, and a `Camera`
 
 ![](./docs/default_scene_contents.png)
 
@@ -60,7 +60,7 @@ The way this works is:
 
 # Ordering techniques
 
-The order of rendering is influenced by three factors and can be conbined in different ways.
+The order of rendering is influenced by three factors and can be combined in different ways.
 We demonstrate each of them separately in the next sections, and you can find a separate example
 project for each of them. Each project has three MeshNodes with different colors rendered in a specific way, but the ordering technique is different for each of them.
 
@@ -68,7 +68,7 @@ project for each of them. Each project has three MeshNodes with different colors
 
 Example project: [1_by_scene_graph](./1_by_scene_graph.rca).
 
-The simples approach to order MeshNodes is by their order in the scene graph.
+The simplest approach to order MeshNodes is by their order in the scene graph.
 To activate this option, you can select the `Scene graph order` in the RenderLayer panel:
 
 ![](./docs/scene_graph_order.png)
@@ -95,7 +95,7 @@ has its own order number assigned to it:
 ![](./docs/color_tags_2.png)
 
 Furthermore, the `Render order` property further down is set to `Render order value in Renderable tags`.
-This means that this `RenderLayer` will sort its content based on the numbers assigned with each tag.
+This means that this `RenderLayer` will sort its content based on the numbers assigned to each tag.
 In particular, it will sort tags based on their Render Order (starting with lowest), then sort all
 mesh nodes which fit to one or more of the tags, and will sort them based on their tags order.
 
@@ -141,7 +141,7 @@ The render order of the `RenderPasses` is defined by their `Order` property:
 
 ![](./docs/renderpass_order.png)
 
-Countrary to `RenderLayer` tags, `RenderPasses` must be ordered with unique order. If you have two
+Contrary to `RenderLayer` tags, `RenderPasses` must be ordered with unique order. If you have two
 `RenderPass` instances with the same order, you will get an error:
 
 ![](./docs/renderpass_order_error.png)
