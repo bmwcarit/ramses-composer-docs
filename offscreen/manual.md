@@ -46,7 +46,7 @@ rendered to which buffer at which time.
 Let's start with the RenderLayers. We need two such layers - one for the monkey, one for the quad.
 Each of them uses a different tag to filter their content - `monkey` and `quad` respectively.
 
-Here is how the `RenderLayer` of the monkey looks like this (it uses a `monkey` tag to collect the monkey mesh):
+Here is how the `RenderLayer` of the monkey looks like (it uses a `monkey` tag to collect the monkey mesh):
 
 ![](./docs/renderlayer.png)
 
