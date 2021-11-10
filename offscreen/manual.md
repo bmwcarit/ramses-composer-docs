@@ -111,7 +111,7 @@ We only highlight the steps specific to this example here:
     * You can also just copy the project and delete two of the monkey heads
 * Create the Quad
     * Create a standard "Plane" mesh in Blender and export as glTF (quad.gltf)
-        * Make sure to export the exture coordinates!
+        * Make sure to export the texture coordinates!
     * Create a Quad Mesh resource and set the [quad.gltf](./meshes/quad.gltf) file as a source for its data
     * Create a Quad Material from the `resolve` GLSL shaders. Leave the uniforms unset for now
     * Link the Quad MeshNode to the Quad Mesh and Quad Material from above
