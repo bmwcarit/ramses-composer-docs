@@ -96,10 +96,11 @@ has its own order number assigned to it:
 
 Furthermore, the `Render order` property further down is set to `Render order value in Renderable tags`.
 This means that this `RenderLayer` will sort its content based on the numbers assigned to each tag.
-In particular, it will sort tags based on their Render Order (starting with lowest), then sort all
-mesh nodes which fit to one or more of the tags, and will sort them based on their tags order.
 
-Note that if tags have the same number, their relative order is not defined. The same is true for mesh nodes which fit to more than one tag, and the tags have different order.
+The exact rules for the ordering are as follows:
+* If Node A has tag T1 and Node B has tag T2 where T1 < T2, then Node A will be rendered before node B
+* If T1 == T2, the order will be decided by the Ramses Composer (possibly optimized to minimize OpenGL state changes)
+* If Node A has two or more tags tags T1 and T2 and T1 != T2 != ..., then the Composer will generate an error
 
 ## Order based on RenderPass slots
 
