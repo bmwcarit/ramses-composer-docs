@@ -82,6 +82,9 @@ a size which is different than the framebuffer, and have a format (RGBA8 and Dep
 
 ![](./docs/depthbuffer.png)
 
+Note: the size of the framebuffer can be configured in View->Project Settings (Display Size). These settings affect the preview
+window, but are not exported in the scene.
+
 In addition, the color buffer has sampling settings which define how it will be read.
 
 Now, if we look at the material of the quad, we notice that the two buffers (color and depth) are mapped
