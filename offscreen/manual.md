@@ -13,7 +13,7 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 ![](./docs/viewport_preview.png)
 
 This example shows how to perform offscreen rendering with the Ramses Composer (also called render-to-texture).
-This article explains the following concepts:
+Following concepts will be explained:
 
 * RenderBuffers
 * RenderTargets
