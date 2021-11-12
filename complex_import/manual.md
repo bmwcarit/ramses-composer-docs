@@ -21,7 +21,7 @@ the transfer of larger scenes, but has a few caveats we will investigate in this
 
 In order to implement a robust asset pipeline based on glTF and the Ramses Composer, it is important to understand how glTF works first. Read this section carefully!
 
-According to the [glTF 2.0 specification](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0) all objects in a glTF asset file are stored as JSON arrays.
+According to the [glTF 2.0 specification](https://www.khronos.org/registry/glTF/specs/2.0/glTF-2.0.html) all objects in a glTF asset file are stored as JSON arrays.
 They are uniquely identified by their index in the array (0, 1, ... N), _not_ by their name. This rule applies
 to nodes, meshes, and all other kinds of array-based objects. This way of ordering is very efficient and
 robust, but it does not allow tracking of objects across different versions of the same file when objects'

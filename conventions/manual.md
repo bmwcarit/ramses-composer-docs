@@ -45,7 +45,7 @@ The rendering order corresponds to the order in which MeshNodes appear in the Sc
 
 ## Attributes
 
-The Ramses Composer's primary import format is GLTF 2.0. It is quite flexible and allows transmission of mesh attributes in a portable way ([see specification](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#meshes)) which can be used in custom GLSL shaders. In order to use them, you have to create attributes with a specific name. The following table shows the mapping between mesh attributes provided by GLTF and the names and types the Composer expects for them:
+The Ramses Composer's primary import format is GLTF 2.0. It is quite flexible and allows transmission of mesh attributes in a portable way ([see specification](https://www.khronos.org/registry/glTF/specs/2.0/glTF-2.0.html#reference-mesh)) which can be used in custom GLSL shaders. In order to use them, you have to create attributes with a specific name. The following table shows the mapping between mesh attributes provided by GLTF and the names and types the Composer expects for them:
 
 
 |GLTF Name   |Accessor Type(s)    |Description|Attribute name in custom GLSL shaders|
