@@ -28,7 +28,7 @@ The scene graph of the cube consists of a node (with a child MeshNode) and a cam
 ![](./docs/scene_graph_view.png)
 
 The scene graph view shows all elements in the scene. In the left column, you can inspect the names and
-structure of the nodes/meshes/cameras etc, while in the 'Type' column you can see
+structure of the nodes/meshes/cameras etc., while in the 'Type' column you can see
 the type of the object. Nodes generally keep only positional data, MeshNodes carry mesh information and
 settings. MeshNodes correspond to draw calls in OpenGL terminology.
 
@@ -76,7 +76,7 @@ of this tutorial, it's enough to know that they make sure the cube is shown in t
 
 ## Saving the project
 
-You can save the project with your changes, or Save As a different file. Note that the Composer stores relative
+You can save the project with your changes, or save as a different file. Note that the Composer stores relative
 paths - so when saving to a different place on disk, the *new_cube.rca* file will re-calculate the relative
 file paths to its external resources. This will notably not work with network drives!
 
