@@ -14,8 +14,8 @@ function interface()
 
     -- Output: direction of light in that static position
     OUT.light_direction = VEC3F
-    -- Output: color of light
-    OUT.light_color = VEC3F
+    -- Output: diffuse color for material(s)
+    OUT.diffuse_color = VEC3F
 end
 
 function run()
@@ -33,12 +33,12 @@ function run()
     OUT.light_direction = lightDirections[lightId]
 
     if IN.time_ms ~= 0 then
-        OUT.light_color = {
+        OUT.diffuse_color = {
             math.abs(math.sin(IN.time_ms / 1000.0)),
             math.abs(math.cos(IN.time_ms / 10000.0)),
             math.abs(math.sin(IN.time_ms / 10000.0))
         }
     else
-        OUT.light_color = {0.1, 0.1, 1.0}
+        OUT.diffuse_color = {0.1, 0.1, 1.0}
     end
 end
