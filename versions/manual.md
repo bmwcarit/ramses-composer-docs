@@ -10,11 +10,12 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 
 # Ramses Composer versions and dependencies
 
-|Ramses Composer   |Ramses     |Ramses Logic|Date    |Notes                                                 |
-|------------------|-----------|------------|--------|------------------------------------------------------|
-|0.8.1             |27.0.103   |0.6.1       |06.2021 | Latest supported release, first open source release  |
-|0.7.3             |27.0.101   |0.5.3       |04.2021 |                                                      |
+You can find out which are the versions of Ramses and Ramses Logic in the Help->About menu of the Ramses Composer.
+We also mention changes to the shipped library versions in the CHANGELOG file in the source repository.
 
+For a comprehensive list of the Ramses Toolchain releases (of which the Ramses Composer is a part of)
+alongside upgrade hints and future plans, please refer to the
+[Ramses SDK docs](https://ramses-sdk.readthedocs.io/en/latest/versions.html).
 
 # Switching to a newer version of the Composer (Project files)
 
