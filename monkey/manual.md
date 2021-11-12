@@ -63,7 +63,7 @@ If you inspect the MonkeyMesh resource, you will notice that it also has `Normal
 ![](./docs/monkey_mesh.png)
 
 Looking at the [vertex shader](./shaders/phong.vert) you can notice that it uses normal information via the *a_Normal* attribute variable. How does the Ramses Composer know how to link mesh attributes to shader attribute variables? We have a [dedicated section](../conventions/manual.md#attributes) which explains how to use mesh properties in vertex shaders. In this example, we need
-the mesh normals in order to compute the ligting of the monkey heads.
+the mesh normals in order to compute the lighting of the monkey heads.
 
 ## Lua Scripting
 
@@ -99,7 +99,7 @@ Those are the same you will see in the Property Browser under the `Inputs` and `
 You can modify the input values and observe the output values changing according to the script logic.
 For example, you can set `0`, `1` or `2` in the light_id field, and observe that the lighting of the monkeys changes. But why?
 
-First, the `run()` method of the Lua script is executed whenever any of the inputs changed and the outputsneed re-evaluating. In this example, the `run()`
+First, the `run()` method of the Lua script is executed whenever any of the inputs changed and the outputs need re-evaluating. In this example, the `run()`
 method sets the light direction based on the current light id and the light color based on the simulated time.
 But which values to use? As documented above the script's `interface()` method, setting light_id to 0, 1 and 2 switches the light position to different static values.
 This kind of documentation is supposed to help a software developer to integrate
