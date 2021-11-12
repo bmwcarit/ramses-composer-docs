@@ -109,21 +109,18 @@ Composer objects:
 |RenderTarget       |Resources          | ramses::RenderTarget                                  |                           | A direct mapping to the Ramses render target. |
 
 
-LuaScripts which belong to a PrefabInstance are created as if they were directly attached to a scene. Currently, all such scripts are exported as copies - one copy per PrefabInstance.
-
-<!-- TODO Update docs once we create them with different names. Also, need to document what happens with ext refs! -->
-
 ## Additional note on prefabs
 
-Prefabs should not export anything unless used in a PrefabInstance. Currently, LuaScripts are being exported from Prefabs even when not referenced. We plan to change this in a future release.
+Prefabs don't export any objects unless used in a PrefabInstance.
 
-<!-- TODO Fix and update docs -->
-
-Furthermore, Prefab(Instance) scene content is instantiated (copied) on all places where a PrefabInstance is attached in the scene. The content copies currently share the same names. This excludes Resources like Textures, Vertex arrays and Effects - they are exported once even if used by multiple MeshNodes/PrefabInstances.
+Furthermore, `Prefab(Instance)` scene content is instantiated (copied) on all places where a `PrefabInstance` is attached in the scene. The content copies receive a prefix in the name which denotes which `PrefabInstance` created them. This excludes Resources like Textures, Vertex arrays and Effects - they are exported once even if used by multiple `MeshNodes/PrefabInstances`.
 
 ## Default Resources
 
-Ramses Composer contains default resources, serving as placeholder resources. A default resource used in a scene will also get exported. Multiple objects share the same default resource, independent of whether this object is in the current project or imported from a different project as an external reference or otherwise. This is done to prevent unnecessary default resource duplicates upon exporting the scene.
+Ramses Composer contains default resources, serving as placeholder resources. A default resource used in a scene will also get exported.
+Multiple objects share the same default resource, independent of whether this object is in the current project or imported from a
+different project as an external reference or otherwise. This is done to prevent unnecessary default resource duplicates upon exporting
+the scene.
 
 ### CubeMap
 
