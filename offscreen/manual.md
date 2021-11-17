@@ -29,7 +29,7 @@ Let's have a look at the contents of the project.
 
 ## Scene graph and resources
 
-After opening the project, we notice a few more things compared to the [monkey example](../monkey/manual.md).
+After opening [the project](./offscreen.rca), we notice a few more things compared to the [monkey example](../monkey/manual.md).
 
 To keep this example simple, we render a single monkey head without a script.
 In the Scene View, there are two cameras - one for rendering the monkey and one for rendering the quad:
