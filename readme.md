@@ -51,6 +51,10 @@ Need a specific Lua feature, or need to know how rotation math works? Advanced d
 
 [Scripting with LUA](./lua_syntax/manual.md) - Advanced Lua scripting tips.
 
+[Render Order](./ordering/manual.md) - Controlling the render order.
+
+[Offscreen Rendering](./offscreen/manual.md) - Offscreen Rendering.
+
 [Versions](./versions/manual.md) - Supported versions, API and ABI compatibility.
 
 ## Troubleshooting
