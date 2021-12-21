@@ -28,6 +28,8 @@ your data.
 
 [Complex import](./complex_import/manual.md) - Import multiple objects from a single glTF file.
 
+[Animations](./animations/manual.md) - Import and control animations from glTF.
+
 [Exporting to Ramses](./export/manual.md) - Export optimized Ramses binary assets.
 
 ## Structuring your project
