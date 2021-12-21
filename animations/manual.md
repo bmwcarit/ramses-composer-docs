@@ -52,7 +52,7 @@ needed.
 ## Importing the animation
 
 Let's import the animated cube in the Ramses Composer. If you haven't yet, check out the [section in the glTF import
-tutorual](../complex_import/manual.md#Scene-graph-and-resources) which explains how to import complex glTF files. When importing
+tutorial](../complex_import/manual.md#Scene-graph-and-resources) which explains how to import complex glTF files. When importing
 the glTF file, you will notice the animation resources in the list of available items to import:
 
 ![](./docs/import_menu.png)
