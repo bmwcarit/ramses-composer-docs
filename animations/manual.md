@@ -37,7 +37,7 @@ in the Blender subfolder](./blender/) or create it yourself by following the ste
 * Press 'i' again, select some other values for the last keyframe (e.g. random rotation, translation and scale values)
 
 Next, we need to export the cube alongside its animation using the glTF export menu. For details how to export
-from Blender, check [the corresponding section basic cube tutorial](../hello_world/manual.md#Export-glTF-from-Blender).
+from Blender, check [the corresponding section of the basic cube tutorial](../hello_world/manual.md#Export-glTF-from-Blender).
 
 Make sure you click the "Export Animations" setting in the export menu:
 
