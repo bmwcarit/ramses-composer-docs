@@ -91,7 +91,7 @@ Don't worry - if you know any other scripting language, Lua is really easy to le
 Back to our example, the LightControl Lua script maps a set of static lights to a set of fixed directions,
 and emulates disco-like light colors. Let's have a look how it does that.
 
-Opening the script file, you will find three functions - an `interface()`, an init() and a `run()` function. Let's
+Opening the script file, you will find three functions - an `interface()`, an `init()` and a `run()` function. Let's
 have a look at each of them.
 
 ### The interface() function
@@ -100,7 +100,7 @@ Ramses Composer expects to find an `interface()` function in every Lua script.
 The `interface()` declares the expected inputs and the produced outputs of the script by
 adding entries in the IN and OUT global variables and specifying their type (integer, floating point number, string, etc.).
 Those properties are the same you will see in the Property Browser under the `Inputs` and `Outputs` tabs respectively.
-Each property receives a default value - 0, 0.0, empty string, etc.. Inputs can be assigned other values in
+Each property receives a default value - `0` (int), `0.0` (float), `""` (string), etc.. Inputs can be assigned other values in
 the composer, while outputs can only be modified by the Lua script itself and are thus "greyed out" in the editor.
 
 ### The run() function
