@@ -101,6 +101,8 @@ Composer objects:
 |Texture            |Resources          |ramses::Texture2D  ramses::TextureSampler              |                           | Currently static |
 |CubeMap            |Resources          |ramses::TextureCube  ramses::TextureSampler            |                           | Currently static |
 |LuaScript          |Scene              |                                                       | rlogic::LuaScript         |                                                                     |
+|Animation          |Scene              |                                                       | rlogic::AnimationNode     |                                                                     |
+|AnimationChannel   |Resources          |                                                       | 2 or 4 rlogic::DataArrays | The number of rlogic::DataArrays depends on the interpolation type - e.g. cubic interpolation requires in/out tangents in addition to keyframes |
 |PrefabInstance     |Scene              | Various                                               | Various                   | Exported content depends on referenced Prefab. Each PrefabInstance creates its own copy based on Prefab contents.  |
 |Prefab             |Prefab             |                                                       |                           | Content created only if referenced by a PrefabInstance. Underlying nodes and scripts are exported as if they had their own Scene Graph. Ramses nodes are parented to the parent node of the corresponding PrefabInstance |
 |RenderBuffer       |Resources          | ramses::RenderBuffer                                  |                           | A direct mapping to the Ramses render buffer. |
