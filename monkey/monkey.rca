@@ -1,7 +1,7 @@
 {
     "externalProjects": {
     },
-    "fileVersion": 17,
+    "fileVersion": 21,
     "instances": [
         {
             "properties": {
@@ -374,6 +374,18 @@
         {
             "properties": {
                 "backgroundColor": {
+                    "w": {
+                        "annotations": [
+                            {
+                                "properties": {
+                                    "max": 1,
+                                    "min": 0
+                                },
+                                "typeName": "RangeAnnotationDouble"
+                            }
+                        ],
+                        "value": 1
+                    },
                     "x": {
                         "annotations": [
                             {
@@ -606,7 +618,7 @@
                                             "typeName": "RangeAnnotationDouble"
                                         }
                                     ],
-                                    "value": 0.279415488243103
+                                    "value": 0.2800000011920929
                                 },
                                 "y": {
                                     "annotations": [
@@ -618,7 +630,7 @@
                                             "typeName": "RangeAnnotationDouble"
                                         }
                                     ],
-                                    "value": 0.8253356218338013
+                                    "value": 0.8199999928474426
                                 },
                                 "z": {
                                     "annotations": [
@@ -630,7 +642,7 @@
                                             "typeName": "RangeAnnotationDouble"
                                         }
                                     ],
-                                    "value": 0.5646424889564514
+                                    "value": 0.6000000238418579
                                 }
                             },
                             "typeName": "Vec3f::EngineTypeAnnotation::LinkEndAnnotation"
@@ -1081,10 +1093,115 @@
             "properties": {
                 "luaInputs": {
                     "order": [
-                        "light_id",
-                        "time_ms"
+                        "diffuse_color",
+                        "light_color",
+                        "light_id"
                     ],
                     "properties": {
+                        "diffuse_color": {
+                            "annotations": [
+                                {
+                                    "properties": {
+                                        "engineType": 8
+                                    },
+                                    "typeName": "EngineTypeAnnotation"
+                                },
+                                {
+                                    "typeName": "LinkEndAnnotation"
+                                }
+                            ],
+                            "properties": {
+                                "x": {
+                                    "annotations": [
+                                        {
+                                            "properties": {
+                                                "max": 1,
+                                                "min": 0
+                                            },
+                                            "typeName": "RangeAnnotationDouble"
+                                        }
+                                    ],
+                                    "value": 0
+                                },
+                                "y": {
+                                    "annotations": [
+                                        {
+                                            "properties": {
+                                                "max": 1,
+                                                "min": 0
+                                            },
+                                            "typeName": "RangeAnnotationDouble"
+                                        }
+                                    ],
+                                    "value": 0
+                                },
+                                "z": {
+                                    "annotations": [
+                                        {
+                                            "properties": {
+                                                "max": 1,
+                                                "min": 0
+                                            },
+                                            "typeName": "RangeAnnotationDouble"
+                                        }
+                                    ],
+                                    "value": 0
+                                }
+                            },
+                            "typeName": "Vec3f::EngineTypeAnnotation::LinkEndAnnotation"
+                        },
+                        "light_color": {
+                            "annotations": [
+                                {
+                                    "properties": {
+                                        "engineType": 8
+                                    },
+                                    "typeName": "EngineTypeAnnotation"
+                                },
+                                {
+                                    "typeName": "LinkEndAnnotation"
+                                }
+                            ],
+                            "properties": {
+                                "x": {
+                                    "annotations": [
+                                        {
+                                            "properties": {
+                                                "max": 1,
+                                                "min": 0
+                                            },
+                                            "typeName": "RangeAnnotationDouble"
+                                        }
+                                    ],
+                                    "value": 0
+                                },
+                                "y": {
+                                    "annotations": [
+                                        {
+                                            "properties": {
+                                                "max": 1,
+                                                "min": 0
+                                            },
+                                            "typeName": "RangeAnnotationDouble"
+                                        }
+                                    ],
+                                    "value": 0
+                                },
+                                "z": {
+                                    "annotations": [
+                                        {
+                                            "properties": {
+                                                "max": 1,
+                                                "min": 0
+                                            },
+                                            "typeName": "RangeAnnotationDouble"
+                                        }
+                                    ],
+                                    "value": 0
+                                }
+                            },
+                            "typeName": "Vec3f::EngineTypeAnnotation::LinkEndAnnotation"
+                        },
                         "light_id": {
                             "annotations": [
                                 {
@@ -1099,27 +1216,13 @@
                             ],
                             "typeName": "Int::EngineTypeAnnotation::LinkEndAnnotation",
                             "value": 0
-                        },
-                        "time_ms": {
-                            "annotations": [
-                                {
-                                    "properties": {
-                                        "engineType": 2
-                                    },
-                                    "typeName": "EngineTypeAnnotation"
-                                },
-                                {
-                                    "typeName": "LinkEndAnnotation"
-                                }
-                            ],
-                            "typeName": "Int::EngineTypeAnnotation::LinkEndAnnotation",
-                            "value": 6000
                         }
                     }
                 },
                 "luaOutputs": {
                     "order": [
                         "diffuse_color",
+                        "light_color",
                         "light_direction"
                     ],
                     "properties": {
@@ -1146,7 +1249,7 @@
                                             "typeName": "RangeAnnotationDouble"
                                         }
                                     ],
-                                    "value": 0.279415488243103
+                                    "value": 0.2800000011920929
                                 },
                                 "y": {
                                     "annotations": [
@@ -1158,7 +1261,7 @@
                                             "typeName": "RangeAnnotationDouble"
                                         }
                                     ],
-                                    "value": 0.8253356218338013
+                                    "value": 0.8199999928474426
                                 },
                                 "z": {
                                     "annotations": [
@@ -1170,7 +1273,59 @@
                                             "typeName": "RangeAnnotationDouble"
                                         }
                                     ],
-                                    "value": 0.5646424889564514
+                                    "value": 0.6000000238418579
+                                }
+                            },
+                            "typeName": "Vec3f::EngineTypeAnnotation::LinkStartAnnotation"
+                        },
+                        "light_color": {
+                            "annotations": [
+                                {
+                                    "properties": {
+                                        "engineType": 8
+                                    },
+                                    "typeName": "EngineTypeAnnotation"
+                                },
+                                {
+                                    "typeName": "LinkStartAnnotation"
+                                }
+                            ],
+                            "properties": {
+                                "x": {
+                                    "annotations": [
+                                        {
+                                            "properties": {
+                                                "max": 1,
+                                                "min": 0
+                                            },
+                                            "typeName": "RangeAnnotationDouble"
+                                        }
+                                    ],
+                                    "value": 1
+                                },
+                                "y": {
+                                    "annotations": [
+                                        {
+                                            "properties": {
+                                                "max": 1,
+                                                "min": 0
+                                            },
+                                            "typeName": "RangeAnnotationDouble"
+                                        }
+                                    ],
+                                    "value": 1
+                                },
+                                "z": {
+                                    "annotations": [
+                                        {
+                                            "properties": {
+                                                "max": 1,
+                                                "min": 0
+                                            },
+                                            "typeName": "RangeAnnotationDouble"
+                                        }
+                                    ],
+                                    "value": 1
                                 }
                             },
                             "typeName": "Vec3f::EngineTypeAnnotation::LinkStartAnnotation"
@@ -2120,21 +2275,53 @@
                 }
             },
             "typeName": "Link"
+        },
+        {
+            "properties": {
+                "endObject": "948b9d48-97d1-49a9-a6b6-093b9c62826e",
+                "endProp": {
+                    "properties": [
+                        {
+                            "typeName": "String",
+                            "value": "uniforms"
+                        },
+                        {
+                            "typeName": "String",
+                            "value": "u_lightColor"
+                        }
+                    ]
+                },
+                "isValid": true,
+                "startObject": "ba776ca4-6b28-4e7b-b5e5-b9973b4658aa",
+                "startProp": {
+                    "properties": [
+                        {
+                            "typeName": "String",
+                            "value": "luaOutputs"
+                        },
+                        {
+                            "typeName": "String",
+                            "value": "light_color"
+                        }
+                    ]
+                }
+            },
+            "typeName": "Link"
         }
     ],
     "logicEngineVersion": [
         0,
-        11,
+        13,
         0
     ],
     "racoVersion": [
         0,
-        9,
-        2
+        11,
+        0
     ],
     "ramsesVersion": [
         27,
         0,
-        113
+        114
     ]
 }
