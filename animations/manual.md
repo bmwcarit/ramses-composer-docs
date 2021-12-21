@@ -18,7 +18,7 @@ This tutorial shows how to import animation data using the glTF format.
 
 Animation data can typically grow large and cause performance problems if not carefully optimized.
 glTF offers a good compromise between animation quality and exported data size. In order to utilize glTF
-to its best, it's adviced to get a good understanding how the different interpolation mechanisms work, and
+to its best, it's advised to get a good understanding how the different interpolation mechanisms work, and
 most importantly - consult the documentation of your DCC tool of choice regarding keyframe conversion and
 compression.
 
