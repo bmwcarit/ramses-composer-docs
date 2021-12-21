@@ -91,17 +91,44 @@ Don't worry - if you know any other scripting language, Lua is really easy to le
 Back to our example, the LightControl Lua script maps a set of static lights to a set of fixed directions,
 and emulates disco-like light colors. Let's have a look how it does that.
 
-Opening the script file, you will find two functions - an `interface()` and a `run()` function.
-Ramses Composer expects to find these two functions in every Lua script.
-The `interface()` method declares the expected inputs and the produced outputs of the script (note the IN and OUT global variables).
-Those are the same you will see in the Property Browser under the `Inputs` and `Outputs` tabs respectively.
+Opening the script file, you will find three functions - an `interface()`, an init() and a `run()` function. Let's
+have a look at each of them.
+
+### The interface() function
+
+Ramses Composer expects to find an `interface()` function in every Lua script.
+The `interface()` declares the expected inputs and the produced outputs of the script by
+adding entries in the IN and OUT global variables and specifying their type (integer, floating point number, string, etc.).
+Those properties are the same you will see in the Property Browser under the `Inputs` and `Outputs` tabs respectively.
+Each property receives a default value - 0, 0.0, empty string, etc.. Inputs can be assigned other values in
+the composer, while outputs can only be modified by the Lua script itself and are thus "greyed out" in the editor.
+
+### The run() function
+
+The `run()` function is another mandatory component of every Lua script. It is executed whenever any
+of the inputs changed and the outputs need re-evaluating.
+
+In this example, the `run()` function sets the light direction based on the current light id and optionally the diffuse
+color of the monkeys. You can modify the input values and observe the output values changing according to the script logic.
+
+### The init() function
+
+Sometimes, it's useful to have global variables which are initialized once and always available. The optional `init()`
+function does just that - allows any data to be stored in the `GLOBAL` table and referred to either from the `interface()` or
+from the `run()` functions.
+
+In this example, we use the `GLOBAL` table to store a default diffuse color - one which is assigned to the corresponding
+diffuse color output if no input data is provided.
+
+## What does the Lua script do?
 
 You can modify the input values and observe the output values changing according to the script logic.
 For example, you can set `0`, `1` or `2` in the light_id field, and observe that the lighting of the monkeys changes. But why?
 
 First, the `run()` method of the Lua script is executed whenever any of the inputs changed and the outputs need re-evaluating. In this example, the `run()`
-method sets the light direction based on the current light id and the light color based on the simulated time.
-But which values to use? As documented above the script's `interface()` method, setting light_id to 0, 1 and 2 switches the light position to different static values.
+method sets the light direction based on the current light id.
+But which values to use? As documented above the script's `interface()` method, setting light_id to 0, 1 and 2
+switches the light position to different static values.
 This kind of documentation is supposed to help a software developer to integrate
 the asset in a real application - where these values would come from the application logic.
 
@@ -124,9 +151,6 @@ The link mechanism is designed to make it possible
 to control several things with a single script. If you want to have a different mapping between scripts and "linked objects", you can create multiple instances which use the same Lua file as source, or you can use [prefabs](../prefabs/manual.md).
 
 You can find more details and specifics on the Lua syntax and features [in a dedicated section](../lua_syntax/manual.md).
-
-**Note**: you may notice that the LuaScript has a second input called 'time_ms'. Try to figure out what it does
-and how it is supposed to be used by an application!
 
 ## Create Suzanne in Blender
 

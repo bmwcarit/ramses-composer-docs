@@ -1,21 +1,29 @@
 
--- This script emulates a colorful disco-like light
+-- This script controls the lighting of a Phong-like shading model
 -- The light position is static, but can be switched from three
 -- different positions: left, right, and top (use numbers 0, 1, 2 on light_id to toggle)
--- Additionally, the light color is animated to produce a disco-like effect. This is
--- triggered by the time progression (time_ms input, supposed to be provided with a monotonic
--- timer with milliseconds precision during runtime).
+-- Optionally specify a diffuse_color to override the default (green-ish) color
 
 function interface()
     -- Input: index into an array static light positions
     IN.light_id = INT
-    -- Input: time, if available (steady clock, in milliseconds, starts at 1, use 0 to disable)
-    IN.time_ms = INT
+    -- Input: diffuse color (setting to zero causes the script to use its default value, see init())
+    IN.diffuse_color = VEC3F
+    -- Input: light color (setting to zero causes the script to use its default value, see init())
+    IN.light_color = VEC3F
 
     -- Output: direction of light in that static position
     OUT.light_direction = VEC3F
+    -- Output: light color
+    OUT.light_color = VEC3F
     -- Output: diffuse color for material(s)
     OUT.diffuse_color = VEC3F
+end
+
+function init()
+    -- Declares default colors which are used if no other value was provided in the INputs
+    GLOBAL.default_color = {0.28, 0.82, 0.6}
+    GLOBAL.default_light_color = {1.0, 1.0, 1.0}
 end
 
 function run()
@@ -32,13 +40,17 @@ function run()
 
     OUT.light_direction = lightDirections[lightId]
 
-    if IN.time_ms ~= 0 then
-        OUT.diffuse_color = {
-            math.abs(math.sin(IN.time_ms / 1000.0)),
-            math.abs(math.cos(IN.time_ms / 10000.0)),
-            math.abs(math.sin(IN.time_ms / 10000.0))
-        }
+    -- If a light color value was given (IN.light_color), forward it. Otherwise assign default color
+    if IN.light_color[1] ~= 0 or IN.light_color[2] ~= 0 or IN.light_color[3] ~= 0 then
+        OUT.light_color = IN.light_color
     else
-        OUT.diffuse_color = {0.1, 0.1, 1.0}
+        OUT.light_color = GLOBAL.default_light_color
+    end
+
+    -- If a diffuse color value was given (IN.diffuse_color), forward it. Otherwise assign default color
+    if IN.diffuse_color[1] ~= 0 or IN.diffuse_color[2] ~= 0 or IN.diffuse_color[3] ~= 0 then
+        OUT.diffuse_color = IN.diffuse_color
+    else
+        OUT.diffuse_color = GLOBAL.default_color
     end
 end
