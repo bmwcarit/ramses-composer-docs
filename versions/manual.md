@@ -2,7 +2,7 @@
 SPDX-License-Identifier: MPL-2.0
 
 This file is part of Ramses Composer
-(see https://github.com/GENIVI/ramses-composer-docs).
+(see https://github.com/COVESA/ramses-composer-docs).
 
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
 If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -27,8 +27,8 @@ older versions of the tool won't be able to open it any more.
 
 # Ramses Dependencies (Runtime)
 
-The Ramses Composer has an API and ABI dependency on the [Ramses Engine](https://github.com/GENIVI/ramses) and
-the [Ramses Logic Engine](https://github.com/GENIVI/ramses-logic). This means that an upgrade to a newer version
+The Ramses Composer has an API and ABI dependency on the [Ramses Engine](https://github.com/COVESA/ramses) and
+the [Ramses Logic Engine](https://github.com/COVESA/ramses-logic). This means that an upgrade to a newer version
 of the composer which also includes a major update of any of the Ramses dependencies will require a re-export
 of existing binary files, and also an upgrade of the engine/lib versions in your native code. In general, we invest
 a lot of effort to make this process as smooth and transparent as possible - but we ask for understanding that using
