@@ -1094,10 +1094,63 @@
                 "luaInputs": {
                     "order": [
                         "diffuse_color",
+                        "light_color",
                         "light_id"
                     ],
                     "properties": {
                         "diffuse_color": {
+                            "annotations": [
+                                {
+                                    "properties": {
+                                        "engineType": 8
+                                    },
+                                    "typeName": "EngineTypeAnnotation"
+                                },
+                                {
+                                    "typeName": "LinkEndAnnotation"
+                                }
+                            ],
+                            "properties": {
+                                "x": {
+                                    "annotations": [
+                                        {
+                                            "properties": {
+                                                "max": 1,
+                                                "min": 0
+                                            },
+                                            "typeName": "RangeAnnotationDouble"
+                                        }
+                                    ],
+                                    "value": 0
+                                },
+                                "y": {
+                                    "annotations": [
+                                        {
+                                            "properties": {
+                                                "max": 1,
+                                                "min": 0
+                                            },
+                                            "typeName": "RangeAnnotationDouble"
+                                        }
+                                    ],
+                                    "value": 0
+                                },
+                                "z": {
+                                    "annotations": [
+                                        {
+                                            "properties": {
+                                                "max": 1,
+                                                "min": 0
+                                            },
+                                            "typeName": "RangeAnnotationDouble"
+                                        }
+                                    ],
+                                    "value": 0
+                                }
+                            },
+                            "typeName": "Vec3f::EngineTypeAnnotation::LinkEndAnnotation"
+                        },
+                        "light_color": {
                             "annotations": [
                                 {
                                     "properties": {
@@ -1169,6 +1222,7 @@
                 "luaOutputs": {
                     "order": [
                         "diffuse_color",
+                        "light_color",
                         "light_direction"
                     ],
                     "properties": {
@@ -1220,6 +1274,58 @@
                                         }
                                     ],
                                     "value": 0.6000000238418579
+                                }
+                            },
+                            "typeName": "Vec3f::EngineTypeAnnotation::LinkStartAnnotation"
+                        },
+                        "light_color": {
+                            "annotations": [
+                                {
+                                    "properties": {
+                                        "engineType": 8
+                                    },
+                                    "typeName": "EngineTypeAnnotation"
+                                },
+                                {
+                                    "typeName": "LinkStartAnnotation"
+                                }
+                            ],
+                            "properties": {
+                                "x": {
+                                    "annotations": [
+                                        {
+                                            "properties": {
+                                                "max": 1,
+                                                "min": 0
+                                            },
+                                            "typeName": "RangeAnnotationDouble"
+                                        }
+                                    ],
+                                    "value": 1
+                                },
+                                "y": {
+                                    "annotations": [
+                                        {
+                                            "properties": {
+                                                "max": 1,
+                                                "min": 0
+                                            },
+                                            "typeName": "RangeAnnotationDouble"
+                                        }
+                                    ],
+                                    "value": 1
+                                },
+                                "z": {
+                                    "annotations": [
+                                        {
+                                            "properties": {
+                                                "max": 1,
+                                                "min": 0
+                                            },
+                                            "typeName": "RangeAnnotationDouble"
+                                        }
+                                    ],
+                                    "value": 1
                                 }
                             },
                             "typeName": "Vec3f::EngineTypeAnnotation::LinkStartAnnotation"
@@ -2164,6 +2270,38 @@
                         {
                             "typeName": "String",
                             "value": "diffuse_color"
+                        }
+                    ]
+                }
+            },
+            "typeName": "Link"
+        },
+        {
+            "properties": {
+                "endObject": "948b9d48-97d1-49a9-a6b6-093b9c62826e",
+                "endProp": {
+                    "properties": [
+                        {
+                            "typeName": "String",
+                            "value": "uniforms"
+                        },
+                        {
+                            "typeName": "String",
+                            "value": "u_lightColor"
+                        }
+                    ]
+                },
+                "isValid": true,
+                "startObject": "ba776ca4-6b28-4e7b-b5e5-b9973b4658aa",
+                "startProp": {
+                    "properties": [
+                        {
+                            "typeName": "String",
+                            "value": "luaOutputs"
+                        },
+                        {
+                            "typeName": "String",
+                            "value": "light_color"
                         }
                     ]
                 }
