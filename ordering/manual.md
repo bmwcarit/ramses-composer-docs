@@ -73,7 +73,7 @@ To activate this option, you can select the `Scene graph order` in the RenderLay
 
 ![](./docs/scene_graph_order.png)
 
-When this option is selected, all nodes will be sorted in the exact same order as they appear in the
+When this option is selected, all nodes in the render layer will be sorted in the exact same order as they appear in the
 SceneGraph panel - i.e. parent nodes are rendered before their children, and children are sorted
 first-to-last.
 
@@ -97,7 +97,7 @@ has its own order number assigned to it:
 Furthermore, the `Render order` property further down is set to `Render order value in Renderable tags`.
 This means that this `RenderLayer` will sort its content based on the numbers assigned to each tag.
 
-The exact rules for the ordering are as follows:
+The exact rules for the ordering in a render layer are as follows:
 * If Node A has tag T1 and Node B has tag T2 where T1 < T2, then Node A will be rendered before node B
 * If T1 == T2, the order will be decided by the Ramses Composer (possibly optimized to minimize OpenGL state changes)
 * If Node A has two or more tags tags T1 and T2 and T1 != T2 != ..., then the Composer will generate an error
@@ -150,6 +150,21 @@ Contrary to `RenderLayer` tags, `RenderPasses` must be ordered with unique order
 This example has the exact same result as the previous one. However now each `RenderPass` can
 have a different camera! Go ahead and try it - create a second camera, assign it to one
 of the passes, change it's settings and observe the result.
+
+## Nested RenderLayers
+
+Example project: [5_nested_render_layers](./5_nested_render_layers.rca)
+
+For more complex use cases it might prove to be necessary to nest render layers. This can also be
+done by just adding the tag used in the renderable tags property field of one `RenderLayer` object 
+to the tags property field of another `RenderLayer` object.
+
+In this case the tagged `RenderLayer` object follows the same ordering rules as the nodes do
+with the following additional rules:
+* `Scene graph order`: a `RenderLayer` using `Scene graph order` cannot contain other `RenderLayer`. 
+   Ramses Composer will ignore the nested render layers and generate an error.
+* `Render order value in Renderable tags`: the contents of a `RenderLayer` having the same render order value as nodes will be rendered before the nodes.
+
 
 # Combining the techniques
 
