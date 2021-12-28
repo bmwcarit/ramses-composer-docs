@@ -2,7 +2,7 @@
 SPDX-License-Identifier: MPL-2.0
 
 This file is part of Ramses Composer
-(see https://github.com/GENIVI/ramses-composer-docs).
+(see https://github.com/COVESA/ramses-composer-docs).
 
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
 If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -70,7 +70,7 @@ Need a specific Lua feature, or need to know how rotation math works? Advanced d
 
 ## Related resources
 
-You will find the source code of Ramses Composer and instructions on how to build it in the main [Ramses Composer repository](https://github.com/GENIVI/ramses-composer). For a general overview of the Ramses ecosystem and its other components, visit
+You will find the source code of Ramses Composer and instructions on how to build it in the main [Ramses Composer repository](https://github.com/COVESA/ramses-composer). For a general overview of the Ramses ecosystem and its other components, visit
 also [these pages](https://ramses-sdk.readthedocs.io/).
 
 ## License
