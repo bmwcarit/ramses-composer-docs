@@ -31,7 +31,7 @@ __Scene Graph__: This tree view is the heart of Ramses Composer and displays the
 
 __Resources__: The resource view shows all the resources like meshes or textures used by the scene. By clicking on the column headers, it can be sorted by name or by type. It is possible to use resources which are included from other projects. Such external resources are colored in green.
 
-__Prefabs__: This view shows a list of reusable components. Find out more about Prefabs [here](../prefabs/manual.md). It is possible to use prefabs which are defined in and included from other projects. Such external prefabs are colored in green.
+__Prefabs__: This view shows a list of reusable components. Find out more about Prefabs [here](../prefabs/README.md). It is possible to use prefabs which are defined in and included from other projects. Such external prefabs are colored in green.
 
 __Undo Stack__: Here you can see all the changes you made to the scene. It is possible to undo and redo multiple changes by selecting the according line in this view.
 

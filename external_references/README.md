@@ -13,7 +13,7 @@ External references provide the ability to use Prefabs and resources from one pr
 
 ![](docs/result_colored.png)
 
-This example will use our previous Prefab example scenes as well as one additional project and combine everything into a master street scene. You should already be familiar with these [basic](../prefabs/manual.md) and [advanced](../nested_prefabs.md) Prefab examples.
+This example will use our previous Prefab example scenes as well as one additional project and combine everything into a master street scene. You should already be familiar with these [basic](../prefabs/README.md) and [advanced](../nested_prefabs.md) Prefab examples.
 
 ## The Concept
 

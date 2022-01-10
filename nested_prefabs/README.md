@@ -9,7 +9,7 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 -->
 # Complex Prefabs
 
-Prefabs can be combined and re-packaged to create more complex prefabs. In this example we will demonstrate how to use this feature to manage complexity and structure a project better. It builds on the [basic Prefab example](../prefabs/manual.md), if you haven't done so already you should familiarize yourself with that chapter first.
+Prefabs can be combined and re-packaged to create more complex prefabs. In this example we will demonstrate how to use this feature to manage complexity and structure a project better. It builds on the [basic Prefab example](../prefabs/README.md), if you haven't done so already you should familiarize yourself with that chapter first.
 
 ![](docs/title_cars.png)
 
@@ -23,7 +23,7 @@ The blender scene with some modelled objects is also included for completeness. 
 
 ![](docs/blender.png)
 
-The Blender scene contains four objects which we will export into multiple glTF files. While it is possible to use just a single, huge glTF file for all meshes, it is better to seperate them into dedicated glTF files for the objects. This gives better control over what needs to be updated and updates are much faster and less likely to break something. The basic export procedure should be familiar from the [cube example](../hello_world/manual.md).
+The Blender scene contains four objects which we will export into multiple glTF files. While it is possible to use just a single, huge glTF file for all meshes, it is better to seperate them into dedicated glTF files for the objects. This gives better control over what needs to be updated and updates are much faster and less likely to break something. The basic export procedure should be familiar from the [cube example](../hello_world/README.md).
 
 ![](docs/export_settings.png)
 

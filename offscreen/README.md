@@ -19,9 +19,9 @@ Following concepts will be explained:
 * RenderTargets
 * Combining RenderTargets, -Layers, -Passes and tags to produce an offscreen effect
 
-This example is similar to the [monkey example](../monkey/manual.md), but instead of rendering to the display buffer,
+This example is similar to the [monkey example](../monkey/README.md), but instead of rendering to the display buffer,
 it renders to a texture first and then shows the texture color and depth contents on a slightly rotated quad. We recommend
-having a look at the [ordering example](../ordering/manual.md) to understand how to structure a scene in different
+having a look at the [ordering example](../ordering/README.md) to understand how to structure a scene in different
 parts which are rendered at different
 times - this technique is a requirement for offscreen rendering.
 
@@ -29,7 +29,7 @@ Let's have a look at the contents of the project.
 
 ## Scene graph and resources
 
-After opening [the project](./offscreen.rca), we notice a few more things compared to the [monkey example](../monkey/manual.md).
+After opening [the project](./offscreen.rca), we notice a few more things compared to the [monkey example](../monkey/README.md).
 
 To keep this example simple, we render a single monkey head without a script.
 In the Scene View, there are two cameras - one for rendering the monkey and one for rendering the quad:
@@ -106,11 +106,11 @@ this example. A good technical artist knows when to use and when **not** to use 
 
 ## Recreate sample
 
-This example is created in a way similar to the [monkey example](../monkey/manual.md#recreate-sample).
+This example is created in a way similar to the [monkey example](../monkey/README.md#recreate-sample).
 We only highlight the steps specific to this example here:
 
 * Create a new project and delete the default content
-* Create a standard "Suzanne" monkey (same as in [monkey example](../monkey/manual.md))
+* Create a standard "Suzanne" monkey (same as in [monkey example](../monkey/README.md))
     * You can also just copy the project and delete two of the monkey heads
 * Create the Quad
     * Create a standard "Plane" mesh in Blender and export as glTF (quad.gltf)

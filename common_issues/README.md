@@ -42,7 +42,7 @@ Aside from that: On computers with multiple GPUs, the operating system decides w
 
 This issue is closely related to [nodes not being movable on the top level of a scene graph](#i-cant-change-position-of-top-level-nodes).
 
-Currently, the render order is the same order of objects in the scenegraph (see the [Ramses Composer conventions](../conventions/manual.md#rendering-order)).
+Currently, the render order is the same order of objects in the scenegraph (see the [Ramses Composer conventions](../conventions/README.md#rendering-order)).
 
 Especially with top-level MeshNodes that contain MeshNode children, this can lead to unwanted rendering behavior with regards to transparencies and shadows.
 
