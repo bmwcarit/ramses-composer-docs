@@ -23,7 +23,7 @@ Prefabs are helpful for
 
 * creating re-usable components (think of templates or widgets), and utilizing them multiple times
 * structuring your project into modules for better overview and maintainability
-* re-using parts of one project in another project as [external references](../external_references/manual.md)
+* re-using parts of one project in another project as [external references](../external_references/README.md)
 
 To use Prefabs you need to create a _PrefabInstance_ object and assign a Prefab to it. The PrefabInstance can be used in the scene graph just like any other node. All contents of the Prefab appear inside the PrefabInstance as a copy. If the Prefab is modified, all changes are immeditately applied to all its PrefabInstances.
 
@@ -39,7 +39,7 @@ We start by setting up the scene as usual: Import the meshes from GLTF, create a
 
 Here, we are using the meshes from Khronos Group GLTF [lantern example](https://github.com/KhronosGroup/glTF-Sample-Models/tree/master/2.0/Lantern/glTF) (public domain).
 
-There is no need to think about Prefabs at this time yet, any part of the scene graph can be packaged into a Prefab later. It is also possible to restructure Prefabs at any time. The [next prefab example](../nested_prefabs/manual.md) will introduce more complex uses of Prefabs. 
+There is no need to think about Prefabs at this time yet, any part of the scene graph can be packaged into a Prefab later. It is also possible to restructure Prefabs at any time. The [next prefab example](../nested_prefabs/README.md) will introduce more complex uses of Prefabs. 
 
 ## Creating the Prefab
 

@@ -37,7 +37,7 @@ in the Blender subfolder](./blender/) or create it yourself by following the ste
 * Press 'i' again, select some other values for the last keyframe (e.g. random rotation, translation and scale values)
 
 Next, we need to export the cube alongside its animation using the glTF export menu. For details how to export
-from Blender, check [the corresponding section of the basic cube tutorial](../hello_world/manual.md#Export-glTF-from-Blender).
+from Blender, check [the corresponding section of the basic cube tutorial](../hello_world/README.md#Export-glTF-from-Blender).
 
 Make sure you click the "Export Animations" setting in the export menu:
 
@@ -52,7 +52,7 @@ needed.
 ## Importing the animation
 
 Let's import the animated cube in the Ramses Composer. If you haven't yet, check out the [section in the glTF import
-tutorial](../complex_import/manual.md#Scene-graph-and-resources) which explains how to import complex glTF files. When importing
+tutorial](../complex_import/README.md#Scene-graph-and-resources) which explains how to import complex glTF files. When importing
 the glTF file, you will notice the animation resources in the list of available items to import:
 
 ![](./docs/import_menu.png)
@@ -79,7 +79,7 @@ output values:
 ![](./docs/animation.png)
 
 You can set the "play", "loop" and "rewind on pause" properties or link them to scripts to control the state of the animation.
-This works exactly as with other scripts, see the [section on linking Lua properties in the Monkey example](../monkey/manual.md#Lua-Scripting) for details.
+This works exactly as with other scripts, see the [section on linking Lua properties in the Monkey example](../monkey/README.md#Lua-Scripting) for details.
 
 ## How to control time
 

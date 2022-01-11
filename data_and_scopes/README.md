@@ -10,7 +10,7 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 
 # Data and scope
 
-The Ramses Composer is a tool which controls the state of a 3D project before the [export step](../export/manual.md) to binary Ramses formats.
+The Ramses Composer is a tool which controls the state of a 3D project before the [export step](../export/README.md) to binary Ramses formats.
 It is important to understand the lifecycle and origin of Composer objects and their data in order to use them efficiently, reduce unneeded
 duplication of resources, and store the data in a way that it can be configured for different use-cases and export scenarios.
 This section of the documentation explains when data is copied and when referenced, and how objects behave in the different categories
@@ -19,9 +19,9 @@ of content (scene, resources, prefabs, and external project references).
 This manual page is intended for advanced usage of the Composer.
 For introduction to the individual features, have a look at the dedicated examples:
 
-* [Hello World](../hello_world/manual.md) - fundamentals of references to external resources
-* [Monkey heads](../monkey/manual.md#lua-scripting) - links between properties inside the project
-* [Prefabs](../prefabs/manual.md) - packaging of data in reusable components
+* [Hello World](../hello_world/README.md) - fundamentals of references to external resources
+* [Monkey heads](../monkey/README.md#lua-scripting) - links between properties inside the project
+* [Prefabs](../prefabs/README.md) - packaging of data in reusable components
 
 <!-- TODO add external references here too, once finished -->
 
@@ -33,7 +33,7 @@ always distributed together with the imported files at the correct location spec
 `rca` file lives in order to make the project portable, i.e. be able to move and archive the whole folder for easy distribution and versioning.
 
 For options to use absolute paths and best practices for project structure, refer to
-[the dedicated section](../best_practices/manual.md#relative-and-absolute-paths).
+[the dedicated section](../best_practices/README.md#relative-and-absolute-paths).
 
 <!-- TODO this section needs to be extended/adapted once external references are implemented. How are external projects and their references
 supposed to be managed? As subfolders? Relative paths? ... -->
@@ -46,7 +46,7 @@ All references to non-native Ramses objects are resolved to native Ramses conten
 This includes external resources (shaders, PNG, glTF, etc), prefabs and external project references.
 
 During the export, the Ramses scene is exported in the same state as it is in the Composer at the time of export.
-Refer to the [export manual](../export/manual.md)
+Refer to the [export manual](../export/README.md)
 for details how to use the export functionality. See the [section below](#mapping-to-ramses-objects) for
 details which data is exported and which objects to expect.
 

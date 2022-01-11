@@ -71,7 +71,7 @@ with shaders, but new to GLSL, you can find the quick reference of the OpenGL ES
 version of GLSL typically used by modern consumer electronics.
 
 There are two more resource types in the default project - a `RenderLayer` and a `RenderPass`. Please
-refer to the [tutorial related to ordering](../ordering/manual.md) for details on their usage. In the context
+refer to the [tutorial related to ordering](../ordering/README.md) for details on their usage. In the context
 of this tutorial, it's enough to know that they make sure the cube is shown in the viewport of the Ramses Composer.
 
 ## Saving the project

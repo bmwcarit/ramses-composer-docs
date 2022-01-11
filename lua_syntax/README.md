@@ -43,7 +43,7 @@ There are two different ways to use Lua scripts in your scene / project.
 ### What's the difference?
 Basically all *Lua* scripts work in the same way, regardless of their location, this is just a feature to allow you to get them organized conveniently within your project.
 
-If you put them as children of a Node into the scene graph, you can group them logically and keep object specific behaviour closely together. You can always change their location and order if you like. This topic is particularly interesting for including Lua scripts in [Prefabs](../prefabs/manual.md).
+If you put them as children of a Node into the scene graph, you can group them logically and keep object specific behaviour closely together. You can always change their location and order if you like. This topic is particularly interesting for including Lua scripts in [Prefabs](../prefabs/README.md).
 
 _Lua_ scripts in your Resources view also appear on top level in the Scene Graph. They are easy to find and immediately accessible. This might be the right place for scene-level functionality or scene input.
 

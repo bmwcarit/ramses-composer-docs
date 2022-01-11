@@ -18,54 +18,54 @@ This repository contains the documentation for Ramses Composer, the authoring to
 These tutorials explain the basic features of the Composer, how to import, manage, modify and export
 your data.
 
-[Introduction](introduction/manual.md) - What exactly is this Ramses Composer good for?
+[Introduction](introduction/README.md) - What exactly is this Ramses Composer good for?
 
-[First basic project](./hello_world/manual.md) - A simple cube.
+[First basic project](./hello_world/README.md) - A simple cube.
 
-[A more interesting project](./monkey/manual.md) - A monkey head with flat shading.
+[A more interesting project](./monkey/README.md) - A monkey head with flat shading.
 
-[Data and scope](./data_and_scopes/manual.md) - Details on object types, data and scope.
+[Data and scope](./data_and_scopes/README.md) - Details on object types, data and scope.
 
-[Complex import](./complex_import/manual.md) - Import multiple objects from a single glTF file.
+[Complex import](./complex_import/README.md) - Import multiple objects from a single glTF file.
 
-[Animations](./animations/manual.md) - Import and control animations from glTF.
+[Animations](./animations/README.md) - Import and control animations from glTF.
 
-[Exporting to Ramses](./export/manual.md) - Export optimized Ramses binary assets.
+[Exporting to Ramses](./export/README.md) - Export optimized Ramses binary assets.
 
 ## Structuring your project
 
 How to manage a more complex project, allow collaboration with multiple artists or teams,
 eliminate duplication and maintain clear structure? The following tutorials provide some answers.
 
-[Introducing prefabs](prefabs/manual.md) - This example shows you how to create encapsulated, reusable objects with the Prefab mechanism.
+[Introducing prefabs](prefabs/README.md) - This example shows you how to create encapsulated, reusable objects with the Prefab mechanism.
 
-[Nested prefabs](nested_prefabs/manual.md) - Demonstrates how to construct complex Prefabs using other Prefabs as building blocks.
+[Nested prefabs](nested_prefabs/README.md) - Demonstrates how to construct complex Prefabs using other Prefabs as building blocks.
 
-[External references](external_references/manual.md) - Explains how to import and use building blocks from different projects.
+[External references](external_references/README.md) - Explains how to import and use building blocks from different projects.
 
-[Best practices](./best_practices/manual.md) - Suggests best practices for project structure.
+[Best practices](./best_practices/README.md) - Suggests best practices for project structure.
 
 ## Advanced guides
 
 Need a specific Lua feature, or need to know how rotation math works? Advanced details here!
 
-[Conventions](./conventions/manual.md) - Coordinate systems and import specifics.
+[Conventions](./conventions/README.md) - Coordinate systems and import specifics.
 
-[Scripting with LUA](./lua_syntax/manual.md) - Advanced Lua scripting tips.
+[Scripting with LUA](./lua_syntax/README.md) - Advanced Lua scripting tips.
 
-[Render Order](./ordering/manual.md) - Controlling the render order.
+[Render Order](./ordering/README.md) - Controlling the render order.
 
-[Offscreen Rendering](./offscreen/manual.md) - Offscreen Rendering.
+[Offscreen Rendering](./offscreen/README.md) - Offscreen Rendering.
 
-[Versions](./versions/manual.md) - Supported versions, API and ABI compatibility.
+[Versions](./versions/README.md) - Supported versions, API and ABI compatibility.
 
 ## Troubleshooting
 
-[Using the Log Output Console](using_log_console/manual.md)
+[Using the Log Output Console](using_log_console/README.md)
 
-[Common Issues](common_issues/manual.md)
+[Common Issues](common_issues/README.md)
 
-[Crash dumps](crash_dumps/manual.md)
+[Crash dumps](crash_dumps/README.md)
 
 
 ## Related resources
@@ -77,5 +77,5 @@ also [these pages](https://ramses-sdk.readthedocs.io/).
 
 Like the Ramses Composer, this documentation is also published under the MPL-2.0 license.
 Some of the example glTF assets are taken from the official Khronos repositories - the corresponding
-example projects mention the source and license information in their respective manual.md documents.
+example projects mention the source and license information in their respective README.md documents.
 Some of the example projects contain a custom Blender file. These files are also published under the MPL-2.0 license.
