@@ -33,7 +33,7 @@ always distributed together with the imported files at the correct location spec
 `rca` file lives in order to make the project portable, i.e. be able to move and archive the whole folder for easy distribution and versioning.
 
 For options to use absolute paths and best practices for project structure, refer to
-[the dedicated section](../best_practices/README.md#relative-and-absolute-paths).
+[the dedicated section](../../advanced/best_practices/README.md#relative-and-absolute-paths).
 
 <!-- TODO this section needs to be extended/adapted once external references are implemented. How are external projects and their references
 supposed to be managed? As subfolders? Relative paths? ... -->
