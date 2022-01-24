@@ -170,7 +170,7 @@ with the following additional rules:
 
 The ordering mechanisms described in this example are compatible to each other and can be combined.
 It is possible to use different mechanisms for different RenderLayer or RenderPass objects.
-It is also possible to refer to tags used in nested projects (see [external references](../external_references/README.md)).
+It is also possible to refer to tags used in nested projects (see [external references](../../advanced/external_references/README.md)).
 
 To understand which Ramses objects are generated based on the RenderPass, RenderLayer and SceneGraph
 structures, see [the data and scopes section](../data_and_scopes/README.md).

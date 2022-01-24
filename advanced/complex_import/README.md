@@ -68,7 +68,7 @@ coordinate systems for their children:
 ![](./docs/pivots.png)
 
 We want to import the Blender contents into the Ramses Composer and keep the original node structure. In
-the [Hello World](../hello_world/README.md) and the [Monkey](../monkey/README.md) examples we learned
+the [Hello World](../../basics/hello_world/README.md) and the [Monkey](../../basics/monkey/README.md) examples we learned
 how to import single meshes. The monkeys example creates three instances of a mesh, but the
 referenced glTF file still contains only one mesh. For more complex scenes, especially such that contain
 multiple nodes arranged hierarchically, it's not
@@ -110,7 +110,7 @@ You can observe that the Composer imported the nodes exactly as they were
 defined in the [Blender scene](./blender/)
 and kept their names and parental information. If you un-selected the `+Y is up` option in
 Blender glTF export menu, then the node properties (rotation, translation, scaling) are also exactly the same as in Blender. You can
-read up more on the subject in the section in the [Conventions chapter](../conventions/README.md).
+read up more on the subject in the section in the [Conventions chapter](../../basics/conventions/README.md).
 
 Next, we will modify some of the export/import settings. But first, let's make all meshes translucent by assigning a translucent
 material with a different color per mesh, and setting the blending to additive. We use simple [shaders](./shaders/) which
@@ -134,7 +134,7 @@ like in previous examples, but instead remember their original index from the im
 
 ![](./docs/mesh_index.png)
 
-For comparison, this is how the mesh settings from the [Monkey example](../monkey/README.md) look like:
+For comparison, this is how the mesh settings from the [Monkey example](../../basics/monkey/README.md) look like:
 
 ![](./docs/bake_all_meshes.png)
 

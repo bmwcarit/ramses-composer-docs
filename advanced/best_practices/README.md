@@ -69,7 +69,8 @@ Use relative paths whenever possible. As described earlier, relative paths make 
 
 Absolute paths should only be used as a last resort. They are more prone to breaking external dependencies, depending on the resource file path (for local files) or network settings (for network drive files).
 
-For a nifty alternative to absolute paths, try using relative paths to [external references](../external_references/README.md) in local project copies.
+For a nifty alternative to absolute paths, try using relative paths to
+[external references](../external_references/README.md) in local project copies.
 
 
 ## File Version Handling
