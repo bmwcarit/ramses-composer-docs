@@ -45,8 +45,9 @@ prefer to work with. Just play around with it until you feel comfortable. If you
 a view, you can bring it up again from the _View_ menu. The default layout contains the main views:
 
 __Scene Graph__: This tree view is the heart of Ramses Composer and displays the scene graph with all
-the elements of your scene. The elements can be rearranged by drag&drop. The order in the scene graph
-also determines the rendering order.
+the elements of your scene. The elements can be rearranged by drag&drop. Multiple elements can be
+selected and cut/copied/pasted whenever possible. The order in the scene graph also determines
+the rendering order.
 
 __Resources__: The resource view shows all the resources like meshes or textures used by the scene. By
 clicking on the column headers, it can be sorted by name or by type. It is possible to use resources
