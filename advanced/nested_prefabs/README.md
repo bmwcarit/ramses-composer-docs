@@ -84,7 +84,7 @@ shader and apply it to all Mesh Nodes.
 ![](docs/prefab_wheel.png)
 
 Let's start with our most basic element, the wheel. Naturally, we create a Prefab and drag in
-the imported _Wheel_ MeshNode from the scengraph. We also add an additional Node _Suspension_
+the imported _Wheel_ MeshNode from the scene graph. We also add an additional Node _Suspension_
 as its parent so we can better control the movements of the wheel. The MeshNode itself will
 rotate to make the wheel spin, the _Suspension_ Node will rotate for steering.
 
