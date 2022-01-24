@@ -90,7 +90,8 @@ as a modern format for meshes.
 
 __Textures__ can be created in any graphics application. There are 2D textures and cube
 maps. Ramses Composer currently supports PNG images (the most common type with 8bit
-RGBA colors).
+RGBA colors). They can be mipmapped by activating the "Generate Mipmaps" flag
+in the Property Browser.
 
 __Shaders__ in RAMSES are written in the [OpenGL Shading Language](https://en.wikipedia.org/wiki/OpenGL_Shading_Language),
 or to be more specific in GLSL ES 3.0. For editing them, a plain text editor with syntax highlighting is recommended,
