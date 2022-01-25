@@ -45,8 +45,9 @@ prefer to work with. Just play around with it until you feel comfortable. If you
 a view, you can bring it up again from the _View_ menu. The default layout contains the main views:
 
 __Scene Graph__: This tree view is the heart of Ramses Composer and displays the scene graph with all
-the elements of your scene. The elements can be rearranged by drag&drop. The order in the scene graph
-also determines the rendering order.
+the elements of your scene. The elements can be rearranged by drag&drop. Multiple elements can be
+selected and cut/copied/pasted whenever possible. The order in the scene graph also determines
+the rendering order.
 
 __Resources__: The resource view shows all the resources like meshes or textures used by the scene. By
 clicking on the column headers, it can be sorted by name or by type. It is possible to use resources
@@ -89,7 +90,8 @@ as a modern format for meshes.
 
 __Textures__ can be created in any graphics application. There are 2D textures and cube
 maps. Ramses Composer currently supports PNG images (the most common type with 8bit
-RGBA colors).
+RGBA colors). They can be mipmapped by activating the "Generate Mipmaps" flag
+in the Property Browser.
 
 __Shaders__ in RAMSES are written in the [OpenGL Shading Language](https://en.wikipedia.org/wiki/OpenGL_Shading_Language),
 or to be more specific in GLSL ES 3.0. For editing them, a plain text editor with syntax highlighting is recommended,
