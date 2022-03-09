@@ -1,7 +1,7 @@
 {
     "externalProjects": {
     },
-    "fileVersion": 21,
+    "fileVersion": 29,
     "instances": [
         {
             "properties": {
@@ -507,10 +507,17 @@
                         "value": 0
                     }
                 },
+                "defaultResourceFolders": {
+                    "imageSubdirectory": "images",
+                    "meshSubdirectory": "meshes",
+                    "scriptSubdirectory": "scripts",
+                    "shaderSubdirectory": "shaders"
+                },
                 "enableTimerFlag": false,
                 "objectID": "8697046f-6b59-4533-aa6c-795899be9820",
                 "objectName": "animations",
                 "runTimer": false,
+                "saveAsZip": false,
                 "sceneId": {
                     "annotations": [
                         {
@@ -853,7 +860,7 @@
                                 "typeName": "RangeAnnotationDouble"
                             }
                         ],
-                        "value": -2.4450950622558594
+                        "value": -29.476545333862305
                     },
                     "z": {
                         "annotations": [
@@ -891,7 +898,7 @@
                                 "typeName": "RangeAnnotationDouble"
                             }
                         ],
-                        "value": 2.0626842975616455
+                        "value": 2.624814510345459
                     },
                     "z": {
                         "annotations": [
@@ -917,7 +924,7 @@
                                 "typeName": "RangeAnnotationDouble"
                             }
                         ],
-                        "value": 0.05223701149225235
+                        "value": 0.5206786394119263
                     },
                     "y": {
                         "annotations": [
@@ -954,7 +961,7 @@
                 "objectID": "a387317b-d832-4a61-ad3f-ab5a97395eeb",
                 "objectName": "Simple_TRS.ch0",
                 "samplerIndex": 0,
-                "uri": "C:/dev/tools/ramses-composer-docs/animations/meshes/animated.gltf"
+                "uri": "meshes/animated.gltf"
             },
             "typeName": "AnimationChannel"
         },
@@ -964,7 +971,7 @@
                 "objectID": "cfe8dd21-bcf5-446f-b187-19c04fbe00de",
                 "objectName": "Simple_TRS.ch1",
                 "samplerIndex": 1,
-                "uri": "C:/dev/tools/ramses-composer-docs/animations/meshes/animated.gltf"
+                "uri": "meshes/animated.gltf"
             },
             "typeName": "AnimationChannel"
         },
@@ -974,7 +981,7 @@
                 "objectID": "ce8f4f99-80a7-48ff-9f25-dbd1fee4ec17",
                 "objectName": "Simple_TRS.ch2",
                 "samplerIndex": 2,
-                "uri": "C:/dev/tools/ramses-composer-docs/animations/meshes/animated.gltf"
+                "uri": "meshes/animated.gltf"
             },
             "typeName": "AnimationChannel"
         },
@@ -1032,7 +1039,7 @@
                                             "typeName": "RangeAnnotationDouble"
                                         }
                                     ],
-                                    "value": 0.05223701149225235
+                                    "value": 0.5206786394119263
                                 },
                                 "y": {
                                     "annotations": [
@@ -1084,7 +1091,7 @@
                                             "typeName": "RangeAnnotationDouble"
                                         }
                                     ],
-                                    "value": 0.9997723698616028
+                                    "value": 0.96709805727005
                                 },
                                 "x": {
                                     "annotations": [
@@ -1108,7 +1115,7 @@
                                             "typeName": "RangeAnnotationDouble"
                                         }
                                     ],
-                                    "value": -0.02133585885167122
+                                    "value": -0.2544040083885193
                                 },
                                 "z": {
                                     "annotations": [
@@ -1160,7 +1167,7 @@
                                             "typeName": "RangeAnnotationDouble"
                                         }
                                     ],
-                                    "value": 2.0626842975616455
+                                    "value": 2.624814510345459
                                 },
                                 "z": {
                                     "annotations": [
@@ -1190,7 +1197,7 @@
                                 }
                             ],
                             "typeName": "Double::EngineTypeAnnotation::LinkStartAnnotation",
-                            "value": 0.10118936002254486
+                            "value": 0.3055990934371948
                         }
                     }
                 },
@@ -1291,17 +1298,324 @@
     ],
     "logicEngineVersion": [
         0,
-        13,
-        0
+        14,
+        2
     ],
     "racoVersion": [
         0,
-        11,
+        13,
         0
     ],
     "ramsesVersion": [
         27,
         0,
-        114
-    ]
+        115
+    ],
+    "structPropMap": {
+        "BlendOptions": {
+            "blendColor": "Vec4f::DisplayNameAnnotation",
+            "blendFactorDestAlpha": "Int::DisplayNameAnnotation::EnumerationAnnotation",
+            "blendFactorDestColor": "Int::DisplayNameAnnotation::EnumerationAnnotation",
+            "blendFactorSrcAlpha": "Int::DisplayNameAnnotation::EnumerationAnnotation",
+            "blendFactorSrcColor": "Int::DisplayNameAnnotation::EnumerationAnnotation",
+            "blendOperationAlpha": "Int::DisplayNameAnnotation::EnumerationAnnotation",
+            "blendOperationColor": "Int::DisplayNameAnnotation::EnumerationAnnotation",
+            "cullmode": "Int::DisplayNameAnnotation::EnumerationAnnotation",
+            "depthFunction": "Int::DisplayNameAnnotation::EnumerationAnnotation",
+            "depthwrite": "Bool::DisplayNameAnnotation"
+        },
+        "CameraViewport": {
+            "height": "Int::RangeAnnotationInt::DisplayNameAnnotation::LinkEndAnnotation",
+            "offsetX": "Int::RangeAnnotationInt::DisplayNameAnnotation::LinkEndAnnotation",
+            "offsetY": "Int::RangeAnnotationInt::DisplayNameAnnotation::LinkEndAnnotation",
+            "width": "Int::RangeAnnotationInt::DisplayNameAnnotation::LinkEndAnnotation"
+        },
+        "DefaultResourceDirectories": {
+            "imageSubdirectory": "String::DisplayNameAnnotation::URIAnnotation",
+            "meshSubdirectory": "String::DisplayNameAnnotation::URIAnnotation",
+            "scriptSubdirectory": "String::DisplayNameAnnotation::URIAnnotation",
+            "shaderSubdirectory": "String::DisplayNameAnnotation::URIAnnotation"
+        },
+        "OrthographicFrustum": {
+            "bottomPlane": "Double::DisplayNameAnnotation::RangeAnnotationDouble::LinkEndAnnotation",
+            "farPlane": "Double::DisplayNameAnnotation::RangeAnnotationDouble::LinkEndAnnotation",
+            "leftPlane": "Double::DisplayNameAnnotation::RangeAnnotationDouble::LinkEndAnnotation",
+            "nearPlane": "Double::DisplayNameAnnotation::RangeAnnotationDouble::LinkEndAnnotation",
+            "rightPlane": "Double::DisplayNameAnnotation::RangeAnnotationDouble::LinkEndAnnotation",
+            "topPlane": "Double::DisplayNameAnnotation::RangeAnnotationDouble::LinkEndAnnotation"
+        },
+        "PerspectiveFrustum": {
+            "aspectRatio": "Double::DisplayNameAnnotation::RangeAnnotationDouble::LinkEndAnnotation",
+            "farPlane": "Double::DisplayNameAnnotation::RangeAnnotationDouble::LinkEndAnnotation",
+            "fieldOfView": "Double::DisplayNameAnnotation::RangeAnnotationDouble::LinkEndAnnotation",
+            "nearPlane": "Double::DisplayNameAnnotation::RangeAnnotationDouble::LinkEndAnnotation"
+        },
+        "Vec2f": {
+            "x": "Double::DisplayNameAnnotation::RangeAnnotationDouble",
+            "y": "Double::DisplayNameAnnotation::RangeAnnotationDouble"
+        },
+        "Vec2i": {
+            "i1": "Int::DisplayNameAnnotation::RangeAnnotationInt",
+            "i2": "Int::DisplayNameAnnotation::RangeAnnotationInt"
+        },
+        "Vec3f": {
+            "x": "Double::DisplayNameAnnotation::RangeAnnotationDouble",
+            "y": "Double::DisplayNameAnnotation::RangeAnnotationDouble",
+            "z": "Double::DisplayNameAnnotation::RangeAnnotationDouble"
+        },
+        "Vec3i": {
+            "i1": "Int::DisplayNameAnnotation::RangeAnnotationInt",
+            "i2": "Int::DisplayNameAnnotation::RangeAnnotationInt",
+            "i3": "Int::DisplayNameAnnotation::RangeAnnotationInt"
+        },
+        "Vec4f": {
+            "w": "Double::DisplayNameAnnotation::RangeAnnotationDouble",
+            "x": "Double::DisplayNameAnnotation::RangeAnnotationDouble",
+            "y": "Double::DisplayNameAnnotation::RangeAnnotationDouble",
+            "z": "Double::DisplayNameAnnotation::RangeAnnotationDouble"
+        },
+        "Vec4i": {
+            "i1": "Int::DisplayNameAnnotation::RangeAnnotationInt",
+            "i2": "Int::DisplayNameAnnotation::RangeAnnotationInt",
+            "i3": "Int::DisplayNameAnnotation::RangeAnnotationInt",
+            "i4": "Int::DisplayNameAnnotation::RangeAnnotationInt"
+        }
+    },
+    "userTypePropMap": {
+        "Animation": {
+            "animationChannels": "Table::DisplayNameAnnotation",
+            "animationOutputs": "Table::DisplayNameAnnotation",
+            "children": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "loop": "Bool::DisplayNameAnnotation::LinkEndAnnotation",
+            "objectID": "String::HiddenProperty",
+            "objectName": "String::DisplayNameAnnotation",
+            "play": "Bool::DisplayNameAnnotation::LinkEndAnnotation",
+            "rewindOnStop": "Bool::DisplayNameAnnotation::LinkEndAnnotation"
+        },
+        "AnimationChannel": {
+            "animationIndex": "Int::DisplayNameAnnotation",
+            "children": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "objectID": "String::HiddenProperty",
+            "objectName": "String::DisplayNameAnnotation",
+            "samplerIndex": "Int::DisplayNameAnnotation",
+            "uri": "String::URIAnnotation::DisplayNameAnnotation"
+        },
+        "CubeMap": {
+            "anisotropy": "Int::DisplayNameAnnotation::RangeAnnotationInt",
+            "children": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "generateMipmaps": "Bool::DisplayNameAnnotation",
+            "level2uriBack": "String::URIAnnotation::DisplayNameAnnotation",
+            "level2uriBottom": "String::URIAnnotation::DisplayNameAnnotation",
+            "level2uriFront": "String::URIAnnotation::DisplayNameAnnotation",
+            "level2uriLeft": "String::URIAnnotation::DisplayNameAnnotation",
+            "level2uriRight": "String::URIAnnotation::DisplayNameAnnotation",
+            "level2uriTop": "String::URIAnnotation::DisplayNameAnnotation",
+            "level3uriBack": "String::URIAnnotation::DisplayNameAnnotation",
+            "level3uriBottom": "String::URIAnnotation::DisplayNameAnnotation",
+            "level3uriFront": "String::URIAnnotation::DisplayNameAnnotation",
+            "level3uriLeft": "String::URIAnnotation::DisplayNameAnnotation",
+            "level3uriRight": "String::URIAnnotation::DisplayNameAnnotation",
+            "level3uriTop": "String::URIAnnotation::DisplayNameAnnotation",
+            "level4uriBack": "String::URIAnnotation::DisplayNameAnnotation",
+            "level4uriBottom": "String::URIAnnotation::DisplayNameAnnotation",
+            "level4uriFront": "String::URIAnnotation::DisplayNameAnnotation",
+            "level4uriLeft": "String::URIAnnotation::DisplayNameAnnotation",
+            "level4uriRight": "String::URIAnnotation::DisplayNameAnnotation",
+            "level4uriTop": "String::URIAnnotation::DisplayNameAnnotation",
+            "magSamplingMethod": "Int::DisplayNameAnnotation::EnumerationAnnotation",
+            "minSamplingMethod": "Int::DisplayNameAnnotation::EnumerationAnnotation",
+            "mipmapLevel": "Int::DisplayNameAnnotation::RangeAnnotationInt",
+            "objectID": "String::HiddenProperty",
+            "objectName": "String::DisplayNameAnnotation",
+            "uriBack": "String::URIAnnotation::DisplayNameAnnotation",
+            "uriBottom": "String::URIAnnotation::DisplayNameAnnotation",
+            "uriFront": "String::URIAnnotation::DisplayNameAnnotation",
+            "uriLeft": "String::URIAnnotation::DisplayNameAnnotation",
+            "uriRight": "String::URIAnnotation::DisplayNameAnnotation",
+            "uriTop": "String::URIAnnotation::DisplayNameAnnotation",
+            "wrapUMode": "Int::DisplayNameAnnotation::EnumerationAnnotation",
+            "wrapVMode": "Int::DisplayNameAnnotation::EnumerationAnnotation"
+        },
+        "LuaScript": {
+            "children": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "luaInputs": "Table::DisplayNameAnnotation",
+            "luaModules": "Table::DisplayNameAnnotation",
+            "luaOutputs": "Table::DisplayNameAnnotation",
+            "objectID": "String::HiddenProperty",
+            "objectName": "String::DisplayNameAnnotation",
+            "uri": "String::URIAnnotation::DisplayNameAnnotation"
+        },
+        "LuaScriptModule": {
+            "children": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "objectID": "String::HiddenProperty",
+            "objectName": "String::DisplayNameAnnotation",
+            "uri": "String::URIAnnotation::DisplayNameAnnotation"
+        },
+        "Material": {
+            "children": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "objectID": "String::HiddenProperty",
+            "objectName": "String::DisplayNameAnnotation",
+            "options": "BlendOptions::DisplayNameAnnotation",
+            "tags": "Table::ArraySemanticAnnotation::TagContainerAnnotation::DisplayNameAnnotation",
+            "uniforms": "Table::DisplayNameAnnotation",
+            "uriDefines": "String::URIAnnotation::DisplayNameAnnotation",
+            "uriFragment": "String::URIAnnotation::DisplayNameAnnotation",
+            "uriGeometry": "String::URIAnnotation::DisplayNameAnnotation",
+            "uriVertex": "String::URIAnnotation::DisplayNameAnnotation"
+        },
+        "Mesh": {
+            "bakeMeshes": "Bool::DisplayNameAnnotation",
+            "children": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "materialNames": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "meshIndex": "Int::DisplayNameAnnotation",
+            "objectID": "String::HiddenProperty",
+            "objectName": "String::DisplayNameAnnotation",
+            "uri": "String::URIAnnotation::DisplayNameAnnotation"
+        },
+        "MeshNode": {
+            "children": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "instanceCount": "Int::DisplayNameAnnotation::RangeAnnotationInt",
+            "materials": "Table::DisplayNameAnnotation",
+            "mesh": "Mesh::DisplayNameAnnotation",
+            "objectID": "String::HiddenProperty",
+            "objectName": "String::DisplayNameAnnotation",
+            "rotation": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
+            "scale": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
+            "tags": "Table::ArraySemanticAnnotation::TagContainerAnnotation::DisplayNameAnnotation",
+            "translation": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
+            "visible": "Bool::DisplayNameAnnotation::LinkEndAnnotation"
+        },
+        "Node": {
+            "children": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "objectID": "String::HiddenProperty",
+            "objectName": "String::DisplayNameAnnotation",
+            "rotation": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
+            "scale": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
+            "tags": "Table::ArraySemanticAnnotation::TagContainerAnnotation::DisplayNameAnnotation",
+            "translation": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
+            "visible": "Bool::DisplayNameAnnotation::LinkEndAnnotation"
+        },
+        "OrthographicCamera": {
+            "children": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "frustum": "OrthographicFrustum::DisplayNameAnnotation::LinkEndAnnotation",
+            "objectID": "String::HiddenProperty",
+            "objectName": "String::DisplayNameAnnotation",
+            "rotation": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
+            "scale": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
+            "tags": "Table::ArraySemanticAnnotation::TagContainerAnnotation::DisplayNameAnnotation",
+            "translation": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
+            "viewport": "CameraViewport::DisplayNameAnnotation::LinkEndAnnotation",
+            "visible": "Bool::DisplayNameAnnotation::LinkEndAnnotation"
+        },
+        "PerspectiveCamera": {
+            "children": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "frustum": "PerspectiveFrustum::DisplayNameAnnotation::LinkEndAnnotation",
+            "objectID": "String::HiddenProperty",
+            "objectName": "String::DisplayNameAnnotation",
+            "rotation": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
+            "scale": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
+            "tags": "Table::ArraySemanticAnnotation::TagContainerAnnotation::DisplayNameAnnotation",
+            "translation": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
+            "viewport": "CameraViewport::DisplayNameAnnotation::LinkEndAnnotation",
+            "visible": "Bool::DisplayNameAnnotation::LinkEndAnnotation"
+        },
+        "Prefab": {
+            "children": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "objectID": "String::HiddenProperty",
+            "objectName": "String::DisplayNameAnnotation"
+        },
+        "PrefabInstance": {
+            "children": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "objectID": "String::HiddenProperty",
+            "objectName": "String::DisplayNameAnnotation",
+            "rotation": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
+            "scale": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
+            "tags": "Table::ArraySemanticAnnotation::TagContainerAnnotation::DisplayNameAnnotation",
+            "template": "Prefab::DisplayNameAnnotation",
+            "translation": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
+            "visible": "Bool::DisplayNameAnnotation::LinkEndAnnotation"
+        },
+        "ProjectSettings": {
+            "backgroundColor": "Vec4f::DisplayNameAnnotation",
+            "children": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "defaultResourceFolders": "DefaultResourceDirectories::DisplayNameAnnotation",
+            "enableTimerFlag": "Bool::HiddenProperty",
+            "objectID": "String::HiddenProperty",
+            "objectName": "String::DisplayNameAnnotation",
+            "runTimer": "Bool::HiddenProperty",
+            "saveAsZip": "Bool::DisplayNameAnnotation",
+            "sceneId": "Int::DisplayNameAnnotation::RangeAnnotationInt",
+            "viewport": "Vec2i::DisplayNameAnnotation"
+        },
+        "RenderBuffer": {
+            "anisotropy": "Int::DisplayNameAnnotation::RangeAnnotationInt",
+            "children": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "format": "Int::DisplayNameAnnotation::EnumerationAnnotation",
+            "height": "Int::RangeAnnotationInt::DisplayNameAnnotation",
+            "magSamplingMethod": "Int::DisplayNameAnnotation::EnumerationAnnotation",
+            "minSamplingMethod": "Int::DisplayNameAnnotation::EnumerationAnnotation",
+            "objectID": "String::HiddenProperty",
+            "objectName": "String::DisplayNameAnnotation",
+            "width": "Int::RangeAnnotationInt::DisplayNameAnnotation",
+            "wrapUMode": "Int::DisplayNameAnnotation::EnumerationAnnotation",
+            "wrapVMode": "Int::DisplayNameAnnotation::EnumerationAnnotation"
+        },
+        "RenderLayer": {
+            "children": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "invertMaterialFilter": "Bool::DisplayNameAnnotation::EnumerationAnnotation",
+            "materialFilterTags": "Table::ArraySemanticAnnotation::TagContainerAnnotation::DisplayNameAnnotation",
+            "objectID": "String::HiddenProperty",
+            "objectName": "String::DisplayNameAnnotation",
+            "renderableTags": "Table::RenderableTagContainerAnnotation::DisplayNameAnnotation",
+            "sortOrder": "Int::DisplayNameAnnotation::EnumerationAnnotation",
+            "tags": "Table::ArraySemanticAnnotation::TagContainerAnnotation::DisplayNameAnnotation"
+        },
+        "RenderPass": {
+            "camera": "BaseCamera::DisplayNameAnnotation",
+            "children": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "clearColor": "Vec4f::DisplayNameAnnotation",
+            "enableClearColor": "Bool::DisplayNameAnnotation",
+            "enableClearDepth": "Bool::DisplayNameAnnotation",
+            "enableClearStencil": "Bool::DisplayNameAnnotation",
+            "enabled": "Bool::DisplayNameAnnotation",
+            "layer0": "RenderLayer::DisplayNameAnnotation",
+            "layer1": "RenderLayer::DisplayNameAnnotation::EmptyReferenceAllowable",
+            "layer2": "RenderLayer::DisplayNameAnnotation::EmptyReferenceAllowable",
+            "layer3": "RenderLayer::DisplayNameAnnotation::EmptyReferenceAllowable",
+            "layer4": "RenderLayer::DisplayNameAnnotation::EmptyReferenceAllowable",
+            "layer5": "RenderLayer::DisplayNameAnnotation::EmptyReferenceAllowable",
+            "layer6": "RenderLayer::DisplayNameAnnotation::EmptyReferenceAllowable",
+            "layer7": "RenderLayer::DisplayNameAnnotation::EmptyReferenceAllowable",
+            "objectID": "String::HiddenProperty",
+            "objectName": "String::DisplayNameAnnotation",
+            "order": "Int::DisplayNameAnnotation",
+            "target": "RenderTarget::DisplayNameAnnotation::EmptyReferenceAllowable"
+        },
+        "RenderTarget": {
+            "buffer0": "RenderBuffer::DisplayNameAnnotation",
+            "buffer1": "RenderBuffer::DisplayNameAnnotation::EmptyReferenceAllowable",
+            "buffer2": "RenderBuffer::DisplayNameAnnotation::EmptyReferenceAllowable",
+            "buffer3": "RenderBuffer::DisplayNameAnnotation::EmptyReferenceAllowable",
+            "buffer4": "RenderBuffer::DisplayNameAnnotation::EmptyReferenceAllowable",
+            "buffer5": "RenderBuffer::DisplayNameAnnotation::EmptyReferenceAllowable",
+            "buffer6": "RenderBuffer::DisplayNameAnnotation::EmptyReferenceAllowable",
+            "buffer7": "RenderBuffer::DisplayNameAnnotation::EmptyReferenceAllowable",
+            "children": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "objectID": "String::HiddenProperty",
+            "objectName": "String::DisplayNameAnnotation"
+        },
+        "Texture": {
+            "anisotropy": "Int::DisplayNameAnnotation::RangeAnnotationInt",
+            "children": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "flipTexture": "Bool::DisplayNameAnnotation",
+            "generateMipmaps": "Bool::DisplayNameAnnotation",
+            "magSamplingMethod": "Int::DisplayNameAnnotation::EnumerationAnnotation",
+            "minSamplingMethod": "Int::DisplayNameAnnotation::EnumerationAnnotation",
+            "objectID": "String::HiddenProperty",
+            "objectName": "String::DisplayNameAnnotation",
+            "uri": "String::URIAnnotation::DisplayNameAnnotation",
+            "wrapUMode": "Int::DisplayNameAnnotation::EnumerationAnnotation",
+            "wrapVMode": "Int::DisplayNameAnnotation::EnumerationAnnotation"
+        }
+    }
 }
