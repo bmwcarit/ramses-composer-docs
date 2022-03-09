@@ -10,7 +10,7 @@
         },
         "99d3d950-ec4b-47fe-bc86-a062059faf3a": {
             "name": "LanternRoad",
-            "path": "../prefabs/lantern_road.rca"
+            "path": "../../basics/prefabs/lantern_road.rca"
         }
     },
     "fileVersion": 9,
