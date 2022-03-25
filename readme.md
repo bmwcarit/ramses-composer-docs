@@ -40,6 +40,8 @@ your data.
 
 ## Advanced
 
+[Modules](./advanced/modules/README.md) - Reuse Lua code by using modules.
+
 [Complex import](./advanced/complex_import/README.md) - Import multiple objects from a single glTF file.
 
 [Animations](./advanced/animations/README.md) - Import and control animations from glTF.
