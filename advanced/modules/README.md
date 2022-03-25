@@ -12,7 +12,7 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 
 ![](../../basics/monkey/docs/viewport_preview.png)
 
-This tutorial demonstrates how to re-use Lua functions and configuration data using Lua modules.
+This tutorial demonstrates how to reuse Lua functions and configuration data using Lua modules.
 
 ## What are modules good for?
 
