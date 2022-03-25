@@ -69,7 +69,7 @@ function interface()
 
 ```
 
-Now the LightControl script will report errors, because you declared a module but didn't provide one to the script. To fix the
+Now the LightControl script will report errors, because you declared a module in the script file but didn't provide a module to the respective LuaScript object in Ramses Composer. To fix the
 error, go to the LuaScript's property page and you will now see a list of modules with one entry called 'light'. Click and select
 the only module we have in the project - the light module.
 
