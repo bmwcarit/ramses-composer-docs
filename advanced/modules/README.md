@@ -58,7 +58,7 @@ Modules have to be explicitly created and imported in the scripts which need to 
 right click the resources area and create a new object of type 'LuaScriptModule'. Set its URI to the source code file
 we created in the previous section.
 
-To let a script make use of a module, you have to explicitly declare you want to use it. Add the following line in the
+To let a script make use of a module, you have to explicitly declare how you want to use it. Add the following line in the
 LightControl script:
 
 ```lua
