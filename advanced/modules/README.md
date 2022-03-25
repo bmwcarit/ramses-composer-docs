@@ -27,7 +27,7 @@ Modules provide a solution to this problem which works very similar to how typic
 You can put some of the functions and data you need in your project in a module, and reference that module from multiple scripts.
 Let's build an example which does that!
 
-## Copy pasta
+## Copy paste
 
 In this tutorial, we will use the [monkey example](../../basics/monkey/README.md#recreate-sample) and build on top of it.
 In that example, we created three monkey heads which are lit by a Phong shader which is in turn controlled by a Lua script.
