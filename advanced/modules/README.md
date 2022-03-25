@@ -101,7 +101,7 @@ hardcoded diffuse color with a dynamic color which is animated. Feel free to exp
 
 The example module we created for this example has a slightly different syntax than other scripts in the Logic engine.
 The first notable difference is that it declares no global functions or data, but instead declares a local table (the module),
-fills it with content, and returns it. The reason for that is that this is how Lua recommends to define modules
+fills it with content, and returns it. That's because this is how Lua recommends to define modules
 (see e.g. [this guide](https://www.tutorialspoint.com/lua/lua_modules.htm)). This means that you can
 use any existing Lua source code and expose it as a module in your assets - provided that it uses only the standard modules
 [allowed by the Logic Engine](https://ramses-logic.readthedocs.io/en/latest/lua_syntax.html#standard-modules).
