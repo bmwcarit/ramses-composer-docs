@@ -2,7 +2,7 @@
 SPDX-License-Identifier: MPL-2.0
 
 This file is part of Ramses Composer
-(see https://github.com/COVESA/ramses-composer-docs).
+(see https://github.com/bmwcarit/ramses-composer-docs).
 
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
 If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -10,7 +10,7 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 
 # Lua Syntax
 
-The Ramses Composer relies on the [Ramses Logic Engine](https://github.com/COVESA/ramses-logic) to load, parse and execute `Lua` scripts and to capture and report errors.
+The Ramses Composer relies on the [Ramses Logic Engine](https://github.com/bmwcarit/ramses-logic) to load, parse and execute `Lua` scripts and to capture and report errors.
 You can find the user documentation of the `Lua` syntax dialect and its specifics at a dedicated section of the `Logic Engine` docs [here](https://ramses-logic.readthedocs.io/en/latest/lua_syntax.html).
 
 You can find the exact version of the `Logic Engine` used by the Composer in the Help->About menu.

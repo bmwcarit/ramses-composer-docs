@@ -2,7 +2,7 @@
 SPDX-License-Identifier: MPL-2.0
 
 This file is part of Ramses Composer
-(see https://github.com/COVESA/ramses-composer-docs).
+(see https://github.com/bmwcarit/ramses-composer-docs).
 
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
 If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -13,7 +13,7 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 
 ## What is Ramses Composer?
 
-Ramses Composer is an interactive authoring tool for the [RAMSES rendering ecosystem](https://github.com/COVESA/ramses).
+Ramses Composer is an interactive authoring tool for the [RAMSES rendering ecosystem](https://github.com/bmwcarit/ramses).
 While RAMSES provides an efficient OpenGL 3D rendering engine it used to be quite challenging to harness
 it as the whole setup of scenes had to be done programmatically in C++. This is where Ramses Composer
 comes in. It is a WYSIWYG editor that allows you to create and set up a scene interactively in a user
