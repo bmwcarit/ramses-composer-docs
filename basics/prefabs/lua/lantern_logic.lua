@@ -1,16 +1,16 @@
 
-function interface()
+function interface(IN,OUT)
 
-  IN.lightSwitch = BOOL
+  IN.lightSwitch = Type:Bool()
 
-  OUT.emissive = VEC3F
+  OUT.emissive = Type:Vec3f()
   
-	OUT.ambientColor = VEC3F
-	OUT.ambientLight = FLOAT
+	OUT.ambientColor = Type:Vec3f()
+	OUT.ambientLight = Type:Float()
 
 end
 
-function run()
+function run(IN,OUT)
 
  	if IN.lightSwitch then
 		OUT.emissive = { 1,1,1 }

@@ -157,7 +157,7 @@ now there are two options for the link - the light_direction and light_color.
 
 ![](./docs/search_properties.png)
 
-**Note**: only properties of a matching type are shown in the dropdown list. You can not link a property of type INT to a property of type VEC3F.
+**Note**: only properties of a matching type are shown in the dropdown list. You can not link a property of type Type:Int32() to a property of type Type:Vec3f().
 
 The link mechanism is designed to make it possible
 to control several things with a single script. If you want to have a different mapping

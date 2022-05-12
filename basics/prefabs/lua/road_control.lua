@@ -1,13 +1,13 @@
 
-function interface()
+function interface(IN,OUT)
 
-  IN.lightSwitch = BOOL
+  IN.lightSwitch = Type:Bool()
 	
-  OUT.lightSwitch = BOOL
+  OUT.lightSwitch = Type:Bool()
 	
 end
 
-function run()
+function run(IN,OUT)
 
   OUT.lightSwitch = IN.lightSwitch
 	

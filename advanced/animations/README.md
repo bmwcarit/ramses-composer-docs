@@ -72,18 +72,39 @@ Furthermore, the scene graph now contains a Node which also has an animation obj
 
 ![](./docs/scene_graph.png)
 
-The animation is statically assigned to the node and its outputs are linked to the node transformation properties. Looking
-at the Animation properties, you will see the animation channels alongside the state of the animation object and its current
-output values:
+The animation is statically assigned to the node and its outputs are linked to the node transformation properties.
+You can experiment with the `progress` input of the animation object to see the animation in different phases/states:
 
 ![](./docs/animation.png)
 
-You can set the "play", "loop" and "rewind on pause" properties or link them to scripts to control the state of the animation.
-This works exactly as with other scripts, see the [section on linking Lua properties in the Monkey example](../../basics/monkey/README.md#Lua-Scripting) for details.
+If you want to preview the animation in the Composer, you can create a `Timer` object (in the Resources View) and link
+it to a control script which translates timer ticks to a normalized [0, 1] value which is linked to the animation `Progress` input.
 
-## How to control time
+Your script can look like this:
 
-Currently there is no direct way to control the time progression of animations with Lua. We are addressing this
-in the logic engine and will update this tutorial after we have a solution. In Ramses Composer 0.11.0, the time is
-automatically passed to all animation objects in a strictly progressing fashion, and scripts are only allowed to set
-the state of an animation - running, paused, stopped, and rewind.
+```lua
+
+function interface(IN,OUT)
+    IN.ticker = Type:Int64()
+    OUT.animationProgress = Type:Float()
+end
+
+function run(IN,OUT)
+    -- Total duration of the animation in seconds
+    local durationInSeconds = 3
+    -- How many microseconds are needed to fill the progress from 0 -> 1
+    local normalizeFactor = 1000000 * durationInSeconds
+    -- Convert timer ticks to progress and normalizing to [0, 1]
+    local progress = (IN.ticker % normalizeFactor) / normalizeFactor
+    OUT.animationProgress = progress
+end
+
+```
+
+Now you can link the script's animationProgress output to the Animation's `Progress` input.
+This works exactly as with other scripts, see the
+[section on linking Lua properties in the Monkey example](../../basics/monkey/README.md#Lua-Scripting)
+for details.
+
+You can do any transformation - you can stop at a given point, reverse the animation, or rewind to a given point.
+you have the full freedom of Lua to define the logic to translate the time ticks to animation state/progress.

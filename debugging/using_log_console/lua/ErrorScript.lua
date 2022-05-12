@@ -1,14 +1,14 @@
-function interface()
-    IN.colorDoors = VEC4F
-    IN.colorSteeringWheel = VEC4F
-    IN.colorSeat = VEC4F
+function interface(IN,OUT)
+    IN.colorDoors = Type:Vec4f()
+    IN.colorSteeringWheel = Type:Vec4f()
+    IN.colorSeat = Type:Vec4f()
 
-    OUT.colorDoors = VEC3F
-    OUT.colorSteeringWheel = VEC4F
-    OUT.colorSeat = VEC4F
+    OUT.colorDoors = Type:Vec3f()
+    OUT.colorSteeringWheel = Type:Vec4f()
+    OUT.colorSeat = Type:Vec4f()
 end
 
-function run()
+function run(IN,OUT)
     OUT.colorDoors = IN.colorDoors
     OUT.colorSteeringWheel = IN.colorSteeringWheel
     OUT.colorSeat = IN.colorSeat

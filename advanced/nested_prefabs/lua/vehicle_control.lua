@@ -1,15 +1,15 @@
 
-function interface()
+function interface(IN,OUT)
 
-	IN.wheelFactor = FLOAT
-	IN.steeringFactor = FLOAT
+	IN.wheelFactor = Type:Float()
+	IN.steeringFactor = Type:Float()
 
-	OUT.rotationAngle = FLOAT
-	OUT.steeringAngle = FLOAT
+	OUT.rotationAngle = Type:Float()
+	OUT.steeringAngle = Type:Float()
 	
 end
 
-function run()
+function run(IN,OUT)
 
   OUT.rotationAngle = IN.wheelFactor * 360
   OUT.steeringAngle = IN.steeringFactor * 90

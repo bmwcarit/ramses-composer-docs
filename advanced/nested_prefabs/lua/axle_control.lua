@@ -1,15 +1,15 @@
 
-function interface()
+function interface(IN,OUT)
 
-	IN.rotationAngle = FLOAT
-	IN.steeringAngle = FLOAT
+	IN.rotationAngle = Type:Float()
+	IN.steeringAngle = Type:Float()
 
-	OUT.rotationAngle = FLOAT
-	OUT.steeringAngle = FLOAT
+	OUT.rotationAngle = Type:Float()
+	OUT.steeringAngle = Type:Float()
 	
 end
 
-function run()
+function run(IN,OUT)
 
 	OUT.rotationAngle = IN.rotationAngle
 	OUT.steeringAngle = IN.steeringAngle
