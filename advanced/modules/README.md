@@ -64,7 +64,7 @@ LightControl script:
 ```lua
 modules('light')
 
-function interface()
+function interface(IN,OUT)
 ...
 
 ```
@@ -81,11 +81,11 @@ members of the module using a table with the same name as declared in the ``modu
 
 modules("light")
 
-function interface()
+function interface(IN,OUT)
    ...
 end
 
-function run()
+function run(IN,OUT)
     OUT.light_direction = light.getLightDirection(IN.light_id)
     OUT.light_color     = light.resolveColor("light", IN.light_color)
     OUT.diffuse_color   = light.resolveColor("diffuse", IN.diffuse_color)

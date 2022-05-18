@@ -239,17 +239,17 @@ edit their interface script. Open the *Car* Prefab in the Prefab View and edit t
 *vehicleControl* LUA script.
 
 ```
-function interface()
-	IN.wheelFactor = FLOAT
-	IN.steeringFactor = FLOAT
-	IN.color = VEC3F
+function interface(IN,OUT)
+	IN.wheelFactor = Type:Float()
+	IN.steeringFactor = Type:Float()
+	IN.color = Type:Vec3f()
 
-	OUT.rotationAngle = FLOAT
-	OUT.steeringAngle = FLOAT
-	OUT.color = VEC3F
+	OUT.rotationAngle = Type:Float()
+	OUT.steeringAngle = Type:Float()
+	OUT.color = Type:Vec3f()
 end
 
-function run()
+function run(IN,OUT)
     OUT.rotationAngle = IN.wheelFactor * 360
     OUT.steeringAngle = IN.steeringFactor * 90
 	OUT.color = IN.color

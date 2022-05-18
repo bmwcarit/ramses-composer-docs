@@ -1,16 +1,16 @@
 
-function interface()
+function interface(IN,OUT)
 
-	IN.rotationAngle = FLOAT
-	IN.steeringAngle = FLOAT
-  IN.reverse = BOOL
+	IN.rotationAngle = Type:Float()
+	IN.steeringAngle = Type:Float()
+  IN.reverse = Type:Bool()
 
-	OUT.driveRotation = VEC3F
-	OUT.steerRotation = VEC3F
+	OUT.driveRotation = Type:Vec3f()
+	OUT.steerRotation = Type:Vec3f()
 	
 end
 
-function run()
+function run(IN,OUT)
 
   local rotation = IN.rotationAngle
   local steering = IN.steeringAngle

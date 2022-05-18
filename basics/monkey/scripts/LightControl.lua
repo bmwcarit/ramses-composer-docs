@@ -4,20 +4,20 @@
 -- different positions: left, right, and top (use numbers 0, 1, 2 on light_id to toggle)
 -- Optionally specify a diffuse_color to override the default (green-ish) color
 
-function interface()
+function interface(IN,OUT)
     -- Input: index into an array static light positions
-    IN.light_id = INT
+    IN.light_id = Type:Int32()
     -- Input: diffuse color (setting to zero causes the script to use its default value, see init())
-    IN.diffuse_color = VEC3F
+    IN.diffuse_color = Type:Vec3f()
     -- Input: light color (setting to zero causes the script to use its default value, see init())
-    IN.light_color = VEC3F
+    IN.light_color = Type:Vec3f()
 
     -- Output: direction of light in that static position
-    OUT.light_direction = VEC3F
+    OUT.light_direction = Type:Vec3f()
     -- Output: light color
-    OUT.light_color = VEC3F
+    OUT.light_color = Type:Vec3f()
     -- Output: diffuse color for material(s)
-    OUT.diffuse_color = VEC3F
+    OUT.diffuse_color = Type:Vec3f()
 end
 
 function init()
@@ -26,7 +26,7 @@ function init()
     GLOBAL.default_light_color = {1.0, 1.0, 1.0}
 end
 
-function run()
+function run(IN,OUT)
     local lightId = IN.light_id
     if lightId < 0 or lightId > 2 then
         lightId = 0

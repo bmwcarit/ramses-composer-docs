@@ -75,9 +75,9 @@ If your LuaScript contains a parsing error, an error message will be displayed a
 As an example, if your script is 
 
 ```Lua
-function interface()
-    IN.value = INT
-    OUT.value = STRING
+function interface(IN,OUT)
+    IN.value = Type:Int32()
+    OUT.value = Type:String()
 end
 
 fnction run()
@@ -97,14 +97,14 @@ Besides parsing errors, LuaScripts can also cause runtime errors - errors which 
 in line 10 if "choice" is greater than 0:
 
 ```Lua
-function interface()
-    IN.choice = INT
-    IN.value = FLOAT
+function interface(IN,OUT)
+    IN.choice = Type:Int32()
+    IN.value = Type:Float()
     
-    OUT.value = STRING
+    OUT.value = Type:String()
 end
 
-function run()
+function run(IN,OUT)
     if IN.choice > 0 then
         OUT.value = IN.value
     end
@@ -135,15 +135,15 @@ As you know, we can use different types of data, `int`, `float`, `string` and `v
 You should be familiar with these data types, but just as a short reminder, vectors can be used like arrays:
 
 ```Lua
-function interface()
-    IN.myVec4 = VEC4F
-    OUT.myOutVec4 = VEC4F
-    OUT.myOutVec3 = VEC3F
-    OUT.myFirstVec2 = VEC2F
-    OUT.mySecondVec2 = VEC2F
+function interface(IN,OUT)
+    IN.myVec4 = Type:Vec4f()
+    OUT.myOutVec4 = Type:Vec4f()
+    OUT.myOutVec3 = Type:Vec3f()
+    OUT.myFirstVec2 = Type:Vec2f()
+    OUT.mySecondVec2 = Type:Vec2f()
 end
 
-function run()
+function run(IN,OUT)
     local vec4 = IN.myVec4
     OUT.myOutVec4 = vec4
     OUT.myOutVec3 = {vec4[1], vec4[2], vec4[3]}
@@ -165,7 +165,7 @@ end
 No, that's not a pseudo source code, it's native Lua. This function can take 0-N parameters and returns them as a `table`, which makes our `OUT` declarations work all the same:
 
 ```Lua
-function run()
+function run(IN,OUT)
     local vec4 = IN.myVec4
     OUT.myOutVec4 = vec4
     OUT.myOutVec3 = vec(vec4[1], vec4[2], vec4[3])
@@ -179,12 +179,12 @@ end
 You can create structs to bundle data, but there is no reason to copy/paste your code snippet again and again like this.
 
 ```Lua
-function interface()
-    IN.my_IN_Struct = {name = STRING, age = INT, height_meter = FLOAT}
-    OUT.my_OUT_Struct = {name = STRING, age = INT, height_meter = FLOAT} 
+function interface(IN,OUT)
+    IN.my_IN_Struct = {name = Type:String(), age = Type:Int32(), height_meter = Type:Float()}
+    OUT.my_OUT_Struct = {name = Type:String(), age = Type:Int32(), height_meter = Type:Float()} 
 end
 
-function run()
+function run(IN,OUT)
     OUT.my_OUT_Struct = IN.my_IN_Struct
 end
 ```
@@ -193,13 +193,13 @@ As a shortcut create a local struct(-value) in your `interface()` function and u
 _(this only works in the `interface()` function)_
 
 ```Lua
-function interface()
-    local setting_person = {name = STRING, age = INT, height = FLOAT}
+function interface(IN,OUT)
+    local setting_person = {name = Type:String(), age = Type:Int32(), height = Type:Float()}
     IN.my_IN_Struct = setting_person
     OUT.my_OUT_Struct = setting_person
 end
 
-function run()
+function run(IN,OUT)
     OUT.my_OUT_Struct = IN.my_IN_Struct
 end
 ```
@@ -210,11 +210,11 @@ It's much more readable and you don't need to adjust the assignments in your `ru
 Sometimes you need to create a kind of array as `IN` or `OUT`, but it's important the label starts with its own defined name like `my_sensor_0`.
 
 ```Lua
-function interface()
-    OUT.my_sensor = ARRAY(3, BOOL)
+function interface(IN,OUT)
+    OUT.my_sensor = Type:Array(3, Type:Bool())
     
     for i = 0, 2 do
-      OUT["my_sensor_" .. i] = BOOL
+      OUT["my_sensor_" .. i] = Type:Bool()
     end
 end
 ```
@@ -225,7 +225,7 @@ Keep in mind, _Lua_ array indexes start at one instead of zero! The result looks
 Input properties can be generated the same way, but you can't assign the values the same way as with a parameter defined as a `struct`. Every single element need its own assignment.
 
 ```Lua
-function run()
+function run(IN,OUT)
     OUT.my_sensor_0 = true
     OUT.my_sensor_1 = true
     OUT.my_sensor_2 = true
@@ -234,7 +234,7 @@ end
 Of course you can also assign the values in a loop, similar to our approach in the `interface()` function.
 
 ```Lua
-function run()
+function run(IN,OUT)
     for i = 0, 2 do
         OUT["my_sensor_" .. i] = true
     end
@@ -278,7 +278,7 @@ local class_Person = {
 Now our _Lua-class_ is defined and we can try to set some values and call its methods. Note that the syntax is with `:` instead of `.` .
 
 ```Lua
-function run()
+function run(IN,OUT)
     class_Person.age = 18
     class_Person.height = 1.65
     class_Person.name = "Max Mustermann"
@@ -367,7 +367,7 @@ And use the instantiation e.g. like this:
 
 
 ```Lua
-function run()
+function run(IN,OUT)
     local persons = {
       A = class_Person:new(),
       B = class_Person:new()
@@ -391,7 +391,7 @@ TestLua: Name: Karl Heinz, age: 0, height: 0
 Make sure you create the instances with `new()`. Without it this would happen:
 
 ```Lua
-function run()
+function run(IN,OUT)
     --this is a bad idea
     local persons = {
       A = class_Person,
@@ -447,13 +447,13 @@ local class_Person = {
 So if we define a local `person` struct in our `interface()` with exactly the same members as our object (but without `functions`, of course ), we will be able to automatically assign the values of our `class_Person` instances (more or less):
 
 ```Lua
-function interface()
+function interface(IN,OUT)
     local person = {
-        age = INT,
-        height = FLOAT,
-        name = STRING }
+        age = Type:Int32(),
+        height = Type:Float(),
+        name = Type:String() }
     --in this case, we don't need to declare a new local table (struct) - just for a better overview.    
-    OUT.Member = ARRAY(2, person)
+    OUT.Member = Type:Array(2, person)
 end
 ```
 
@@ -488,7 +488,7 @@ Then we parse our `table` for each entry and assign it to a local value. After t
 --it's now a "global" variable
 persons = {}
 
-function run()
+function run(IN,OUT)
  
     persons = {
       A = class_Person:new(),
