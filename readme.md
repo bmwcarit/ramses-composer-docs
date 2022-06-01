@@ -50,6 +50,8 @@ your data.
 
 [External references](./advanced/external_references/README.md) - Explains how to import and use building blocks from different projects.
 
+[Python API](./advanced/python_api/README.md) - Explains how to use the Python API.
+
 [Best practices](./advanced/best_practices/README.md) - Suggests best practices for project structure.
 
 ## Troubleshooting
