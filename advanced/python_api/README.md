@@ -42,22 +42,22 @@ Please be aware that virtualenv or venv are known to cause problems if used with
 
 A simple example that illuminates how Python-based automated workflows look like is purging invalid links.
 
-This chapter contains an attached project `broken_link.rca` which consists of a `LuaScript`, a node `NodeWithValidLink` with a valid link and 100 copies of the node `NodeWithBrokenLink` with a broken link.
+This chapter contains an attached project `broken_link.rca` which consists of a `LuaScript`, a node `Node_validLink` with a valid link and 100 copies of the node `Node_invalidLink` with a broken link.
 Think of a massive project with a few Lua interface nodes that are linked to a massive amount of nodes and where, due to a late change in the Lua properties, a large amount of links have now been invalidated.
 Manually removing these broken links in the GUI by hand is tedious and can be already automated using a Python script.
 
 The `python` subfolder of this chapter contains a script `purge_invalid_links.py`.
-When you open this file in a text editor you can see what this script is doing: Using the `raco` module to access project data, we iterate through all links and remove the invalid ones while keeping count of how many we removed. In the final step, the modified project gets overwritten.
+When you open this file in a text editor you can see what this script is doing: Using the `raco` module to access project data, we iterate through all links and remove the invalid ones while keeping count of how many we removed. In the final step, the modified project gets saved to a new path, as specified by a Python parameter.
 
 Let's launch this script. You can do that by starting RaCoHeadless with the following parameters:
 
-`<path to RaCoHeadless executable> -r <path to purge_invalid_links.py> -p <path to broken_link.rca>`
+`<path to RaCoHeadless executable> -p <path to broken_link.rca> -r <path to purge_invalid_links.py> <new path for fixed project file>`
 
 If every path has been correctly specified you will encounter a lot of log messages in your console window - but by looking through you will also see the Python user output messages that were specified in `purge_invalid_links.py`:
 
 ![](docs/python_output.png)
 
-Upon loading the newly modified `broken_link.rca` in the GUI you will discover that the entire project has been cleaned of invalid links while keeping the valid link intact.
+Upon loading the newly created project specified at `<new path for fixed project file>` in the GUI you will discover that the entire project has been cleaned of invalid links while keeping the valid link intact.
 
 ## General Functions 
 

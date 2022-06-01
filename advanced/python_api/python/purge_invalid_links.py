@@ -24,7 +24,7 @@ print("Number of removed links: ", count)
 print("New number of links: ", len(raco.links()))
 
 
-if len(raco.projectPath()) > 0:
-    print("Save to ", raco.projectPath())
-    raco.save(raco.projectPath())
+if len(sys.argv[0]) > 0:
+    print("Save to ", sys.argv[0])
+    raco.save(sys.argv[0])
 
