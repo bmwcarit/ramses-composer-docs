@@ -43,7 +43,7 @@ Please be aware that virtualenv or venv are known to cause problems if used with
 A simple example that illuminates how Python-based automated workflows look like is purging invalid links.
 
 This chapter contains an attached project `broken_link.rca` which consists of a `LuaScript`, a node `Node_validLink` with a valid link and 100 copies of the node `Node_invalidLink` with a broken link.
-Think of a massive project with a few Lua interface nodes that are linked to a massive amount of nodes and where, due to a late change in the Lua properties, a large amount of links have now been invalidated.
+Think of a gigantic project with a few Lua interface nodes that are linked to a huge amount of nodes and where, due to a late change in the Lua properties, a large amount of links have now been invalidated.
 Manually removing these broken links in the GUI by hand is tedious and can be already automated using a Python script.
 
 The `python` subfolder of this chapter contains a script `purge_invalid_links.py`.
@@ -57,7 +57,7 @@ If every path has been correctly specified you will encounter a lot of log messa
 
 ![](docs/python_output.png)
 
-Upon loading the newly created project specified at `<new path for fixed project file>` in the GUI you will discover that the entire project has been cleaned of invalid links while keeping the valid link intact.
+Upon opening the newly created project specified at `<new path for fixed project file>` you will discover that the entire project has been cleaned of invalid links while keeping the valid link intact.
 
 ## General Functions 
 
