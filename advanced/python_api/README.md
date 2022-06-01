@@ -70,9 +70,6 @@ Upon opening the newly created project specified at `<new path for fixed project
 > save(path)
 >> Save the active project under the given `path`.
 
-> projectPath()
->> Get the path of the active project. Returns an empty string if there is no active project loaded.
-
 > export(ramses_path, logic_path, compress)
 >> Export the active project. The paths of the Ramses and RamsesLogic files need to be specified. Additionallly compression can be enabled using the `compress` flag.
 	
