@@ -18,9 +18,9 @@ the RamsesComposer Python API using an embedded Python interpreter. An initial p
 option which will be loaded before the python script is started. The '--export' and '--compress' commandline options will be ignored 
 if the '-r' commandline option is present.
 
-The commandline options not recognized by RaCoHeadless are collected and passed on to the python script where they are accessible in `sys.argv`. 
-The first element of `sys.argv` is the python script path. For example invoking `RaCoHeadless -r test.py abc -l 2 def` will run the script 'test.py', 
-set the log level to 2 and  pass the list `['test.py', 'abc', 'def']` to python as `sys.argv`.
+The commandline options not recognized by RaCoHeadless are collected and passed on to the python script where they are accessible in `sys.argv`.
+For example invoking `RaCoHeadless -r test.py abc -l 2 def` will run the script 'test.py', set the log level to 2 and  pass the list `['abc', 'def']`
+to python as `sys.argv`.
 
 The Python API is contained in the `raco` Python module which needs to be imported explicity.
 
