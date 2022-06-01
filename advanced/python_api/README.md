@@ -7,7 +7,11 @@ This file is part of Ramses Composer
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
 If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 -->
-# RaCoHeadless Python API Reference
+# Python API Reference
+
+This chapter introduces you to the Python API functionality of Ramses Composer, including a Python API reference.
+
+## Python API in RaCoHeadless
 
 The newly added "-r" commandline option of the RaCoHeadless application allows to run non-interactive python scripts with access to 
 the RamsesComposer Python API using an embedded Python interpreter. An initial project may be specified with the "-p" commandline
@@ -18,21 +22,42 @@ The commandline options not recognized by RaCoHeadless are collected and passed 
 The first element of `sys.argv` is the python script path. For example invoking `RaCoHeadless -r test.py abc -l 2 def` will run the script 'test.py', 
 set the log level to 2 and  pass the list `['test.py', 'abc', 'def']` to python as `sys.argv`.
 
-The Python API is contained in the "raco" Python module which needs to be imported explicity. 
+The Python API is contained in the `raco` Python module which needs to be imported explicity.
 
 If an error occurs during loading of the initial project or the execution of the python script RaCoHeadless will exit with a non-zero exit code.
 Similarly if exit is called in the Python script RaCoHeadless will exit with the specified exit code. The python API will report errors by 
 throwing Python exceptions. 
 
-All functions and types described below reside in the 'raco' module.
+All functions and types described below reside in the `raco` module.
 
 The python interface currently allows access only to the active project. The active project is implicit and doesn't need to specified in any of the operations. Load and reset operations will change the currently active project as in the RamsesComposer GUI application.
 
-A few example scripts can be found in the 'python' folder in the installation zip file.
+A few example scripts can be found in the `python` folder in the installation zip file.
 
-The Python environment used by RaCoHeadless is shipped with Ramses Composer, isolated from any Python installations on the system and can be found in the bin/python... folder. 
-It is possible to use pip to install custom packages to that environment, for an example see the python/use_pip_to_install_module.py script.
+The Python environment used by RaCoHeadless is shipped with Ramses Composer, isolated from any Python installations on the system and can be found in the `bin/python...` folder.
+It is possible to use pip to install custom packages to that environment, for an example see the `python/use_pip_to_install_module.py` script.
 Please be aware that virtualenv or venv are known to cause problems if used with the RaCoHeadless Python environment - particularly in Linux.
+
+## Simple Example: Purging Invalid Links
+
+A simple example that illuminates how Python-based automated workflows look like is purging invalid links.
+
+This chapter contains an attached project `broken_link.rca` which consists of a `LuaScript`, a node `NodeWithValidLink` with a valid link and 100 copies of the node `NodeWithBrokenLink` with a broken link.
+Think of a massive project with a few Lua interface nodes that are linked to a massive amount of nodes and where, due to a late change in the Lua properties, a large amount of links have now been invalidated.
+Manually removing these broken links in the GUI by hand is tedious and can be already automated using a Python script.
+
+The `python` subfolder of this chapter contains a script `purge_invalid_links.py`.
+When you open this file in a text editor you can see what this script is doing: Using the `raco` module to access project data, we iterate through all links and remove the invalid ones while keeping count of how many we removed. In the final step, the modified project gets overwritten.
+
+Let's launch this script. You can do that by starting RaCoHeadless with the following parameters:
+
+`<path to RaCoHeadless executable> -r <path to purge_invalid_links.py> -p <path to broken_link.rca>`
+
+If every path has been correctly specified you will encounter a lot of log messages in your console window - but by looking through you will also see the Python user output messages that were specified in `purge_invalid_links.py`:
+
+![](docs/python_output.png)
+
+Upon loading the newly modified `broken_link.rca` in the GUI you will discover that the entire project has been cleaned of invalid links while keeping the valid link intact.
 
 ## General Functions 
 
