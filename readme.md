@@ -28,6 +28,8 @@ your data.
 
 [Exporting to Ramses](./basics/export/README.md) - Export optimized Ramses binary assets.
 
+[Build an app](./basics/android_app/README.md) - Integrating into an Android app.
+
 [Introducing prefabs](./basics/prefabs/README.md) - This example shows you how to create encapsulated, reusable objects with the Prefab mechanism.
 
 [Conventions](./basics/conventions/README.md) - Coordinate systems and import specifics.
