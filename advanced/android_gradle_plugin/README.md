@@ -20,7 +20,7 @@ The Ramses toolchain is primarily aimed at a subgroup of graphics developers cal
 
 In order to provide the most optimal workflow for technical artists, the Ramses toolchain provides
 a special Gradle plugin for Android. The plugin connects the development/application workflow with the
-design/composition workflow. Whenever you do a change in the original Ramses Composer scene, the plugin
+design/composition workflow. Whenever you change the original Ramses Composer scene, the plugin
 will pick it up, rebuild your app and integrate the latest/current version of the asset there.
 
 ## Add the plugin
