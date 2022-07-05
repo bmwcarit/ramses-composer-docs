@@ -19,8 +19,10 @@ have a look at the [official docs]() which explain the various aspects of Androi
 tutorial, we assume you have basic understanding of Android and will focus only on Ramses
 specifics.
 
-If you don't like reading, you can find the final source code of the app in the [app_src](./app_src)
-folder.
+If you prefer looking at the final source code instead of going through the tutorial,
+you can find it in the [app_src](./app_src) folder. Note that the sample source code
+was created with a fairly new Android Studio and may fail to open in older versions
+of the IDE.
 
 ## Creating an empty Android app
 

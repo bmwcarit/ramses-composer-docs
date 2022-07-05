@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity(), SurfaceHolder.Callback {
     private val monkeyThread: MonkeyThread by lazy {
         MonkeyThread("MonkeyThread", applicationContext)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity(), SurfaceHolder.Callback {
         // Loads the scene from its binary asset files
         monkeyThread.initRamsesThreadAndLoadScene(assets, "monkey.ramses", "monkey.rlogic")
 
+        // Ramses renders into the SurfaceView
         val surfaceView = findViewById<SurfaceView>(R.id.surfaceView)
         surfaceView.holder.addCallback(this)
     }
