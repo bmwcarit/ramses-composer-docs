@@ -28,7 +28,7 @@ will pick it up, rebuild your app and integrate the latest/current version of th
 You can add enable the plugin in your top-level build file using standard Gradle syntax (Gradle 7.2):
 
 ```groovy
-// <app>/build.gradle
+// <root>/build.gradle
 plugins {
     id 'io.github.bmwcarit.RaCoPlugin' version '0.3.1' apply false
 }
@@ -39,7 +39,7 @@ You can now enable it in all subprojects which have Ramses assets:
 
 
 ```groovy
-// E.g. <app>/app/build.gradle
+// E.g. <root>/app/build.gradle
 plugins {
     id 'io.github.bmwcarit.RaCoPlugin'
 }
@@ -52,8 +52,11 @@ Finally, you can configure the plugin to track asset(s) and recreate them any ti
 raCoConfig {
     // A path on your local machine where you downloaded the Ramses Composer
     raCoHeadlessPath = '/home/user/Downloads/tools/RamsesComposer-1-0-3/bin/RelWithDebInfo/RaCoHeadless.sh'
-    // A list of tuples where the first element is a RaCo project file, the second one is path to the asset
-    // inside the app, without the extensions (.ramses/.rlogic)
+    // A list of tuples where the first element is a RaCo project file, the second one is path to the output filename
+    // Note that the output filename does not include the file extensions (.ramses/.rlogic)
+    // In this example, the plugin will generate two files:
+    // - app/src/main/assets/monkey.ramses
+    // - app/src/main/assets/monkey.rlogic
     inputs = [['../../monkey/monkey.rca', 'app/src/main/assets/monkey']]
 }
 
