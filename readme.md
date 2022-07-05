@@ -54,6 +54,8 @@ your data.
 
 [Python API](./advanced/python_api/README.md) - Explains how to use the Python API.
 
+[Android Gradle Plugin](./advanced/android_gradle_plugin/README.md) - Integrate RaCo with Android Studio/Gradle.
+
 [Best practices](./advanced/best_practices/README.md) - Suggests best practices for project structure.
 
 ## Troubleshooting
