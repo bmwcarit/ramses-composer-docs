@@ -29,9 +29,10 @@ use MinSDK=26, use Kotlin as project language.
 
 ## Adding Ramses as dependency
 
-Next, we can add the Ramses AAR as a dependency in our project, like this:
+Next, we can add the Ramses AAR as a dependency in the app-level `build.gradle` file, like this:
 
 ```groovy
+// <root>/app/build.gradle
 dependencies
 {
     implementation "io.github.bmwcarit:ramses-aar:1.0.3"
@@ -180,11 +181,11 @@ override fun surfaceCreated(holder: SurfaceHolder) {
 
 Multiple things going on here. Let's have a look one by one.
 
-First, we need a try/catch block. The RamsesThread
-is a thread - it is doing things asynchronously and hides some of the boilerplate code for rendering
-and event processing from our app. The price for that is that we have to handle the possible
-error that the
-thread might be interrupted.
+First, we need a try/catch block. Most of the calls to RamsesThread are performed
+asynchronously and therefore can be interrupted. In a real-world application, our business
+logic should handle such interruptions gracefully, e.g. by showing something else or
+displaying a 'loading screen' while reloading the content. In this example, we keep
+things simple and just print the exception stack trace.
 
 Inside the try block, we first create a Ramses display and immediately show the scene we loaded
 earlier in the thread. Then, we tell the thread to start rendering.
@@ -196,9 +197,9 @@ would be to tell the
 user of the app that there was a problem with the asset.
 
 Notice how we check if a display is created and if the thread is not already rendering, before we
-ask it to start rendering. There are various things that can happen to our surface, based on application
-lifecycle - e.g. stopping or pausing the activity. It is quite important to manage the lifecycle
-of the app carefully and avoid rendering if we are not supposed to.
+ask it to start rendering. The lifecycle-related RamsesThread calls (start/stop rendering, creating displays etc.) are
+not graceful - i.e. they will throw exceptions if you are doing something which is not well defined,
+for example starting to render when the thread is already rendering.
 
 ## Improve the lifecycle
 
