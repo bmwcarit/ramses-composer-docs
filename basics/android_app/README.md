@@ -95,7 +95,7 @@ SurfaceView which we will render our monkey into, like this:
 Ramses supports rendering into a SurfaceView and a TextureView. We are going to be using the
 former in this example.
 
-Next, we make our activity a listener to surface events, so that we
+Next, we make our activity listen to surface events, so that we
 can load our asset file after a surface is created, and adapt its size when the
 surface size is changed. First, implement the SurfaceHolder.Callback interface:
 
