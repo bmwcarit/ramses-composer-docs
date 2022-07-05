@@ -52,7 +52,7 @@ Finally, you can configure the plugin to track asset(s) and recreate them any ti
 raCoConfig {
     // A path on your local machine where you downloaded the Ramses Composer
     raCoHeadlessPath = '/home/user/Downloads/tools/RamsesComposer-1-0-3/bin/RelWithDebInfo/RaCoHeadless.sh'
-    // A list of tuples where the first element is a RaCo project file, the second one is path to the output filename
+    // A list of tuples where the first element is a RaCo project file, the second one is the output filename
     // Note that the output filename does not include the file extensions (.ramses/.rlogic)
     // In this example, the plugin will generate two files:
     // - app/src/main/assets/monkey.ramses
