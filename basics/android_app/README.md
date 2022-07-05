@@ -96,7 +96,7 @@ Ramses supports rendering into a SurfaceView and a TextureView. We are going to 
 former in this example.
 
 Next, we make our activity listen to surface events, so that we
-can load our asset file after a surface is created, and adapt its size when the
+can load our asset files after a surface is created, and adapt its size when the
 surface size is changed. First, implement the SurfaceHolder.Callback interface:
 
 ```kotlin
@@ -181,7 +181,7 @@ override fun surfaceCreated(holder: SurfaceHolder) {
 Multiple things going on here. Let's have a look one by one.
 
 First, we need a try/catch block. The RamsesThread
-is a thread - it is doing things asynchroneously and hides some of the boilerplate code for rendering
+is a thread - it is doing things asynchronously and hides some of the boilerplate code for rendering
 and event processing from our app. The price for that is that we have to handle the possible
 error that the
 thread might be interrupted.
