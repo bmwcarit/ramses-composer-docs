@@ -15,7 +15,7 @@ This tutorial explains how to integrate a Ramses Composer asset into your Androi
 [Monkey tutorial](../monkey/README.md) and integrate it into an android application.
 
 We don't want to repeat the Android documentation here. If you are new to Android, please
-have a look at the [official docs]() which explain the various aspects of Android. In this
+have a look at the [official docs](https://developer.android.com/docs) which explain the various aspects of Android. In this
 tutorial, we assume you have basic understanding of Android and will focus only on Ramses
 specifics.
 
@@ -127,7 +127,8 @@ In order to render something into the SurfaceView, we need an asset exported in 
 the RamsesComposer.
 There are multiple ways how to do this, the simplest one is to use the export menu (File -> Export).
 Open the project we created in the [Monkey tutorial](../monkey/README.md) and export the files
-into the assets/ folder of the app. If you used the standard paths, this is \<root\>/app/src/main/assets/.
+into the assets/ folder of the app. If you used the standard paths, this is \<root\>/app/src/main/assets/. You should have the `monkey.ramses` and `monkey.rlogic` files
+in the assets folder which we will load next.
 
 ## Loading the assets
 
