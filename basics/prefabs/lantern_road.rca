@@ -293,7 +293,7 @@
                     "blendFactorSrcAlpha": 1,
                     "blendFactorSrcColor": 2,
                     "blendOperationAlpha": 0,
-                    "blendOperationColor": 1,
+                    "blendOperationColor": 0,
                     "cullmode": 2,
                     "depthFunction": 4,
                     "depthwrite": true
