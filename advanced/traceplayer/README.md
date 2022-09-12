@@ -97,5 +97,5 @@ The TracePlayer offers the following two properties in TracePlayerData script as
 - **activate_animation**: a boolean flag that is set once playback starts, and reset once a jump or a stop is triggered.
 - **timestamp_milli**: an integer of timeline timestamp, which should be used as the reference timer for animation
 ## Example (G05_OSS)
-Load **G05_main.rca** scene into Ramses Composer; refer to documentation in scene [g05_oss](../digital-car-3d/G05/README.md).  
+Load **G05_main.rca** scene into Ramses Composer; refer to documentation in scene [g05_oss](https://github.com/bmwcarit/digital-car-3d/tree/master/G05).  
 Edit, save, and reload the RaCo trace [g05_demo](traces/g05_demo.rctrace); change timestamp of frames and properties to see different playback in Ramses Composer renderer.
