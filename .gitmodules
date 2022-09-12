@@ -1,0 +1,3 @@
+[submodule "advanced/digital-car-3d"]
+	path = advanced/digital-car-3d
+	url = https://github.com/bmwcarit/digital-car-3d.git

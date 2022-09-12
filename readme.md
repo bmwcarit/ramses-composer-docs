@@ -58,6 +58,8 @@ your data.
 
 [Best practices](./advanced/best_practices/README.md) - Suggests best practices for project structure.
 
+[TracePlayer](./advanced/traceplayer/README.md) - Explains how to use TracePlayer, and the .rctrace file.
+
 ## Troubleshooting
 
 [Versions](./debugging/versions/README.md) - Supported versions, API and ABI compatibility.
