@@ -115,15 +115,16 @@ and the RAMSES client.
 
 ### Command line options
 
-	  -?, -h, --help                Displays help on commandline options.
-	  --help-all                    Displays help including Qt specific options.
-	  -v, --version                 Displays version information.
-	  -c, --console					Open with std out console.
-	  -r, --ramses-framework-arguments <default-args>
-	  								Override arguments passed to the ramses framework.
-	  -p, --project <project-path>  Load a scene from specified path.
-	  -d, --nodump                  Don't generate crash dumps on unhandled
-	                                exceptions.	                           
+	-h, --help                                	Displays help on commandline options.
+	--help-all                                	Displays help including Qt specific options.
+	-v, --version                             	Displays version information.
+	-c, --console                             	Open with std out console.
+	-a, --framework-arguments <default-args>  	Override arguments passed to the ramses framework.
+	-d, --nodump                              	Don't generate crash dumps on unhandled exceptions.
+	-p, --project <project-path>              	Load a scene from specified path.
+	-t, --trace-messages-ramses               	Enable trace-level Ramses log messages.
+	-f, --featurelevel <feature-level>        	RamsesLogic feature level (-1, 1 ... 2)
+	-r, --run <script-path>                   	Run Python script. Specify arguments for python script by writing '--' before arguments.                           
 
 ## Ramses Composer Headless
 
@@ -138,12 +139,16 @@ of Ramses Composer scenes to Logic and RAMSES files.
 
 ### Command line options
 
-	  -?, -h, --help                Displays help on commandline options.
-	  --help-all                    Displays help including Qt specific options.
-	  -v, --version                 Displays version information.
-	  -p, --project <project-path>  Load a scene from specified path.
-	  -e, --export <export-path>    Export Ramses scene and logic to path. File
-	                                extensions are added automatically.
-	  -c, --compress                Compress Ramses scene on export.
-	  -d, --nodump                  Don't generate crash dumps on unhandled
-	                                exceptions.
+	-h, --help                          	Displays help on commandline options.
+	--help-all                          	Displays help including Qt specific options.
+	-v, --version                       	Displays version information.
+	-p, --project <project-path>        	Load a scene from specified path.
+	-e, --export <export-path>          	Export Ramses scene and logic to path.
+											File extensions are added automatically (ignored if '-r' is used).
+	-c, --compress                      	Compress Ramses scene on export (ignored if '-r' is used).
+	-d, --nodump                        	Don't generate crash dumps on unhandled exceptions.
+	-l, --loglevel <log-level>          	Maximum information level that should be printed as console log output. Possible options:
+											0 (off), 1 (critical), 2 (error), 3 (warn), 4 (info), 5 (debug), 6 (trace).
+	-r, --run <script-path>             	Run Python script.
+	-o, --outlogfile <log-file-name>    	File name to write log file to.
+	-f, --featurelevel <feature-level>  	RamsesLogic feature level (-1, 1 ... 2)
