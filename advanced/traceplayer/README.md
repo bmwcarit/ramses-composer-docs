@@ -9,31 +9,36 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 -->
 
 # TracePlayer
-The Ramses Composer offers scene player, where users can load and play back RaCo trace (.rctrace) files.  
-TracePlayer is mainly used to play back:
-- recorded trace from the car, for scene debugging purposes
-- predefined sequence of scene states, for demos and scene validation purposes
 
-## Basic Functionalities
+The Ramses Composer contains a built-in trace player, which allows to play back RaCo trace (.rctrace) files.
+Good applications of the TracePlayer include:
+* re-playing captured real-world traces to debug exotic issues
+* looping predefined sequence of scene states, for demos and scene validation purposes
+
+## Basics
+
 ![](docs/traceplayer_notrace.png "TracePlayer - No Trace Loaded")
 
-The TracePlayer has typical playback features of Load, Play, Pause, Stop, Looping, Step-forward/backward, and Jump-to.  
-First, you need to browse to a valid .rctrace file and load it using the 3-dots icon.  
-![](docs/traceplayer_init.png "TracePlayer - Initial State")
+The TracePlayer has the usual playback features (Load, Play, Pause, Stop, toggle Loop mode, Step-forward/backward, and Jump-to).
 
-TracePlayer parses .rctrace file, then updates properties of relevant Lua nodes in the scene based on their names.Therefore, you need to make sure to add the equivalent interface Lua scripts to the scene and match their names.  
-On the other hand, **IN** interfaces of the Lua script have to match the same structure on the properties in the .rctrace file.
+First, browse to a valid `.rctrace` file and load it using the 3-dots icon.
+![](docs/traceplayer_init.png "TracePlayer - Initial State"). This documentation article includes an [example](#example-g05oss) based on the BMW X5 example model.
 
-## .rctrace File Format
-The trace file is a JSON-based file and has the file extension ".rctrace". The trace file is a JSON array of frames, where each frame is a JSON object containing two JSON objects children elements "SceneData" and "TracePlayerData".  
-**SceneData** is a JSON object that contains a list of features; those features are parsed and mapped by name by TracePlayer to the corresponding Lua nodes in the scene. Supported property types are boolean, integer, double, and strings.  
-**TracePlayerData** is a JSON object that contains timestamp of a frame in milliseconds.
+The TracePlayer parses the `.rctrace` file, then updates properties of relevant Lua nodes sequentially in the scene based on their names. Therefore, you need to make sure to add the equivalent interface Lua scripts to the scene and match their names.
+Furthermore, **IN** interfaces of the Lua script have to match the same structure on the properties in the `.rctrace` file.
 
-An example of a valid trace can look like the following:
+## The .rctrace File Format
+
+The trace file is a JSON file and must contain an array of frames, where each frame is a JSON object containing two nested objects: "SceneData" and "TracePlayerData".
+
+**SceneData** can contain a list of features; those features are parsed and mapped by name by TracePlayer to the corresponding Lua nodes in the scene. The supported property types are boolean, integer, double, and strings.
+**TracePlayerData** must contain the timestamp of a frame in milliseconds.
+
+This is how a valid trace can look like:
 
 ```json
 [
-    {   // frame#1 
+    {   // frame#1
         "SceneData" :
         {
             "Feature_1" :    // TracePlayer will look the scene up for a Lua node with the name "Feature_1". It shall have IN interface structs named "Function_1" and "Function_2"
@@ -91,11 +96,17 @@ An example of a valid trace can look like the following:
     }
 ]
 ```
+
 ## Animation Control
-*(preliminary function and subject to change soon)*  
+
+*(preliminary function and subject to change soon)*
 The TracePlayer offers the following two properties in TracePlayerData script as interface for animation:
 - **activate_animation**: a boolean flag that is set once playback starts, and reset once a jump or a stop is triggered.
 - **timestamp_milli**: an integer of timeline timestamp, which should be used as the reference timer for animation
+
 ## Example (G05_OSS)
-Load **G05_main.rca** scene into Ramses Composer; refer to documentation in scene [g05_oss](https://github.com/bmwcarit/digital-car-3d/tree/master/G05).  
-Edit, save, and reload the RaCo trace [g05_demo](traces/g05_demo.rctrace); change timestamp of frames and properties to see different playback in Ramses Composer renderer.
+
+This article includes a sample trace file based on the BMW X5 demo model. You can find it in the [traces folder](./traces).
+
+Download the X5 project from its [repository](https://github.com/bmwcarit/digital-car-3d) and load the **G05_main.rca** file as documented in project README.
+Load and play the RaCo trace [g05_demo](traces/g05_demo.rctrace). Try changing the frame timestamps and properties to see how the playback changes in the Ramses Composer viewport.
