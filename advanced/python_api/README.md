@@ -19,8 +19,8 @@ option which will be loaded before the python script is started. The '--export' 
 if the '-r' commandline option is present.
 
 The commandline options not recognized by RaCoHeadless are collected and passed on to the python script where they are accessible in `sys.argv`.
-For example invoking `RaCoHeadless -r test.py abc -l 2 def` will run the script 'test.py', set the log level to 2 and  pass the list `['abc', 'def']`
-to python as `sys.argv`.
+The first element of `sys.argv` is the python script path. For example invoking `RaCoHeadless -r test.py abc -l 2 def` will run the script 'test.py',
+set the log level to 2 and  pass the list `['test.py', 'abc', 'def']` to python as `sys.argv`.
 
 The Python API is contained in the `raco` Python module which needs to be imported explicity.
 
@@ -34,9 +34,29 @@ The python interface currently allows access only to the active project. The act
 
 A few example scripts can be found in the `python` folder in the installation zip file.
 
+Any python output will be logged.
+
 The Python environment used by RaCoHeadless is shipped with Ramses Composer, isolated from any Python installations on the system and can be found in the `bin/python...` folder.
 It is possible to use pip to install custom packages to that environment, for an example see the `python/use_pip_to_install_module.py` script.
 Please be aware that virtualenv or venv are known to cause problems if used with the RaCoHeadless Python environment - particularly in Linux.
+
+## Python API in RaCoEditor
+
+The "-r" commandline option of the RaCoEditor application also allows to run non-interactive python scripts for the UI version of Ramses Composer.
+The script will be run before the editor window appears.
+To specify position arguments for the Python script, use "--" so filenames (before "--") can be separated from python arguments (after "--").
+
+Examples:
+* "RamsesComposer.exe -r script.py test.rca" will load test.rca, pass no parameters to python
+* "RamsesComposer.exe -r script.py -- a b c" will load no project, pass 3 parameters to python
+* "RamsesComposer.exe -r script.py test.rca -- a b c" will load test.rca, pass 3 parameters to python
+
+Aside from that, all information from the RaCoHeadless Python API Reference also applies here.
+
+While the editor window is open, a python script can also be run on the current project.
+The menu bar option "File" -> "Run Script" will launch a "Run Script" dialog where a path to the script as well as command line arguments can be specified.
+Scripts with functions that load or reset the current project are currently disabled in the "Run Script" dialog due to UI incompatibilities.
+
 
 ## Simple Example: Purging Invalid Links
 
@@ -61,14 +81,27 @@ Upon opening the newly created project specified at `<new path for fixed project
 
 ## General Functions 
 
-> reset()
+> reset([featureLevel])
 >> Create a new project which is empty except a newly created ProjectSettings object.
+>> This function is currently disabled when using the "Run Dialog" script.
+>> The optional featureLevel parameter allows to set the feature level of the new project. If no feature level is given the largest supported feature level is used by default.
 
-> load(path)
+> load(path[, featureLevel])
 >> Load the project with the given `path` and replace the active project with it.
+>> This function is currently disabled when using the "Run Dialog" script.
+>> If the optional featureLevel parameter is used loading will attempt to upgrade the project to the given feature level. Since feature level downgrades are not allowed, the featureLevel parameter must not be smaller than the project feature level.
 
 > save(path)
 >> Save the active project under the given `path`.
+
+> projectPath()
+>> Get the path of the active project. Returns an empty string if there is no active project loaded.
+
+> projectFeatureLevel()
+>> Returns the feature level of the current project. This is a convenience function which reads the feature level from the "featureLevel" property of the "ProjectSettings" object.
+
+> externalProjects()
+>> Get a list of the absolute paths of all externally referenced projects.
 
 > export(ramses_path, logic_path, compress)
 >> Export the active project. The paths of the Ramses and RamsesLogic files need to be specified. Additionallly compression can be enabled using the `compress` flag.
@@ -92,8 +125,7 @@ The printed representation includes the type and name of the object, e.g. `<Node
 Global functions:
 
 > dir(object)
->> Returns a list of the names of all properties of the object.
-
+>> Returns a list of the names of all properties of the object in alphabetical order.
 
 Member functions:	
 	
@@ -110,10 +142,9 @@ Member functions:
  	
 > objectID()
 >> 	Returns the internal object ID of the object as a string. The object ID is automatically generated and can't be changed.
-	
-Properties can be accessed like python class members using either the dot notation or the getattr/setattr functions.
-To obtain a property `getattr(node, "visible")` or `node.visible` will return the 'visible' property of the 'node' object as a PropertyDescriptor. 
-Changing properties is possible using the dot notation, e.g. `node.visible = True`, or using the setattr function, e.g. `setattr(node, 'visible', True)`.
+
+> keys()
+>> Returns a list of the names of all properties in internal data model order.
 
 
 ## Properties
@@ -124,7 +155,7 @@ link-related operations.
 PropertyDescriptors can also be used almost like normal Python objects. 
 
 The printed representation includes the type and the full path of the property starting with the object name itself, e.g. 
-`<Property[Bool]: 'lua.luaInputs.struct.in_bool'>`.
+`<Property[Bool]: 'lua.inputs.struct.in_bool'>`.
 
 ### Global Functions:
 
@@ -133,6 +164,9 @@ The printed representation includes the type and the full path of the property s
 	
 ### Member Functions
 	
+> object()
+>> Return the object the property is contained in.
+
 > typeName()
 >> Returns the name of the property type as a string. 
 	
@@ -140,18 +174,74 @@ The printed representation includes the type and the full path of the property s
 >> The name of the property. This is the last part of the the full property path of the printed PropertyDescriptor representation.
 	
 > value()
->> Returns the value of the property for scalar properties (numbers, bool, string, references). Returns None for properties which have substructure.
-	
-Read and write access to substructure of complex properties is performed as for objects, i.e. with dot notation or the getattr/setattr functions.
-`getattr(lua.luaInputs, 'bool')` or `lua.luaInputs.bool` will return a PropertyDescriptor for the nested property. Setting a property is possible with
-`lua.luaInputs.bool = True` or `setattr(lua.luaInputs, 'bool', True)`.
+>> Returns the value of the property for scalar properties (numbers, bool, string, references). Throws exception if the property type has substructure.
+
+> hasSubstructure()
+>> Returns True if the type of the property can have substructure. Returns False for scalar properties. This will return True for empty container properties, e.g. the `inputs` property of a LuaScript which has no uri set.
+
+> keys()
+>> Returns a list of the names of all nested properties if `property` has substructure. Returns an empty list if `property` has no substructure.
+
+
+## Child property access
+
+Child properties may be accessed by attribute notation or using the indexing operator. Both will return the PropertyDescriptor of the child property. To obtain the value of scalar properties the value() member function has to be used. Child properties of both objects and PropertyDescriptors can be accessed in the same way.
+
+### Attribute-based access
+
+The PropertyDescriptor for a child property of a complex property or an object can be obtained using the dot notation for attribute access, e.g. 
+```
+node.translation
+```
+This works recursively, e.g. `node.translation.x` returns a PropertyDescriptor for the `x` component of the translation of `node`.
+
+Setting a property is also possible using the attribute notation:
+```
+node.translation.x = 2.0
+```
+Only scalar properties may be set directly in this way. Complex properties must be set component by component.
+
+Alternatively the getattr and setattr functions may be used for attribute access. These take an object or PropertyDescriptor and the property name as their first two arguments. The setattr function takes the new value as last argument:
+```
+getattr(node, 'translation')
+setattr(node.translation, 'x', 2.0)
+```
+
+While attribute access allows a convenient notation the property names may not start with numbers or conflict with the member functions listed above. For these cases use the dictionary-like access.
+
+### Dictionary-like access
+
+Another way to obtain the PropertyDescriptor of a child property is via the indexing operator `[]` allowing dictionary-like access to properties. The operator requires a string as an argument, e.g.
+```
+node['translation']
+```
+
+The indexing operator can also be used to set properties
+```
+node['visibility'] = 2.0
+```
+
+The indexing operator allows access to all property names, including names conflicting with member function names or property names starting with numbers. To access the elements of a Lua array property use
+```
+lua.inputs.array['1']
+lua.inputs.array['1'] = 3.0
+```
+
+Note that all property access variations described above can be mixed subject to the restrictions on property names mentioned,  e.g.
+```
+lua.inputs.vec.x
+getattr(lua.inputs.vec, 'x')
+getattr(lua.inputs, 'vec').x
+lua["inputs"].vec.x
+```
+will all return the same PropertyDescriptor.
 
 
 ## Links
 
 Links are represented by LinkDescriptors. 
 
-The printed representation includes the property paths including the object names of both the start end endpoints of the link as well as the link validity flag, e.g. `<Link: start='lua.luaOutputs.vec' end='my_node.rotation' valid='true'>`.
+The printed representation includes the property paths including the object names of both the start end endpoints of the link as well as the link validity and weak flags, e.g. `<Link: start='lua.outputs.vec' end='my_node.rotation' valid='true' weak='false'>`.
 
 ### Member variables
 
@@ -164,7 +254,10 @@ The printed representation includes the property paths including the object name
 > valid
 >> 	The current link validity. Only valid links are created in the LogicEngine. Invalid links are kept for caching purposes and can become
 	active if LuaScript properties change or if links on parent properties are changed. Link validity can not be set directly by the user.
-	
+
+> weak
+>> Flag indicating a weak link.
+		
 The member variables of a LinkDescriptor can't be changed. Modification of links is only possible with the addLink and removeLink functions described below.
 
 
@@ -188,10 +281,10 @@ The member variables of a LinkDescriptor can't be changed. Modification of links
  
 > getLink(property)
 >> 	Given a PropertyDescriptor this will return a LinkDescriptor if the property has a link ending on it or `None` if there is no link.
- 	
-> addLink(start, end)
->> 	Creates a link between two properties given their PropertyDescriptors.
- 	
+
+> addLink(start, end[, isWeak])
+>> 	Creates a link between two properties given their PropertyDescriptors. Weak links can be created using an optional boolean flag. By default strong link are created.
+	
 > removeLink(end)
 >> 	Removes a link given the PropertyDescriptor of the link endpoint.
  	
