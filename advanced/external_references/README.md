@@ -170,8 +170,9 @@ We are still missing the mesh *RoadPlane*. Copy it from the Project Browser and
 Now we build our scene using the imported resources. Add a Node and a MeshNode as its child.
 Assign the imported material and mesh to the MeshNode. You should see a distorted piece of
 road in the Preview. Adjust the scaling as shown in the picture to match the scale of the
-other objects we are going to import shortly. Finally, rotate the Node -90° on the X-axis,
-this should put the road flat on the ground where it belongs.
+other objects we are going to import shortly. Finally, rotate the Node up to -89° on the X-axis,
+this should put the road flat on the ground where it belongs. At -90° you can see, that you can 
+only see black because you're right infront of the profile of the street. 
 
 Note that mesh and material drop-down boxes show the project name after the resource name for
 External References. This is true for all reference properties to external objects, to help you
@@ -258,6 +259,17 @@ end
 
 Add a new input parameter and a new output parameter *color* as shown above. In the *run()*
 function, just assign the input color to the output color.
+
+In order for the LUA script and LUA interface to work together, you need to add a line for the
+parameter *color* in the interface, as well.
+
+```
+function interface(INOUT)
+    INOUT.steeringFactor = Type:Float()
+    INOUT.wheelFactor = Type:Float()
+    INOUT.color = Type:Vec3f()
+end
+```
 
 Finally, select the MeshNode *ToyCar* and create a link on its *color* property from the
 output parameter of the script. Now we can set the color of the cars from outside the Prefab.
