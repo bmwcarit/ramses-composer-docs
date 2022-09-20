@@ -42,7 +42,7 @@ inspecting the `mesh` property.
 There are also [other ways](../prefabs/README.md) to instantiate the same object multiple times,
 but in this example we keep things simple - just having three MeshNodes which share the same geometry.
 
-You can see the Scene Graph and the Resources views contain a `Lua script` - ignore it for now,
+You can see the Scene Graph contains a `Lua script` - ignore it for now,
 we will have a look at it in the [next section](#lua-scripting).
 
 The Resources view contains a slightly more sophisticated material, based on a so-called
