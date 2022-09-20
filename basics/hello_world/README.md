@@ -109,6 +109,7 @@ To recreate the sample cube project from scratch, follow these steps:
 * Create a new MeshNode in the Scene Graph view
     * Right click -> Create MeshNode
     * Give it a name (optionally) in the Property Browser
+    * Apply the tag render_main in the Property Browser
 * Create a new Mesh in the resources window
     * Right click -> Create Mesh
     * Give it a name (optionally)
