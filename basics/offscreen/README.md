@@ -112,6 +112,8 @@ We only highlight the steps specific to this example here:
 * Create a new project and delete the default content
 * Create a standard "Suzanne" monkey (same as in [monkey example](../monkey/README.md))
     * You can also just copy the project and delete two of the monkey heads
+    * Remember to change all the uniform numbers, otherwise the monkey is black on a
+    black background
 * Create the Quad
     * Create a standard "Plane" mesh in Blender and export as glTF (quad.gltf)
         * Make sure to export the texture coordinates!
@@ -121,9 +123,8 @@ We only highlight the steps specific to this example here:
     * Create a node for the Quad and attach it under the root node
 * Create the MonkeyRenderTarget
     * Create a render target and two render buffers (color and depth)
-    * Set the resolution and buffer types (e.g. 256x256, RGBA8 and Depth24) - you can try other types too!
+    * Set the resolution and buffer types (e.g. 512x256, RGBA8 and Depth24) - you can try other types too!
     * Attach the buffers to the RenderTarget in its property panel
-    * Set the clear color of the RenderTarget to some color
 * Create the cameras
     * Create two cameras - MonkeyCamera and QuadCamera
     * Set the viewport of the MonkeyCamera to the same resolution as the size of the buffers in the render target above
@@ -131,7 +132,8 @@ We only highlight the steps specific to this example here:
     * Create a MonkeyRenderLayer with a render tag "monkey"
     * Create a MonkeyRenderPass and set the MonkeyRenderLayer to its first slot
     * Set the render order of the MonkeyRenderPass to 1 (it will be rendered first)
-    * Set tag "monkey" to the Monkey Mesh
+    * Set the Clear Color of the RenderPass to some color
+    * Set tag "monkey" to the Monkey MeshNode in the scene graph
     * Set the MonkeyRenderTarget from above as target of the MonkeyRenderPass
     * Set the MonkeyCamera in the MonkeyRenderPass
 * Create the Quad RenderLayer and Pass
