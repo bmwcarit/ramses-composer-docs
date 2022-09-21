@@ -55,11 +55,9 @@ We will explain later why this is necessary. Let's move on and use the new modul
 ## Using the module
 
 Modules have to be explicitly created and imported in the scripts which need to access them. To create a module,
-right click the resources area and create a new object of type 'LuaScriptModule'. Set its URI to the source code file
-we created in the previous section.
+right click the resources area and create a new object of type 'LuaScriptModule'. Set its URI to the source code file of the Lua Module (LightModule) we created in the previous section.
 
-To let a script make use of a module, you have to explicitly declare how you want to use it. Add the following line in the
-LightControl script:
+To let a script make use of a module, you have to explicitly declare how you want to use it. Add the following line in the LightControl script:
 
 ```lua
 modules('light')
@@ -69,9 +67,10 @@ function interface(IN,OUT)
 
 ```
 
-Now the LightControl script will report errors, because you declared a module in the script file but didn't provide a module to the respective LuaScript object in Ramses Composer. To fix the
-error, go to the LuaScript's property page and you will now see a list of modules with one entry called 'light'. Click and select
-the only module we have in the project - the light module.
+Create a new LuaScript in the Scene Graph and add the LightControl script to it. Now the LightControl script will report errors, because you declared a module in the script file but didn't provide a module to the respective LuaScript object in Ramses Composer. The error "Required LuaScriptModule 'light' is unassigned" will show up. To fix the error, go to the LuaScript's property page and you will now see a list property  called Modules with one entry called 'light'. Click and select
+the only module we have in the project - the LightModule.
+
+Now the LightControl script will display another error. In order to fix it, give the light_id in the Property Browser of the LuaScript a value between 1 and 3 
 
 Now the LuaScript is working again, but it essentially does the same thing as before - hardcodes its light properties.
 We included the new module as a dependency, but we are not using it yet. To use it, we can refer to all functions and data
@@ -121,7 +120,9 @@ steps specific to this example here:
 * Create a new LuaScriptModule in the Resource view
     * Set its URI to the file created above
     * Set its name to "LightModule"
+* Create a new LuaScript in the Scene Graph
+    * Fix the "missing module" error in the LightControl script by selecting the "LightModule" from the dropdown list
+    * Fix the id error by changing the light_id to a value between 1 and 3
 * Modify the LightControl script from the monkey example to start with `modules("light")`
-* Fix the "missing module" error in the LightControl script by selecting the "LightModule" from the dropdown list
 * Modify the LightControl script to use data/functions from the LightModule
 
