@@ -42,7 +42,7 @@ inspecting the `mesh` property.
 There are also [other ways](../prefabs/README.md) to instantiate the same object multiple times,
 but in this example we keep things simple - just having three MeshNodes which share the same geometry.
 
-You can see the Scene Graph contains a `Lua script` - ignore it for now,
+You can see the Scene Graph and the Resources views contain a `Lua script` - ignore it for now,
 we will have a look at it in the [next section](#lua-scripting).
 
 The Resources view contains a slightly more sophisticated material, based on a so-called
@@ -150,10 +150,9 @@ script's output property 'light_direction'? These values are
 dynamically obtained from the Lua script we just inspected.
 
 Any objects in the scene can be linked to the values produced by any LuaScript. You can add, remove and switch the
-source of such links over the link icon (![](./docs/link_icon.png)). The popup window supports text-based search which filters all
-properties in the project by their name (and only lists properties with a compatible type!). Try modifying
-one of the link texts by deleting everything after "light_" and observe that
-now there are two options for the link - the light_direction and light_color.
+source of such links over the link icon (![](./docs/link_icon.png)). If you click on it you can see a list of all the properties
+with a compatible type. The popup window supports text-based search which filters all properties in the project by their name - in this case: 
+diffuse_color, light_color and light_direction. 
 
 ![](./docs/search_properties.png)
 
