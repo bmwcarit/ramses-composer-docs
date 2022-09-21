@@ -152,7 +152,7 @@ dynamically obtained from the Lua script we just inspected.
 Any objects in the scene can be linked to the values produced by any LuaScript. You can add, remove and switch the
 source of such links over the link icon (![](./docs/link_icon.png)). If you click on it you can see a list of all the properties
 with a compatible type. The popup window supports text-based search which filters all properties in the project by their name - in this case: 
-diffuse_color, light_color and light_direction. 
+diffuse_color, light_color and light_direction.
 
 ![](./docs/search_properties.png)
 
