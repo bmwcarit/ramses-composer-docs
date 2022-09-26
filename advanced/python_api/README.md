@@ -79,7 +79,7 @@ If every path has been correctly specified you will encounter a lot of log messa
 
 Upon opening the newly created project specified at `<new path for fixed project file>` you will discover that the entire project has been cleaned of invalid links while keeping the valid link intact.
 
-## General Functions 
+## General Functions
 
 > reset([featureLevel])
 >> Create a new project which is empty except a newly created ProjectSettings object.
@@ -97,8 +97,17 @@ Upon opening the newly created project specified at `<new path for fixed project
 > projectPath()
 >> Get the path of the active project. Returns an empty string if there is no active project loaded.
 
+> isRunningInUi()
+>> Use this to figure out if the composer is running in Headless mode or with the GUI.
+
 > projectFeatureLevel()
 >> Returns the feature level of the current project. This is a convenience function which reads the feature level from the "featureLevel" property of the "ProjectSettings" object.
+
+> minFeatureLevel()
+>> Returns the current minimum feature level supported by the engine.
+
+> maxFeatureLevel()
+>> Returns the current maximum feature level supported by the engine.
 
 > externalProjects()
 >> Get a list of the absolute paths of all externally referenced projects.
@@ -111,6 +120,9 @@ Upon opening the newly created project specified at `<new path for fixed project
 
 > instances()
 >> Returns a list of all objects in the active project.
+ 
+> getInstanceById(id)
+>> Returns the object with the specified id or None.
 	
 > links()
 >> Returns a list of all links in the active project.
@@ -142,6 +154,24 @@ Member functions:
  	
 > objectID()
 >> 	Returns the internal object ID of the object as a string. The object ID is automatically generated and can't be changed.
+
+> isReadOnly() 
+>> Returns true if the object cannot be edited.
+
+> isExternalReference()
+>> Returns true if the object is part of an external reference
+
+> isResource() 
+>> Returns true if the object is part of the project's resources.
+
+> getPrefab()
+>> If the object is in a Prefab, this will return the Prefab. Otherwise this will return None.
+
+> getPrefabInstance()
+>> If the object is in a PrefabInstance, this will return the PrefabInstance. Otherwise this will return None.
+
+> getOuterContainingPrefabInstance()
+>> In case of nested prefabs, this will return the outermost prefab instance, or None if the object is not part of a PrefabInstance.
 
 > keys()
 >> Returns a list of the names of all properties in internal data model order.
@@ -175,6 +205,15 @@ The printed representation includes the type and the full path of the property s
 	
 > value()
 >> Returns the value of the property for scalar properties (numbers, bool, string, references). Throws exception if the property type has substructure.
+
+> isReadOnly() 
+>> Returns true if the property value cannot be edited.
+
+> isValidLinkStart()
+>> Returns true if a link can start from this property.
+
+> isValidLinkEnd()
+>> Returns true if a link can end at this property.
 
 > hasSubstructure()
 >> Returns True if the type of the property can have substructure. Returns False for scalar properties. This will return True for empty container properties, e.g. the `inputs` property of a LuaScript which has no uri set.
