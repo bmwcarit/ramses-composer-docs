@@ -13,7 +13,7 @@ This chapter introduces you to the Python API functionality of Ramses Composer, 
 
 ## Python API in RaCoHeadless
 
-The newly added "-r" commandline option of the RaCoHeadless application allows to run non-interactive python scripts with access to 
+The "-r" commandline option of the RaCoHeadless application allows to run non-interactive python scripts with access to 
 the RamsesComposer Python API using an embedded Python interpreter. An initial project may be specified with the "-p" commandline
 option which will be loaded before the python script is started. The '--export' and '--compress' commandline options will be ignored 
 if the '-r' commandline option is present.
@@ -50,6 +50,8 @@ Examples:
 * "RamsesComposer.exe -r script.py test.rca" will load test.rca, pass no parameters to python
 * "RamsesComposer.exe -r script.py -- a b c" will load no project, pass 3 parameters to python
 * "RamsesComposer.exe -r script.py test.rca -- a b c" will load test.rca, pass 3 parameters to python
+
+While running python scripts in the editor, you'll have access to the `raco_gui` module to interact with editor specific things. See the bottom of this documentation for more information on that.
 
 Aside from that, all information from the RaCoHeadless Python API Reference also applies here.
 
@@ -329,7 +331,10 @@ The member variables of a LinkDescriptor can't be changed. Modification of links
  	
 	
 
+# raco_gui module
+When running python scripts inside the GUI, this module is available to interact with editor specific things. You'll need to add an explicit import statement for `raco_gui` in order to call the methods mentioned below.
 
+If you need to ensure that your scripts run both in headless and in gui, you can wrap the import and usages of these methods inside a `raco.isRunningInUi()` check.
 
-
-
+> getCurrentSelection()
+>> Returns a list of the currently selected editor objects.
