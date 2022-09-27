@@ -7,7 +7,7 @@ This file is part of Ramses Composer
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
 If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 -->
-# Python API
+# Python API Reference
 
 This chapter introduces you to the Python API functionality of Ramses Composer, including a Python API reference at the end.
 
@@ -123,6 +123,9 @@ The `raco` module is available in both RaCoHeadless and RaCoEditor. You'll need 
 
 > export(ramses_path, logic_path, compress)
 >> Export the active project. The paths of the Ramses and RamsesLogic files need to be specified. Additionally, compression can be enabled using the `compress` flag.
+
+> getErrors()
+>> Returns a list of active `ErrorItems`
 	
 
 ## Active Project Access
