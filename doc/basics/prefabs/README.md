@@ -112,9 +112,9 @@ see that particular lantern light up.
 
 ![](docs/result.png)
 
-Finally we add the LUA script for the master light switch. *road_control.lua* justs hands on its single parameter
+Finally, we add the Lua script for the master light switch. *road_control.lua* just hands on its single parameter
 and acts as a sort of user interface of the scene or a substitute for a more complex logic controlling our
-lanterns. Just link the interface parameters of all instances to the output of the roadControl script. When
+lanterns. Just select the interface of each lantern instance and link their individual _lightSwitch_ parameters to the output of the roadControl script. When
 you change its input value now, you should see all lamps coming on.
 
 ## Tips and Tricks
