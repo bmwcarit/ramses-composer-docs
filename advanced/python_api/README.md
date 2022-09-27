@@ -7,60 +7,64 @@ This file is part of Ramses Composer
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
 If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 -->
-# Python API Reference
+# Python API
 
-This chapter introduces you to the Python API functionality of Ramses Composer, including a Python API reference.
+This chapter introduces you to the Python API functionality of Ramses Composer, including a Python API reference at the end.
 
-## Python API in RaCoHeadless
-
-The "-r" commandline option of the RaCoHeadless application allows to run non-interactive python scripts with access to 
-the RamsesComposer Python API using an embedded Python interpreter. An initial project may be specified with the "-p" commandline
-option which will be loaded before the python script is started. The '--export' and '--compress' commandline options will be ignored 
-if the '-r' commandline option is present.
-
-The commandline options not recognized by RaCoHeadless are collected and passed on to the python script where they are accessible in `sys.argv`.
-The first element of `sys.argv` is the python script path. For example invoking `RaCoHeadless -r test.py abc -l 2 def` will run the script 'test.py',
-set the log level to 2 and  pass the list `['test.py', 'abc', 'def']` to python as `sys.argv`.
-
-The Python API is contained in the `raco` Python module which needs to be imported explicity.
-
-If an error occurs during loading of the initial project or the execution of the python script RaCoHeadless will exit with a non-zero exit code.
-Similarly if exit is called in the Python script RaCoHeadless will exit with the specified exit code. The python API will report errors by 
-throwing Python exceptions. 
-
-All functions and types described below reside in the `raco` module.
-
+## Running Python Scripts
 The python interface currently allows access only to the active project. The active project is implicit and doesn't need to specified in any of the operations. Load and reset operations will change the currently active project as in the RamsesComposer GUI application.
 
 A few example scripts can be found in the `python` folder in the installation zip file.
 
 Any python output will be logged.
 
-The Python environment used by RaCoHeadless is shipped with Ramses Composer, isolated from any Python installations on the system and can be found in the `bin/python...` folder.
+The Python environment used by Ramses Composer is shipped with the application, isolated from any Python installations on the system and can be found in the `bin/python...` folder.
 It is possible to use pip to install custom packages to that environment, for an example see the `python/use_pip_to_install_module.py` script.
-Please be aware that virtualenv or venv are known to cause problems if used with the RaCoHeadless Python environment - particularly in Linux.
 
-## Python API in RaCoEditor
+Please be aware that virtualenv or venv are known to cause problems if used with the RaCo Python environment - particularly in Linux.
 
-The "-r" commandline option of the RaCoEditor application also allows to run non-interactive python scripts for the UI version of Ramses Composer.
-The script will be run before the editor window appears.
-To specify position arguments for the Python script, use "--" so filenames (before "--") can be separated from python arguments (after "--").
+### Running Scripts in RaCoHeadless
+#### Running scripts with `-r`
+The `-r` commandline option of the RaCoHeadless application allows running non-interactive python scripts with access to 
+the RamsesComposer Python API using an embedded Python interpreter. An initial project may be specified with the `-p` commandline
+option which will be loaded before the python script is started. The `--export` and `--compress` commandline options will be ignored 
+if the `-r` commandline option is present.
+
+The commandline options not recognized by RaCoHeadless are collected and passed on to the python script where they are accessible in `sys.argv`.
+The first element of `sys.argv` is the python script path. For example invoking `RaCoHeadless -r test.py abc -l 2 def` will run the script 'test.py',
+set the log level to 2 and  pass the list `['test.py', 'abc', 'def']` to python as `sys.argv`.
+
+#### Adding paths with `-y`
+By using the `-y` command line option you can set additional python module search paths. Multiple `-y` options may be specified to add multiple directories. The additional paths are added before the default search path.
+
+#### Error handling
+If an error occurs during loading of the initial project or the execution of the python script RaCoHeadless will exit with a non-zero exit code.
+Similarly, if exit is called in the Python script RaCoHeadless will exit with the specified exit code. The python API will report errors by throwing Python exceptions. 
+
+### Running Scripts in RaCoEditor
+While the editor window is open, a python script can be run on the current project.
+
+The menu bar option `View` -> `New Python Runner` will add a Python Runner dock to the editor, where the path to the script as well as command line arguments can be specified.
+
+Scripts with functions that load or reset the current project are currently disabled , due to UI incompatibilities.
+
+#### Running scripts with `-r`
+Just like in RaCoHeadless, the `-r` commandline option of the RaCoEditor application also allows to run non-interactive python scripts for the UI version of Ramses Composer. The script will be run before the editor window appears.
+To specify position arguments for the Python script, use `--` so filenames (before `--`) can be separated from python arguments (after `--`).
 
 Examples:
-* "RamsesComposer.exe -r script.py test.rca" will load test.rca, pass no parameters to python
-* "RamsesComposer.exe -r script.py -- a b c" will load no project, pass 3 parameters to python
-* "RamsesComposer.exe -r script.py test.rca -- a b c" will load test.rca, pass 3 parameters to python
+* `RamsesComposer.exe -r script.py test.rca` will load test.rca, pass no parameters to python
+* `RamsesComposer.exe -r script.py -- a b c` will load no project, pass 3 parameters to python
+* `RamsesComposer.exe -r script.py test.rca -- a b c` will load test.rca, pass 3 parameters to python
 
-While running python scripts in the editor, you'll have access to the `raco_gui` module to interact with editor specific things. See the bottom of this documentation for more information on that.
+Aside from that, all information from the RaCoHeadless Python API Reference also applies here, including the `-y` command line option.
 
-Aside from that, all information from the RaCoHeadless Python API Reference also applies here.
+## Writing Python Scripts for Ramses Composer
+The Python API is contained within the `raco` and `raco_gui` Python modules which need to be imported explicitly. `raco_gui` is only available in the RaCoEditor.
 
-While the editor window is open, a python script can also be run on the current project.
-The menu bar option "File" -> "Run Script" will launch a "Run Script" dialog where a path to the script as well as command line arguments can be specified.
-Scripts with functions that load or reset the current project are currently disabled in the "Run Script" dialog due to UI incompatibilities.
+All functions and types described below reside in either of these modules.
 
-
-## Simple Example: Purging Invalid Links
+### Simple Example: Purging Invalid Links
 
 A simple example that illuminates how Python-based automated workflows look like is purging invalid links.
 
@@ -81,16 +85,19 @@ If every path has been correctly specified you will encounter a lot of log messa
 
 Upon opening the newly created project specified at `<new path for fixed project file>` you will discover that the entire project has been cleaned of invalid links while keeping the valid link intact.
 
+# `raco` module reference
+The `raco` module is available in both RaCoHeadless and RaCoEditor. You'll need to add an explicit import statement for the module in order to call the methods mentioned below.
+
 ## General Functions
 
 > reset([featureLevel])
 >> Create a new project which is empty except a newly created ProjectSettings object.
->> This function is currently disabled when using the "Run Dialog" script.
+>> This function is currently disabled when using the Python Runner in RaCoEditor.
 >> The optional featureLevel parameter allows to set the feature level of the new project. If no feature level is given the largest supported feature level is used by default.
 
 > load(path[, featureLevel])
 >> Load the project with the given `path` and replace the active project with it.
->> This function is currently disabled when using the "Run Dialog" script.
+>> This function is currently disabled when using the Python Runner in RaCoEditor.
 >> If the optional featureLevel parameter is used loading will attempt to upgrade the project to the given feature level. Since feature level downgrades are not allowed, the featureLevel parameter must not be smaller than the project feature level.
 
 > save(path)
@@ -103,7 +110,7 @@ Upon opening the newly created project specified at `<new path for fixed project
 >> Use this to figure out if the composer is running in Headless mode or with the GUI.
 
 > projectFeatureLevel()
->> Returns the feature level of the current project. This is a convenience function which reads the feature level from the "featureLevel" property of the "ProjectSettings" object.
+>> Returns the feature level of the current project. This is a convenience function which reads the feature level from the `featureLevel` property of the `ProjectSettings` object.
 
 > minFeatureLevel()
 >> Returns the current minimum feature level supported by the engine.
@@ -115,7 +122,7 @@ Upon opening the newly created project specified at `<new path for fixed project
 >> Get a list of the absolute paths of all externally referenced projects.
 
 > export(ramses_path, logic_path, compress)
->> Export the active project. The paths of the Ramses and RamsesLogic files need to be specified. Additionallly compression can be enabled using the `compress` flag.
+>> Export the active project. The paths of the Ramses and RamsesLogic files need to be specified. Additionally, compression can be enabled using the `compress` flag.
 	
 
 ## Active Project Access
@@ -167,10 +174,10 @@ Member functions:
 >> Returns true if the object is part of the project's resources.
 
 > getPrefab()
->> If the object is in a Prefab, this will return the Prefab. Otherwise this will return None.
+>> If the object is in a Prefab, this will return the Prefab. Otherwise, this will return None.
 
 > getPrefabInstance()
->> If the object is in a PrefabInstance, this will return the PrefabInstance. Otherwise this will return None.
+>> If the object is in a PrefabInstance, this will return the PrefabInstance. Otherwise, this will return None.
 
 > getOuterContainingPrefabInstance()
 >> In case of nested prefabs, this will return the outermost prefab instance, or None if the object is not part of a PrefabInstance.
@@ -330,11 +337,10 @@ The member variables of a LinkDescriptor can't be changed. Modification of links
 >> 	Removes a link given the PropertyDescriptor of the link endpoint.
  	
 	
-
-# raco_gui module
-When running python scripts inside the GUI, this module is available to interact with editor specific things. You'll need to add an explicit import statement for `raco_gui` in order to call the methods mentioned below.
+# `raco_gui` module reference
+When running python scripts inside RaCoEditor, `raco_gui` is available to interact with editor specific things. You'll need to add an explicit import statement for the module in order to call the methods mentioned below.
 
 If you need to ensure that your scripts run both in headless and in gui, you can wrap the import and usages of these methods inside a `raco.isRunningInUi()` check.
 
-> getCurrentSelection()
+> getSelection()
 >> Returns a list of the currently selected editor objects.
