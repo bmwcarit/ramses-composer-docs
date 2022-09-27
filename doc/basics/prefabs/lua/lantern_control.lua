@@ -1,14 +1,3 @@
-
-function interface(IN,OUT)
-
-	IN.lightSwitch = Type:Bool()
-
-	OUT.lightSwitch = Type:Bool()
-	
-end
-
-function run(IN,OUT)
-
-  OUT.lightSwitch = IN.lightSwitch
-  
+function interface(INOUT)
+    INOUT.lightSwitch = Type:Bool()
 end

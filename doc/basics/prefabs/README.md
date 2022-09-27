@@ -38,11 +38,11 @@ As a Prefab is a self-contained entity, its components can not be linked directl
 Likewise, the copied objects inside of a PrefabInstance are read-only and updated from within their Prefab.
 So how can we make PrefabInstances individual and interactive?
 
-Lua scripts inside a Prefab which reside at the "top level", i.e. above all other parts of the Prefab, have
-special meaning. Other than all internal parts of the Prefab, these scripts are not shared among PrefabInstances
-and thus can have different values or links for each instance. These scripts represent the interface of the
+That's where Lua Interfaces come in handy. They are simple lua scripts which just hold values. 
+Those values can then be read by other scripts inside the instance, 
+and are not shared among PrefabInstances. They represent quite literally the "interface" of the
 Prefab - the properties a Prefab "offers" to whoever instantiates it. Every aspect of the Prefab which you
-want to be able to control per-instance needs to be represented by an input parameter in such a script.
+want to be able to control per-instance needs to be represented by an input parameter in such a LuaInterface.
 The outputs of these interface scripts are linked inside the Prefab, either directly to nodes or to other
 Lua scripts used internally.
 
@@ -82,9 +82,7 @@ it, we will see our lantern again.
 Next we add two scripts to the Prefab. We can create content directly inside the Prefab with the
 context menu. There are two scripts:
 
-* [lantern_control.lua](lua/lantern_control.lua) (named _interface_) will be our interface to the outside.
-  It has just one parameter _lightSwitch_ and hands it on to the inside. With more complex parameters,
-  it could also check the input for validity or transform external units into those used internally.
+* [lantern_control.lua](lua/lantern_control.lua) (named _interface_) will be our interface to the outside. It has just one parameter _lightSwitch_, which will be handed on to the inside.
 * [lantern_logic.lua](lua/lantern_logic.lua) (named _logic_) does the actual manipulation of the objects
 inside the Prefab. It transforms our boolean light switch into a vector which is linked to the *u_EmissiveFactor*
 of the shader to control the light. It also provides some static values for ambient light which are assigned to
@@ -92,9 +90,7 @@ all mesh nodes rather than setting those identical values by hand.
 
 ![](docs/prefab.png)
 
-For this simple Prefab we could have used just one script for everything, but for more complex uses in real
-life it is usually a good idea to separate the outside interface from the actual internal logic in this way.
-You might even have multiple scripts on interface level which control different aspects of the Prefab.
+For this simple Prefab we only used one Script and one Interface, but more complex uses in real life will probably require more than that. As an example, you could add a script in between the interface and the actual logic to perform input validation or transform external units into those used internally. You might even have multiple interfaces which control different aspects of the Prefab.
 
 ## Instancing the Prefab
 
