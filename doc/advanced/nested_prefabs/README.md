@@ -85,17 +85,22 @@ shader and apply it to all Mesh Nodes.
 
 Let's start with our most basic element, the wheel. Naturally, we create a Prefab and drag in
 the imported _Wheel_ MeshNode from the scene graph. We also add an additional Node _Suspension_
-as its parent so we can better control the movements of the wheel. The MeshNode itself will
+as its parent, so we can better control the movements of the wheel. The MeshNode itself will
 rotate to make the wheel spin, the _Suspension_ Node will rotate for steering.
 
-As an interface for this Prefab we add the [wheel_control.lua](lua/wheel_control.lua) script.
+As a LuaInterface for this Prefab we add the [wheel_interface.lua](interfaces/wheel_interface.lua) script.
 Our Prefab accepts the following parameters:
 
-* _rotationAngle_ controls spinning the wheels. The angle is transformed into a vector as output so it can be linked to the MeshNode's rotation.
-* _steeringAngle_ controls turning the wheel for steering. This angle is clamped between -30° and 30° to prevent unrealistic angles. It is likewise transformed into a vector and linked to the rotation of the _Suspension_ node.
-* _reverse_ is needed to distinguish between wheels on the left side and right side of the car. Wheels on the opposite side need to be rotated by 180° for correct orientation and need to spin in the other direction.
+* _rotationAngle_ controls spinning the wheels.
+* _steeringAngle_ controls turning the wheel for steering.
+* _reverse_ is needed to distinguish between wheels on the left side and right side of the car.
 
-This gives us a working wheel. In this example there is only one script. Keep in mind that in
+Additionally, we add an internal LuaScript [wheel_control.lua](lua/wheel_control.lua) and link it up with the interface in order to convert the input data:
+* _rotationAngle_ is transformed into a vector as output, so it can be linked to the MeshNode's rotation.
+* _steeringAngle_ is clamped between -30° and 30° to prevent unrealistic angles. It is likewise transformed into a vector and linked to the rotation of the _Suspension_ node.
+* _reverse_ signals that the wheel needs to be rotated by 180° for correct orientation and needs to spin in the opposite direction.
+
+After linking everything up, this gives us a working wheel. Keep in mind that in
 complex real life projects you can have multiple interface scripts as well as multiple inner
 scripts for logic to separate different aspects of your LUA code.
 
@@ -107,13 +112,13 @@ Next we are going to build a Prefab for the axle of a vehicle. It adds the diffe
 between left and right wheels, helps to position the wheels as a unit and will be reused
 multiple times with each vehicle.
 
-To build the axle, we add two Prefab Instances of our _Wheel_ Prefab and name them _Left_
-and _Right_. One of them should be moved around a little so they don't overlap and we can
+To build the axle, we add two Prefab Instances of our _Wheel_ Prefab and name them _LeftWheel_
+and _RightWheel_. One of them should be moved around a little so they don't overlap and we can
 see both of them later. As the preview is still empty at this time, we don't care about
 proper positioning, we will do this when we have completed our Prefab hierarchy and can
 see something again.
 
-Last we add the [axle_control.lua](lua/axle_control.lua) interface script. It just takes
+Last we add the [axle_interface.lua](interfaces/axle_interface.lua) interface script. It just takes
 the angles for wheel rotation and steering and hands them on as output. The output is
 linked to the input parameters of both wheel Prefab Instances.
 
@@ -126,10 +131,10 @@ the imported _ToyCar_ MeshNode over from the scene graph. It contains the body o
 Then we create two Prefab Instances for the front and rear axle and point them at our axle
 Prefab. Again, it helps to move one of them a little so they don't overlap.
 
-Then we add the [vehicle_control.lua](lua/vehicle_control.lua) interface script. It has input
-parameters for rotation and steering with values between 0 and 1 (which just happens to be
-the range of the sliders) and output values in degrees which are needed to apply the rotations
-later.
+Again, we'll need two scripts:
+[vehicle_interface.lua](interfaces/vehicle_interface.lua) will be our interface, which has input parameters for rotation and steering with values between 0 and 1 (which just so happens to be the range of the sliders).
+
+Then we add the [vehicle_control.lua](lua/vehicle_control.lua) script and link it to the interface in order to convert those values to degrees which are needed to apply the rotations later.
 
 We link both output values to the _FrontAxle_ Prefab Instance, but only the _rotationAngle_
 to the _RearAxle_ as cars usually don't have steerable rear wheels.
