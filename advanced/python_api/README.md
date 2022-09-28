@@ -140,6 +140,33 @@ The `raco` module is available in both RaCoHeadless and RaCoEditor. You'll need 
 >> Returns a list of all links in the active project.
 
 
+## Operations
+
+> create(typename, object_name)
+>> 	Creates a new object of the given type and sets the name. 
+
+> delete(object)
+>> Deletes a single object.
+
+> delete([object, ...])
+>> Deletes a list of objects.
+ 	
+> moveScenegraph(object, new_parent)
+>> 	Moves an object in the scenegraph and adds it at the end of the scenegraph children of the new parent object. Makes the object a top-level scenegraph object if `new_parent` is `None`.
+
+> moveScenegraph(object, new_parent, insert_before_index)
+>> 	Moves an object in the scenegraph and inserts it into the scenegraph children of `new_parent` before the given index.
+ 
+> getLink(property)
+>> 	Given a PropertyDescriptor this will return a LinkDescriptor if the property has a link ending on it or `None` if there is no link.
+
+> addLink(start, end[, isWeak])
+>> 	Creates a link between two properties given their PropertyDescriptors. Weak links can be created using an optional boolean flag. By default strong link are created.
+	
+> removeLink(end)
+>> 	Removes a link given the PropertyDescriptor of the link endpoint.
+
+
 ## Objects
 
 RamsesComposer objects can be accessed and used almost like normal Python objects.
@@ -325,34 +352,6 @@ The member variables of a LinkDescriptor can't be changed. Modification of links
 >> handle
 > In case of object errors, this will return the EditorObject causing the error. 
 > If the error refers to a property, this will return the PropertyDescriptor instead.
-
-## Operations
-
-> create(typename, object_name)
->> 	Creates a new object of the given type and sets the name. 
-
-> delete(object)
->> Deletes a single object.
-
-> delete([object, ...])
->> Deletes a list of objects.
- 	
-> moveScenegraph(object, new_parent)
->> 	Moves an object in the scenegraph and adds it at the end of the scenegraph children of the new parent object. Makes the object a top-level scenegraph object if `new_parent` is `None`.
-
-> moveScenegraph(object, new_parent, insert_before_index)
->> 	Moves an object in the scenegraph and inserts it into the scenegraph children of `new_parent` before the given index.
- 	
- 
-> getLink(property)
->> 	Given a PropertyDescriptor this will return a LinkDescriptor if the property has a link ending on it or `None` if there is no link.
-
-> addLink(start, end[, isWeak])
->> 	Creates a link between two properties given their PropertyDescriptors. Weak links can be created using an optional boolean flag. By default strong link are created.
-	
-> removeLink(end)
->> 	Removes a link given the PropertyDescriptor of the link endpoint.
- 	
 	
 # `raco_gui` module reference
 When running python scripts inside RaCoEditor, `raco_gui` is available to interact with editor specific things. You'll need to add an explicit import statement for the module in order to call the methods mentioned below.
