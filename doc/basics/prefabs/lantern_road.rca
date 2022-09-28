@@ -1007,7 +1007,7 @@
                 },
                 "objectID": "279f9991-2e42-0fa7-2dac-bf6a061fecb6",
                 "objectName": "interface",
-                "uri": "lua/lantern_control.lua"
+                "uri": "interfaces/lantern_interface.lua"
             },
             "typeName": "LuaInterface"
         },
@@ -1043,7 +1043,7 @@
                 },
                 "objectID": "33acb0ce-85f7-4548-b77d-6460bd049dc9",
                 "objectName": "interface",
-                "uri": "lua/lantern_control.lua"
+                "uri": "interfaces/lantern_interface.lua"
             },
             "typeName": "LuaInterface"
         },
@@ -1097,7 +1097,7 @@
                 },
                 "objectID": "44472d19-cf78-0af3-03d4-ed2954a29780",
                 "objectName": "interface",
-                "uri": "lua/lantern_control.lua"
+                "uri": "interfaces/lantern_interface.lua"
             },
             "typeName": "LuaInterface"
         },
@@ -1151,7 +1151,7 @@
                 },
                 "objectID": "55d6e4f8-e2f4-03eb-2801-d01181c67426",
                 "objectName": "interface",
-                "uri": "lua/lantern_control.lua"
+                "uri": "interfaces/lantern_interface.lua"
             },
             "typeName": "LuaInterface"
         },
@@ -4931,7 +4931,7 @@
                 },
                 "objectID": "b8ec7826-77fd-0ab2-3f31-158ed0c0706a",
                 "objectName": "interface",
-                "uri": "lua/lantern_control.lua"
+                "uri": "interfaces/lantern_interface.lua"
             },
             "typeName": "LuaInterface"
         },
@@ -5292,7 +5292,7 @@
                 },
                 "objectID": "d534c58f-8f64-0b27-0c53-c2c8796afb01",
                 "objectName": "interface",
-                "uri": "lua/lantern_control.lua"
+                "uri": "interfaces/lantern_interface.lua"
             },
             "typeName": "LuaInterface"
         },
@@ -5468,7 +5468,7 @@
                 },
                 "objectID": "f4369ed8-6af2-0833-2872-1a899aef1c7f",
                 "objectName": "interface",
-                "uri": "lua/lantern_control.lua"
+                "uri": "interfaces/lantern_interface.lua"
             },
             "typeName": "LuaInterface"
         },

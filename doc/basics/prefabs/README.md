@@ -31,7 +31,7 @@ Prefabs are helpful for
 
 To use Prefabs you need to create a _PrefabInstance_ object and assign a Prefab to it. The PrefabInstance
 can be used in the scene graph just like any other node. All contents of the Prefab appear inside the
-PrefabInstance as a copy. If the Prefab is modified, all changes are immeditately applied to all its
+PrefabInstance as a copy. If the Prefab is modified, all changes are immediately applied to all its
 PrefabInstances.
 
 As a Prefab is a self-contained entity, its components can not be linked directly to other components.
@@ -82,15 +82,12 @@ it, we will see our lantern again.
 Next we add two scripts to the Prefab. We can create content directly inside the Prefab with the
 context menu. There are two scripts:
 
-* [lantern_control.lua](lua/lantern_control.lua) (named _interface_) will be our interface to the outside. It has just one parameter _lightSwitch_, which will be handed on to the inside.
-* [lantern_logic.lua](lua/lantern_logic.lua) (named _logic_) does the actual manipulation of the objects
-inside the Prefab. It transforms our boolean light switch into a vector which is linked to the *u_EmissiveFactor*
-of the shader to control the light. It also provides some static values for ambient light which are assigned to
-all mesh nodes rather than setting those identical values by hand.
+* [lantern_interface.lua](interfaces/lantern_interface.lua) (named _interface_) will be our interface to the outside. It has just one parameter _lightSwitch_, which will be handed on to the inside.
+* [lantern_logic.lua](lua/lantern_logic.lua) (named _logic_) does the actual manipulation of the objects inside the Prefab. Once you link the lightSwitch parameter up with the interface, it will be transformed into a vector which then needs to be linked to the *u_EmissiveFactor* of the shader to control the light. It also provides some static values for ambient light which are assigned to all mesh nodes rather than setting those identical values by hand.
 
 ![](docs/prefab.png)
 
-For this simple Prefab we only used one Script and one Interface, but more complex uses in real life will probably require more than that. As an example, you could add a script in between the interface and the actual logic to perform input validation or transform external units into those used internally. You might even have multiple interfaces which control different aspects of the Prefab.
+For this simple Prefab we only used one Script and one Interface, but more complex uses in real life will probably require more than that. As an example, you could add a script in between the interface and the actual logic to perform input validation or transform external units into those used internally. You might even have multiple interfaces which control different aspects of the Prefab. For a more complex example, you can take a look at our [Nested Prefabs](../../advanced/nested_prefabs/README.md) tutorial later.
 
 ## Instancing the Prefab
 
@@ -120,7 +117,7 @@ you change its input value now, you should see all lamps coming on.
 ## Tips and Tricks
 
 Be careful not to confuse PrefabInstances with their Prefabs, because of their identical structure. If you change
-the input parameters of a Prefab's interface script, this will **not** effect the existing instances. You can
+the input parameters of a Prefab's interface script, this will **not** affect the existing instances. You can
 check the properties inside the Prefab content this way and see whether your scripts produce the intended output,
 but there is no visible change in the preview as the Prefabs are abstract, invisible templates. To see an effect
 in the preview, you need to change the input parameters of the instances.
