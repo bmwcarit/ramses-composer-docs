@@ -311,6 +311,20 @@ The printed representation includes the property paths including the object name
 		
 The member variables of a LinkDescriptor can't be changed. Modification of links is only possible with the addLink and removeLink functions described below.
 
+## ErrorItems
+### Member variables
+>> category
+> The category this ErrorItem belongs to.
+
+>> level
+> The severity level of this ErrorItem.
+
+>> message
+> The error message of this ErrorItem.
+
+>> handle
+> In case of object errors, this will return the EditorObject causing the error. 
+> If the error refers to a property, this will return the PropertyDescriptor instead.
 
 ## Operations
 
