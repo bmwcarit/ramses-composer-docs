@@ -79,11 +79,10 @@ _Lantern_ Node in and delete the empty _Lantern.gltf_. You will notice that the 
 in the preview. Prefabs are not visible as they are just templates. Once we create an instance for
 it, we will see our lantern again.
 
-Next we add two scripts to the Prefab. We can create content directly inside the Prefab with the
-context menu. There are two scripts:
+Next we add two scripts to the Prefab. We can create content directly inside the Prefab with the context menu, just right-click on it. Here they are:
 
-* [lantern_interface.lua](interfaces/lantern_interface.lua) (named _interface_) will be our interface to the outside. It has just one parameter _lightSwitch_, which will be handed on to the inside.
-* [lantern_logic.lua](lua/lantern_logic.lua) (named _logic_) does the actual manipulation of the objects inside the Prefab. Once you link the lightSwitch parameter up with the interface, it will be transformed into a vector which then needs to be linked to the *u_EmissiveFactor* of the shader to control the light. It also provides some static values for ambient light which are assigned to all mesh nodes rather than setting those identical values by hand.
+* [lantern_interface.lua](interfaces/lantern_interface.lua) (named _interface_) will be our LuaInterface to the outside. It has just one parameter _lightSwitch_, which will be handed on to the inside.
+* [lantern_logic.lua](lua/lantern_logic.lua) (named _logic_) is our LuaScript which does the actual manipulation of the objects inside the Prefab by transforming the _lightSwitch_ parameter into a vector. First, link up the _lightSwitch_ with the interface. In order to link the vector up with the shader to control the light, you'll need to select the *Lantern_Lantern* MeshNode and check the checkbox for _Private Material_. That way you can override shader attributes locally, such as the *u_EmissiveFactor* color or *u_AmbientLightIntensity*, and thus also add links to the output parameters of the LuaScript.
 
 ![](docs/prefab.png)
 
