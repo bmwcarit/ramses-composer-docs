@@ -126,7 +126,10 @@ The `raco` module is available in both RaCoHeadless and RaCoEditor. You'll need 
 
 > getErrors()
 >> Returns a list of active `ErrorItems`
-	
+
+> importGLTF(path[, parent])	
+>> Import complete contents of a gltf file into the current scene. Inserts the new nodes below `parent` in the scenegraph when the optional argument is given.
+
 
 ## Active Project Access
 
@@ -215,6 +218,8 @@ Member functions:
 > keys()
 >> Returns a list of the names of all properties in internal data model order.
 
+> metadata()
+>> If the object is a mesh this will return gltf `extras` metadata as a dictionary. Only string values in the gltf `extras` are supported.
 
 ## Properties
 
