@@ -112,7 +112,7 @@ We only highlight the steps specific to this example here:
 * Create a new project and delete the default content
 * Create a standard "Suzanne" monkey (same as in [monkey example](../monkey/README.md))
     * You can also just copy the project and delete two of the monkey heads
-    * Remember to change all the uniform numbers, otherwise the monkey is black on a
+    * Remember to change all the color values in the material uniforms, otherwise the monkey is black on a
     black background
 * Create the Quad
     * Create a standard "Plane" mesh in Blender and export as glTF (quad.gltf)

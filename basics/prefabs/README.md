@@ -55,8 +55,9 @@ content. You will find no Prefab or Prefab Instance objects in the RAMSES scene 
 
 We start by setting up the scene as usual: Import the meshes from GLTF by right clicking on the scene graph and 
 choosing "Import glTF Assets...". Leave all checkboxes checked. Make sure the new Node has the "render_main" tag. 
-Create a material and textures and configure their uniforms. For this project you need to add the link to the 
-Defines URI in the Property Browser of the Lantern Material. We have seen this in the [hello world](../hello_world/README.md) chapter.
+Create a material and textures and configure their uniforms (here: u_AmbientLightColor: 1, 1, 1, u_AmbientLightIntensity: 1,
+u_BaseColorFactor: 1, 1, 1, 0). For this project you need to add the link to the Defines URI in the Property Browser of 
+the Lantern Material.
 
 Here, we are using the meshes from Khronos Group GLTF [lantern example](https://github.com/KhronosGroup/glTF-Sample-Models/tree/master/2.0/Lantern/glTF) (public domain).
 
