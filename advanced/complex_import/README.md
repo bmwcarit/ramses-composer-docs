@@ -37,14 +37,15 @@ will demonstrate in this example [further down](#Experiment-one-Playing-with-the
 
 The Blender glTF exporter produces deterministic ordering after every export, provided
 the scene did not change topologically (no new or deleted meshes). Other exporters may not be that predictable!
-In order to avoid export issues we suggest two solutions:
+In order to avoid export issues we suggest one of the following solutions:
 
-1. Export meshes to separate glTF files, using the _export only selected_ feature of the Blender glTF exporter.
+1. Export meshes to separate glTF files, using the _export only selected_ feature of the Blender glTF exporter. You can create a Blender plugin to do that easily
 2. Don't import multi-object glTF files which are changing frequently, e.g. during prototyping.
+3. Use the complex glTF import of the Ramses Composer.
 
-<!-- TODO Violin we should find a third option here. It is precicely prototyping where such feature will be very useful - being able
-to rapidly change the exported content of a complex scene, while maintaining and updating the composer project and having a seamless
-workflow. Maybe ship a Blender plugin? Or just implement a "complex import" of glTF? -->
+You can combine any of these solutions together with the
+[Python API](../python_api/README.md) of the
+Composer to customize the import of data.
 
 ## Scene graph and resources
 
@@ -100,7 +101,7 @@ menu and choose the option `Scene graph order` in the `Render Order` field:
 
 ![](./docs/render_order.png)
 
-<!-- TODO Violin add link to render order docs here -->
+You can read more on the topic of rendering order in its [dedicated tutorial](../../basics/ordering/README.md).
 
 The import function puts all imported nodes inside a new root node with name equal to the name of the glTF file:
 
@@ -210,19 +211,17 @@ with the name of the glTF file under the selected node. All imported nodes are a
 that root node. The import
 menu also offers a selection menu to import only specific objects from the glTF file.
 
-<!-- TODO Violin what happens with more than one scene? Also, add exact list of supported glTF objects -->
-
 Here is a list of the glTF objects currently supported:
 
 * scenes
 * nodes
 * meshes
 * mesh data (accessors, bufferViews, buffers, etc.)
+* animations
 
 The following objects are not supported (yet):
 
 * cameras
-* animations
 * images/samples/textures
 * materials
 
