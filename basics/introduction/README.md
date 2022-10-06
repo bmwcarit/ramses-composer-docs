@@ -125,6 +125,7 @@ and the RAMSES client.
 	-t, --trace-messages-ramses               	Enable trace-level Ramses log messages.
 	-f, --featurelevel <feature-level>        	RamsesLogic feature level (-1, 1 ... 2)
 	-r, --run <script-path>                   	Run Python script. Specify arguments for python script by writing '--' before arguments.                           
+ 	-y, --pythonpath <python-path>				Directory to add to python module search path.
 
 ## Ramses Composer Headless
 
@@ -152,3 +153,4 @@ of Ramses Composer scenes to Logic and RAMSES files.
 	-r, --run <script-path>             	Run Python script.
 	-o, --outlogfile <log-file-name>    	File name to write log file to.
 	-f, --featurelevel <feature-level>  	RamsesLogic feature level (-1, 1 ... 2)
+ 	-y, --pythonpath <python-path>			Directory to add to python module search path.
