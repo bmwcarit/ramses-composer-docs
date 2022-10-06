@@ -345,18 +345,18 @@ The member variables of a LinkDescriptor can't be changed. Modification of links
 
 ## ErrorItems
 ### Member variables
->> category
-> The category this ErrorItem belongs to.
+> category
+>> The category this ErrorItem belongs to.
 
->> level
-> The severity level of this ErrorItem.
+> level
+>> The severity level of this ErrorItem.
 
->> message
-> The error message of this ErrorItem.
+> message
+>> The error message of this ErrorItem.
 
->> handle
-> In case of object errors, this will return the EditorObject causing the error. 
-> If the error refers to a property, this will return the PropertyDescriptor instead.
+> handle
+>> In case of object errors, this will return the EditorObject causing the error. 
+>> If the error refers to a property, this will return the PropertyDescriptor instead.
 	
 # `raco_gui` module reference
 When running python scripts inside RaCoEditor, `raco_gui` is available to interact with editor specific things. You'll need to add an explicit import statement for the module in order to call the methods mentioned below.
