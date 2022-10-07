@@ -169,6 +169,11 @@ The `raco` module is available in both RaCoHeadless and RaCoEditor. You'll need 
 > removeLink(end)
 >> 	Removes a link given the PropertyDescriptor of the link endpoint.
 
+> addExternalProject(path)
+>> Adds the project at `path` as external reference. Path can be either absolute or relative to the current project directory.
+
+> addExternalReferences(path, type)
+>> Adds all objects of a certain `type` (or a list of `types`) from an external project at `path` as external references. Returns a list containing the added objects.
 
 ## Objects
 
