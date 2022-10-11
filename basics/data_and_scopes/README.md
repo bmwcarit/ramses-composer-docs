@@ -22,8 +22,7 @@ For introduction to the individual features, have a look at the dedicated exampl
 * [Hello World](../hello_world/README.md) - fundamentals of references to external resources
 * [Monkey heads](../monkey/README.md#lua-scripting) - links between properties inside the project
 * [Prefabs](../prefabs/README.md) - packaging of data in reusable components
-
-<!-- TODO add external references here too, once finished -->
+* [External references](../../advanced/external_references/) - splitting projects into reusable modules which can reference each other
 
 ## Composer data and imported resources
 
@@ -34,9 +33,6 @@ always distributed together with the imported files at the correct location spec
 
 For options to use absolute paths and best practices for project structure, refer to
 [the dedicated section](../../advanced/best_practices/README.md#relative-and-absolute-paths).
-
-<!-- TODO this section needs to be extended/adapted once external references are implemented. How are external projects and their references
-supposed to be managed? As subfolders? Relative paths? ... -->
 
 ## Composer data and exported binary files
 
@@ -49,8 +45,6 @@ During the export, the Ramses scene is exported in the same state as it is in th
 Refer to the [export manual](../export/README.md)
 for details how to use the export functionality. See the [section below](#mapping-to-ramses-objects) for
 details which data is exported and which objects to expect.
-
-<!--TODO Once we have external references, we should mention them here and link the page-->
 
 ## Scene Graph objects
 
