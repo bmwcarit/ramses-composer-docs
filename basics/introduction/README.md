@@ -31,7 +31,7 @@ maintain your project. The scene is stored in a JSON-based .rca file which is hu
 degree and can be inspected and processed in text-based tools (diff, Git, grep etc.).
 
 Ramses Composer runs instances of the RAMSES renderer and RAMSES logic internally to create a working
-scene and display it in the preview window - with life updates of everything that happens  in the scene
+scene and display it in the preview window - with live updates of everything that happens  in the scene
 graph as well as in the external assets. This scene can then be exported into RAMSES files to be used
 in a target application or with a player.
 
