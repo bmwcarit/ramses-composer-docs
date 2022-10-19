@@ -104,9 +104,9 @@ shadows etc. It's tempting to use it for all kinds of global effects, but it als
 Overusing such effects often causes sampling stalls on the GPU, especially when reading/writing multiple textures as in
 this example. A good technical artist knows when to use and when **not** to use offscreen rendering.
 
-## Recreate sample
+## Recreate this sample
 
-This example is created in a way similar to the [monkey example](../monkey/README.md#recreate-sample).
+This example is created in a way similar to the [monkey example](../monkey/README.md#recreate-this-sample).
 We only highlight the steps specific to this example here:
 
 * Create a new project and delete the default content

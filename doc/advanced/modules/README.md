@@ -70,7 +70,7 @@ function interface(IN,OUT)
 Create a new LuaScript in the Scene Graph and add the LightControl script to it. The error "Required LuaScriptModule 'light' is unassigned" will show up, because you declared a module in the script file but didn't provide a module to the respective LuaScript object in Ramses Composer. To fix the error, go to the LuaScript's property page and you will now see a list property called Modules with one entry called 'light'. Click and select
 the only module we have in the project - the LightModule.
 
-Now the LightControl script will display another error. In order to fix it, give the light_id in the Property Browser of the LuaScript a value between 1 and 3 
+Now the LightControl script will display another error. In order to fix it, give the light_id in the Property Browser of the LuaScript a value between 1 and 3
 
 Now the LuaScript is working again, but it essentially does the same thing as before - hardcodes its light properties.
 We included the new module as a dependency, but we are not using it yet. To use it, we can refer to all functions and data
@@ -110,7 +110,7 @@ expectations of the function. You can of course do some sort of "default behavio
 that if you use the module from multiple scripts, it can become difficult to track errors. It is therefore recommended
 to use the Lua ``error()`` built-in function to raise an error if something is not as expected in the module functions.
 
-## Recreate sample
+## Recreate modules sample
 
 This example is created in a way similar to the [monkey example](../../basics/monkey/README.md#recreate-sample). We only highlight the
 steps specific to this example here:

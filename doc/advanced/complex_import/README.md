@@ -47,7 +47,7 @@ You can combine any of these solutions together with the
 [Python API](../python_api/README.md) of the
 Composer to customize the import of data.
 
-## Scene graph and resources
+## Scene graph and resources of this sample project
 
 This example project contains a complex scene consisting of multiple meshes and nodes. You can inspect
 the [Blender scene we used ](./blender/). It contains a bunch of

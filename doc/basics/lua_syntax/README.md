@@ -15,7 +15,7 @@ You can find the user documentation of the `Lua` syntax dialect and its specific
 
 You can find the exact version of the `Logic Engine` used by the Composer in the Help->About menu.
 
-# Basics
+# Introduction to Lua
 
 This section explains the basics about _Lua_ scripts and how to use them interactively with the _Ramses Composer_.
 
@@ -67,12 +67,12 @@ Hint: You need to define a standard application editing _.lua_ file extensions i
 
 If you create several Lua script objects with the same URI, this means that you have several instances of the script. They will behave in the same way, but they all have independent sets of input and output parameters and variables.
 
-## Error Handling
+## Understanding errors
 
 ### Parsing Errors
 
-If your LuaScript contains a parsing error, an error message will be displayed at the top of a property browser for the LuaScript. 
-As an example, if your script is 
+If your LuaScript contains a parsing error, an error message will be displayed at the top of a property browser for the LuaScript.
+As an example, if your script is
 
 ```Lua
 function interface(IN,OUT)
@@ -100,7 +100,7 @@ in line 10 if "choice" is greater than 0:
 function interface(IN,OUT)
     IN.choice = Type:Int32()
     IN.value = Type:Float()
-    
+
     OUT.value = Type:String()
 end
 
@@ -116,7 +116,7 @@ Runtime errors show up at the top of the property browser for the script, just a
 ![](./docs/Lua_Runtime_Error.png)
 
 Note that the runtime error only occurs if the line with the runtime error is actually executed - in this example "choice" must be set to a value greater than 0 for the
-error to occur and be displayed. 
+error to occur and be displayed.
 
 Ramses Logic stops processing the LuaScripts once it encounters a runtime error. To alert the user that a runtime error occurred and not all scripts
 have been processed, a warning is displayed in the property browser for all LuaScripts:
@@ -181,7 +181,7 @@ You can create structs to bundle data, but there is no reason to copy/paste your
 ```Lua
 function interface(IN,OUT)
     IN.my_IN_Struct = {name = Type:String(), age = Type:Int32(), height_meter = Type:Float()}
-    OUT.my_OUT_Struct = {name = Type:String(), age = Type:Int32(), height_meter = Type:Float()} 
+    OUT.my_OUT_Struct = {name = Type:String(), age = Type:Int32(), height_meter = Type:Float()}
 end
 
 function run(IN,OUT)
@@ -212,7 +212,7 @@ Sometimes you need to create a kind of array as `IN` or `OUT`, but it's importan
 ```Lua
 function interface(IN,OUT)
     OUT.my_sensor = Type:Array(3, Type:Bool())
-    
+
     for i = 0, 2 do
       OUT["my_sensor_" .. i] = Type:Bool()
     end
@@ -263,8 +263,8 @@ local class_Person = {
     height = 0.0,
     name = "unknown",
     print = function(self)
-        print(  "Name: " .. self.name .. 
-                ", age: " .. self.age .. 
+        print(  "Name: " .. self.name ..
+                ", age: " .. self.age ..
                 ", height: " .. self.height)
     end,
     reset = function(self)
@@ -297,10 +297,10 @@ TestLua: Name: unknown, age: 0, height: 0
 
 Sure - it's not really handy to define the same method in every single object and a globally defined function could be in conflict with other objects, so we define a _base class_, define our methods there and make our _person class_ *inherit* this _base class_.
 
-Our global function, which is comparable with 
+Our global function, which is comparable with
 **[condition] ? [result a] : [result b]** in _C++_
 
-```Lua 
+```Lua
 function select(a, x, y)
     if a then
         return x
@@ -318,7 +318,7 @@ local class_basic = {
       for key, value in pairs(self) do
         local _type = type(value)
         if _type ~= "function" then
-          self[key] = select(_type == "number", 0, 
+          self[key] = select(_type == "number", 0,
                         select( _type == "string", "unknown" ,false))
         end
       end
@@ -361,7 +361,7 @@ local class_Person = {
     end,
     reset = class_basic.reset,
     new = class_basic.new
-}    
+}
 ```
 And use the instantiation e.g. like this:
 
@@ -372,10 +372,10 @@ function run(IN,OUT)
       A = class_Person:new(),
       B = class_Person:new()
     }
-    
+
     persons.A.name = "Max Bauer"
     persons.B.name = "Karl Heinz"
-    
+
     persons.A:print()
     persons.B:print()
 end
@@ -400,7 +400,7 @@ function run(IN,OUT)
 
     persons.A.name = "Max Bauer"
     persons.B.name = "Karl Heinz"
-    
+
     persons.A:print()
     persons.B:print()
 end
@@ -435,8 +435,8 @@ local class_Person = {
     height = 0.0,
     name = "unknown",
     print = function(self)
-        print(  "Name: " .. self.name .. 
-                ", age: " .. self.age .. 
+        print(  "Name: " .. self.name ..
+                ", age: " .. self.age ..
                 ", height: " .. self.height)
     end,
     reset = class_basic.reset,
@@ -452,12 +452,12 @@ function interface(IN,OUT)
         age = Type:Int32(),
         height = Type:Float(),
         name = Type:String() }
-    --in this case, we don't need to declare a new local table (struct) - just for a better overview.    
+    --in this case, we don't need to declare a new local table (struct) - just for a better overview.
     OUT.Member = Type:Array(2, person)
 end
 ```
 
-The result should look like this, an empty array of structs: 
+The result should look like this, an empty array of structs:
 
 ![](./docs/Array_Struct_output.png)
 
@@ -479,7 +479,7 @@ end
 
 What exactly happens:
 
-The parameter `out` represents our `OUT.xxx` property and input our matching "object". 
+The parameter `out` represents our `OUT.xxx` property and input our matching "object".
 
 Then we parse our `table` for each entry and assign it to a local value. After this we check what kind of value we have `type(value)` and ignore all `functions` and `tables` (to avoid recursive functions). At the end we use the name of this value to catch the matching one in our `OUT` and assign the value from our input to the property of the same name in `out`.
 
@@ -489,12 +489,12 @@ Then we parse our `table` for each entry and assign it to a local value. After t
 persons = {}
 
 function run(IN,OUT)
- 
+
     persons = {
       A = class_Person:new(),
       B = class_Person:new()
     }
-    
+
     persons.A.name = "Max Bauer"
     persons.A.age = 22
     persons.A.height = 1.85
@@ -502,7 +502,7 @@ function run(IN,OUT)
     persons.B.name = "Karl Heinz"
     persons.B.age = 65
     persons.B.height = 1.61
-    
+
     setStruct(OUT.Member[1], persons.A)
     setStruct(OUT.Member[2], persons.B)
 end

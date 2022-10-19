@@ -25,7 +25,8 @@ compression.
 ## Creating a simple animation with Blender
 
 In this tutorial, we use the excellent glTF exporter of Blender 2.83 LTS. You can just use [the existing scene
-in the Blender subfolder](./blender/) or create it yourself by following the steps below.
+in the Blender subfolder](https://github.com/bmwcarit/ramses-composer-docs/tree/master/advanced/animations/blender)
+or create it yourself by following the steps below.
 
 * Select the default blender cube in a new project
 * In the animation panel, change the "End" frame from 250 to 60 to reduce the animation time
@@ -37,7 +38,8 @@ in the Blender subfolder](./blender/) or create it yourself by following the ste
 * Press 'i' again, select some other values for the last keyframe (e.g. random rotation, translation and scale values)
 
 Next, we need to export the cube alongside its animation using the glTF export menu. For details how to export
-from Blender, check [the corresponding section of the basic cube tutorial](../../basics/hello_world/README.md#Export-glTF-from-Blender).
+from Blender, check [the corresponding section of the basic cube tutorial](#Export-glTF-from-Blender).
+
 
 Make sure you click the "Export Animations" setting in the export menu:
 

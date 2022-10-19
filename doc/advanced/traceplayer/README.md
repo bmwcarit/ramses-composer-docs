@@ -10,26 +10,26 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 
 # TracePlayer
 
-The Ramses Composer contains a built-in trace player, which allows to play back RaCo trace (.rctrace) files.  
+The Ramses Composer contains a built-in trace player, which allows to play back RaCo trace (.rctrace) files.
 Good applications of the TracePlayer include:
 * re-playing captured real-world traces to debug exotic issues
 * looping predefined sequence of scene states, for demos and scene validation purposes
 
-## Basics
+## Basic usage
 
-The TracePlayer has the usual playback features (Load, Play, Pause, Stop, toggle Loop mode, Step-forward/backward, and Jump-to).  
+The TracePlayer has the usual playback features (Load, Play, Pause, Stop, toggle Loop mode, Step-forward/backward, and Jump-to).
 ![](docs/traceplayer_notrace.png "TracePlayer - No Trace Loaded")
 
-First, browse to a valid `.rctrace` file and load it using the 3-dots icon (*this article includes an [example](#example-g05oss) based on the BMW X5 example model*).  
-![](docs/traceplayer_init.png "TracePlayer - Initial State").  
+First, browse to a valid `.rctrace` file and load it using the 3-dots icon (*this article includes an [example](#example-bmw-x5) based on the BMW X5 example model*).
+![](docs/traceplayer_init.png "TracePlayer - Initial State").
 
-The TracePlayer parses the `.rctrace` file, then updates properties of relevant Lua nodes sequentially in the scene based on their names. Therefore, you need to make sure to add the equivalent interface Lua scripts to the scene and match their names.  
+The TracePlayer parses the `.rctrace` file, then updates properties of relevant Lua nodes sequentially in the scene based on their names. Therefore, you need to make sure to add the equivalent interface Lua scripts to the scene and match their names.
 Furthermore, **IN** interfaces of the Lua script have to match the same structure on the properties in the `.rctrace` file.
 
 ## The .rctrace File Format
 
-The trace file is a JSON file and must contain an array of frames, where each frame is a JSON object containing two nested objects: "SceneData" and "TracePlayerData".  
-**SceneData** can contain a list of features; those features are parsed and mapped by name by TracePlayer to the corresponding Lua nodes in the scene. The supported property types are boolean, integer, double, and strings.  
+The trace file is a JSON file and must contain an array of frames, where each frame is a JSON object containing two nested objects: "SceneData" and "TracePlayerData".
+**SceneData** can contain a list of features; those features are parsed and mapped by name by TracePlayer to the corresponding Lua nodes in the scene. The supported property types are boolean, integer, double, and strings.
 **TracePlayerData** must contain the timestamp of a frame in milliseconds.
 
 This is how a valid trace can look like:
@@ -102,7 +102,8 @@ The TracePlayer offers the following property in the **TracePlayerData** object:
 
 ## Example (BMW X5)
 
-This article includes a sample trace file based on the BMW X5 demo model. You can find it in the [traces folder](./traces).
+This article includes a sample trace file based on the BMW X5 demo model. You can find it in the
+[traces folder](https://github.com/bmwcarit/ramses-composer-docs/tree/master/advanced/traceplayer/traces).
 
-Download the X5 project from its [repository](https://github.com/bmwcarit/digital-car-3d) and load the **G05_main.rca** file as documented in project README.  
-Load and play the RaCo trace [g05_demo](traces/g05_demo.rctrace). Try changing the frame timestamps and properties to see how the playback changes in the Ramses Composer viewport.
+Download the X5 project from its [repository](https://github.com/bmwcarit/digital-car-3d) and load the **G05_main.rca** file as documented in project README.
+Load and play the RaCo trace [g05_demo](https://github.com/bmwcarit/ramses-composer-docs/tree/master/advanced/traceplayer/traces/g05_demo.rctrace). Try changing the frame timestamps and properties to see how the playback changes in the Ramses Composer viewport.

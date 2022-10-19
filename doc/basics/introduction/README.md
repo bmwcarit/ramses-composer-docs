@@ -9,7 +9,7 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 -->
 # Introduction
 
-![](images/sample_project.png)
+![](./images/sample_project.png)
 
 ## What is Ramses Composer?
 
@@ -113,7 +113,7 @@ case of problems, start Ramses Composer with the command line parameter **-c**. 
 will open an additional console window with the log output, both from Ramses Composer
 and the RAMSES client.
 
-### Command line options
+**Command line options**
 
 	-h, --help                                	Displays help on commandline options.
 	--help-all                                	Displays help including Qt specific options.
@@ -124,7 +124,7 @@ and the RAMSES client.
 	-p, --project <project-path>              	Load a scene from specified path.
 	-t, --trace-messages-ramses               	Enable trace-level Ramses log messages.
 	-f, --featurelevel <feature-level>        	RamsesLogic feature level (-1, 1 ... 2)
-	-r, --run <script-path>                   	Run Python script. Specify arguments for python script by writing '--' before arguments.                           
+	-r, --run <script-path>                   	Run Python script. Specify arguments for python script by writing '--' before arguments.
  	-y, --pythonpath <python-path>				Directory to add to python module search path.
 
 ## Ramses Composer Headless
@@ -138,7 +138,7 @@ on the fly), for test automation, or for scripted asset generation.
 Currently it can be used for loading projects as a smoke test or for automating the export
 of Ramses Composer scenes to Logic and RAMSES files.
 
-### Command line options
+**Command line options**
 
 	-h, --help                          	Displays help on commandline options.
 	--help-all                          	Displays help including Qt specific options.

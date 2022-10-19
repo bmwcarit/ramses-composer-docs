@@ -98,7 +98,7 @@ We also suggest disabling parts which are not required, to keep the asset small.
 disable all geometry properties (we don't use any), and all animation properties.
 
 
-## Recreate sample
+## Recreate cube sample
 
 To recreate the sample cube project from scratch, follow these steps:
 

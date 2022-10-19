@@ -14,7 +14,7 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 
 This example shows different ways to define rendering order of objects in a scene.
 
-# Overview
+# Ordering techniques
 
 The rendering order of objects is usually not something to manage manually. Typically
 the depth buffer takes care of that: objects which are in front will overwrite the pixels of
@@ -156,12 +156,12 @@ of the passes, change it's settings and observe the result.
 Example project: [5_nested_render_layers](./5_nested_render_layers.rca)
 
 For more complex use cases it might prove to be necessary to nest render layers. This can also be
-done by just adding the tag used in the renderable tags property field of one `RenderLayer` object 
+done by just adding the tag used in the renderable tags property field of one `RenderLayer` object
 to the tags property field of another `RenderLayer` object.
 
 In this case the tagged `RenderLayer` object follows the same ordering rules as the nodes do
 with the following additional rules:
-* `Scene graph order`: a `RenderLayer` using `Scene graph order` cannot contain other `RenderLayer`. 
+* `Scene graph order`: a `RenderLayer` using `Scene graph order` cannot contain other `RenderLayer`.
    Ramses Composer will ignore the nested render layers and generate an error.
 * `Render order value in Renderable tags`: the contents of a `RenderLayer` having the same render order value as nodes will be rendered before the nodes.
 
