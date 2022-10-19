@@ -58,8 +58,8 @@ When clicking on a scene graph object, UI widgets are dynamically generated for 
 **Suggestion:** Let us know when this seriously hinders progress, else try to split up larger LuaScripts into smaller partitions of multiple LuaScript objects.
 
 
-## The application immediately crashes or the scene is not rendered
+## Upon launching, the application does not show the rendered scene, is unresponsive and then crashes
 
-This might be caused by an incompatible GPU or drivers.
+This happens if Ramses is not able to render the scene and might be caused by an incompatible GPU or drivers.
 
 **Solution:** Try updating your drivers, especially the ones for your GPU.
