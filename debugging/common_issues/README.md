@@ -56,3 +56,10 @@ This can be circumvented, just like the top-level node position issue, if you...
 When clicking on a scene graph object, UI widgets are dynamically generated for every property in the property browser. This can cause performance issues with LuaScripts that contain more than around 80-100 properties. We are aware of this issue and we will look at it.
 
 **Suggestion:** Let us know when this seriously hinders progress, else try to split up larger LuaScripts into smaller partitions of multiple LuaScript objects.
+
+
+## Upon launching, the application does not show the rendered scene, is unresponsive and then crashes
+
+This happens if Ramses is not able to render the scene and might be caused by an incompatible GPU or drivers.
+
+**Solution:** Try updating your drivers, especially the ones for your GPU.
