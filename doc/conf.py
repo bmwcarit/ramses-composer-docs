@@ -17,8 +17,8 @@ import subprocess, os
 # -- Project information -----------------------------------------------------
 
 project = 'ramses_composer'
-copyright = '2018-2022, BMW AG'
-author = 'BMW AG'
+copyright = '2018-2022, BMW AG, ParadoxCat'
+author = 'BMW AG, ParadoxCat'
 
 # -- General configuration ---------------------------------------------------
 
@@ -56,4 +56,4 @@ html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
 myst_heading_anchors = 2
-# autosectionlabel_maxdepth = 2
+autosectionlabel_prefix_document = True

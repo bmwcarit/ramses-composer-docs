@@ -92,7 +92,9 @@ to its texture slots:
 
 ![](./docs/mapped_buffers.png)
 
-The material can therefore read the data from the buffers. If you look at the [fragment shader](./shaders/resolve.frag#L13) you will notice
+The material can therefore read the data from the buffers. If you look at the
+[fragment shader](https://github.com/bmwcarit/ramses-composer-docs/blob/master/basics/offscreen/shaders/resolve.frag#L13)
+you will notice
 that it displays half of the color buffer and half of the depth buffer (with enhanced contrast) based on
 texture coordinates. This produces the final image which shows a flat texture with the monkey head, with the
 left half displaying the contents of the depth buffer.
@@ -106,7 +108,7 @@ this example. A good technical artist knows when to use and when **not** to use 
 
 ## Recreate this sample
 
-This example is created in a way similar to the [monkey example](../monkey/README.md#recreate-this-sample).
+This example is created in a way similar to the [monkey example](../monkey/README.md#recreate-monkey-sample).
 We only highlight the steps specific to this example here:
 
 * Create a new project and delete the default content

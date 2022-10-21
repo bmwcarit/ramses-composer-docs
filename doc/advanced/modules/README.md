@@ -29,7 +29,7 @@ Let's build an example which does that!
 
 ## Copy paste
 
-In this tutorial, we will use the [monkey example](../../basics/monkey/README.md#recreate-sample) and build on top of it.
+In this tutorial, we will use the [monkey example](../../basics/monkey/README.md#recreate-monkey-sample) and build on top of it.
 In that example, we created three monkey heads which are lit by a Phong shader which is in turn controlled by a Lua script.
 Let's imagine we wanted to create a second, different lighting model, but we wanted to keep the light configuration and the color
 settings shared between the old and the new shading model.
@@ -112,7 +112,7 @@ to use the Lua ``error()`` built-in function to raise an error if something is n
 
 ## Recreate modules sample
 
-This example is created in a way similar to the [monkey example](../../basics/monkey/README.md#recreate-sample). We only highlight the
+This example is created in a way similar to the [monkey example](../../basics/monkey/README.md#recreate-monkey-sample). We only highlight the
 steps specific to this example here:
 
 * Create a copy of the monkey project

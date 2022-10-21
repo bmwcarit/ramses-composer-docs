@@ -19,7 +19,7 @@ running into conflicts.
 
 This example will use our previous Prefab example scenes as well as one additional project and
 combine everything into a master street scene. You should already be familiar with these
-[basic](../../basics/prefabs/README.md) and [advanced](../nested_prefabs.md) Prefab examples.
+[basic](../../basics/prefabs/README.md) and [advanced](../nested_prefabs/README.md) Prefab examples.
 
 ## The Concept
 
@@ -49,7 +49,7 @@ To summarize, External References work with
 * Scripts
 
 Only scene files which have been _created independently_ from the consumer scene may be used as a
-source scene for external reference objects. 
+source scene for external reference objects.
 
 Independently created scenes are only those that are created by File/New followed by File/Save.
 Scenes files created using either File/SaveAs from within RamsesComposer or by using OS file copy
@@ -76,7 +76,7 @@ scene can be worked on in parallel.
 This setup would fit a rather complex scene with the need to work on many of the parts
 simultaneously and dynamically assign responsibilities. For a simpler setup with a small team it
 might also be sufficient to just create three separate modules in version control for the three
-main groups. 
+main groups.
 
 ## Update Timing
 
@@ -141,7 +141,7 @@ copies from are not saved and will be gone in the next session.
 Here we see all the contents of the projects. Note that the names of the projects we are
 inspecting are shown in the third column for all objects. It is important to have meaningful
 names in all your projects in order to track the source where the external references are coming
-from and where you can edit them if you need to make changes. 
+from and where you can edit them if you need to make changes.
 
 The object name of the *Project Settings* is used as the project name. The project settings
 are accessible using the *View/Project Settings* entry from the Menu.
@@ -293,7 +293,7 @@ scene graph. Still, unused resources will unnecessarily increase the size of you
 RAMSES file.
 
 To remove an External Prefab, simply delete it from the Prefab View. As long as an external
-object is still required by another External Reference, you can't delete it - the *Delete* menu item will be disabled. 
+object is still required by another External Reference, you can't delete it - the *Delete* menu item will be disabled.
 Note that only objects required by other External References are protected this way. Prefabs
 and resources that are actively used in the scene graph can be deleted any time, this will
 just invalidate the corresponding references in the scene graph.
@@ -316,10 +316,10 @@ scene using external references the following approximate workflow can be used:
    use normal paste and not `paste as external reference`.
 3. Use module in master scene: add the newly created module scene to the Projects Browser, copy the Prefabs
    from there and paste them into the master scene _as external references_. Set the template of
-   prefab instances to the pasted prefabs. 
+   prefab instances to the pasted prefabs.
 
 The deep cut operation of the Prefab will include all resources that are used by the Prefab and is
-needed to ensure that the module scene will contain the prefab with all its dependencies. 
+needed to ensure that the module scene will contain the prefab with all its dependencies.
 
 
 ## Moving Project Files

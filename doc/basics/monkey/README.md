@@ -54,7 +54,8 @@ Note that the material has a few properties (uniforms in OpenGL terms) in its Pr
 
 ![](./docs/monkey_material.png)
 
-These uniforms are dynamically parsed out of the imported glSL shader (see the [fragment shader](./shaders/phong.frag#L8)).
+These uniforms are dynamically parsed out of the imported glSL shader (see the
+[fragment shader](https://github.com/bmwcarit/ramses-composer-docs/blob/master/basics/monkey/shaders/phong.frag#L8)).
 You can edit the shader in your editor of choice, and as soon as the file is saved, the Composer will
 reload its uniforms (or display syntax errors when there are such).
 
@@ -151,7 +152,7 @@ dynamically obtained from the Lua script we just inspected.
 
 Any objects in the scene can be linked to the values produced by any LuaScript. You can add, remove and switch the
 source of such links over the link icon (![](./docs/link_icon.png)). If you click on it you can see a list of all the properties
-with a compatible type. The popup window supports text-based search which filters all properties in the project by their name - in this case: 
+with a compatible type. The popup window supports text-based search which filters all properties in the project by their name - in this case:
 diffuse_color, light_color and light_direction.
 
 ![](./docs/search_properties.png)
@@ -174,9 +175,9 @@ You can easily create the `Suzanne` monkey head in Blender - just delete the def
 You can export a glTF 2.0 file from Blender as described in the [cube example](../hello_world/README.md#export-gltf-from-blender).
 Make sure you select Normals in the Geometry bar, otherwise your glTF file will not have normals!
 
-## Recreate sample
+## Recreate monkey sample
 
-This example is created in a way similar to the [cube example](../hello_world/README.md#recreate-sample). We only highlight the
+This example is created in a way similar to the [cube example](../hello_world/README.md#recreate-cube-sample). We only highlight the
 steps specific to this example here:
 
 * Create a standard "Suzanne" monkey head in Blender and export as glTF (as described [above](#create-suzanne-in-blender))

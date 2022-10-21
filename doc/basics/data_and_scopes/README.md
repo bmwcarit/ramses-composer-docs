@@ -22,7 +22,7 @@ For introduction to the individual features, have a look at the dedicated exampl
 * [Hello World](../hello_world/README.md) - fundamentals of references to external resources
 * [Monkey heads](../monkey/README.md#lua-scripting) - links between properties inside the project
 * [Prefabs](../prefabs/README.md) - packaging of data in reusable components
-* [External references](../../advanced/external_references/) - splitting projects into reusable modules which can reference each other
+* [External references](../../advanced/external_references/README.md) - splitting projects into reusable modules which can reference each other
 
 ## Composer data and imported resources
 

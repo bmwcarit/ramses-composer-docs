@@ -33,7 +33,8 @@ The RamsesComposer supports _hot reloading_ of referenced files - including glTF
 This means that overwriting a glTF file will immediately trigger a reload of the Ramses Composer
 resources which refer to it. In particular, re-exporting the same glTF asset twice, but
 reordering all objects in their corresponding arrays differently, will have very unexpected results - as we
-will demonstrate in this example [further down](#Experiment-one-Playing-with-the-mesh-index).
+will demonstrate in this example
+[further down](#experiment-one-playing-with-the-mesh-index).
 
 The Blender glTF exporter produces deterministic ordering after every export, provided
 the scene did not change topologically (no new or deleted meshes). Other exporters may not be that predictable!
@@ -47,10 +48,10 @@ You can combine any of these solutions together with the
 [Python API](../python_api/README.md) of the
 Composer to customize the import of data.
 
-## Scene graph and resources of this sample project
+## Scene graph and resources
 
 This example project contains a complex scene consisting of multiple meshes and nodes. You can inspect
-the [Blender scene we used ](./blender/). It contains a bunch of
+the [Blender scene we used ](https://github.com/bmwcarit/ramses-composer-docs/tree/master/advanced/complex_import/blender). It contains a bunch of
 named shapes with a different position, orientation and scaling:
 
 ![](./docs/blender.png)
@@ -108,13 +109,13 @@ The import function puts all imported nodes inside a new root node with name equ
 ![](./docs/after_import.png)
 
 You can observe that the Composer imported the nodes exactly as they were
-defined in the [Blender scene](./blender/)
+defined in the [Blender scene](https://github.com/bmwcarit/ramses-composer-docs/tree/master/advanced/complex_import/blender)
 and kept their names and parental information. If you un-selected the `+Y is up` option in
 Blender glTF export menu, then the node properties (rotation, translation, scaling) are also exactly the same as in Blender. You can
 read up more on the subject in the section in the [Conventions chapter](../../basics/conventions/README.md).
 
 Next, we will modify some of the export/import settings. But first, let's make all meshes translucent by assigning a translucent
-material with a different color per mesh, and setting the blending to additive. We use simple [shaders](./shaders/) which
+material with a different color per mesh, and setting the blending to additive. We use simple [shaders](https://github.com/bmwcarit/ramses-composer-docs/tree/master/advanced/complex_import/shaders) which
 just assign a 4-component color, set alpha values lower than 1.0, and disable the depth buffer:
 
 ![](./docs/translucent_material_settings.png)

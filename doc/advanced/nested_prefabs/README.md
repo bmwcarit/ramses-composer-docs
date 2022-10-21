@@ -31,7 +31,7 @@ keep track of your structure.
 
 The blender scene with some modelled objects is also included for completeness. This chapter has
 some hints on how to export the objects properly. If you want to learn about complex Prefabs right
-away, just skip to [the next chapter](#Setting-up-the-meshes) and use the provided glTF files.
+away, just skip to [the next chapter](#setting-up-the-meshes) and use the provided glTF files.
 
 ![](docs/blender.png)
 
@@ -97,7 +97,7 @@ Our Prefab accepts the following parameters:
 
 This gives us a working wheel. In this example there is only one script. Keep in mind that in
 complex real life projects you can have multiple interface scripts as well as multiple inner
-scripts for logic to separate different aspects of your LUA code. 
+scripts for logic to separate different aspects of your LUA code.
 
 ## The axle Prefab
 

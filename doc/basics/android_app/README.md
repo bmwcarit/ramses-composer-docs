@@ -20,7 +20,8 @@ tutorial, we assume you have basic understanding of Android and will focus only 
 specifics.
 
 If you prefer looking at the final source code instead of going through the tutorial,
-you can find it in the [app_src](./app_src) folder. Note that the sample source code
+you can find it in the [app_src](https://github.com/bmwcarit/ramses-composer-docs/tree/master/basics/android_app/app_src)
+folder. Note that the sample source code
 was created with a fairly new Android Studio and may fail to open in older versions
 of the IDE.
 

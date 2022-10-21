@@ -14,7 +14,7 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 
 This example shows different ways to define rendering order of objects in a scene.
 
-# Ordering techniques
+# Ordering
 
 The rendering order of objects is usually not something to manage manually. Typically
 the depth buffer takes care of that: objects which are in front will overwrite the pixels of

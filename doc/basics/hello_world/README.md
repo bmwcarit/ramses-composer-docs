@@ -16,7 +16,7 @@ This example shows how Blender and RaCo can be used to produce a trivial unlit c
 
 # Contents explained
 
-Let's start by examining the sample project. You can [re-create the sample yourself later](#recreate-sample).
+Let's start by examining the sample project. You can [re-create the sample yourself later](#recreate-cube-sample).
 Start the composer and open the [cube.rca file](./cube.rca) (File->Open). You will see the image
 from above, along with a few views, among which the [scene graph view](#scene-graph) and the
 [resources view](#resources).
