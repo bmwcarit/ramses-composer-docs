@@ -153,6 +153,9 @@ It is shown in green color to indicate that it is an External Reference. It cann
 but you can select it and inspect all its properties. The third column indicates the project name
 where it is coming from.
 
+Alternatively to copy-pasting, you can also drag & drop the external item into the resource view. 
+If you hold down the Alt-key as you let go, the item will be pasted as external reference.
+
 ![](docs/external_resources.png)
 
 Note that the texture *RoadMarkings* has also magically appeared in the Resources View. When you
