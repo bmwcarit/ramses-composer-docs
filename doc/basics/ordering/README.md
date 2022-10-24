@@ -8,12 +8,6 @@ This Source Code Form is subject to the terms of the Mozilla Public License, v. 
 If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 -->
 
-# Ordering example
-
-![](./docs/viewport_preview.png)
-
-This example shows different ways to define rendering order of objects in a scene.
-
 # Ordering
 
 The rendering order of objects is usually not something to manage manually. Typically
@@ -25,7 +19,13 @@ a given order or special rules which objects should be rendered at which time.
 
 In this chapter we demonstrate different ordering techniques and how to use and combine them.
 
-# Contents of a Ramses Composer project
+## Ordering example
+
+![](./docs/viewport_preview.png)
+
+This example shows different ways to define rendering order of objects in a scene.
+
+## Contents of a Ramses Composer project
 
 In order to understand how ordering of content works, it's essential to understand
 the contents of a Ramses Composer project first.
@@ -58,13 +58,13 @@ The way this works is:
 * The `RenderPass` renders everything from the `RenderLayer` using the selected `Camera`
 * The order of the meshes is influenced by multiple factors, as we will learn in the next sections
 
-# Ordering techniques
+## Ordering techniques
 
 The order of rendering is influenced by three factors and can be combined in different ways.
 We demonstrate each of them separately in the next sections, and you can find a separate example
 project for each of them. Each project has three MeshNodes with different colors rendered in a specific way, but the ordering technique is different for each of them.
 
-## Order based on scene graph order
+### Order based on scene graph order
 
 Example project: [1_by_scene_graph](./1_by_scene_graph.rca).
 
@@ -77,7 +77,7 @@ When this option is selected, all nodes in the render layer will be sorted in th
 SceneGraph panel - i.e. parent nodes are rendered before their children, and children are sorted
 first-to-last.
 
-## Order based on tags inside RenderLayer
+### Order based on tags inside RenderLayer
 
 Example project: [2_by_tags_priority](./2_by_tags_priority.rca).
 
@@ -102,7 +102,7 @@ The exact rules for the ordering in a render layer are as follows:
 * If T1 == T2, the order will be decided by the Ramses Composer (possibly optimized to minimize OpenGL state changes)
 * If Node A has two or more tags tags T1 and T2 and T1 != T2 != ..., then the Composer will generate an error
 
-## Order based on RenderPass slots
+### Order based on RenderPass slots
 
 Example project: [3_by_render_pass_slots](./3_by_render_pass_slots.rca).
 
@@ -121,7 +121,7 @@ The layers are ordered in different slots in the main `RenderPass`:
 If you change the order in these slots, the quads will be rendered in the corresponding order.
 Go ahead and try it out!
 
-## Order with multiple RenderPasses
+### Order with multiple RenderPasses
 
 Example project: [4_by_render_pass](./4_by_render_pass.rca).
 
@@ -151,7 +151,7 @@ This example has the exact same result as the previous one. However now each `Re
 have a different camera! Go ahead and try it - create a second camera, assign it to one
 of the passes, change it's settings and observe the result.
 
-## Nested RenderLayers
+### Nested RenderLayers
 
 Example project: [5_nested_render_layers](./5_nested_render_layers.rca)
 
@@ -166,7 +166,7 @@ with the following additional rules:
 * `Render order value in Renderable tags`: the contents of a `RenderLayer` having the same render order value as nodes will be rendered before the nodes.
 
 
-# Combining the techniques
+## Combining the techniques
 
 The ordering mechanisms described in this example are compatible to each other and can be combined.
 It is possible to use different mechanisms for different RenderLayer or RenderPass objects.
