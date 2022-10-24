@@ -87,10 +87,10 @@ If every path has been correctly specified you will encounter a lot of log messa
 
 Upon opening the newly created project specified at `<new path for fixed project file>` you will discover that the entire project has been cleaned of invalid links while keeping the valid link intact.
 
-# `raco` module reference
+## `raco` module reference
 The `raco` module is available in both RaCoHeadless and RaCoEditor. You'll need to add an explicit import statement for the module in order to call the methods mentioned below.
 
-## General Functions
+### General Functions
 
 > reset([featureLevel])
 >> Create a new project which is empty except a newly created ProjectSettings object.
@@ -133,7 +133,7 @@ The `raco` module is available in both RaCoHeadless and RaCoEditor. You'll need 
 >> Import complete contents of a gltf file into the current scene. Inserts the new nodes below `parent` in the scenegraph when the optional argument is given.
 
 
-## Active Project Access
+### Active Project Access
 
 > instances()
 >> Returns a list of all objects in the active project.
@@ -145,7 +145,7 @@ The `raco` module is available in both RaCoHeadless and RaCoEditor. You'll need 
 >> Returns a list of all links in the active project.
 
 
-## Operations
+### Operations
 
 > create(typename, object_name)
 >> 	Creates a new object of the given type and sets the name.
@@ -172,7 +172,7 @@ The `raco` module is available in both RaCoHeadless and RaCoEditor. You'll need 
 >> 	Removes a link given the PropertyDescriptor of the link endpoint.
 
 
-## Objects
+### Objects
 
 RamsesComposer objects can be accessed and used almost like normal Python objects.
 
@@ -223,7 +223,7 @@ Member functions:
 > metadata()
 >> If the object is a mesh this will return gltf `extras` metadata as a dictionary. Only string values in the gltf `extras` are supported.
 
-## Properties
+### Properties
 
 Properties are represented in the python api by PropertyDescriptor objects. These can be used to get or set the value, and will also be used in
 link-related operations.
@@ -233,12 +233,12 @@ PropertyDescriptors can also be used almost like normal Python objects.
 The printed representation includes the type and the full path of the property starting with the object name itself, e.g.
 `<Property[Bool]: 'lua.inputs.struct.in_bool'>`.
 
-### Global Functions:
+#### Global Functions:
 
 > dir(property)
 >> Returns a list of the names of all nested properties if `property` has substructure. Returns an empty list if `property` has no substructure.
 
-### Member Functions
+#### Member Functions
 
 > object()
 >> Return the object the property is contained in.
@@ -268,11 +268,11 @@ The printed representation includes the type and the full path of the property s
 >> Returns a list of the names of all nested properties if `property` has substructure. Returns an empty list if `property` has no substructure.
 
 
-## Child property access
+### Child property access
 
 Child properties may be accessed by attribute notation or using the indexing operator. Both will return the PropertyDescriptor of the child property. To obtain the value of scalar properties the value() member function has to be used. Child properties of both objects and PropertyDescriptors can be accessed in the same way.
 
-### Attribute-based access
+#### Attribute-based access
 
 The PropertyDescriptor for a child property of a complex property or an object can be obtained using the dot notation for attribute access, e.g.
 ```
@@ -294,7 +294,7 @@ setattr(node.translation, 'x', 2.0)
 
 While attribute access allows a convenient notation the property names may not start with numbers or conflict with the member functions listed above. For these cases use the dictionary-like access.
 
-### Dictionary-like access
+#### Dictionary-like access
 
 Another way to obtain the PropertyDescriptor of a child property is via the indexing operator `[]` allowing dictionary-like access to properties. The operator requires a string as an argument, e.g.
 ```
@@ -322,7 +322,7 @@ lua["inputs"].vec.x
 will all return the same PropertyDescriptor.
 
 
-## Links
+### Links
 
 Links are represented by LinkDescriptors.
 
@@ -345,7 +345,7 @@ The printed representation includes the property paths including the object name
 
 The member variables of a LinkDescriptor can't be changed. Modification of links is only possible with the addLink and removeLink functions described below.
 
-## ErrorItems
+### ErrorItems
 
 **Member variables**
 
@@ -362,7 +362,7 @@ The member variables of a LinkDescriptor can't be changed. Modification of links
 >> In case of object errors, this will return the EditorObject causing the error.
 >> If the error refers to a property, this will return the PropertyDescriptor instead.
 
-# `raco_gui` module reference
+## `raco_gui` module reference
 When running python scripts inside RaCoEditor, `raco_gui` is available to interact with editor specific things. You'll need to add an explicit import statement for the module in order to call the methods mentioned below.
 
 If you need to ensure that your scripts run both in headless and in gui, you can wrap the import and usages of these methods inside a `raco.isRunningInUi()` check.
