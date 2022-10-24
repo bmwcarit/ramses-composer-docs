@@ -1,27 +1,12 @@
 # Ramses Composer documentation
 
-```{toctree}
-:maxdepth: 2
-:caption: Overview
-
-overview
-
-```
+Welcome to the [Ramses Composer](https://github.com/bmwcarit/ramses-composer) documentation pages!
 
 ```{toctree}
 :maxdepth: 2
-:caption: Basics
+:caption: Tutorials
 
-basics
-
-```
-
-```{toctree}
-:maxdepth: 2
-:caption: Advanced
-
-advanced
-
+tutorials
 ```
 
 ```{toctree}
@@ -29,5 +14,4 @@ advanced
 :caption: Debugging
 
 debugging
-
 ```
