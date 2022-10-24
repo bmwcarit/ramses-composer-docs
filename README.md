@@ -9,14 +9,9 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 -->
 # Ramses Composer Documentation
 
-This is the Ramses Composer documentation repository (TODO add link to published URL).
-
-## Related resources
-
-You will find the source code of Ramses Composer and instructions on how to build it in the
-main [Ramses Composer repository](https://github.com/COVESA/ramses-composer). For a general
-overview of the Ramses ecosystem and its other components, visit
-also [these pages](https://ramses-sdk.readthedocs.io/).
+Welcome to the [Ramses Composer](https://github.com/bmwcarit/ramses-composer) documentation pages!
+For more info about the Ramses ecosystem please visit [ramses3d.org](htps://ramses3d.org/) or
+the [Ramses SDK technical documentation](https://ramses-sdk.readthedocs.io/).
 
 ## License
 
