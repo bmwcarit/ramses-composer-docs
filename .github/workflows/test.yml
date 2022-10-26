@@ -1,0 +1,51 @@
+# SPDX-License-Identifier: MPL-2.0
+#
+# This file is part of Ramses Composer
+# (see https://github.com/bmwcarit/ramses-composer-docs).
+#
+# This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
+# If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+name: Test
+
+# Only pushes and PRs against the master branch are built
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        lfs: 'true'
+
+    - name: Install pip packages
+      shell: bash
+      run: |
+        set -e
+        python3 -m pip install -r doc/requirements.txt
+
+    - name: Test that archive can be created
+      shell: bash
+      run: |
+        set -e
+        python3 .github/package.py ${{runner.workspace}}/tutorials
+        test -e ${{runner.workspace}}/tutorials
+
+    - name: Test that docs can be built without errors
+      shell: bash
+      run: |
+        set -e
+        bash build_docs.sh -v 0.0.1
+        test -e build/index.html
+
+    - name: Test that docs contain no broken links
+      shell: bash
+      run: |
+        set -e
+        bash build_docs.sh -v 0.0.1 -l
