@@ -35,7 +35,7 @@ jobs:
       run: |
         set -e
         python3 .github/package.py ${{runner.workspace}}/tutorials
-        test -e ${{runner.workspace}}/tutorials
+        test -e ${{runner.workspace}}/tutorials.zip
 
     - name: Test that docs can be built without errors
       shell: bash
