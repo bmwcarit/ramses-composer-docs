@@ -25,7 +25,7 @@ compression.
 ## Creating a simple animation with Blender
 
 In this tutorial, we use the excellent glTF exporter of Blender 2.83 LTS. You can just use [the existing scene
-in the Blender subfolder](https://github.com/bmwcarit/ramses-composer-docs/tree/master/advanced/animations/blender)
+in the Blender subfolder](https://github.com/bmwcarit/ramses-composer-docs/tree/master/doc/advanced/animations/blender)
 or create it yourself by following the steps below.
 
 * Select the default blender cube in a new project
