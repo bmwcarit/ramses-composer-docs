@@ -8,6 +8,7 @@ This Source Code Form is subject to the terms of the Mozilla Public License, v. 
 If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 -->
 # Introduction
+*You can find the example project [here](https://github.com/bmwcarit/ramses-composer-docs/tree/master/doc/basics/introduction).*
 
 ![](./images/sample_project.png)
 

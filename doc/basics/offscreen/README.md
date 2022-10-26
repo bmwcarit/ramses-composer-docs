@@ -9,6 +9,7 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 -->
 
 # Offscreen rendering example
+*You can find the example project [here](https://github.com/bmwcarit/ramses-composer-docs/tree/master/doc/basics/offscreen).*
 
 ![](./docs/viewport_preview.png)
 

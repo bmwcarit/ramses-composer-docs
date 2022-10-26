@@ -9,6 +9,7 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 -->
 
 # Lua Syntax
+*You can find the example project [here](https://github.com/bmwcarit/ramses-composer-docs/tree/master/doc/basics/lua_syntax).*
 
 The Ramses Composer relies on the [Ramses Logic Engine](https://github.com/bmwcarit/ramses-logic) to load, parse and execute `Lua` scripts and to capture and report errors.
 You can find the user documentation of the `Lua` syntax dialect and its specifics at a dedicated section of the `Logic Engine` docs [here](https://ramses-logic.readthedocs.io/en/latest/lua_syntax.html).
