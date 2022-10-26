@@ -15,11 +15,11 @@ You can find the user documentation of the `Lua` syntax dialect and its specific
 
 You can find the exact version of the `Logic Engine` used by the Composer in the Help->About menu.
 
-# Introduction to Lua
+## Introduction to Lua
 
 This section explains the basics about _Lua_ scripts and how to use them interactively with the _Ramses Composer_.
 
-## Why should you use Lua scripts
+### Why should you use Lua scripts
 
 Using _Lua_ scripts is generally optional, you don't need them to create a basic, static 3D scene.
 However, they allow you to include dynamic behaviour and some business logic in your scene. They enable you to create interfaces and "translate" given information to an specific behaviour and pass on this information via _links_.
@@ -32,7 +32,7 @@ For example:
 This way you can translate potentially application-specific data (the travel distance of a car in meters) to the abstract representation of a 3D scene (the vector3 rotation property in this example). As you guessed, you can then extend the Lua scripts to do more things - use different metrics, simulate different inputs etc. while not changing the wheel object itself.
 Of course Lua can be useful to make debugging easier, e.g. by emitting debug data.
 
-## How to include and use your Lua scripts
+### How to include and use your Lua scripts
 
 There are two different ways to use Lua scripts in your scene / project.
 * included in your scene graph (red arrow)
@@ -40,7 +40,7 @@ There are two different ways to use Lua scripts in your scene / project.
 
 ![](./docs/Including_Lua.png)
 
-### What's the difference?
+#### What's the difference?
 Basically all *Lua* scripts work in the same way, regardless of their location, this is just a feature to allow you to get them organized conveniently within your project.
 
 If you put them as children of a Node into the scene graph, you can group them logically and
@@ -50,7 +50,7 @@ order if you like. This topic is particularly interesting for including Lua scri
 
 _Lua_ scripts in your Resources view also appear on top level in the Scene Graph. They are easy to find and immediately accessible. This might be the right place for scene-level functionality or scene input.
 
-### Including Lua to your project
+#### Including Lua to your project
 Open the context menu in your scene graph using right click and select `Create LuaScript` as shown.
 When you execute this step in an empty area of your scene graph or in your resource browser, an independent (empty) Lua script object is created. In case of right click on a node in your scene graph, a _Lua_ script object will be created inside of your scene graph.
 
@@ -124,11 +124,11 @@ have been processed, a warning is displayed in the property browser for all LuaS
 ![](./docs/Lua_Runtime_Warning.png)
 
 
-# Shortcuts and Tricks
+## Shortcuts and Tricks
 
 There are a lot of coding styles and individual preferred structures if you create a Lua script for your projects. Here are some typical use cases which can help save a bit of work time and performance.
 
-## Suggestions for Readability
+### Suggestions for Readability
 
 As you know, we can use different types of data, `int`, `float`, `string` and `vectors` of size 2, 3 and 4. As a recommendation, if you use an `IN` property more than one time in your script, you should assign it to a local value, it's much faster!
 
@@ -174,7 +174,7 @@ function run(IN,OUT)
 end
 ```
 
-## Using and assigning structs
+### Using and assigning structs
 
 You can create structs to bundle data, but there is no reason to copy/paste your code snippet again and again like this.
 
@@ -205,7 +205,7 @@ end
 ```
 It's much more readable and you don't need to adjust the assignments in your `run()` function - another side effect, this approach eliminates struct assignment mismatches!
 
-## Array vs loop
+### Array vs loop
 
 Sometimes you need to create a kind of array as `IN` or `OUT`, but it's important the label starts with its own defined name like `my_sensor_0`.
 
@@ -241,10 +241,10 @@ function run(IN,OUT)
 end
 ```
 
-# Complex scripts
+## Complex scripts
 Sometimes you need a much more complex way to create a solution, for such cases you should read this section.
 
-## Thinking objectively
+### Thinking objectively
 If you prefer to think in an object-oriented way, you can also create objects in Lua scripts. At first you create a simple local `table`, but define this outside of your functions `run()` and `interface()` so it's global in Lua.
 
 ```Lua
@@ -415,7 +415,7 @@ TestLua: Name: Karl Heinz, age: 0, height: 0
 
 It's because our `class_Person` is assigned as a `table` reference - so it's the same object.
 
-## Make struct output assignments easier
+### Make struct output assignments easier
 So, currently we have objects to store our data and they can have their own _output_ functions - which is sometimes needed of course. But this isn't really handy and we want an easier way to handle this.
 
 What we have:
