@@ -9,6 +9,7 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 -->
 
 # Complex glTF import
+*You can find the example project [here](https://github.com/bmwcarit/ramses-composer-docs/tree/master/doc/advanced/complex_import).*
 
 ![](./docs/translucent.png)
 

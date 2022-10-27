@@ -9,6 +9,7 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 -->
 
 # 'Hello world' cube example
+*You can find the example code [here](https://github.com/bmwcarit/ramses-composer-docs/tree/master/doc/basics/hello_world).*
 
 ![](./docs/viewport_preview.png)
 
