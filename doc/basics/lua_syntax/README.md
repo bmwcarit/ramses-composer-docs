@@ -50,7 +50,7 @@ order if you like. This topic is particularly interesting for including Lua scri
 _Lua_ scripts in your Resources view also appear on top level in the Scene Graph. They are easy to find and immediately accessible. This might be the right place for scene-level functionality or scene input.
 
 #### Including Lua to your project
-Open the context menu in your scene graph using right click and select `Create LuaScript` as shown.
+Open the context menu in your scene graph using right click and select `Create LuaScript` as shown. Make sure not to confuse LuaScripts with LuaInterfaces, those will be explained later in the aforementioned prefabs tutorial.
 When you execute this step in an empty area of your scene graph or in your resource browser, an independent (empty) Lua script object is created. In case of right click on a node in your scene graph, a _Lua_ script object will be created inside of your scene graph.
 
 ![](./docs/Include_lua_to_project.gif)

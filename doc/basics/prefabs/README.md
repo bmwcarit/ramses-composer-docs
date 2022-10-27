@@ -32,18 +32,18 @@ Prefabs are helpful for
 
 To use Prefabs you need to create a _PrefabInstance_ object and assign a Prefab to it. The PrefabInstance
 can be used in the scene graph just like any other node. All contents of the Prefab appear inside the
-PrefabInstance as a copy. If the Prefab is modified, all changes are immeditately applied to all its
+PrefabInstance as a copy. If the Prefab is modified, all changes are immediately applied to all its
 PrefabInstances.
 
 As a Prefab is a self-contained entity, its components can not be linked directly to other components.
 Likewise, the copied objects inside of a PrefabInstance are read-only and updated from within their Prefab.
 So how can we make PrefabInstances individual and interactive?
 
-Lua scripts inside a Prefab which reside at the "top level", i.e. above all other parts of the Prefab, have
-special meaning. Other than all internal parts of the Prefab, these scripts are not shared among PrefabInstances
-and thus can have different values or links for each instance. These scripts represent the interface of the
+That's where Lua Interfaces come in handy. They are simple lua scripts which just hold values. 
+Those values can then be read by other scripts inside the instance, 
+and are not shared among PrefabInstances. They represent quite literally the "interface" of the
 Prefab - the properties a Prefab "offers" to whoever instantiates it. Every aspect of the Prefab which you
-want to be able to control per-instance needs to be represented by an input parameter in such a script.
+want to be able to control per-instance needs to be represented by an input parameter in such a LuaInterface.
 The outputs of these interface scripts are linked inside the Prefab, either directly to nodes or to other
 Lua scripts used internally.
 
@@ -80,22 +80,14 @@ _Lantern_ Node in and delete the empty _Lantern.gltf_. You will notice that the 
 in the preview. Prefabs are not visible as they are just templates. Once we create an instance for
 it, we will see our lantern again.
 
-Next we add two scripts to the Prefab. We can create content directly inside the Prefab with the
-context menu. There are two scripts:
+Next we add two scripts to the Prefab. We can create content directly inside the Prefab with the context menu, just right-click on it. Here they are:
 
-* [lantern_control.lua](lua/lantern_control.lua) (named _interface_) will be our interface to the outside.
-  It has just one parameter _lightSwitch_ and hands it on to the inside. With more complex parameters,
-  it could also check the input for validity or transform external units into those used internally.
-* [lantern_logic.lua](lua/lantern_logic.lua) (named _logic_) does the actual manipulation of the objects
-inside the Prefab. It transforms our boolean light switch into a vector which is linked to the *u_EmissiveFactor*
-of the shader to control the light. It also provides some static values for ambient light which are assigned to
-all mesh nodes rather than setting those identical values by hand.
+* [lantern_interface.lua](interfaces/lantern_interface.lua) (named _interface_) will be our LuaInterface to the outside. It has just one parameter _lightSwitch_, which will be handed on to the inside.
+* [lantern_logic.lua](lua/lantern_logic.lua) (named _logic_) is our LuaScript which does the actual manipulation of the objects inside the Prefab by transforming the _lightSwitch_ parameter into a vector. First, link up the _lightSwitch_ with the interface. In order to link the vector up with the shader to control the light, you'll need to select the *Lantern_Lantern* MeshNode and check the checkbox for _Private Material_. That way you can override shader attributes locally, such as the *u_EmissiveFactor* color or *u_AmbientLightIntensity*, and thus also add links to the output parameters of the LuaScript.
 
 ![](docs/prefab.png)
 
-For this simple Prefab we could have used just one script for everything, but for more complex uses in real
-life it is usually a good idea to separate the outside interface from the actual internal logic in this way.
-You might even have multiple scripts on interface level which control different aspects of the Prefab.
+For this simple Prefab we only used one Script and one Interface, but more complex uses in real life will probably require more than that. As an example, you could add a script in between the interface and the actual logic to perform input validation or transform external units into those used internally. You might even have multiple interfaces which control different aspects of the Prefab. For a more complex example, you can take a look at our [Nested Prefabs](../../advanced/nested_prefabs/README.md) tutorial later.
 
 ## Instancing the Prefab
 
@@ -117,15 +109,15 @@ see that particular lantern light up.
 
 ![](docs/result.png)
 
-Finally we add the LUA script for the master light switch. *road_control.lua* justs hands on its single parameter
+Finally, we add the Lua script for the master light switch. *road_control.lua* just hands on its single parameter
 and acts as a sort of user interface of the scene or a substitute for a more complex logic controlling our
-lanterns. Just link the interface parameters of all instances to the output of the roadControl script. When
+lanterns. Just select the interface of each lantern instance and link their individual _lightSwitch_ parameters to the output of the roadControl script. When
 you change its input value now, you should see all lamps coming on.
 
 ## Tips and Tricks
 
 Be careful not to confuse PrefabInstances with their Prefabs, because of their identical structure. If you change
-the input parameters of a Prefab's interface script, this will **not** effect the existing instances. You can
+the input parameters of a Prefab's interface script, this will **not** affect the existing instances. You can
 check the properties inside the Prefab content this way and see whether your scripts produce the intended output,
 but there is no visible change in the preview as the Prefabs are abstract, invisible templates. To see an effect
 in the preview, you need to change the input parameters of the instances.

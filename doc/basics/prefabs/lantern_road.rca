@@ -1,7 +1,8 @@
 {
     "externalProjects": {
     },
-    "fileVersion": 35,
+    "featureLevel": 1,
+    "fileVersion": 44,
     "instances": [
         {
             "properties": {
@@ -13,7 +14,7 @@
                         },
                         {
                             "typeName": "Ref",
-                            "value": "33acb0ce-85f7-4548-b77d-6460bd049dc8"
+                            "value": "33acb0ce-85f7-4548-b77d-6460bd049dc9"
                         }
                     ]
                 },
@@ -89,7 +90,8 @@
                 "layer7": null,
                 "objectID": "0f8cf5b4-b00c-444d-9b90-0ab374b8e171",
                 "objectName": "MainRenderPass",
-                "order": 1,
+                "renderOnce": false,
+                "renderOrder": 1,
                 "target": null
             },
             "typeName": "RenderPass"
@@ -100,10 +102,11 @@
                     "properties": [
                         {
                             "typeName": "Ref",
-                            "value": "279f9991-2e42-0fa7-2dac-bf6a061fecb7"
+                            "value": "279f9991-2e42-0fa7-2dac-bf6a061fecb6"
                         }
                     ]
                 },
+                "enabled": true,
                 "objectID": "1433295f-abb5-4aef-9ad1-db0abb1b717f",
                 "objectName": "lantern1",
                 "rotation": {
@@ -144,7 +147,7 @@
                         "value": 0
                     }
                 },
-                "scale": {
+                "scaling": {
                     "x": {
                         "annotations": [
                             {
@@ -229,7 +232,7 @@
                         "value": 0
                     }
                 },
-                "visible": true
+                "visibility": true
             },
             "typeName": "PrefabInstance"
         },
@@ -327,6 +330,9 @@
                                     "typeName": "EngineTypeAnnotation"
                                 },
                                 {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
                                     "typeName": "LinkEndAnnotation"
                                 }
                             ],
@@ -342,6 +348,9 @@
                                     "typeName": "EngineTypeAnnotation"
                                 },
                                 {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
                                     "typeName": "LinkEndAnnotation"
                                 }
                             ],
@@ -357,6 +366,9 @@
                                     "typeName": "EngineTypeAnnotation"
                                 },
                                 {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
                                     "typeName": "LinkEndAnnotation"
                                 }
                             ],
@@ -409,6 +421,9 @@
                                     "typeName": "EngineTypeAnnotation"
                                 },
                                 {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
                                     "typeName": "LinkEndAnnotation"
                                 }
                             ],
@@ -424,6 +439,9 @@
                                     "typeName": "EngineTypeAnnotation"
                                 },
                                 {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
                                     "typeName": "LinkEndAnnotation"
                                 }
                             ],
@@ -500,6 +518,9 @@
                                     "typeName": "EngineTypeAnnotation"
                                 },
                                 {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
                                     "typeName": "LinkEndAnnotation"
                                 }
                             ],
@@ -515,6 +536,9 @@
                                     "typeName": "EngineTypeAnnotation"
                                 },
                                 {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
                                     "typeName": "LinkEndAnnotation"
                                 }
                             ],
@@ -579,6 +603,9 @@
                                     "typeName": "EngineTypeAnnotation"
                                 },
                                 {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
                                     "typeName": "LinkEndAnnotation"
                                 }
                             ],
@@ -594,6 +621,9 @@
                                     "typeName": "EngineTypeAnnotation"
                                 },
                                 {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
                                     "typeName": "LinkEndAnnotation"
                                 }
                             ],
@@ -646,6 +676,9 @@
                                     "typeName": "EngineTypeAnnotation"
                                 },
                                 {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
                                     "typeName": "LinkEndAnnotation"
                                 }
                             ],
@@ -698,6 +731,9 @@
                                     "typeName": "EngineTypeAnnotation"
                                 },
                                 {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
                                     "typeName": "LinkEndAnnotation"
                                 }
                             ],
@@ -738,6 +774,9 @@
                                     "typeName": "EngineTypeAnnotation"
                                 },
                                 {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
                                     "typeName": "LinkEndAnnotation"
                                 }
                             ],
@@ -802,6 +841,9 @@
                                     "typeName": "EngineTypeAnnotation"
                                 },
                                 {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
                                     "typeName": "LinkEndAnnotation"
                                 }
                             ],
@@ -866,6 +908,9 @@
                                     "typeName": "EngineTypeAnnotation"
                                 },
                                 {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
                                     "typeName": "LinkEndAnnotation"
                                 }
                             ],
@@ -932,29 +977,7 @@
         },
         {
             "properties": {
-                "luaInputs": {
-                    "order": [
-                        "lightSwitch"
-                    ],
-                    "properties": {
-                        "lightSwitch": {
-                            "annotations": [
-                                {
-                                    "properties": {
-                                        "engineType": 1
-                                    },
-                                    "typeName": "EngineTypeAnnotation"
-                                },
-                                {
-                                    "typeName": "LinkEndAnnotation"
-                                }
-                            ],
-                            "typeName": "Bool::EngineTypeAnnotation::LinkEndAnnotation",
-                            "value": false
-                        }
-                    }
-                },
-                "luaOutputs": {
+                "inputs": {
                     "order": [
                         "lightSwitch"
                     ],
@@ -969,44 +992,28 @@
                                 },
                                 {
                                     "typeName": "LinkStartAnnotation"
+                                },
+                                {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
+                                    "typeName": "LinkEndAnnotation"
                                 }
                             ],
-                            "typeName": "Bool::EngineTypeAnnotation::LinkStartAnnotation",
+                            "typeName": "Bool::EngineTypeAnnotation::LinkStartAnnotation::LinkEndAnnotation",
                             "value": false
                         }
                     }
                 },
-                "objectID": "279f9991-2e42-0fa7-2dac-bf6a061fecb7",
+                "objectID": "279f9991-2e42-0fa7-2dac-bf6a061fecb6",
                 "objectName": "interface",
-                "uri": "lua/lantern_control.lua"
+                "uri": "interfaces/lantern_interface.lua"
             },
-            "typeName": "LuaScript"
+            "typeName": "LuaInterface"
         },
         {
             "properties": {
-                "luaInputs": {
-                    "order": [
-                        "lightSwitch"
-                    ],
-                    "properties": {
-                        "lightSwitch": {
-                            "annotations": [
-                                {
-                                    "properties": {
-                                        "engineType": 1
-                                    },
-                                    "typeName": "EngineTypeAnnotation"
-                                },
-                                {
-                                    "typeName": "LinkEndAnnotation"
-                                }
-                            ],
-                            "typeName": "Bool::EngineTypeAnnotation::LinkEndAnnotation",
-                            "value": false
-                        }
-                    }
-                },
-                "luaOutputs": {
+                "inputs": {
                     "order": [
                         "lightSwitch"
                     ],
@@ -1021,18 +1028,24 @@
                                 },
                                 {
                                     "typeName": "LinkStartAnnotation"
+                                },
+                                {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
+                                    "typeName": "LinkEndAnnotation"
                                 }
                             ],
-                            "typeName": "Bool::EngineTypeAnnotation::LinkStartAnnotation",
+                            "typeName": "Bool::EngineTypeAnnotation::LinkStartAnnotation::LinkEndAnnotation",
                             "value": false
                         }
                     }
                 },
-                "objectID": "33acb0ce-85f7-4548-b77d-6460bd049dc8",
+                "objectID": "33acb0ce-85f7-4548-b77d-6460bd049dc9",
                 "objectName": "interface",
-                "uri": "lua/lantern_control.lua"
+                "uri": "interfaces/lantern_interface.lua"
             },
-            "typeName": "LuaScript"
+            "typeName": "LuaInterface"
         },
         {
             "properties": {
@@ -1054,29 +1067,7 @@
         },
         {
             "properties": {
-                "luaInputs": {
-                    "order": [
-                        "lightSwitch"
-                    ],
-                    "properties": {
-                        "lightSwitch": {
-                            "annotations": [
-                                {
-                                    "properties": {
-                                        "engineType": 1
-                                    },
-                                    "typeName": "EngineTypeAnnotation"
-                                },
-                                {
-                                    "typeName": "LinkEndAnnotation"
-                                }
-                            ],
-                            "typeName": "Bool::EngineTypeAnnotation::LinkEndAnnotation",
-                            "value": false
-                        }
-                    }
-                },
-                "luaOutputs": {
+                "inputs": {
                     "order": [
                         "lightSwitch"
                     ],
@@ -1091,18 +1082,24 @@
                                 },
                                 {
                                     "typeName": "LinkStartAnnotation"
+                                },
+                                {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
+                                    "typeName": "LinkEndAnnotation"
                                 }
                             ],
-                            "typeName": "Bool::EngineTypeAnnotation::LinkStartAnnotation",
+                            "typeName": "Bool::EngineTypeAnnotation::LinkStartAnnotation::LinkEndAnnotation",
                             "value": false
                         }
                     }
                 },
-                "objectID": "44472d19-cf78-0af3-03d4-ed2954a29781",
+                "objectID": "44472d19-cf78-0af3-03d4-ed2954a29780",
                 "objectName": "interface",
-                "uri": "lua/lantern_control.lua"
+                "uri": "interfaces/lantern_interface.lua"
             },
-            "typeName": "LuaScript"
+            "typeName": "LuaInterface"
         },
         {
             "properties": {
@@ -1124,29 +1121,7 @@
         },
         {
             "properties": {
-                "luaInputs": {
-                    "order": [
-                        "lightSwitch"
-                    ],
-                    "properties": {
-                        "lightSwitch": {
-                            "annotations": [
-                                {
-                                    "properties": {
-                                        "engineType": 1
-                                    },
-                                    "typeName": "EngineTypeAnnotation"
-                                },
-                                {
-                                    "typeName": "LinkEndAnnotation"
-                                }
-                            ],
-                            "typeName": "Bool::EngineTypeAnnotation::LinkEndAnnotation",
-                            "value": false
-                        }
-                    }
-                },
-                "luaOutputs": {
+                "inputs": {
                     "order": [
                         "lightSwitch"
                     ],
@@ -1161,18 +1136,24 @@
                                 },
                                 {
                                     "typeName": "LinkStartAnnotation"
+                                },
+                                {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
+                                    "typeName": "LinkEndAnnotation"
                                 }
                             ],
-                            "typeName": "Bool::EngineTypeAnnotation::LinkStartAnnotation",
+                            "typeName": "Bool::EngineTypeAnnotation::LinkStartAnnotation::LinkEndAnnotation",
                             "value": false
                         }
                     }
                 },
-                "objectID": "55d6e4f8-e2f4-03eb-2801-d01181c67427",
+                "objectID": "55d6e4f8-e2f4-03eb-2801-d01181c67426",
                 "objectName": "interface",
-                "uri": "lua/lantern_control.lua"
+                "uri": "interfaces/lantern_interface.lua"
             },
-            "typeName": "LuaScript"
+            "typeName": "LuaInterface"
         },
         {
             "properties": {
@@ -1180,10 +1161,11 @@
                     "properties": [
                         {
                             "typeName": "Ref",
-                            "value": "55d6e4f8-e2f4-03eb-2801-d01181c67427"
+                            "value": "55d6e4f8-e2f4-03eb-2801-d01181c67426"
                         }
                     ]
                 },
+                "enabled": true,
                 "objectID": "667a5436-6703-46a3-9f7c-b4713cc2e9ef",
                 "objectName": "lantern2",
                 "rotation": {
@@ -1224,7 +1206,7 @@
                         "value": 0
                     }
                 },
-                "scale": {
+                "scaling": {
                     "x": {
                         "annotations": [
                             {
@@ -1309,7 +1291,7 @@
                         "value": 0
                     }
                 },
-                "visible": true
+                "visibility": true
             },
             "typeName": "PrefabInstance"
         },
@@ -1319,10 +1301,11 @@
                     "properties": [
                         {
                             "typeName": "Ref",
-                            "value": "44472d19-cf78-0af3-03d4-ed2954a29781"
+                            "value": "44472d19-cf78-0af3-03d4-ed2954a29780"
                         }
                     ]
                 },
+                "enabled": true,
                 "objectID": "77eb9dd7-4a8f-4fbb-b4a9-8949e9a60a49",
                 "objectName": "lantern3",
                 "rotation": {
@@ -1363,7 +1346,7 @@
                         "value": 0
                     }
                 },
-                "scale": {
+                "scaling": {
                     "x": {
                         "annotations": [
                             {
@@ -1448,7 +1431,7 @@
                         "value": -20
                     }
                 },
-                "visible": true
+                "visibility": true
             },
             "typeName": "PrefabInstance"
         },
@@ -1474,7 +1457,7 @@
         },
         {
             "properties": {
-                "luaInputs": {
+                "inputs": {
                     "order": [
                         "lightSwitch"
                     ],
@@ -1488,6 +1471,9 @@
                                     "typeName": "EngineTypeAnnotation"
                                 },
                                 {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
                                     "typeName": "LinkEndAnnotation"
                                 }
                             ],
@@ -1496,7 +1482,9 @@
                         }
                     }
                 },
-                "luaOutputs": {
+                "objectID": "80e04438-eed6-4c89-b48e-44c117079831",
+                "objectName": "logic",
+                "outputs": {
                     "order": [
                         "ambientColor",
                         "ambientLight",
@@ -1624,8 +1612,13 @@
                         }
                     }
                 },
-                "objectID": "80e04438-eed6-4c89-b48e-44c117079831",
-                "objectName": "logic",
+                "stdModules": {
+                    "base": true,
+                    "debug": true,
+                    "math": true,
+                    "string": true,
+                    "table": true
+                },
                 "uri": "lua/lantern_logic.lua"
             },
             "typeName": "LuaScript"
@@ -1636,10 +1629,11 @@
                     "properties": [
                         {
                             "typeName": "Ref",
-                            "value": "b8ec7826-77fd-0ab2-3f31-158ed0c0706b"
+                            "value": "b8ec7826-77fd-0ab2-3f31-158ed0c0706a"
                         }
                     ]
                 },
+                "enabled": true,
                 "objectID": "8b40c8e8-f20a-4ffa-884c-71ee6dc4eda3",
                 "objectName": "lantern5",
                 "rotation": {
@@ -1680,7 +1674,7 @@
                         "value": 0
                     }
                 },
-                "scale": {
+                "scaling": {
                     "x": {
                         "annotations": [
                             {
@@ -1765,12 +1759,13 @@
                         "value": -40
                     }
                 },
-                "visible": true
+                "visibility": true
             },
             "typeName": "PrefabInstance"
         },
         {
             "properties": {
+                "enabled": true,
                 "instanceCount": {
                     "annotations": [
                         {
@@ -1913,6 +1908,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -1928,6 +1926,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -1943,6 +1944,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -1995,6 +1999,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -2010,6 +2017,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -2086,6 +2096,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -2101,6 +2114,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -2165,6 +2181,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -2180,6 +2199,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -2232,6 +2254,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -2284,6 +2309,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -2324,6 +2352,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -2388,6 +2419,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -2452,6 +2486,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -2556,7 +2593,7 @@
                         "value": 0
                     }
                 },
-                "scale": {
+                "scaling": {
                     "x": {
                         "annotations": [
                             {
@@ -2632,7 +2669,7 @@
                         "value": 0
                     }
                 },
-                "visible": true
+                "visibility": true
             },
             "typeName": "MeshNode"
         },
@@ -2708,14 +2745,14 @@
                 },
                 "defaultResourceFolders": {
                     "imageSubdirectory": "images",
+                    "interfaceSubdirectory": "interfaces",
                     "meshSubdirectory": "meshes",
                     "scriptSubdirectory": "scripts",
                     "shaderSubdirectory": "shaders"
                 },
-                "enableTimerFlag": false,
+                "featureLevel": 1,
                 "objectID": "99d3d950-ec4b-47fe-bc86-a062059faf3a",
                 "objectName": "LanternRoad",
-                "runTimer": false,
                 "saveAsZip": false,
                 "sceneId": {
                     "annotations": [
@@ -2760,6 +2797,7 @@
         },
         {
             "properties": {
+                "enabled": true,
                 "instanceCount": {
                     "annotations": [
                         {
@@ -2902,6 +2940,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -2917,6 +2958,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -2932,6 +2976,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -2984,6 +3031,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -2999,6 +3049,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -3075,6 +3128,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -3090,6 +3146,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -3154,6 +3213,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -3169,6 +3231,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -3221,6 +3286,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -3273,6 +3341,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -3313,6 +3384,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -3377,6 +3451,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -3441,6 +3518,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -3545,7 +3625,7 @@
                         "value": 0
                     }
                 },
-                "scale": {
+                "scaling": {
                     "x": {
                         "annotations": [
                             {
@@ -3621,12 +3701,13 @@
                         "value": 0
                     }
                 },
-                "visible": true
+                "visibility": true
             },
             "typeName": "MeshNode"
         },
         {
             "properties": {
+                "enabled": true,
                 "instanceCount": {
                     "annotations": [
                         {
@@ -3769,6 +3850,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -3784,6 +3868,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -3799,6 +3886,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -3851,6 +3941,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -3866,6 +3959,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -3942,6 +4038,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -3957,6 +4056,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -4021,6 +4123,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -4036,6 +4141,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -4088,6 +4196,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -4140,6 +4251,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -4180,6 +4294,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -4244,6 +4361,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -4308,6 +4428,9 @@
                                                     "typeName": "EngineTypeAnnotation"
                                                 },
                                                 {
+                                                    "properties": {
+                                                        "featureLevel": 1
+                                                    },
                                                     "typeName": "LinkEndAnnotation"
                                                 }
                                             ],
@@ -4412,7 +4535,7 @@
                         "value": 0
                     }
                 },
-                "scale": {
+                "scaling": {
                     "x": {
                         "annotations": [
                             {
@@ -4488,62 +4611,124 @@
                         "value": 0
                     }
                 },
-                "visible": true
+                "visibility": true
             },
             "typeName": "MeshNode"
         },
         {
             "properties": {
+                "enabled": true,
                 "frustum": {
-                    "aspectRatio": {
-                        "annotations": [
-                            {
-                                "properties": {
-                                    "max": 4,
-                                    "min": 0.5
+                    "order": [
+                        "nearPlane",
+                        "farPlane",
+                        "fieldOfView",
+                        "aspectRatio"
+                    ],
+                    "properties": {
+                        "aspectRatio": {
+                            "annotations": [
+                                {
+                                    "properties": {
+                                        "name": "aspectRatio"
+                                    },
+                                    "typeName": "DisplayNameAnnotation"
                                 },
-                                "typeName": "RangeAnnotationDouble"
-                            }
-                        ],
-                        "value": 2
-                    },
-                    "farPlane": {
-                        "annotations": [
-                            {
-                                "properties": {
-                                    "max": 10000,
-                                    "min": 100
+                                {
+                                    "properties": {
+                                        "max": 4,
+                                        "min": 0.5
+                                    },
+                                    "typeName": "RangeAnnotationDouble"
                                 },
-                                "typeName": "RangeAnnotationDouble"
-                            }
-                        ],
-                        "value": 1000
-                    },
-                    "fieldOfView": {
-                        "annotations": [
-                            {
-                                "properties": {
-                                    "max": 120,
-                                    "min": 10
+                                {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
+                                    "typeName": "LinkEndAnnotation"
+                                }
+                            ],
+                            "typeName": "Double::DisplayNameAnnotation::RangeAnnotationDouble::LinkEndAnnotation",
+                            "value": 2
+                        },
+                        "farPlane": {
+                            "annotations": [
+                                {
+                                    "properties": {
+                                        "name": "farPlane"
+                                    },
+                                    "typeName": "DisplayNameAnnotation"
                                 },
-                                "typeName": "RangeAnnotationDouble"
-                            }
-                        ],
-                        "value": 35
-                    },
-                    "nearPlane": {
-                        "annotations": [
-                            {
-                                "properties": {
-                                    "max": 1,
-                                    "min": 0.1
+                                {
+                                    "properties": {
+                                        "max": 10000,
+                                        "min": 100
+                                    },
+                                    "typeName": "RangeAnnotationDouble"
                                 },
-                                "typeName": "RangeAnnotationDouble"
-                            }
-                        ],
-                        "value": 0.1
+                                {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
+                                    "typeName": "LinkEndAnnotation"
+                                }
+                            ],
+                            "typeName": "Double::DisplayNameAnnotation::RangeAnnotationDouble::LinkEndAnnotation",
+                            "value": 1000
+                        },
+                        "fieldOfView": {
+                            "annotations": [
+                                {
+                                    "properties": {
+                                        "name": "fieldOfView"
+                                    },
+                                    "typeName": "DisplayNameAnnotation"
+                                },
+                                {
+                                    "properties": {
+                                        "max": 120,
+                                        "min": 10
+                                    },
+                                    "typeName": "RangeAnnotationDouble"
+                                },
+                                {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
+                                    "typeName": "LinkEndAnnotation"
+                                }
+                            ],
+                            "typeName": "Double::DisplayNameAnnotation::RangeAnnotationDouble::LinkEndAnnotation",
+                            "value": 35
+                        },
+                        "nearPlane": {
+                            "annotations": [
+                                {
+                                    "properties": {
+                                        "name": "nearPlane"
+                                    },
+                                    "typeName": "DisplayNameAnnotation"
+                                },
+                                {
+                                    "properties": {
+                                        "max": 1,
+                                        "min": 0.1
+                                    },
+                                    "typeName": "RangeAnnotationDouble"
+                                },
+                                {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
+                                    "typeName": "LinkEndAnnotation"
+                                }
+                            ],
+                            "typeName": "Double::DisplayNameAnnotation::RangeAnnotationDouble::LinkEndAnnotation",
+                            "value": 0.1
+                        }
                     }
                 },
+                "frustumType": 0,
                 "objectID": "b7c8b1e0-79b1-4acb-8d5d-bc6067d0b6a1",
                 "objectName": "PerspectiveCamera",
                 "rotation": {
@@ -4584,7 +4769,7 @@
                         "value": 7.526132404181183
                     }
                 },
-                "scale": {
+                "scaling": {
                     "x": {
                         "annotations": [
                             {
@@ -4710,35 +4895,13 @@
                         "value": 1440
                     }
                 },
-                "visible": true
+                "visibility": true
             },
             "typeName": "PerspectiveCamera"
         },
         {
             "properties": {
-                "luaInputs": {
-                    "order": [
-                        "lightSwitch"
-                    ],
-                    "properties": {
-                        "lightSwitch": {
-                            "annotations": [
-                                {
-                                    "properties": {
-                                        "engineType": 1
-                                    },
-                                    "typeName": "EngineTypeAnnotation"
-                                },
-                                {
-                                    "typeName": "LinkEndAnnotation"
-                                }
-                            ],
-                            "typeName": "Bool::EngineTypeAnnotation::LinkEndAnnotation",
-                            "value": false
-                        }
-                    }
-                },
-                "luaOutputs": {
+                "inputs": {
                     "order": [
                         "lightSwitch"
                     ],
@@ -4753,18 +4916,24 @@
                                 },
                                 {
                                     "typeName": "LinkStartAnnotation"
+                                },
+                                {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
+                                    "typeName": "LinkEndAnnotation"
                                 }
                             ],
-                            "typeName": "Bool::EngineTypeAnnotation::LinkStartAnnotation",
+                            "typeName": "Bool::EngineTypeAnnotation::LinkStartAnnotation::LinkEndAnnotation",
                             "value": false
                         }
                     }
                 },
-                "objectID": "b8ec7826-77fd-0ab2-3f31-158ed0c0706b",
+                "objectID": "b8ec7826-77fd-0ab2-3f31-158ed0c0706a",
                 "objectName": "interface",
-                "uri": "lua/lantern_control.lua"
+                "uri": "interfaces/lantern_interface.lua"
             },
-            "typeName": "LuaScript"
+            "typeName": "LuaInterface"
         },
         {
             "properties": {
@@ -4772,10 +4941,11 @@
                     "properties": [
                         {
                             "typeName": "Ref",
-                            "value": "f4369ed8-6af2-0833-2872-1a899aef1c7e"
+                            "value": "f4369ed8-6af2-0833-2872-1a899aef1c7f"
                         }
                     ]
                 },
+                "enabled": true,
                 "objectID": "c79a2e16-ef05-4d7b-9f0f-7ee927eb81b6",
                 "objectName": "lantern6",
                 "rotation": {
@@ -4816,7 +4986,7 @@
                         "value": 0
                     }
                 },
-                "scale": {
+                "scaling": {
                     "x": {
                         "annotations": [
                             {
@@ -4901,7 +5071,7 @@
                         "value": -40
                     }
                 },
-                "visible": true
+                "visibility": true
             },
             "typeName": "PrefabInstance"
         },
@@ -4927,6 +5097,7 @@
                         }
                     ]
                 },
+                "enabled": true,
                 "objectID": "c9d52edc-88ab-4086-8fc0-71c8776b10cc",
                 "objectName": "Lantern",
                 "rotation": {
@@ -4967,7 +5138,7 @@
                         "value": 0
                     }
                 },
-                "scale": {
+                "scaling": {
                     "x": {
                         "annotations": [
                             {
@@ -5043,7 +5214,7 @@
                         "value": 0
                     }
                 },
-                "visible": true
+                "visibility": true
             },
             "typeName": "Node"
         },
@@ -5063,8 +5234,23 @@
                 },
                 "flipTexture": false,
                 "generateMipmaps": false,
+                "level2uri": "",
+                "level3uri": "",
+                "level4uri": "",
                 "magSamplingMethod": 0,
                 "minSamplingMethod": 0,
+                "mipmapLevel": {
+                    "annotations": [
+                        {
+                            "properties": {
+                                "max": 4,
+                                "min": 1
+                            },
+                            "typeName": "RangeAnnotationInt"
+                        }
+                    ],
+                    "value": 1
+                },
                 "objectID": "ce5e20cd-fac0-454c-9c4e-7172e8a7a105",
                 "objectName": "baseColor",
                 "textureFormat": 5,
@@ -5076,29 +5262,7 @@
         },
         {
             "properties": {
-                "luaInputs": {
-                    "order": [
-                        "lightSwitch"
-                    ],
-                    "properties": {
-                        "lightSwitch": {
-                            "annotations": [
-                                {
-                                    "properties": {
-                                        "engineType": 1
-                                    },
-                                    "typeName": "EngineTypeAnnotation"
-                                },
-                                {
-                                    "typeName": "LinkEndAnnotation"
-                                }
-                            ],
-                            "typeName": "Bool::EngineTypeAnnotation::LinkEndAnnotation",
-                            "value": false
-                        }
-                    }
-                },
-                "luaOutputs": {
+                "inputs": {
                     "order": [
                         "lightSwitch"
                     ],
@@ -5113,18 +5277,24 @@
                                 },
                                 {
                                     "typeName": "LinkStartAnnotation"
+                                },
+                                {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
+                                    "typeName": "LinkEndAnnotation"
                                 }
                             ],
-                            "typeName": "Bool::EngineTypeAnnotation::LinkStartAnnotation",
+                            "typeName": "Bool::EngineTypeAnnotation::LinkStartAnnotation::LinkEndAnnotation",
                             "value": false
                         }
                     }
                 },
-                "objectID": "d534c58f-8f64-0b27-0c53-c2c8796afb00",
+                "objectID": "d534c58f-8f64-0b27-0c53-c2c8796afb01",
                 "objectName": "interface",
-                "uri": "lua/lantern_control.lua"
+                "uri": "interfaces/lantern_interface.lua"
             },
-            "typeName": "LuaScript"
+            "typeName": "LuaInterface"
         },
         {
             "properties": {
@@ -5132,10 +5302,11 @@
                     "properties": [
                         {
                             "typeName": "Ref",
-                            "value": "d534c58f-8f64-0b27-0c53-c2c8796afb00"
+                            "value": "d534c58f-8f64-0b27-0c53-c2c8796afb01"
                         }
                     ]
                 },
+                "enabled": true,
                 "objectID": "e6987541-0a93-4e6f-bb2e-a6a8c46e66c8",
                 "objectName": "lantern4",
                 "rotation": {
@@ -5176,7 +5347,7 @@
                         "value": 0
                     }
                 },
-                "scale": {
+                "scaling": {
                     "x": {
                         "annotations": [
                             {
@@ -5261,35 +5432,13 @@
                         "value": -20
                     }
                 },
-                "visible": true
+                "visibility": true
             },
             "typeName": "PrefabInstance"
         },
         {
             "properties": {
-                "luaInputs": {
-                    "order": [
-                        "lightSwitch"
-                    ],
-                    "properties": {
-                        "lightSwitch": {
-                            "annotations": [
-                                {
-                                    "properties": {
-                                        "engineType": 1
-                                    },
-                                    "typeName": "EngineTypeAnnotation"
-                                },
-                                {
-                                    "typeName": "LinkEndAnnotation"
-                                }
-                            ],
-                            "typeName": "Bool::EngineTypeAnnotation::LinkEndAnnotation",
-                            "value": false
-                        }
-                    }
-                },
-                "luaOutputs": {
+                "inputs": {
                     "order": [
                         "lightSwitch"
                     ],
@@ -5304,18 +5453,24 @@
                                 },
                                 {
                                     "typeName": "LinkStartAnnotation"
+                                },
+                                {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
+                                    "typeName": "LinkEndAnnotation"
                                 }
                             ],
-                            "typeName": "Bool::EngineTypeAnnotation::LinkStartAnnotation",
+                            "typeName": "Bool::EngineTypeAnnotation::LinkStartAnnotation::LinkEndAnnotation",
                             "value": false
                         }
                     }
                 },
-                "objectID": "f4369ed8-6af2-0833-2872-1a899aef1c7e",
+                "objectID": "f4369ed8-6af2-0833-2872-1a899aef1c7f",
                 "objectName": "interface",
-                "uri": "lua/lantern_control.lua"
+                "uri": "interfaces/lantern_interface.lua"
             },
-            "typeName": "LuaScript"
+            "typeName": "LuaInterface"
         },
         {
             "properties": {
@@ -5333,8 +5488,23 @@
                 },
                 "flipTexture": false,
                 "generateMipmaps": false,
+                "level2uri": "",
+                "level3uri": "",
+                "level4uri": "",
                 "magSamplingMethod": 0,
                 "minSamplingMethod": 0,
+                "mipmapLevel": {
+                    "annotations": [
+                        {
+                            "properties": {
+                                "max": 4,
+                                "min": 1
+                            },
+                            "typeName": "RangeAnnotationInt"
+                        }
+                    ],
+                    "value": 1
+                },
                 "objectID": "f4e6a120-447a-470e-8d91-61ee3e3a8f46",
                 "objectName": "emissionMap",
                 "textureFormat": 3,
@@ -5346,7 +5516,7 @@
         },
         {
             "properties": {
-                "luaInputs": {
+                "inputs": {
                     "order": [
                         "lightSwitch"
                     ],
@@ -5360,6 +5530,9 @@
                                     "typeName": "EngineTypeAnnotation"
                                 },
                                 {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
                                     "typeName": "LinkEndAnnotation"
                                 }
                             ],
@@ -5368,7 +5541,9 @@
                         }
                     }
                 },
-                "luaOutputs": {
+                "objectID": "fcc575c5-e421-4ed1-ab3a-72db89a5b624",
+                "objectName": "roadControl",
+                "outputs": {
                     "order": [
                         "lightSwitch"
                     ],
@@ -5390,8 +5565,13 @@
                         }
                     }
                 },
-                "objectID": "fcc575c5-e421-4ed1-ab3a-72db89a5b624",
-                "objectName": "roadControl",
+                "stdModules": {
+                    "base": true,
+                    "debug": true,
+                    "math": true,
+                    "string": true,
+                    "table": true
+                },
                 "uri": "lua/road_control.lua"
             },
             "typeName": "LuaScript"
@@ -5405,7 +5585,7 @@
                     "properties": [
                         {
                             "typeName": "String",
-                            "value": "luaInputs"
+                            "value": "inputs"
                         },
                         {
                             "typeName": "String",
@@ -5414,12 +5594,13 @@
                     ]
                 },
                 "isValid": true,
-                "startObject": "33acb0ce-85f7-4548-b77d-6460bd049dc8",
+                "isWeak": false,
+                "startObject": "33acb0ce-85f7-4548-b77d-6460bd049dc9",
                 "startProp": {
                     "properties": [
                         {
                             "typeName": "String",
-                            "value": "luaOutputs"
+                            "value": "inputs"
                         },
                         {
                             "typeName": "String",
@@ -5454,12 +5635,13 @@
                     ]
                 },
                 "isValid": true,
+                "isWeak": false,
                 "startObject": "80e04438-eed6-4c89-b48e-44c117079831",
                 "startProp": {
                     "properties": [
                         {
                             "typeName": "String",
-                            "value": "luaOutputs"
+                            "value": "outputs"
                         },
                         {
                             "typeName": "String",
@@ -5494,12 +5676,13 @@
                     ]
                 },
                 "isValid": true,
+                "isWeak": false,
                 "startObject": "80e04438-eed6-4c89-b48e-44c117079831",
                 "startProp": {
                     "properties": [
                         {
                             "typeName": "String",
-                            "value": "luaOutputs"
+                            "value": "outputs"
                         },
                         {
                             "typeName": "String",
@@ -5534,12 +5717,13 @@
                     ]
                 },
                 "isValid": true,
+                "isWeak": false,
                 "startObject": "80e04438-eed6-4c89-b48e-44c117079831",
                 "startProp": {
                     "properties": [
                         {
                             "typeName": "String",
-                            "value": "luaOutputs"
+                            "value": "outputs"
                         },
                         {
                             "typeName": "String",
@@ -5574,12 +5758,13 @@
                     ]
                 },
                 "isValid": true,
+                "isWeak": false,
                 "startObject": "80e04438-eed6-4c89-b48e-44c117079831",
                 "startProp": {
                     "properties": [
                         {
                             "typeName": "String",
-                            "value": "luaOutputs"
+                            "value": "outputs"
                         },
                         {
                             "typeName": "String",
@@ -5614,12 +5799,13 @@
                     ]
                 },
                 "isValid": true,
+                "isWeak": false,
                 "startObject": "80e04438-eed6-4c89-b48e-44c117079831",
                 "startProp": {
                     "properties": [
                         {
                             "typeName": "String",
-                            "value": "luaOutputs"
+                            "value": "outputs"
                         },
                         {
                             "typeName": "String",
@@ -5654,12 +5840,13 @@
                     ]
                 },
                 "isValid": true,
+                "isWeak": false,
                 "startObject": "80e04438-eed6-4c89-b48e-44c117079831",
                 "startProp": {
                     "properties": [
                         {
                             "typeName": "String",
-                            "value": "luaOutputs"
+                            "value": "outputs"
                         },
                         {
                             "typeName": "String",
@@ -5694,12 +5881,13 @@
                     ]
                 },
                 "isValid": true,
+                "isWeak": false,
                 "startObject": "80e04438-eed6-4c89-b48e-44c117079831",
                 "startProp": {
                     "properties": [
                         {
                             "typeName": "String",
-                            "value": "luaOutputs"
+                            "value": "outputs"
                         },
                         {
                             "typeName": "String",
@@ -5712,12 +5900,12 @@
         },
         {
             "properties": {
-                "endObject": "279f9991-2e42-0fa7-2dac-bf6a061fecb7",
+                "endObject": "279f9991-2e42-0fa7-2dac-bf6a061fecb6",
                 "endProp": {
                     "properties": [
                         {
                             "typeName": "String",
-                            "value": "luaInputs"
+                            "value": "inputs"
                         },
                         {
                             "typeName": "String",
@@ -5726,12 +5914,13 @@
                     ]
                 },
                 "isValid": true,
+                "isWeak": false,
                 "startObject": "fcc575c5-e421-4ed1-ab3a-72db89a5b624",
                 "startProp": {
                     "properties": [
                         {
                             "typeName": "String",
-                            "value": "luaOutputs"
+                            "value": "outputs"
                         },
                         {
                             "typeName": "String",
@@ -5744,12 +5933,12 @@
         },
         {
             "properties": {
-                "endObject": "44472d19-cf78-0af3-03d4-ed2954a29781",
+                "endObject": "44472d19-cf78-0af3-03d4-ed2954a29780",
                 "endProp": {
                     "properties": [
                         {
                             "typeName": "String",
-                            "value": "luaInputs"
+                            "value": "inputs"
                         },
                         {
                             "typeName": "String",
@@ -5758,12 +5947,13 @@
                     ]
                 },
                 "isValid": true,
+                "isWeak": false,
                 "startObject": "fcc575c5-e421-4ed1-ab3a-72db89a5b624",
                 "startProp": {
                     "properties": [
                         {
                             "typeName": "String",
-                            "value": "luaOutputs"
+                            "value": "outputs"
                         },
                         {
                             "typeName": "String",
@@ -5776,12 +5966,12 @@
         },
         {
             "properties": {
-                "endObject": "55d6e4f8-e2f4-03eb-2801-d01181c67427",
+                "endObject": "55d6e4f8-e2f4-03eb-2801-d01181c67426",
                 "endProp": {
                     "properties": [
                         {
                             "typeName": "String",
-                            "value": "luaInputs"
+                            "value": "inputs"
                         },
                         {
                             "typeName": "String",
@@ -5790,12 +5980,13 @@
                     ]
                 },
                 "isValid": true,
+                "isWeak": false,
                 "startObject": "fcc575c5-e421-4ed1-ab3a-72db89a5b624",
                 "startProp": {
                     "properties": [
                         {
                             "typeName": "String",
-                            "value": "luaOutputs"
+                            "value": "outputs"
                         },
                         {
                             "typeName": "String",
@@ -5808,12 +5999,12 @@
         },
         {
             "properties": {
-                "endObject": "b8ec7826-77fd-0ab2-3f31-158ed0c0706b",
+                "endObject": "b8ec7826-77fd-0ab2-3f31-158ed0c0706a",
                 "endProp": {
                     "properties": [
                         {
                             "typeName": "String",
-                            "value": "luaInputs"
+                            "value": "inputs"
                         },
                         {
                             "typeName": "String",
@@ -5822,12 +6013,13 @@
                     ]
                 },
                 "isValid": true,
+                "isWeak": false,
                 "startObject": "fcc575c5-e421-4ed1-ab3a-72db89a5b624",
                 "startProp": {
                     "properties": [
                         {
                             "typeName": "String",
-                            "value": "luaOutputs"
+                            "value": "outputs"
                         },
                         {
                             "typeName": "String",
@@ -5840,12 +6032,12 @@
         },
         {
             "properties": {
-                "endObject": "d534c58f-8f64-0b27-0c53-c2c8796afb00",
+                "endObject": "d534c58f-8f64-0b27-0c53-c2c8796afb01",
                 "endProp": {
                     "properties": [
                         {
                             "typeName": "String",
-                            "value": "luaInputs"
+                            "value": "inputs"
                         },
                         {
                             "typeName": "String",
@@ -5854,12 +6046,13 @@
                     ]
                 },
                 "isValid": true,
+                "isWeak": false,
                 "startObject": "fcc575c5-e421-4ed1-ab3a-72db89a5b624",
                 "startProp": {
                     "properties": [
                         {
                             "typeName": "String",
-                            "value": "luaOutputs"
+                            "value": "outputs"
                         },
                         {
                             "typeName": "String",
@@ -5872,12 +6065,12 @@
         },
         {
             "properties": {
-                "endObject": "f4369ed8-6af2-0833-2872-1a899aef1c7e",
+                "endObject": "f4369ed8-6af2-0833-2872-1a899aef1c7f",
                 "endProp": {
                     "properties": [
                         {
                             "typeName": "String",
-                            "value": "luaInputs"
+                            "value": "inputs"
                         },
                         {
                             "typeName": "String",
@@ -5886,12 +6079,13 @@
                     ]
                 },
                 "isValid": true,
+                "isWeak": false,
                 "startObject": "fcc575c5-e421-4ed1-ab3a-72db89a5b624",
                 "startProp": {
                     "properties": [
                         {
                             "typeName": "String",
-                            "value": "luaOutputs"
+                            "value": "outputs"
                         },
                         {
                             "typeName": "String",
@@ -5905,20 +6099,24 @@
     ],
     "logicEngineVersion": [
         1,
-        0,
-        2
+        1,
+        0
     ],
     "racoVersion": [
         1,
-        0,
+        3,
         0
     ],
     "ramsesVersion": [
         27,
         0,
-        119
+        121
     ],
     "structPropMap": {
+        "AnchorPointOutputs": {
+            "depth": "Double::DisplayNameAnnotation::LinkStartAnnotation",
+            "viewportCoords": "Vec2f::DisplayNameAnnotation::LinkStartAnnotation"
+        },
         "BlendOptions": {
             "blendColor": "Vec4f::DisplayNameAnnotation",
             "blendFactorDestAlpha": "Int::DisplayNameAnnotation::EnumerationAnnotation",
@@ -5939,9 +6137,17 @@
         },
         "DefaultResourceDirectories": {
             "imageSubdirectory": "String::DisplayNameAnnotation::URIAnnotation",
+            "interfaceSubdirectory": "String::DisplayNameAnnotation::URIAnnotation",
             "meshSubdirectory": "String::DisplayNameAnnotation::URIAnnotation",
             "scriptSubdirectory": "String::DisplayNameAnnotation::URIAnnotation",
             "shaderSubdirectory": "String::DisplayNameAnnotation::URIAnnotation"
+        },
+        "LuaStandardModuleSelection": {
+            "base": "Bool::DisplayNameAnnotation",
+            "debug": "Bool::DisplayNameAnnotation",
+            "math": "Bool::DisplayNameAnnotation",
+            "string": "Bool::DisplayNameAnnotation",
+            "table": "Bool::DisplayNameAnnotation"
         },
         "OrthographicFrustum": {
             "bottomPlane": "Double::DisplayNameAnnotation::RangeAnnotationDouble::LinkEndAnnotation",
@@ -5951,11 +6157,11 @@
             "rightPlane": "Double::DisplayNameAnnotation::RangeAnnotationDouble::LinkEndAnnotation",
             "topPlane": "Double::DisplayNameAnnotation::RangeAnnotationDouble::LinkEndAnnotation"
         },
-        "PerspectiveFrustum": {
-            "aspectRatio": "Double::DisplayNameAnnotation::RangeAnnotationDouble::LinkEndAnnotation",
-            "farPlane": "Double::DisplayNameAnnotation::RangeAnnotationDouble::LinkEndAnnotation",
-            "fieldOfView": "Double::DisplayNameAnnotation::RangeAnnotationDouble::LinkEndAnnotation",
-            "nearPlane": "Double::DisplayNameAnnotation::RangeAnnotationDouble::LinkEndAnnotation"
+        "TimerInput": {
+            "ticker_us": "Int64::DisplayNameAnnotation::LinkEndAnnotation"
+        },
+        "TimerOutput": {
+            "ticker_us": "Int64::DisplayNameAnnotation::LinkStartAnnotation"
         },
         "Vec2f": {
             "x": "Double::DisplayNameAnnotation::RangeAnnotationDouble",
@@ -5989,12 +6195,20 @@
         }
     },
     "userTypePropMap": {
+        "AnchorPoint": {
+            "camera": "BaseCamera::DisplayNameAnnotation",
+            "children": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "node": "Node::DisplayNameAnnotation",
+            "objectID": "String::HiddenProperty",
+            "objectName": "String::DisplayNameAnnotation",
+            "outputs": "AnchorPointOutputs::DisplayNameAnnotation"
+        },
         "Animation": {
             "animationChannels": "Table::DisplayNameAnnotation",
-            "animationOutputs": "Table::DisplayNameAnnotation",
             "children": "Table::ArraySemanticAnnotation::HiddenProperty",
             "objectID": "String::HiddenProperty",
             "objectName": "String::DisplayNameAnnotation",
+            "outputs": "Table::DisplayNameAnnotation",
             "progress": "Double::DisplayNameAnnotation::RangeAnnotationDouble::LinkEndAnnotation"
         },
         "AnimationChannel": {
@@ -6042,19 +6256,28 @@
             "wrapUMode": "Int::DisplayNameAnnotation::EnumerationAnnotation",
             "wrapVMode": "Int::DisplayNameAnnotation::EnumerationAnnotation"
         },
-        "LuaScript": {
+        "LuaInterface": {
             "children": "Table::ArraySemanticAnnotation::HiddenProperty",
-            "luaInputs": "Table::DisplayNameAnnotation",
-            "luaModules": "Table::DisplayNameAnnotation",
-            "luaOutputs": "Table::DisplayNameAnnotation",
+            "inputs": "Table::DisplayNameAnnotation::LinkStartAnnotation::LinkEndAnnotation",
             "objectID": "String::HiddenProperty",
             "objectName": "String::DisplayNameAnnotation",
+            "uri": "String::URIAnnotation::DisplayNameAnnotation"
+        },
+        "LuaScript": {
+            "children": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "inputs": "Table::DisplayNameAnnotation::LinkEndAnnotation",
+            "luaModules": "Table::DisplayNameAnnotation",
+            "objectID": "String::HiddenProperty",
+            "objectName": "String::DisplayNameAnnotation",
+            "outputs": "Table::DisplayNameAnnotation",
+            "stdModules": "LuaStandardModuleSelection::DisplayNameAnnotation",
             "uri": "String::URIAnnotation::DisplayNameAnnotation"
         },
         "LuaScriptModule": {
             "children": "Table::ArraySemanticAnnotation::HiddenProperty",
             "objectID": "String::HiddenProperty",
             "objectName": "String::DisplayNameAnnotation",
+            "stdModules": "LuaStandardModuleSelection::DisplayNameAnnotation",
             "uri": "String::URIAnnotation::DisplayNameAnnotation"
         },
         "Material": {
@@ -6080,50 +6303,55 @@
         },
         "MeshNode": {
             "children": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "enabled": "Bool::DisplayNameAnnotation::LinkEndAnnotation::FeatureLevel",
             "instanceCount": "Int::DisplayNameAnnotation::RangeAnnotationInt",
             "materials": "Table::DisplayNameAnnotation",
             "mesh": "Mesh::DisplayNameAnnotation",
             "objectID": "String::HiddenProperty",
             "objectName": "String::DisplayNameAnnotation",
             "rotation": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
-            "scale": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
+            "scaling": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
             "tags": "Table::ArraySemanticAnnotation::HiddenProperty::TagContainerAnnotation::DisplayNameAnnotation",
             "translation": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
-            "visible": "Bool::DisplayNameAnnotation::LinkEndAnnotation"
+            "visibility": "Bool::DisplayNameAnnotation::LinkEndAnnotation"
         },
         "Node": {
             "children": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "enabled": "Bool::DisplayNameAnnotation::LinkEndAnnotation::FeatureLevel",
             "objectID": "String::HiddenProperty",
             "objectName": "String::DisplayNameAnnotation",
             "rotation": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
-            "scale": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
+            "scaling": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
             "tags": "Table::ArraySemanticAnnotation::HiddenProperty::TagContainerAnnotation::DisplayNameAnnotation",
             "translation": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
-            "visible": "Bool::DisplayNameAnnotation::LinkEndAnnotation"
+            "visibility": "Bool::DisplayNameAnnotation::LinkEndAnnotation"
         },
         "OrthographicCamera": {
             "children": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "enabled": "Bool::DisplayNameAnnotation::LinkEndAnnotation::FeatureLevel",
             "frustum": "OrthographicFrustum::DisplayNameAnnotation::LinkEndAnnotation",
             "objectID": "String::HiddenProperty",
             "objectName": "String::DisplayNameAnnotation",
             "rotation": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
-            "scale": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
+            "scaling": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
             "tags": "Table::ArraySemanticAnnotation::HiddenProperty::TagContainerAnnotation::DisplayNameAnnotation",
             "translation": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
             "viewport": "CameraViewport::DisplayNameAnnotation::LinkEndAnnotation",
-            "visible": "Bool::DisplayNameAnnotation::LinkEndAnnotation"
+            "visibility": "Bool::DisplayNameAnnotation::LinkEndAnnotation"
         },
         "PerspectiveCamera": {
             "children": "Table::ArraySemanticAnnotation::HiddenProperty",
-            "frustum": "PerspectiveFrustum::DisplayNameAnnotation::LinkEndAnnotation",
+            "enabled": "Bool::DisplayNameAnnotation::LinkEndAnnotation::FeatureLevel",
+            "frustum": "Table::DisplayNameAnnotation::LinkEndAnnotation",
+            "frustumType": "Int::DisplayNameAnnotation::EnumerationAnnotation::FeatureLevel",
             "objectID": "String::HiddenProperty",
             "objectName": "String::DisplayNameAnnotation",
             "rotation": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
-            "scale": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
+            "scaling": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
             "tags": "Table::ArraySemanticAnnotation::HiddenProperty::TagContainerAnnotation::DisplayNameAnnotation",
             "translation": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
             "viewport": "CameraViewport::DisplayNameAnnotation::LinkEndAnnotation",
-            "visible": "Bool::DisplayNameAnnotation::LinkEndAnnotation"
+            "visibility": "Bool::DisplayNameAnnotation::LinkEndAnnotation"
         },
         "Prefab": {
             "children": "Table::ArraySemanticAnnotation::HiddenProperty",
@@ -6132,23 +6360,23 @@
         },
         "PrefabInstance": {
             "children": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "enabled": "Bool::DisplayNameAnnotation::LinkEndAnnotation::FeatureLevel",
             "objectID": "String::HiddenProperty",
             "objectName": "String::DisplayNameAnnotation",
             "rotation": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
-            "scale": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
+            "scaling": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
             "tags": "Table::ArraySemanticAnnotation::HiddenProperty::TagContainerAnnotation::DisplayNameAnnotation",
             "template": "Prefab::DisplayNameAnnotation",
             "translation": "Vec3f::DisplayNameAnnotation::LinkEndAnnotation",
-            "visible": "Bool::DisplayNameAnnotation::LinkEndAnnotation"
+            "visibility": "Bool::DisplayNameAnnotation::LinkEndAnnotation"
         },
         "ProjectSettings": {
             "backgroundColor": "Vec4f::DisplayNameAnnotation",
             "children": "Table::ArraySemanticAnnotation::HiddenProperty",
             "defaultResourceFolders": "DefaultResourceDirectories::DisplayNameAnnotation",
-            "enableTimerFlag": "Bool::HiddenProperty",
+            "featureLevel": "Int::DisplayNameAnnotation::ReadOnlyAnnotation",
             "objectID": "String::HiddenProperty",
             "objectName": "String::DisplayNameAnnotation",
-            "runTimer": "Bool::HiddenProperty",
             "saveAsZip": "Bool::DisplayNameAnnotation",
             "sceneId": "Int::DisplayNameAnnotation::RangeAnnotationInt",
             "viewport": "Vec2i::DisplayNameAnnotation"
@@ -6179,11 +6407,11 @@
         "RenderPass": {
             "camera": "BaseCamera::DisplayNameAnnotation",
             "children": "Table::ArraySemanticAnnotation::HiddenProperty",
-            "clearColor": "Vec4f::DisplayNameAnnotation",
+            "clearColor": "Vec4f::DisplayNameAnnotation::LinkEndAnnotation",
             "enableClearColor": "Bool::DisplayNameAnnotation",
             "enableClearDepth": "Bool::DisplayNameAnnotation",
             "enableClearStencil": "Bool::DisplayNameAnnotation",
-            "enabled": "Bool::DisplayNameAnnotation",
+            "enabled": "Bool::DisplayNameAnnotation::LinkEndAnnotation",
             "layer0": "RenderLayer::DisplayNameAnnotation",
             "layer1": "RenderLayer::DisplayNameAnnotation::EmptyReferenceAllowable",
             "layer2": "RenderLayer::DisplayNameAnnotation::EmptyReferenceAllowable",
@@ -6194,7 +6422,8 @@
             "layer7": "RenderLayer::DisplayNameAnnotation::EmptyReferenceAllowable",
             "objectID": "String::HiddenProperty",
             "objectName": "String::DisplayNameAnnotation",
-            "order": "Int::DisplayNameAnnotation",
+            "renderOnce": "Bool::DisplayNameAnnotation::LinkEndAnnotation::FeatureLevel",
+            "renderOrder": "Int::DisplayNameAnnotation::LinkEndAnnotation",
             "target": "RenderTarget::DisplayNameAnnotation::EmptyReferenceAllowable"
         },
         "RenderTarget": {
@@ -6215,8 +6444,12 @@
             "children": "Table::ArraySemanticAnnotation::HiddenProperty",
             "flipTexture": "Bool::DisplayNameAnnotation",
             "generateMipmaps": "Bool::DisplayNameAnnotation",
+            "level2uri": "String::URIAnnotation::DisplayNameAnnotation",
+            "level3uri": "String::URIAnnotation::DisplayNameAnnotation",
+            "level4uri": "String::URIAnnotation::DisplayNameAnnotation",
             "magSamplingMethod": "Int::DisplayNameAnnotation::EnumerationAnnotation",
             "minSamplingMethod": "Int::DisplayNameAnnotation::EnumerationAnnotation",
+            "mipmapLevel": "Int::DisplayNameAnnotation::RangeAnnotationInt",
             "objectID": "String::HiddenProperty",
             "objectName": "String::DisplayNameAnnotation",
             "textureFormat": "Int::DisplayNameAnnotation::EnumerationAnnotation",
@@ -6226,10 +6459,10 @@
         },
         "Timer": {
             "children": "Table::ArraySemanticAnnotation::HiddenProperty",
+            "inputs": "TimerInput::DisplayNameAnnotation",
             "objectID": "String::HiddenProperty",
             "objectName": "String::DisplayNameAnnotation",
-            "tickerInput": "Int64::DisplayNameAnnotation::LinkEndAnnotation",
-            "tickerOutput": "Int64::DisplayNameAnnotation::LinkStartAnnotation"
+            "outputs": "TimerOutput::DisplayNameAnnotation"
         }
     }
 }
