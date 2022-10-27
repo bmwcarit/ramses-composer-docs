@@ -10,6 +10,8 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 # Ramses Composer Documentation
 
 Welcome to the [Ramses Composer](https://github.com/bmwcarit/ramses-composer) documentation pages!
+You will find a HTML version of it on [ReadTheDocs](https://ramses-composer.readthedocs.io/en/latest/).
+
 For more info about the Ramses ecosystem please visit [ramses3d.org](htps://ramses3d.org/) or
 the [Ramses SDK technical documentation](https://ramses-sdk.readthedocs.io/).
 
