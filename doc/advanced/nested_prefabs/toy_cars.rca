@@ -2,7 +2,7 @@
     "externalProjects": {
     },
     "featureLevel": 1,
-    "fileVersion": 44,
+    "fileVersion": 45,
     "instances": [
         {
             "properties": {
@@ -673,9 +673,59 @@
         },
         {
             "properties": {
+                "inputs": {
+                    "order": [
+                        "steeringFactor",
+                        "wheelFactor"
+                    ],
+                    "properties": {
+                        "steeringFactor": {
+                            "annotations": [
+                                {
+                                    "properties": {
+                                        "engineType": 5
+                                    },
+                                    "typeName": "EngineTypeAnnotation"
+                                },
+                                {
+                                    "typeName": "LinkStartAnnotation"
+                                },
+                                {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
+                                    "typeName": "LinkEndAnnotation"
+                                }
+                            ],
+                            "typeName": "Double::EngineTypeAnnotation::LinkStartAnnotation::LinkEndAnnotation",
+                            "value": 0
+                        },
+                        "wheelFactor": {
+                            "annotations": [
+                                {
+                                    "properties": {
+                                        "engineType": 5
+                                    },
+                                    "typeName": "EngineTypeAnnotation"
+                                },
+                                {
+                                    "typeName": "LinkStartAnnotation"
+                                },
+                                {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
+                                    "typeName": "LinkEndAnnotation"
+                                }
+                            ],
+                            "typeName": "Double::EngineTypeAnnotation::LinkStartAnnotation::LinkEndAnnotation",
+                            "value": 0
+                        }
+                    }
+                },
                 "objectID": "1a0cc462-8930-0e6a-3543-bb2b1f606eed",
-                "objectName": "vehicleControl",
-                "uri": "interfaces/vehicle_control.lua"
+                "objectName": "vehicleInterface",
+                "uri": "interfaces/vehicle_interface.lua"
             },
             "typeName": "LuaInterface"
         },
@@ -2096,9 +2146,59 @@
         },
         {
             "properties": {
+                "inputs": {
+                    "order": [
+                        "steeringFactor",
+                        "wheelFactor"
+                    ],
+                    "properties": {
+                        "steeringFactor": {
+                            "annotations": [
+                                {
+                                    "properties": {
+                                        "engineType": 5
+                                    },
+                                    "typeName": "EngineTypeAnnotation"
+                                },
+                                {
+                                    "typeName": "LinkStartAnnotation"
+                                },
+                                {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
+                                    "typeName": "LinkEndAnnotation"
+                                }
+                            ],
+                            "typeName": "Double::EngineTypeAnnotation::LinkStartAnnotation::LinkEndAnnotation",
+                            "value": 0
+                        },
+                        "wheelFactor": {
+                            "annotations": [
+                                {
+                                    "properties": {
+                                        "engineType": 5
+                                    },
+                                    "typeName": "EngineTypeAnnotation"
+                                },
+                                {
+                                    "typeName": "LinkStartAnnotation"
+                                },
+                                {
+                                    "properties": {
+                                        "featureLevel": 1
+                                    },
+                                    "typeName": "LinkEndAnnotation"
+                                }
+                            ],
+                            "typeName": "Double::EngineTypeAnnotation::LinkStartAnnotation::LinkEndAnnotation",
+                            "value": 0
+                        }
+                    }
+                },
                 "objectID": "7df99ada-f162-4a69-9ef1-a6e7b85f4084",
-                "objectName": "vehicleControl",
-                "uri": "interfaces/vehicle_control.lua"
+                "objectName": "vehicleInterface",
+                "uri": "interfaces/vehicle_interface.lua"
             },
             "typeName": "LuaInterface"
         },
@@ -2862,7 +2962,15 @@
                     ],
                     "properties": {
                         "render_main": {
-                            "typeName": "Int",
+                            "annotations": [
+                                {
+                                    "properties": {
+                                        "featureLevel": 3
+                                    },
+                                    "typeName": "LinkEndAnnotation"
+                                }
+                            ],
+                            "typeName": "Int::LinkEndAnnotation",
                             "value": 0
                         }
                     }
@@ -4131,7 +4239,7 @@
                         }
                     ]
                 },
-                "isValid": false,
+                "isValid": true,
                 "isWeak": false,
                 "startObject": "7df99ada-f162-4a69-9ef1-a6e7b85f4084",
                 "startProp": {
@@ -4586,18 +4694,18 @@
     ],
     "logicEngineVersion": [
         1,
-        1,
-        0
+        2,
+        2
     ],
     "racoVersion": [
         1,
-        3,
+        4,
         0
     ],
     "ramsesVersion": [
         27,
         0,
-        121
+        125
     ],
     "structPropMap": {
         "AnchorPointOutputs": {
@@ -4887,7 +4995,7 @@
             "materialFilterTags": "Table::ArraySemanticAnnotation::HiddenProperty::TagContainerAnnotation::DisplayNameAnnotation",
             "objectID": "String::HiddenProperty",
             "objectName": "String::DisplayNameAnnotation",
-            "renderableTags": "Table::RenderableTagContainerAnnotation::HiddenProperty::DisplayNameAnnotation",
+            "renderableTags": "Table::RenderableTagContainerAnnotation::DisplayNameAnnotation",
             "sortOrder": "Int::DisplayNameAnnotation::EnumerationAnnotation",
             "tags": "Table::ArraySemanticAnnotation::HiddenProperty::TagContainerAnnotation::DisplayNameAnnotation"
         },
