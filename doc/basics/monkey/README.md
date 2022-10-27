@@ -55,7 +55,7 @@ Note that the material has a few properties (uniforms in OpenGL terms) in its Pr
 ![](./docs/monkey_material.png)
 
 These uniforms are dynamically parsed out of the imported glSL shader (see the
-[fragment shader](https://github.com/bmwcarit/ramses-composer-docs/blob/master/basics/monkey/shaders/phong.frag#L8)).
+[fragment shader](https://github.com/bmwcarit/ramses-composer-docs/blob/master/doc/basics/monkey/shaders/phong.frag#L8)).
 You can edit the shader in your editor of choice, and as soon as the file is saved, the Composer will
 reload its uniforms (or display syntax errors when there are such).
 
