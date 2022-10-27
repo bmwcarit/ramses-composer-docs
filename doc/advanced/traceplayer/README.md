@@ -103,7 +103,7 @@ The TracePlayer offers the following property in the **TracePlayerData** object:
 ## Example (BMW X5)
 
 This article includes a sample trace file based on the BMW X5 demo model. You can find it in the
-[traces folder](https://github.com/bmwcarit/ramses-composer-docs/tree/master/advanced/traceplayer/traces).
+[traces folder](https://github.com/bmwcarit/ramses-composer-docs/tree/master/doc/advanced/traceplayer/traces).
 
 Download the X5 project from its [repository](https://github.com/bmwcarit/digital-car-3d) and load the **G05_main.rca** file as documented in project README.
-Load and play the RaCo trace [g05_demo](https://github.com/bmwcarit/ramses-composer-docs/tree/master/advanced/traceplayer/traces/g05_demo.rctrace). Try changing the frame timestamps and properties to see how the playback changes in the Ramses Composer viewport.
+Load and play the RaCo trace [g05_demo](https://github.com/bmwcarit/ramses-composer-docs/tree/master/doc/advanced/traceplayer/traces/g05_demo.rctrace). Try changing the frame timestamps and properties to see how the playback changes in the Ramses Composer viewport.
