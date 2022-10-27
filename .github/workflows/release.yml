@@ -25,6 +25,7 @@ jobs:
     - name: Create archive
       shell: bash
       run: |
+        set -e
         python3 .github/package.py ${{runner.workspace}}/tutorials
 
     - name: Publish release

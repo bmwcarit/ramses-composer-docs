@@ -9,6 +9,7 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 -->
 
 # Complex glTF import
+*You can find the example project [here](https://github.com/bmwcarit/ramses-composer-docs/tree/master/doc/advanced/complex_import).*
 
 ![](./docs/translucent.png)
 
@@ -51,7 +52,7 @@ Composer to customize the import of data.
 ## Scene graph and resources
 
 This example project contains a complex scene consisting of multiple meshes and nodes. You can inspect
-the [Blender scene we used ](https://github.com/bmwcarit/ramses-composer-docs/tree/master/advanced/complex_import/blender). It contains a bunch of
+the [Blender scene we used ](https://github.com/bmwcarit/ramses-composer-docs/tree/master/doc/advanced/complex_import/blender). It contains a bunch of
 named shapes with a different position, orientation and scaling:
 
 ![](./docs/blender.png)
@@ -109,13 +110,13 @@ The import function puts all imported nodes inside a new root node with name equ
 ![](./docs/after_import.png)
 
 You can observe that the Composer imported the nodes exactly as they were
-defined in the [Blender scene](https://github.com/bmwcarit/ramses-composer-docs/tree/master/advanced/complex_import/blender)
+defined in the [Blender scene](https://github.com/bmwcarit/ramses-composer-docs/tree/master/doc/advanced/complex_import/blender)
 and kept their names and parental information. If you un-selected the `+Y is up` option in
 Blender glTF export menu, then the node properties (rotation, translation, scaling) are also exactly the same as in Blender. You can
 read up more on the subject in the section in the [Conventions chapter](../../basics/conventions/README.md).
 
 Next, we will modify some of the export/import settings. But first, let's make all meshes translucent by assigning a translucent
-material with a different color per mesh, and setting the blending to additive. We use simple [shaders](https://github.com/bmwcarit/ramses-composer-docs/tree/master/advanced/complex_import/shaders) which
+material with a different color per mesh, and setting the blending to additive. We use simple [shaders](https://github.com/bmwcarit/ramses-composer-docs/tree/master/doc/advanced/complex_import/shaders) which
 just assign a 4-component color, set alpha values lower than 1.0, and disable the depth buffer:
 
 ![](./docs/translucent_material_settings.png)

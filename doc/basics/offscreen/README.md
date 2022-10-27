@@ -9,6 +9,7 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 -->
 
 # Offscreen rendering example
+*You can find the example project [here](https://github.com/bmwcarit/ramses-composer-docs/tree/master/doc/basics/offscreen).*
 
 ![](./docs/viewport_preview.png)
 
@@ -93,7 +94,7 @@ to its texture slots:
 ![](./docs/mapped_buffers.png)
 
 The material can therefore read the data from the buffers. If you look at the
-[fragment shader](https://github.com/bmwcarit/ramses-composer-docs/blob/master/basics/offscreen/shaders/resolve.frag#L13)
+[fragment shader](https://github.com/bmwcarit/ramses-composer-docs/blob/master/doc/basics/offscreen/shaders/resolve.frag#L13)
 you will notice
 that it displays half of the color buffer and half of the depth buffer (with enhanced contrast) based on
 texture coordinates. This produces the final image which shows a flat texture with the monkey head, with the

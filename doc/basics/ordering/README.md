@@ -9,6 +9,7 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 -->
 
 # Ordering
+*You can find the example project [here](https://github.com/bmwcarit/ramses-composer-docs/tree/master/doc/basics/ordering).*
 
 The rendering order of objects is usually not something to manage manually. Typically
 the depth buffer takes care of that: objects which are in front will overwrite the pixels of

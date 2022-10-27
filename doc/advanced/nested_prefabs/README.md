@@ -8,6 +8,7 @@ This Source Code Form is subject to the terms of the Mozilla Public License, v. 
 If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 -->
 # Complex Prefabs
+*You can find the example project [here](https://github.com/bmwcarit/ramses-composer-docs/tree/master/doc/advanced/nested_prefabs).*
 
 Prefabs can be combined and re-packaged to create more complex prefabs. In this example we will
 demonstrate how to use this feature to manage complexity and structure a project better. It builds

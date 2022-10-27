@@ -8,6 +8,7 @@ This Source Code Form is subject to the terms of the Mozilla Public License, v. 
 -->
 
 # External References
+*You can find the example project [here](https://github.com/bmwcarit/ramses-composer-docs/tree/master/doc/advanced/external_references).*
 
 External references provide the ability to use Prefabs and resources from one project file in
 another. This can be used to structure your projects, share and re-use parts of scenes or create

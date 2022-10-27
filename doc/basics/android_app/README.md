@@ -8,6 +8,7 @@ This Source Code Form is subject to the terms of the Mozilla Public License, v. 
 If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 -->
 # Writing an Android app
+*You can find the example code [here](https://github.com/bmwcarit/ramses-composer-docs/tree/master/doc/basics/android_app).*
 
 ![](./doc/monkey_app.png)
 
@@ -20,7 +21,7 @@ tutorial, we assume you have basic understanding of Android and will focus only 
 specifics.
 
 If you prefer looking at the final source code instead of going through the tutorial,
-you can find it in the [app_src](https://github.com/bmwcarit/ramses-composer-docs/tree/master/basics/android_app/app_src)
+you can find it in the [app_src](https://github.com/bmwcarit/ramses-composer-docs/tree/master/doc/basics/android_app/app_src)
 folder. Note that the sample source code
 was created with a fairly new Android Studio and may fail to open in older versions
 of the IDE.
