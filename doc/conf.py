@@ -29,6 +29,7 @@ extensions = [
     "sphinx_rtd_theme",             # Read-the-docs html theme
     "sphinx.ext.autosectionlabel",  # Creates labels to sections in documents for easier :ref:-ing
     "myst_parser",                  # Can parse MyST markdown dialect
+    "sphinx_lfs_content",           # Ensures git lfs support on readthedocs
 ]
 
 # Add any paths that contain templates here, relative to this directory.
