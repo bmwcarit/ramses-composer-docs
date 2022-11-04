@@ -2,3 +2,5 @@ build/
 .vscode/
 **/__pycache__/
 venv/
+*.rlogic
+*.ramses
