@@ -172,6 +172,11 @@ The `raco` module is available in both RaCoHeadless and RaCoEditor. You'll need 
 > removeLink(end)
 >> 	Removes a link given the PropertyDescriptor of the link endpoint.
 
+> addExternalProject(path)
+>> Adds the project at `path` as external reference. Path can be either absolute or relative to the current project directory.
+
+> addExternalReferences(path, type)
+>> Adds all objects of a certain `type` (or a list of `types`) from an external project at `path` as external references. Returns a list containing the added objects.
 
 ### Objects
 
@@ -223,6 +228,25 @@ Member functions:
 
 > metadata()
 >> If the object is a mesh this will return gltf `extras` metadata as a dictionary. Only string values in the gltf `extras` are supported.
+
+> getTags()
+>> Return the `tags` property of a `Node`, `Material`, or `RenderLayer` object as list of strings.
+
+> setTags(tags)
+>> Set the `tags` property of a `Node`, `Material`, or `RenderLayer` object from a list of strings.
+
+> getMaterialFilterTags()
+>> Retun the `materialFilterTags` property of a `RenderLayer` object as list of strings.
+
+> setMaterialFilterTags(tags)
+>> Set the `materialFilterTags` property of a `RenderLayer` object from a list of strings.
+
+> getRenderableTags()
+>> Return the `renderableTags` property of `RenderLayer` object as a list of (tag, priority) tuples.
+
+> setRenderableTags(renderableTags)
+>> Set the `renderableTags` property of `RenderLayer` object from a list of (tag, priority) tuples.
+
 
 ### Properties
 
