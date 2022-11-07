@@ -212,22 +212,10 @@
   ],
   "images": [
     {
-      "uri": "Lantern_baseColor.png"
+      "uri": "../texture/Lantern_baseColor.png"
     },
     {
-      "uri": "Lantern_roughnessMetallic.png"
-    },
-    {
-      "uri": "Lantern_normal.png"
-    },
-    {
-      "uri": "Lantern_emissive.png"
-    },
-    {
-      "uri": "Lantern_diffuse.png"
-    },
-    {
-      "uri": "Lantern_specularGlossiness.png"
+      "uri": "../texture/Lantern_emissive.png"
     }
   ],
   "meshes": [
