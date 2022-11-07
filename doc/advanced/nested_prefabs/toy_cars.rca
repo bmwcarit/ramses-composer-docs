@@ -2,7 +2,7 @@
     "externalProjects": {
     },
     "featureLevel": 1,
-    "fileVersion": 45,
+    "fileVersion": 44,
     "instances": [
         {
             "properties": {
@@ -2962,15 +2962,7 @@
                     ],
                     "properties": {
                         "render_main": {
-                            "annotations": [
-                                {
-                                    "properties": {
-                                        "featureLevel": 3
-                                    },
-                                    "typeName": "LinkEndAnnotation"
-                                }
-                            ],
-                            "typeName": "Int::LinkEndAnnotation",
+                            "typeName": "Int",
                             "value": 0
                         }
                     }
@@ -4694,8 +4686,8 @@
     ],
     "logicEngineVersion": [
         1,
-        2,
-        2
+        1,
+        0
     ],
     "racoVersion": [
         1,
@@ -4705,7 +4697,7 @@
     "ramsesVersion": [
         27,
         0,
-        125
+        121
     ],
     "structPropMap": {
         "AnchorPointOutputs": {
@@ -4995,7 +4987,7 @@
             "materialFilterTags": "Table::ArraySemanticAnnotation::HiddenProperty::TagContainerAnnotation::DisplayNameAnnotation",
             "objectID": "String::HiddenProperty",
             "objectName": "String::DisplayNameAnnotation",
-            "renderableTags": "Table::RenderableTagContainerAnnotation::DisplayNameAnnotation",
+            "renderableTags": "Table::RenderableTagContainerAnnotation::HiddenProperty::DisplayNameAnnotation",
             "sortOrder": "Int::DisplayNameAnnotation::EnumerationAnnotation",
             "tags": "Table::ArraySemanticAnnotation::HiddenProperty::TagContainerAnnotation::DisplayNameAnnotation"
         },
