@@ -99,21 +99,21 @@ all possible combinations of supported 8bit png file formats and valid format va
 The ramses and shader columns show the color channels in the Ramses data buffer and the channels as seen by the shader
 with constant values shown as 0 or 1.
 
-| File		| Format	| Ramses Current	| Ramses Future 	| Shader		| 
-| --------- | ---------	| ----------------- | ----------------- | ------------- | 
-| rgb		| rgba		| rgb1				| rgb				| rgb1			| 		  
-| 			| rgb		| rgb				| rgb				| rgb1			| 		  
-| 			| rg		| rg				| rg				| rg01			| 		  
-| 			| r			| r					| r					| r001			| 		  
-| rgba		| rgba		| rgba				| rgba				| rgba			| 		  
-| 			| rgb		| rgb				| rgb				| rgb1			| 		  
-| 			| rg		| rg				| rg				| rg01			| 		  
-| 			| r			| r					| r					| r001			| 
-| r			| rgba		| rrr1				| r					| rrr1			|
-|			| rgb		| rrr				| r					| rrr1			| 
-| 			| rg		| rr				| r					| rr01			| 
-| 			| r			| r					| r					| r001			|
-| rg		| rgba		| rrrg				| rg				| rrrg			| 
-|			| rgb		| rrr				| r					| rrr1			| 
-| 			| rg		| rg				| rg				| rg01			|
-| 			| r			| r					| r					| r001			|
+| File		| Format	| Ramses 	        | Shader		| 
+| --------- | ---------	| ----------------- | ------------- | 
+| rgb		| rgba		| rgb1				| rgb1			| 		  
+| 			| rgb		| rgb				| rgb1			| 		  
+| 			| rg		| rg				| rg01			| 		  
+| 			| r			| r					| r001			| 		  
+| rgba		| rgba		| rgba				| rgba			| 		  
+| 			| rgb		| rgb				| rgb1			| 		  
+| 			| rg		| rg				| rg01			| 		  
+| 			| r			| r					| r001			| 
+| r			| rgba		| rrr1				| rrr1			|
+|			| rgb		| rrr				| rrr1			| 
+| 			| rg		| rr				| rr01			| 
+| 			| r			| r					| r001			|
+| rg		| rgba		| rrrg				| rrrg			| 
+|			| rgb		| rrr				| rrr1			| 
+| 			| rg		| rg				| rg01			|
+| 			| r			| r					| r001			|
