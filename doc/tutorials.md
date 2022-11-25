@@ -105,6 +105,13 @@ advanced/animations/README
 
 ```{toctree}
 :maxdepth: 2
+:caption: Skinning
+
+advanced/skinning/README
+```
+
+```{toctree}
+:maxdepth: 2
 :caption: Nesting prefabs
 
 advanced/nested_prefabs/README

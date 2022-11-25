@@ -220,6 +220,7 @@ Here is a list of the glTF objects currently supported:
 * meshes
 * mesh data (accessors, bufferViews, buffers, etc.)
 * animations
+* skins
 
 The following objects are not supported (yet):
 

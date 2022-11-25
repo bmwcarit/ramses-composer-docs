@@ -55,8 +55,12 @@ The Ramses Composer's primary import format is GLTF 2.0. It is quite flexible an
 |`TANGENT`   |`"VEC4"`            |XYZW vertex tangents where the *w* component is a sign value (-1 or +1) indicating handedness of the tangent basis|a_Tangent|
 |`TEXCOORD_0`|`"VEC2"`            |UV texture coordinates for the first set|a_TextureCoordinate|
 |`COLOR_0`   |`"VEC3"`<br>`"VEC4"`|RGB or RGBA vertex color|a_Color|
+|`JOINTS_0`  | `"VEC4"`           |Joint node indices for skinning | a_Joints0 |
+|`WEIGHTS_0` | `"VEC4"`           | Joint node weights for skinning | a_Weights0 |
 
 Multiple color or UV attributes appear according to the scheme a_Color, a_Color1, a_Color2, etc.
+
+Multiple joint and weight attributes are numbered starting with 0: a_Joints0, a_Joints1, a_Joints2, etc.
 
 <!--
 TODO
@@ -81,3 +85,5 @@ There are few special semantic uniforms (i.e. uniforms which can't be explicitly
 | ```RESOLUTION```                   | `VEC2`  | u_resolution / uResolution |
 
 If any of these uniforms are found in a shader, they will not show up in the Property view of MeshNodes and Materials, but they will receive their value from Ramses.
+
+In addition the `u_jointMat` uniform of private materials of MeshNodes will be set by Skin objects referencing the MeshNode. It has to be an array of type `VEC4` of the same length as the number of joints nodes in the Skin object.
