@@ -81,3 +81,39 @@ There are few special semantic uniforms (i.e. uniforms which can't be explicitly
 | ```RESOLUTION```                   | `VEC2`  | u_resolution / uResolution |
 
 If any of these uniforms are found in a shader, they will not show up in the Property view of MeshNodes and Materials, but they will receive their value from Ramses.
+
+## Texture Loading and Conversion
+Ramses Composer currently supports PNG images with 8 or 16 bit color depth.
+The number of color channels can vary from 1 for greyscale to 4 for RGBA images.
+
+The user can change the format of the Ramses data buffer for the texture using the 'format' property of Texture objects.
+The loaded texture data is internally converted to this format possibly dropping channels or replicating and/or adding channels.
+If the Ramses data buffer contains less than 4 channels the remaining channels will be set in the shader according to the OpenGL conventions.
+The OpenGL convention will fill missing color channels with 0 and a missing alpha channel by 1.
+
+The conversions performed can be seen in the property browser of Texture objects in an info box
+showing the color channels present in the file, the channels in the Ramses data buffer, and the values seen by the shader.
+
+For convenience the table below lists the conversions as shown by the info box for
+all possible combinations of supported 8bit png file formats and valid format values.
+The ramses and shader columns show the color channels in the Ramses data buffer and the channels as seen by the shader
+with constant values shown as 0 or 1.
+
+| File		| Format	| Ramses 	        | Shader		| 
+| --------- | ---------	| ----------------- | ------------- | 
+| rgb		| rgba		| rgb1				| rgb1			| 		  
+| 			| rgb		| rgb				| rgb1			| 		  
+| 			| rg		| rg				| rg01			| 		  
+| 			| r			| r					| r001			| 		  
+| rgba		| rgba		| rgba				| rgba			| 		  
+| 			| rgb		| rgb				| rgb1			| 		  
+| 			| rg		| rg				| rg01			| 		  
+| 			| r			| r					| r001			| 
+| r			| rgba		| rrr1				| rrr1			|
+|			| rgb		| rrr				| rrr1			| 
+| 			| rg		| rr				| rr01			| 
+| 			| r			| r					| r001			|
+| rg		| rgba		| rrrg				| rrrg			| 
+|			| rgb		| rrr				| rrr1			| 
+| 			| rg		| rg				| rg01			|
+| 			| r			| r					| r001			|
