@@ -42,6 +42,8 @@ The Mesh object imported shows additional `a_Joints0` and `a_Weights0` attribute
 
 The Skin object itself contains a reference to the controlled meshnode and a list of the nodes in the skeleton node hierarchy that control the deformation. In addition the skin inside the glTF file itself needs to be referenced by a uri and a skin index. The data needed from the glTF file is an additional array of inverse transformation matrices which are needed in addition to the dynamic transformation matrices of the skeleton nodes to calculate the correct world space transformation matrices fed to the shader.
 
+When importing meshes using multiple materials several MeshNodes will be created. The Skin object will then contain a list of all these MeshNodes as targets.
+
 To control the meshnode deformation via the shader the target meshnode set in the Skin object needs to have a private material with the correct uniform for the transformation matrices as described in detail below. The Skin object will therefore still show an error directly after the import:
 
 ![](./docs/skin-property-browser.png)
