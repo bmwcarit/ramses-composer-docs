@@ -23,6 +23,7 @@ Skinned meshes are supported by the glTF format and can be imported into RamsesC
 
 The following sections will describe the individual steps needed to setup a skinned mesh in RamsesComposer.
 
+Note that skinning is supported only at feature levels 4 or greater. At lower feature levels the glTF import dialog will not show any skin in the file and Skin objets can't be created.
 
 ## Importing from glTF
 
