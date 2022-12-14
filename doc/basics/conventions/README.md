@@ -58,6 +58,8 @@ The Ramses Composer's primary import format is GLTF 2.0. It is quite flexible an
 
 Multiple color or UV attributes appear according to the scheme a_Color, a_Color1, a_Color2, etc.
 
+Morph target attribues for the position and normal attributed will be imported with `_Morph_0`, `_Morph_1`, etc appended.
+
 <!--
 TODO
 Where do the a_Bitangent come from?

@@ -105,6 +105,13 @@ advanced/animations/README
 
 ```{toctree}
 :maxdepth: 2
+:caption: Morphing
+
+advanced/morphing/README
+```
+
+```{toctree}
+:maxdepth: 2
 :caption: Nesting prefabs
 
 advanced/nested_prefabs/README
