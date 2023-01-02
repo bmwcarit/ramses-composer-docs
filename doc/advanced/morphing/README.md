@@ -90,7 +90,7 @@ The morphing can now be controlled manually using the weights uniform.
 
 The Animation objects now support the animation of the weights vector used as a uniform in the morphing shader starting at feature level 4.
 
-Looking at hte imported AnimationChannel object we see the output being a component type Array with a component size of `2` which is just the number of morph targets.
+Looking at the imported AnimationChannel object we see the output being a component type Array with a component size of `2` which is just the number of morph targets.
 
 ![](./docs/animation-channel-property-browser.png)
 
