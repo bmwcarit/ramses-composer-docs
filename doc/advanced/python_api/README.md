@@ -103,8 +103,9 @@ The `raco` module is available in both RaCoHeadless and RaCoEditor. You'll need 
 >> This function is currently disabled when using the Python Runner in RaCoEditor.
 >> If the optional featureLevel parameter is used loading will attempt to upgrade the project to the given feature level. Since feature level downgrades are not allowed, the featureLevel parameter must not be smaller than the project feature level.
 
-> save(path)
+> save(path[, setNewIDs: bool])
 >> Save the active project under the given `path`.
+>> If the optional `setNewIDs` parameter is set to true, all project's object IDs are regenerated in order to allow reuse of its contents as external reference without conflicts (copies of the same project could not be used as source of external references more than once otherwise).
 
 > projectPath()
 >> Get the path of the active project. Returns an empty string if there is no active project loaded.
