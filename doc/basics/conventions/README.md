@@ -64,6 +64,46 @@ Where do the a_Bitangent come from?
 Also: check tangent types
 -->
 
+## Struct and Array Uniforms
+
+Ramses Composer supports scalar array uniforms:
+
+```
+uniform float weights[2];
+```
+
+![](./float_array_uniform.png)
+
+Scalar array uniform can be linked with a single link for the entire entity or with links for individual items.
+
+Struct uniforms:
+
+```
+uniform struct Light
+{
+	vec3 eyePosOrDir;
+	bool isDirectional;
+	vec3 intensity;
+	float attenuation;
+} uLight;
+```
+
+![](./struct_uniform.png)
+
+Struct array uniforms:
+
+```
+struct Point2D {
+	float x;
+	float y;
+};
+uniform Point2D uPoints[2];
+```
+
+![](./struct_array_uniform.png)
+
+Both struct and array of structs uniforms are flattened by Ramses itself into `struct.member` or `struct[index].member` uniform names and are represented as independent properties. This means structs or arrays of structs can't be linked with a single link for the entire entity.
+
 ## Semantic Uniforms
 
 There are few special semantic uniforms (i.e. uniforms which can't be explicitly set, but receive their values from Ramses). These are:
@@ -117,6 +157,3 @@ with constant values shown as 0 or 1.
 |			| rgb		| rrr				| rrr1			| 
 | 			| rg		| rg				| rg01			|
 | 			| r			| r					| r001			|
-
-## Known limitations
-Ramses Composer currently supports integral type array uniforms. Struct arrays are displayed as independent material properties.
