@@ -117,3 +117,6 @@ with constant values shown as 0 or 1.
 |			| rgb		| rrr				| rrr1			| 
 | 			| rg		| rg				| rg01			|
 | 			| r			| r					| r001			|
+
+## Known limitations
+Ramses Composer currently supports integral type array uniforms. Struct arrays are displayed as independent material properties.
