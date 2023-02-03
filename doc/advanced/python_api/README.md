@@ -224,6 +224,12 @@ Member functions:
 > metadata()
 >> If the object is a mesh this will return gltf `extras` metadata as a dictionary. Only string values in the gltf `extras` are supported.
 
+> getUserTags()
+>> Return the `userTags` property of an object as list of strings.
+
+> setUserTags(tags)
+>> Set the `userTags` property of an object from a list of strings.
+
 ### Properties
 
 Properties are represented in the python api by PropertyDescriptor objects. These can be used to get or set the value, and will also be used in
