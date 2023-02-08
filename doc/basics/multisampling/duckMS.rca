@@ -1056,7 +1056,7 @@
                 "objectID": "8703286b-f230-4c15-b110-eb0a9e209ae3",
                 "objectName": "MainRenderPass",
                 "renderOnce": false,
-                "renderOrder": 3,
+                "renderOrder": 1,
                 "target": null
             },
             "typeName": "RenderPass"
@@ -1781,54 +1781,6 @@
                 "target": "80d35c68-f4bf-41b2-b759-085572918791"
             },
             "typeName": "RenderPass"
-        },
-        {
-            "properties": {
-                "anisotropy": {
-                    "annotations": [
-                        {
-                            "properties": {
-                                "max": 32000,
-                                "min": 1
-                            },
-                            "typeName": "RangeAnnotationInt"
-                        }
-                    ],
-                    "value": 1
-                },
-                "format": 4,
-                "height": {
-                    "annotations": [
-                        {
-                            "properties": {
-                                "max": 7680,
-                                "min": 1
-                            },
-                            "typeName": "RangeAnnotationInt"
-                        }
-                    ],
-                    "value": 128
-                },
-                "magSamplingMethod": 0,
-                "minSamplingMethod": 0,
-                "objectID": "e4226f28-3d0e-402e-9db3-a7756f562dd2",
-                "objectName": "DuckRenderBufferMS1",
-                "width": {
-                    "annotations": [
-                        {
-                            "properties": {
-                                "max": 7680,
-                                "min": 1
-                            },
-                            "typeName": "RangeAnnotationInt"
-                        }
-                    ],
-                    "value": 128
-                },
-                "wrapUMode": 0,
-                "wrapVMode": 0
-            },
-            "typeName": "RenderBuffer"
         },
         {
             "properties": {
