@@ -118,45 +118,9 @@
                                         }
                                     ],
                                     "typeName": "Bool::DisplayNameAnnotation",
-                                    "value": true
+                                    "value": false
                                 },
                                 "uniforms": {
-                                    "order": [
-                                        "textureSampler",
-                                        "sampleCount"
-                                    ],
-                                    "properties": {
-                                        "sampleCount": {
-                                            "annotations": [
-                                                {
-                                                    "properties": {
-                                                        "engineType": 2
-                                                    },
-                                                    "typeName": "EngineTypeAnnotation"
-                                                },
-                                                {
-                                                    "properties": {
-                                                        "featureLevel": 1
-                                                    },
-                                                    "typeName": "LinkEndAnnotation"
-                                                }
-                                            ],
-                                            "typeName": "Int::EngineTypeAnnotation::LinkEndAnnotation",
-                                            "value": 4
-                                        },
-                                        "textureSampler": {
-                                            "annotations": [
-                                                {
-                                                    "properties": {
-                                                        "engineType": 19
-                                                    },
-                                                    "typeName": "EngineTypeAnnotation"
-                                                }
-                                            ],
-                                            "typeName": "RenderBufferMS::EngineTypeAnnotation",
-                                            "value": "b48a46aa-4340-4153-a43f-998194089091"
-                                        }
-                                    },
                                     "typeName": "Table"
                                 }
                             },
@@ -2238,7 +2202,7 @@
                                 }
                             ],
                             "typeName": "RenderBufferMS::EngineTypeAnnotation",
-                            "value": "d8301386-444e-489a-8190-6d7e5721d2f2"
+                            "value": "b48a46aa-4340-4153-a43f-998194089091"
                         }
                     }
                 },
