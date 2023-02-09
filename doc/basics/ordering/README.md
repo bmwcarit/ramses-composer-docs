@@ -166,6 +166,23 @@ with the following additional rules:
    Ramses Composer will ignore the nested render layers and generate an error.
 * `Render order value in Renderable tags`: the contents of a `RenderLayer` having the same render order value as nodes will be rendered before the nodes.
 
+### Dynamic render order
+
+Example project: [6_dynamic_render_order](./6_dynamic_render_order.rca).
+
+All above techniques define static render order. It is also possible to reorder rendering dynamically.
+
+Render Order property linking is possible for:
+* `RenderLayer` Renderable Tags
+* `RenderPass`
+
+We can use a Lua script to dynamically set Render Order based on application business logic. Example script outputs are linked to Render Order properties of:
+* `red` and `green` Renderable Tags of `MainRenderLayer`
+* Render Order of `MainRenderPass` and `YellowRenderPass`
+
+Depending on `state` script input being `0` outputs reorder rendering of Red and Green quads within `MainRenderLayer`. At the same time order of `MainRenderPass` and `YellowRenderPass` is flipped.
+
+![](./doc/dynamic_render_order.gif)
 
 ## Combining the techniques
 
