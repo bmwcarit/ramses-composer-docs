@@ -170,19 +170,19 @@ with the following additional rules:
 
 Example project: [6_dynamic_render_order](./6_dynamic_render_order.rca).
 
-All above techniques define static render order. It is also possible to reorder rendering dynamically.
+All above techniques define static render order. Starting at feature level 4, it is also possible to reorder rendering dynamically.
 
 Render Order property linking is possible for:
 * `RenderLayer` Renderable Tags
 * `RenderPass`
 
-We can use a Lua script to dynamically set Render Order based on application business logic. Example script outputs are linked to Render Order properties of:
+A Lua script can be used to dynamically set the Render Order based on application business logic. Example script outputs are linked to Render Order properties of:
 * `red` and `green` Renderable Tags of `MainRenderLayer`
 * Render Order of `MainRenderPass` and `YellowRenderPass`
 
-Depending on `state` script input being `0` outputs reorder rendering of Red and Green quads within `MainRenderLayer`. At the same time order of `MainRenderPass` and `YellowRenderPass` is flipped.
+Depending on `state` script input being `0` or non-zero, script outputs reorder rendering of Red and Green quads within `MainRenderLayer`. At the same time order of `MainRenderPass` and `YellowRenderPass` is flipped by Lua script outputs.
 
-![](./doc/dynamic_render_order.gif)
+![](./docs/dynamic_render_order.gif)
 
 ## Combining the techniques
 
