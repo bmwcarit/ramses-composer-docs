@@ -33,16 +33,16 @@ Left quad is rendered using with offscreen rendered texture using `TextureMateri
 
 For MSAA rendering, multisample renderbuffers and special fragment shader are used.
 
-`RenderTargetMSx4` is set up as follows:
+Render target for multisample renderbuffers `RenderTargetMSx4` is set up as follows:
 
-* `ColorMSx4` and `DepthMSx4` Sample Count = `4` are created. They are set to `RenderTargetMSx4` multisample buffer fields. All RenderBuffers in MSAA RenderTarget must have same Sample Count.
-* `DuckRenderPassMSx4` renders `DuckRenderLayer` nodes using `DuckCamera` to `RenderTargetMSx4`.
+* Renderbuffers `ColorMSx4` and `DepthMSx4` with Sample Count = `4` are created. They are set to `RenderTargetMSx4` multisample buffer fields. All renderbuffers in a render target must have same Sample Count value.
+* Render pass `DuckRenderPassMSx4` renders `DuckRenderLayer` nodes using `DuckCamera` to target `RenderTargetMSx4`.
 
 ![](./docs/msaa_render_target.png)
 
 ## Displaying multisample renderbuffer contents
 
-We want to display the `ColorMSx4` MSAA renderbuffer as texture on `RightQuadMeshNode`.
+We want to use the `ColorMSx4` MSAA renderbuffer as a texture for `RightQuadMeshNode`.
 
 To use `ColorMSx4` renderbuffer as texture uniform, the fragment shader must accept `sampler2DMS textureSampler` uniform representing a Multisample Texture. `int sampleCount` uniform specifies amount of samples per fragment. Below is full code of fragment shader:
 
@@ -72,11 +72,11 @@ Now we can create `TextureMaterialMS` material and use MSAA fragment shader. `Co
 
 ![](./docs/msaa_material.png)
 
-Finally, `RightQuadMeshNode` is assigned `TextureMaterialMS` material and displays multisample renderbuffer content.
+Finally, the `RightQuadMeshNode` is assigned `TextureMaterialMS` material. Now it displays multisample renderbuffer contents.
 
 ## Preview MSAA settings
 
-Ramses Composer allows enable MSAA in Preview:
+Ramses Composer allows to enable MSAA in Preview:
 
 ![](./docs/msaa_preview_settings.png)
 
