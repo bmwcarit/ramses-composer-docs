@@ -66,7 +66,9 @@ Also: check tangent types
 
 ## Struct and Array Uniforms
 
-Ramses Composer supports scalar array uniforms:
+Ramses Composer supports struct, scalar array and struct array uniforms.
+
+Scalar array uniform:
 
 ```
 uniform float weights[2];
@@ -76,7 +78,7 @@ uniform float weights[2];
 
 Scalar array uniform can be linked with a single link for the entire entity or with links for individual items.
 
-Struct uniforms:
+Struct uniform:
 
 ```
 uniform struct Light
@@ -90,7 +92,7 @@ uniform struct Light
 
 ![](./struct_uniform.png)
 
-Struct array uniforms:
+Struct array uniform:
 
 ```
 struct Point2D {
@@ -102,7 +104,12 @@ uniform Point2D uPoints[2];
 
 ![](./struct_array_uniform.png)
 
-Both struct and array of structs uniforms are flattened by Ramses itself into `struct.member` or `struct[index].member` uniform names and are represented as independent properties. This means structs or arrays of structs can't be linked with a single link for the entire entity.
+Struct and struct array uniforms are flattened by Ramses into set of properties. Each element of uniform is represented as individual property in Ramses Composer:
+
+* `struct.member` for struct element
+* `struct[index].member` for struct array element
+
+This means struct and struct array uniforms can't be linked with a single link for the entire entity. They should be linked as individual properties.
 
 ## Semantic Uniforms
 
