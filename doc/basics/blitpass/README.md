@@ -15,7 +15,7 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 
 This example shows how to use `BlitPass` render pass to perform copy between render buffers with the Ramses Composer.
 
-In OpenGL, [blitting](https://www.khronos.org/opengl/wiki/Framebuffer#Blitting) is an efficient operation to copy rectangular regions between FBOs (represented in Ramses Composer by `RenderTargets`). It allows to re-use already rendered buffers containing color, depth or other data format in subsequent render passes.
+In OpenGL, blitting is an efficient operation to copy rectangular regions between FBOs (represented in Ramses Composer by `RenderTargets`). It allows to re-use already rendered buffers containing color, depth or other data format in subsequent render passes.
 
 Similarly to the [offscreen rendering example](../offscreen/README.md), this example first renders the front view of a duck to an offscreen render target. Then it blits color render buffer region to another render buffer four times to create a tiled image. Finally, it uses both render buffers contents to render textured quads, as well as original mesh (seen from default camera), to the default framebuffer.
 
