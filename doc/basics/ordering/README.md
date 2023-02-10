@@ -154,7 +154,7 @@ of the passes, change it's settings and observe the result.
 
 ### Nested RenderLayers
 
-Example project: [5_nested_render_layers](./5_nested_render_layers.rca)
+Example project: [5_nested_render_layers](./5_nested_render_layers.rca).
 
 For more complex use cases it might prove to be necessary to nest render layers. This can also be
 done by just adding the tag used in the renderable tags property field of one `RenderLayer` object
@@ -179,6 +179,10 @@ Render Order property linking is possible for:
 A Lua script can be used to dynamically set the Render Order based on application business logic. Example script outputs are linked to Render Order properties of:
 * `red` and `green` Renderable Tags of `MainRenderLayer`
 * Render Order of `MainRenderPass` and `YellowRenderPass`
+
+![](./docs/renderable_tags_order_link.png)
+
+![](./docs/renderpass_order_link.png)
 
 Depending on `state` script input being `0` or non-zero, script outputs reorder rendering of Red and Green quads within `MainRenderLayer`. At the same time order of `MainRenderPass` and `YellowRenderPass` is flipped by Lua script outputs.
 
