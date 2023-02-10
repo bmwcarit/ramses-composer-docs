@@ -1086,7 +1086,7 @@
                 },
                 "featureLevel": 1,
                 "objectID": "a2840514-1f24-4e84-b843-ae26eb95f0b4",
-                "objectName": "blitpass",
+                "objectName": "msaa",
                 "saveAsZip": false,
                 "sceneId": {
                     "annotations": [
