@@ -122,6 +122,28 @@ have been processed, a warning is displayed in the property browser for all LuaS
 
 ![](./docs/Lua_Runtime_Warning.png)
 
+### Debugging
+
+To obtain information from inside a script Ramses Logic supports several debugging functions. These are `rl_logInfo`, `rl_logWarn`, and `rl_logError` which all take a single string argument. They generate a log message of the appropriate catogory which is visible in the log view. These functions are only enabled in normal operation both in the GUI and headless applications but will be disabled if the scene is setup for export. Calling these functions in a Lua script will therefore result in an export failure.
+
+As an example consider the following script:
+```Lua
+function interface(IN,OUT)
+	IN.choice = Type:Int32()
+end
+
+function run(IN,OUT)
+    if IN.choice < 0 then
+		rl_logError(string.format("choice < 0: %s", IN.choice))
+	elseif IN.choice == 0 then
+		rl_logWarn("choice == 0")
+	else 
+		rl_logInfo(string.format("choice > 0: %s", IN.choice))
+    end
+end
+```
+Depending on the input variable an info, warning, or error message is generated including the current value of the input. This log message will be generated every time the script is executed.
+
 
 ## Shortcuts and Tricks
 
