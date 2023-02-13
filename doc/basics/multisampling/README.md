@@ -9,7 +9,7 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 -->
 
 # Multisampling example
-*You can find the example project [here](https://github.com/bmwcarit/ramses-composer-docs/tree/master/doc/basics/multisampling).*
+*You can find the example project [here](https://github.com/bmwcarit/ramses-composer-docs/tree/master/doc/basics).*
 
 ![](./docs/msaa_result_scene.png)
 
