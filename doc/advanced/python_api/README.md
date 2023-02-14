@@ -230,6 +230,25 @@ Member functions:
 > metadata()
 >> If the object is a mesh this will return gltf `extras` metadata as a dictionary. Only string values in the gltf `extras` are supported.
 
+> getTags()
+>> Return the `tags` property of a `Node`, `Material`, or `RenderLayer` object as list of strings.
+
+> setTags(tags)
+>> Set the `tags` property of a `Node`, `Material`, or `RenderLayer` object from a list of strings.
+
+> getMaterialFilterTags()
+>> Retun the `materialFilterTags` property of a `RenderLayer` object as list of strings.
+
+> setMaterialFilterTags(tags)
+>> Set the `materialFilterTags` property of a `RenderLayer` object from a list of strings.
+
+> getRenderableTags()
+>> Return the `renderableTags` property of `RenderLayer` object as a list of (tag, priority) tuples.
+
+> setRenderableTags(renderableTags)
+>> Set the `renderableTags` property of `RenderLayer` object from a list of (tag, priority) tuples.
+
+
 ### Properties
 
 Properties are represented in the python api by PropertyDescriptor objects. These can be used to get or set the value, and will also be used in
