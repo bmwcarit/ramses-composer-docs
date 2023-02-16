@@ -28,6 +28,3 @@ if len(sys.argv) > 1:
     filename = sys.argv[1]
     print("Save to ", filename)
     raco.save(filename)
-
-
-
