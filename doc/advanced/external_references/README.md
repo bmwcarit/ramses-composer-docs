@@ -182,7 +182,7 @@ Assign the imported material and mesh to the MeshNode. You should see a distorte
 road in the Preview. Adjust the scaling as shown in the picture to match the scale of the
 other objects we are going to import shortly. Finally, rotate the Node -90° on the X-axis,
 this should put the road flat on the ground where it belongs. Now you can't see anything because
-the street goes straight through the camera. In order to fix this, translate the camera 5 units up on the y-axis and rotate
+the street goes straight through the camera. In order to fix this, move the camera 5° up on the y-axis and rotate
 it -25° on the x-axis.
 
 Note that mesh and material drop-down boxes show the project name after the resource name for
