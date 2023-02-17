@@ -68,6 +68,13 @@ basics/lua_syntax/README
 
 ```{toctree}
 :maxdepth: 2
+:caption: Render Pipeline
+
+basics/render_pipeline/README
+```
+
+```{toctree}
+:maxdepth: 2
 :caption: Render order
 
 basics/ordering/README
