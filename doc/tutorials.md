@@ -80,6 +80,20 @@ basics/ordering/README
 basics/offscreen/README
 ```
 
+```{toctree}
+:maxdepth: 2
+:caption: Multisampling
+
+basics/multisampling/README
+```
+
+```{toctree}
+:maxdepth: 2
+:caption: BlitPass
+
+basics/blitpass/README
+```
+
 # Advanced
 
 ```{toctree}

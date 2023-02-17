@@ -103,6 +103,7 @@ Composer objects:
 |RenderLayer        |Resources          | ramses::RenderGroup                                   |                           | Each render layer creates a ramses::RenderGroup. The renderables in a render group are determined by tags. The order of the renderables is either given by manually specifying the order index for each tag, or given by the scene graph order. |
 |RenderPass         |Resources          | ramses::RenderPass                                    |                           | A direct mapping to the Ramses render pass. |
 |RenderTarget       |Resources          | ramses::RenderTarget                                  |                           | A direct mapping to the Ramses render target. |
+|BlitPass           |Resources          | ramses::BlitPass                                      |                           | A direct mapping to the Ramses blit pass. |
 
 
 ## Additional note on prefabs

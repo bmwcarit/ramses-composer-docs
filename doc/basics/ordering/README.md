@@ -154,7 +154,7 @@ of the passes, change it's settings and observe the result.
 
 ### Nested RenderLayers
 
-Example project: [5_nested_render_layers](./5_nested_render_layers.rca)
+Example project: [5_nested_render_layers](./5_nested_render_layers.rca).
 
 For more complex use cases it might prove to be necessary to nest render layers. This can also be
 done by just adding the tag used in the renderable tags property field of one `RenderLayer` object
@@ -166,6 +166,27 @@ with the following additional rules:
    Ramses Composer will ignore the nested render layers and generate an error.
 * `Render order value in Renderable tags`: the contents of a `RenderLayer` having the same render order value as nodes will be rendered before the nodes.
 
+### Dynamic render order
+
+Example project: [6_dynamic_render_order](./6_dynamic_render_order.rca).
+
+All above techniques define static render order. Starting at feature level 4, it is also possible to reorder rendering dynamically.
+
+Render Order property linking is possible for:
+* `RenderLayer` Renderable Tags
+* `RenderPass`
+
+A Lua script can be used to dynamically set the Render Order based on application business logic. Example script outputs are linked to Render Order properties of:
+* `red` and `green` Renderable Tags of `MainRenderLayer`
+* Render Order of `MainRenderPass` and `YellowRenderPass`
+
+![](./docs/renderable_tags_order_link.png)
+
+![](./docs/renderpass_order_link.png)
+
+Depending on `state` script input being `0` or non-zero, script outputs reorder rendering of Red and Green quads within `MainRenderLayer`. At the same time order of `MainRenderPass` and `YellowRenderPass` is flipped by Lua script outputs.
+
+![](./docs/dynamic_render_order.gif)
 
 ## Combining the techniques
 
