@@ -52,9 +52,15 @@ To summarize, External References work with
 Only scene files which have been _created independently_ from the consumer scene may be used as a
 source scene for external reference objects.
 
-Independently created scenes are only those that are created by File/New followed by File/Save.
+Independently created scenes are only those that are created by File/New followed by File/Save, or by File/Save As with new IDs.
 Scenes files created using either File/SaveAs from within RamsesComposer or by using OS file copy
 operations do _not_ count as independently created and can not be used as source of external reference objects.
+
+Hint: use File/Save As with new IDs when saving a copy of a project intended to be used as an external reference from original
+project or as external reference more than once. File/Save As with new IDs command regenerates all project items'
+object IDs to be new unique values, making them being _created independently_. This allows to reference objects from the project
+copy at the same time as using original project without conflicts. Otherwise you can not reference an object more that once due
+to conflicting IDs.
 
 This allows you to split up your project into multiple modules with their own scene files and put them
 into a version control system as separate entities. This works very much like you would handle software modules or libraries in software development. This way you can
