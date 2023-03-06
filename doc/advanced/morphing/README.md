@@ -36,7 +36,7 @@ In this examples there are two morph targets, and the morph targets have both po
 
 ## Setting up the shader
 
-To make use the additional morph target vertex attributes a specialized shader needs to be supplied. A template shader is included with the RamsesComposer distribution. The vertex shader is reproduced below.
+To make use the additional morph target vertex attributes a specialized shader needs to be supplied. A template shader is included with the RamsesComposer distribution. For example, the vertex shader can look like this:
 
 ```
 #version 300 es
