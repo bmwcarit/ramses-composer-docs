@@ -52,7 +52,7 @@ To control the meshnode deformation via the shader the target meshnode set in th
 
 ## Setting up the shader
 
-As a starting point for setting up a shader for a skinned mesh a template shader is included in the RamsesComposer distribution in the `resources/shaders/` subfolder. The fragment shader is
+As a starting point for setting up a shader for a skinned mesh a template shader is included in the RamsesComposer distribution in the `resources/shaders/` subfolder. The fragment shader can look like this for example:
 
 ```
 #version 300 es
@@ -108,7 +108,7 @@ It is now possible to deform the meshnode via changes in the position or orienta
 
 ## Control via animations
 
-However the exmple glTF file used already contains an animation which controls the rotation of the `node_2` in the skeleton node hierarchy via a link:
+The exmple glTF file used already contains an animation which controls the rotation of the `node_2` in the skeleton node hierarchy via a link:
 
 ![](./docs/node-property-browser.png)
 
