@@ -1,7 +1,7 @@
 # Debugging
 
-The following sections offer more info on problem solving, debugging and other
-technical activities.
+The following sections offer more info on problem solving, debugging, profiling and other
+technical challenges.
 
 ```{toctree}
 :maxdepth: 2
@@ -22,6 +22,13 @@ debugging/using_log_console/README
 :caption: Common issues
 
 debugging/common_issues/README
+```
+
+```{toctree}
+:maxdepth: 2
+:caption: Improve performance
+
+debugging/profiling/README
 ```
 
 ```{toctree}
