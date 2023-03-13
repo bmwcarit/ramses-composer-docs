@@ -20,7 +20,7 @@ Following concepts will be explained:
 * RenderTargets
 * Combining RenderTargets, -Layers, -Passes and tags to produce an offscreen effect
 
-This example is similar to the [monkey example](../monkey/README.md), but instead of rendering to the display buffer,
+This example is similar to the [monkey example](../monkey/broken_relative_page/README.md), but instead of rendering to the display buffer,
 it renders to a texture first and then shows the texture color and depth contents on a slightly rotated quad. We recommend
 having a look at the [ordering example](../ordering/README.md) to understand how to structure a scene in different
 parts which are rendered at different
@@ -30,7 +30,7 @@ Let's have a look at the contents of the project.
 
 ## Scene graph and resources
 
-After opening [the project](./offscreen.rca), we notice a few more things compared to the [monkey example](../monkey/README.md).
+After opening [the project](./broken_relative_file/offscreen.rca), we notice a few more things compared to the [monkey example](../monkey/README.md).
 
 To keep this example simple, we render a single monkey head without a script.
 In the Scene View, there are two cameras - one for rendering the monkey and one for rendering the quad:
@@ -67,7 +67,7 @@ Let's have a look at the `RenderTarget`:
 
 ![](./docs/rendertarget.png)
 
-The `RenderTarget` (in OpenGL terms - a [framebuffer object](https://www.khronos.org/opengl/wiki/Framebuffer_Object), or FBO)
+The `RenderTarget` (in OpenGL terms - a [framebuffer object](https://www.khronos.org/opengl/wiki/Framebuffer_Object/broken_absolute_page), or FBO)
 is a collection of one or multiple buffers for rendering.
 Those can be color buffers, and optionally a depth and/or stencil buffer. These buffers must all have the same size, and must
 fulfill other criteria too - e.g. you can have at most one depth buffer, and they can't exceed a given size. The Ramses Composer
