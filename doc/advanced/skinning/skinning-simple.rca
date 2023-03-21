@@ -2,7 +2,7 @@
     "externalProjects": {
     },
     "featureLevel": 4,
-    "fileVersion": 47,
+    "fileVersion": 48,
     "instances": [
         {
             "properties": {
@@ -230,87 +230,6 @@
                 "visibility": true
             },
             "typeName": "Node"
-        },
-        {
-            "properties": {
-                "inputs": {
-                    "order": [
-                        "speed",
-                        "time"
-                    ],
-                    "properties": {
-                        "speed": {
-                            "annotations": [
-                                {
-                                    "properties": {
-                                        "engineType": 5
-                                    },
-                                    "typeName": "EngineTypeAnnotation"
-                                },
-                                {
-                                    "properties": {
-                                        "featureLevel": 1
-                                    },
-                                    "typeName": "LinkEndAnnotation"
-                                }
-                            ],
-                            "typeName": "Double::EngineTypeAnnotation::LinkEndAnnotation",
-                            "value": 3
-                        },
-                        "time": {
-                            "annotations": [
-                                {
-                                    "properties": {
-                                        "engineType": 18
-                                    },
-                                    "typeName": "EngineTypeAnnotation"
-                                },
-                                {
-                                    "properties": {
-                                        "featureLevel": 1
-                                    },
-                                    "typeName": "LinkEndAnnotation"
-                                }
-                            ],
-                            "typeName": "Int64::EngineTypeAnnotation::LinkEndAnnotation",
-                            "value": "612600373436"
-                        }
-                    }
-                },
-                "objectID": "19f4d752-2b92-4693-b5a5-76f1d54b105b",
-                "objectName": "clip_timer",
-                "outputs": {
-                    "order": [
-                        "progress"
-                    ],
-                    "properties": {
-                        "progress": {
-                            "annotations": [
-                                {
-                                    "properties": {
-                                        "engineType": 5
-                                    },
-                                    "typeName": "EngineTypeAnnotation"
-                                },
-                                {
-                                    "typeName": "LinkStartAnnotation"
-                                }
-                            ],
-                            "typeName": "Double::EngineTypeAnnotation::LinkStartAnnotation",
-                            "value": 0.12447866797447205
-                        }
-                    }
-                },
-                "stdModules": {
-                    "base": true,
-                    "debug": true,
-                    "math": true,
-                    "string": true,
-                    "table": true
-                },
-                "uri": "../../../../../OneDrive - Paradox Cat GmbH/Documents/RamsesComposer/skinning/scripts/clip-timer.lua"
-            },
-            "typeName": "LuaScript"
         },
         {
             "properties": {
@@ -1192,7 +1111,7 @@
                 "objectID": "935a0e9c-23a2-4feb-9b09-c2563a76a3da",
                 "objectName": "Timer",
                 "outputs": {
-                    "ticker_us": "612600373436"
+                    "ticker_us": "690246084457"
                 }
             },
             "typeName": "Timer"
@@ -1757,55 +1676,22 @@
                 }
             },
             "typeName": "Link"
-        },
-        {
-            "properties": {
-                "endObject": "19f4d752-2b92-4693-b5a5-76f1d54b105b",
-                "endProp": {
-                    "properties": [
-                        {
-                            "typeName": "String",
-                            "value": "inputs"
-                        },
-                        {
-                            "typeName": "String",
-                            "value": "time"
-                        }
-                    ]
-                },
-                "isValid": true,
-                "isWeak": false,
-                "startObject": "935a0e9c-23a2-4feb-9b09-c2563a76a3da",
-                "startProp": {
-                    "properties": [
-                        {
-                            "typeName": "String",
-                            "value": "outputs"
-                        },
-                        {
-                            "typeName": "String",
-                            "value": "ticker_us"
-                        }
-                    ]
-                }
-            },
-            "typeName": "Link"
         }
     ],
     "logicEngineVersion": [
         1,
-        3,
-        0
+        4,
+        1
     ],
     "racoVersion": [
         1,
-        5,
-        1
+        6,
+        0
     ],
     "ramsesVersion": [
         27,
         0,
-        126
+        128
     ],
     "structPropMap": {
         "AnchorPointOutputs": {
@@ -1971,8 +1857,10 @@
         "LuaInterface": {
             "children": "Table::ArraySemanticAnnotation::HiddenProperty",
             "inputs": "Table::DisplayNameAnnotation::LinkStartAnnotation::LinkEndAnnotation",
+            "luaModules": "Table::DisplayNameAnnotation::FeatureLevel",
             "objectID": "String::HiddenProperty",
             "objectName": "String::DisplayNameAnnotation",
+            "stdModules": "LuaStandardModuleSelection::DisplayNameAnnotation::FeatureLevel",
             "uri": "String::URIAnnotation::DisplayNameAnnotation"
         },
         "LuaScript": {
