@@ -108,7 +108,7 @@ It is now possible to deform the meshnode via changes in the position or orienta
 
 ## Control via animations
 
-The exmple glTF file used already contains an animation which controls the rotation of the `node_2` in the skeleton node hierarchy via a link:
+The example glTF file used already contains an animation which controls the rotation of the `node_2` in the skeleton node hierarchy via a link:
 
 ![](./docs/node-property-browser.png)
 
