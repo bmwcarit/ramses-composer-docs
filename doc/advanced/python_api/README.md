@@ -230,6 +230,12 @@ Member functions:
 > metadata()
 >> If the object is a mesh this will return gltf `extras` metadata as a dictionary. Only string values in the gltf `extras` are supported.
 
+> getUserTags()
+>> Return the `userTags` property of an object as list of strings.
+
+> setUserTags(tags)
+>> Set the `userTags` property of an object from a list of strings.
+
 > getTags()
 >> Return the `tags` property of a `Node`, `Material`, or `RenderLayer` object as list of strings.
 
